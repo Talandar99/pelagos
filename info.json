@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -12,7 +12,8 @@
         "cargo-ships",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-unbounded",
-        "? maraxsis"
+        "? maraxsis",
+        "? boompuff-agriculture"
     ],
     "description": "Visit Pelagos. Insular planet rich in tropical coconut palms, methane deposits, and minor lifeforms. Harvest coconuts, process them into oil, sealant, and biofuels, experiment with fermentation, and use high-temperature calciners to improve smelting processes in your factory.",
     "factorio_version": "2.0"

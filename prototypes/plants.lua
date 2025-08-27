@@ -97,3 +97,8 @@ data:extend({
 	},
 })
 
+local mature_palm = table.deepcopy(data.raw.plant["coconut-palm"])
+mature_palm.name = "coconut-palm-mature"
+mature_palm.growth_ticks = 1
+mature_palm.hidden_in_factoriopedia = true
+data:extend({ mature_palm })

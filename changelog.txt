@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2025-08-27
+  Features:
+    - added fuel_value property to petroleum,light oil,heavy oil and crude oil so it will be present even without maraxis installed
+    - added fuel_value property to puff-gas for compatibility with boompuff agriculture (puff gas can now be used as calciner fuel)
+    - added Pelagos briefing with simulation to factoriopedia
+    - added Coconut processing entry to factoriopedia
+    - added Calciner entry to factoriopedia
+    - removed ethanol temperature property 
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2025-08-26
   Features:

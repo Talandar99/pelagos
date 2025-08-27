@@ -2,14 +2,13 @@
 data:extend({
 	{
 		type = "fluid",
-		name = "coconut-oil",
 		subgroup = "fluid",
+		name = "coconut-oil",
 		default_temperature = 25,
 		base_color = { r = 1.0, g = 0.9, b = 0.6 },
 		flow_color = { r = 1.0, g = 0.95, b = 0.7 },
 		icon = "__pelagos__/graphics/coconut-oil.png",
 		icon_size = 64,
-		fuel_value = "1MJ",
 		order = "a[fluid]-b[coconut-oil]",
 		pressure_to_speed_ratio = 0.4,
 		flow_to_energy_ratio = 0.59,
@@ -24,7 +23,6 @@ data:extend({
 		flow_color = { r = 0.7, g = 1.0, b = 0.3 },
 		icon = "__pelagos__/graphics/methane.png",
 		icon_size = 64,
-		fuel_value = "2MJ",
 		order = "a[fluid]-b[methane]",
 		pressure_to_speed_ratio = 0.4,
 		flow_to_energy_ratio = 0.59,
@@ -32,10 +30,9 @@ data:extend({
 	},
 	{
 		type = "fluid",
-		name = "ethanol",
 		subgroup = "fluid",
+		name = "ethanol",
 		default_temperature = 25,
-		max_temperature = 100,
 		base_color = { r = 0.5, g = 0.75, b = 0.85 },
 		flow_color = { r = 0.6, g = 0.76, b = 0.86 },
 		icon = "__pelagos__/graphics/ethanol.png",
@@ -43,7 +40,6 @@ data:extend({
 		order = "a[fluid]-c[ethanol]",
 		pressure_to_speed_ratio = 0.4,
 		flow_to_energy_ratio = 0.59,
-		fuel_value = "4MJ",
 		auto_barrel = true,
 	},
 })
