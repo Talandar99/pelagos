@@ -170,42 +170,45 @@ data:extend({
 		},
 	},
 })
-local productivity_effects = {
-	{
-		type = "change-recipe-productivity",
-		recipe = "landfill",
-		change = 0.1,
-	},
-	{
-		type = "change-recipe-productivity",
-		recipe = "artificial-yumako-soil",
-		change = 0.1,
-	},
-	{
-		type = "change-recipe-productivity",
-		recipe = "overgrowth-yumako-soil",
-		change = 0.1,
-	},
-	{
-		type = "change-recipe-productivity",
-		recipe = "artificial-jellynut-soil",
-		change = 0.1,
-	},
-	{
-		type = "change-recipe-productivity",
-		recipe = "overgrowth-jellynut-soil",
-		change = 0.1,
-	},
-	{
-		type = "change-recipe-productivity",
-		recipe = "ice-platform",
-		change = 0.1,
-	},
-	{
-		type = "change-recipe-productivity",
-		recipe = "foundation",
-		change = 0.1,
-	},
+local recipe_productivity_effects = {
+	allow_recipes_without_productivity = true,
+	effects = {
+		{
+			type = "item",
+			name = "landfill",
+			change = 0.1,
+		},
+		{
+			type = "item",
+			name = "artificial-yumako-soil",
+			change = 0.1,
+		},
+		{
+			type = "item",
+			name = "overgrowth-yumako-soil",
+			change = 0.1,
+		},
+		{
+			type = "item",
+			name = "artificial-jellynut-soil",
+			change = 0.1,
+		},
+		{
+			type = "item",
+			name = "overgrowth-jellynut-soil",
+			change = 0.1,
+		},
+		{
+			type = "item",
+			name = "ice-platform",
+			change = 0.1,
+		},
+		{
+			type = "item",
+			name = "foundation",
+			change = 0.1,
+		},
+	}
 }
 
 if mods["planetaris-unbounded"] then
@@ -229,7 +232,7 @@ data:extend({
 		name = "landfill-productivity",
 		icons = util.technology_icon_constant_recipe_productivity("__pelagos__/graphics/landfill-productivity.png"),
 		icon_size = 256,
-		effects = productivity_effects,
+		PlanetsLib_recipe_productivity_effects = recipe_productivity_effects,
 
 		prerequisites = { "improvised-landfill", "production-science-pack" },
 		unit = {
