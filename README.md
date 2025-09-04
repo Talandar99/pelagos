@@ -19,7 +19,6 @@ to improve smelting processes in your factory.
 2. Craft an Excavatable surface
 3. Mine it with the excavator to get some stone
 
-
 ## Calciner
 ![calciner](https://raw.githubusercontent.com/Talandar99/pelagos/refs/heads/main/readme_images/calciner.png)
 - A big fluid-powered furnace. 
