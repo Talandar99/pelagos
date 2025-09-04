@@ -41,6 +41,7 @@ data:extend({
 			secondary = { r = 0.900, g = 0.780, b = 0.400, a = 1.000 },
 		},
 		allow_productivity = true,
+		auto_recycle = false,
 	},
 	{
 		type = "recipe",

@@ -39,7 +39,7 @@ data:extend({
 		default_import_location = "pelagos",
 		fuel_category = "chemical",
 		fuel_value = "1MJ",
-		stack_size = 50,
+		stack_size = 40,
 		weight = 1 * kg,
 	},
 })
@@ -56,7 +56,7 @@ data:extend({
 		drop_sound = space_age_item_sounds.agriculture_inventory_move,
 		fuel_category = "chemical",
 		fuel_value = "1MJ",
-		stack_size = 100,
+		stack_size = 50,
 		default_import_location = "pelagos",
 		spoil_ticks = 10 * minute,
 		spoil_result = "spoilage",
@@ -207,19 +207,19 @@ data:extend({
 })
 
 data:extend({
-  {
-    type = "item",
-    name = "activated-carbon",
-	icon = "__pelagos__/graphics/activated-carbon.png",
-    fuel_value = "1MJ",
-    fuel_category = "chemical",
-    subgroup = "raw-material",
-    order = "b[chemistry]-f[carbon-activated]",
-    inventory_move_sound = item_sounds.resource_inventory_move,
-    pick_sound = item_sounds.resource_inventory_pickup,
-    drop_sound = item_sounds.resource_inventory_move,
-    stack_size = 50,
-    weight = 1 * kg,
-    default_import_location = "pelagos",
-  },
+	{
+		type = "item",
+		name = "activated-carbon",
+		icon = "__pelagos__/graphics/activated-carbon.png",
+		fuel_value = "1MJ",
+		fuel_category = "chemical",
+		subgroup = "raw-material",
+		order = "b[chemistry]-f[carbon-activated]",
+		inventory_move_sound = item_sounds.resource_inventory_move,
+		pick_sound = item_sounds.resource_inventory_pickup,
+		drop_sound = item_sounds.resource_inventory_move,
+		stack_size = 50,
+		weight = 1 * kg,
+		default_import_location = "pelagos",
+	},
 })

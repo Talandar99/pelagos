@@ -334,13 +334,6 @@ data:extend({
 			{ type = "item", name = "engine-unit", amount = 1 },
 			{ type = "item", name = "coconut-sealant", amount = 10 },
 		},
-		surface_conditions = {
-			{
-				property = "pressure",
-				min = 1500,
-				max = 1500,
-			},
-		},
 		results = { { type = "item", name = "diesel-mining-drill", amount = 1 } },
 		enabled = false,
 	},
@@ -355,13 +348,30 @@ data:extend({
 			{ type = "item", name = "coconut-sealant", amount = 6 },
 			{ type = "item", name = "long-handed-inserter", amount = 1 },
 		},
-		surface_conditions = {
-			{
-				property = "pressure",
-				min = 1500,
-				max = 1500,
-			},
-		},
 		results = { { type = "item", name = "diesel-inserter", amount = 1 } },
+	},
+	{
+		type = "recipe",
+		name = "diesel-assembling-machine",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "steel-plate", amount = 5 },
+			{ type = "item", name = "coconut-sealant", amount = 10 },
+			{ type = "item", name = "pipe", amount = 5 },
+			{ type = "item", name = "assembling-machine-1", amount = 1 },
+			{ type = "item", name = "engine-unit", amount = 1 },
+		},
+		results = { { type = "item", name = "diesel-assembling-machine", amount = 1 } },
+	},
+	{
+		type = "recipe",
+		name = "diesel-pump",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "engine-unit", amount = 2 },
+			{ type = "item", name = "pipe", amount = 4 },
+			{ type = "item", name = "coconut-sealant", amount = 2 },
+		},
+		results = { { type = "item", name = "diesel-pump", amount = 1 } },
 	},
 })

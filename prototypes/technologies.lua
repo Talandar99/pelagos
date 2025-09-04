@@ -218,20 +218,21 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
-		name = "diesel-inserter",
-		icon = "__pelagos__/graphics/diesel-long-handed-inserter/diesel-inserter.png",
-		icon_size = 64,
+		name = "diesel-automation",
+		icon = "__pelagos__/graphics/diesel-automation.png",
+		icon_size = 256,
 		effects = {
 			{ type = "unlock-recipe", recipe = "diesel-inserter" },
+			{ type = "unlock-recipe", recipe = "diesel-assembling-machine" },
+			{ type = "unlock-recipe", recipe = "diesel-pump" },
 		},
 		prerequisites = { "pelagos-science-pack", "production-science-pack" },
 		unit = {
-			count_formula = "1000",
+			count_formula = "2000",
 			ingredients = {
 				{ "automation-science-pack", 1 },
 				{ "logistic-science-pack", 1 },
 				{ "chemical-science-pack", 1 },
-				{ "space-science-pack", 1 },
 				{ "production-science-pack", 1 },
 				{ "pelagos-science-pack", 1 },
 			},

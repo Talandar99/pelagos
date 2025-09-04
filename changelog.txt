@@ -1,6 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2025-09-03
+  Changes:
+    - added diesel pump
+    - added diesel assembler
+    - fixed error that caused rocket fuel to be recycled based on pelagos recipe, so it was recycled into sealant instead of solid fuel
+    - added spanish translation created by AnthonyDPS
+    - reduced coconut husk stack size 50 -> 40
+    - reduced coconut meat stack size 100 -> 50
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
-Date: 2025-09-01
+Date: 2025-09-02
   Changes:
     - updated calciner power demand 4MW -> 1MW to compensate liquid_fuel energy value changes in 0.2.0
 ---------------------------------------------------------------------------------------------------

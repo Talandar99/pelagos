@@ -2213,7 +2213,7 @@ data:extend({
 					name = "smoke",
 					frequency = 8,
 					position = { 0, 0 },
-					starting_vertical_speed = 0.18, --base 0.08
+					starting_vertical_speed = 0.16, --base 0.08
 					starting_frame_deviation = 60,
 				},
 			},
