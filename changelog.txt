@@ -4,8 +4,8 @@ Date: 2025-09-03
   Changes:
     - added diesel pump
     - added diesel assembler
+    - moved diesel inserter into diesel automation technology
     - fixed error that caused rocket fuel to be recycled based on pelagos recipe, so it was recycled into sealant instead of solid fuel
-    - added spanish translation created by AnthonyDPS
     - reduced coconut husk stack size 50 -> 40
     - reduced coconut meat stack size 100 -> 50
 ---------------------------------------------------------------------------------------------------
