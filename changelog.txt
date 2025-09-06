@@ -16,6 +16,7 @@ Date: 2025-09-06
     - increased wood drop from coconut palm: 3 -> 5.
     - fixed overlapping corundum path.
     - fixed pelagos overlapping with corundum when the organized solar system mod is installed.
+    - reduced improvised landfill cost (20 stone + 100 spoilage) -> (20 stone + 80 spoilage)
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 2025-09-04
