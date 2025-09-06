@@ -15,13 +15,8 @@ if mods["canal-excavator"] then
 	})
 
 	-- allow productivity
-	if not data.raw["mining-drill"]["canex-excavator"] then
-		data:extend({
-			{
-				type = "mining-drill",
-				name = "canex-excavator",
-				allowed_effects = { "consumption", "speed", "pollution", "productivity" },
-			},
-		})
+	if data.raw["mining-drill"]["canex-excavator"] then
+		local excavator = data.raw["mining-drill"]["canex-excavator"]
+		excavator.allowed_effects = { "consumption", "speed", "pollution", "productivity" }
 	end
 end

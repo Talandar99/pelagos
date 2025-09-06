@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 2025-09-06
+  Changes:
+    - updated diesel assembler sprite.
+    - all ships from the cargo-ships mod now have diesel engines. They consume barrels filled with fuel (fluids that have fuel value) instead of solid fuel like coal. Barrels are reusable.
+    - excavator is now powered by a diesel engine, similar to the one on ships.
+    - removed pelagos rocket fuel recipe. It is no longer needed on the planet.
+    - rocket part now uses ethanol if a silo was created on pelagos surface.
+    - removed coconut oil recipes for express transport belt, express splitter, express underground belt, and electric engine.
+    - added new recipe: coconut lubricant.
+    - terrain generator should now favor bigger islands a bit more.
+    - terrain generator now generates +50% more coconut palms.
+    - added new hard dependency: "distant shores". Galleon and its cannonball are now part of the pelagos tech tree.
+    - increased energy needed in coconut husk and wood carbonization recipes.
+    - increased wood drop from coconut palm: 3 -> 5.
+    - fixed overlapping corundum path.
+    - fixed pelagos overlapping with corundum when the organized solar system mod is installed.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 2025-09-04
   Changes:
@@ -36,7 +54,7 @@ Date: 2025-09-01
         20x heavy oil = 1 solid fuel so 1 heavy oil is 0.6MJ
     - changed absurd cargo ship storage size and tanker storage volume into something more reasonable. Also reduced storage of boat a little bit. 
     - boat storage, cargo ship storage size and tanker storage volume is now configurable in settings. Old value will remain until reseted to new defaults in settings
-    - added setting to force small electic generator on oil rig by default to avoid error when running game
+    - added setting to force small electric generator on oil rig by default to avoid error when running game
     - lifting train bridge is now hidden in factoriopedia. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.3

@@ -152,7 +152,7 @@ local function MapGen_Pelagos()
 		cliff_settings = nil,
 		default_enable_all_autoplace_controls = false,
 		autoplace_controls = {
-			["water"] = { frequency = 12, size = 12 },
+			["water"] = { frequency = 8, size = 12 },
 			["iron-ore"] = { frequency = 3, size = 1, richness = 3 },
 			["copper-ore"] = { frequency = 3, size = 1, richness = 3 },
 			["methane"] = { frequency = 3, size = 1, richness = 1 },

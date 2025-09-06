@@ -23,3 +23,7 @@ if settings.startup["pelagos-force-small-electric-generator"].value then
 		gen.fluid_box.volume = 500
 	end
 end
+
+require("prototypes.liquid-fuel.barrel-fuel")
+
+require("prototypes.pirate-ship")

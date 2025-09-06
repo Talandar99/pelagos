@@ -85,6 +85,13 @@ if mods["cargo-ships"] then
 		}
 	end
 end
+--pirateship
+if mods["pirateship"] then
+	data.raw["recipe"]["pirateship-cannonball"].ingredients = {
+		{ type = "item", name = "iron-plate", amount = 25 },
+		{ type = "item", name = "activated-carbon", amount = 5 },
+	}
+end
 --maraxsis
 if mods["maraxsis"] then
 	data:extend({

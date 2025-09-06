@@ -21,7 +21,7 @@ data:extend({
 			mining_time = 0.5,
 			results = {
 				{ type = "item", name = "coconut", amount = 10 },
-				{ type = "item", name = "wood", amount = 3 },
+				{ type = "item", name = "wood", amount = 5 },
 			},
 		},
 		agricultural_tower_tint = {

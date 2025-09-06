@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -10,6 +10,7 @@
         "PlanetsLib",
         "canal-excavator",
         "cargo-ships",
+        "pirateship",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-unbounded",
         "? maraxsis",

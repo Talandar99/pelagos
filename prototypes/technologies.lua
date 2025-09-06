@@ -20,8 +20,9 @@ data:extend({
 				space_location = "pelagos",
 				use_icon_overlay_constant = true,
 			},
-
 			{ type = "unlock-recipe", recipe = "pelagos-biochamber" },
+			{ type = "unlock-recipe", recipe = "pelagos-rocket-part" },
+			{ type = "unlock-recipe", recipe = "pirateship" },
 		},
 		prerequisites = { "agricultural-science-pack", "fish-breeding" },
 		unit = {
@@ -51,7 +52,6 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "coconut-processing" },
 			{ type = "unlock-recipe", recipe = "coconut-oil" },
 			{ type = "unlock-recipe", recipe = "coconut-sealant" },
-			{ type = "unlock-recipe", recipe = "pelagos-electric-engine-unit" },
 		},
 		prerequisites = { "planet-discovery-pelagos" },
 		research_trigger = {
@@ -180,8 +180,8 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "pelagos-science-pack" },
 			{ type = "unlock-recipe", recipe = "ethanol" },
 			{ type = "unlock-recipe", recipe = "pelagos-bioplastic" },
+			{ type = "unlock-recipe", recipe = "pelagos-biolubricant" },
 			{ type = "unlock-recipe", recipe = "pelagos-processing-unit" },
-			{ type = "unlock-recipe", recipe = "pelagos-rocket-fuel" },
 		},
 		prerequisites = { "fermentation-bacteria-cultivation-technology", "calciner" },
 		research_trigger = {
@@ -395,14 +395,6 @@ data:extend({
 		},
 	},
 })
--- add pelagos to "logistics-3"
-local tech = data.raw.technology["logistics-3"]
-
-if tech and tech.effects then
-	table.insert(tech.effects, { type = "unlock-recipe", recipe = "pelagos-express-transport-belt" })
-	table.insert(tech.effects, { type = "unlock-recipe", recipe = "pelagos-express-underground-belt" })
-	table.insert(tech.effects, { type = "unlock-recipe", recipe = "pelagos-express-splitter" })
-end
 
 if mods["cargo-ships"] then
 	local t = data.raw["technology"]["oversea-energy-distribution"]
@@ -434,6 +426,25 @@ if mods["cargo-ships"] then
 			{ "chemical-science-pack", 1 },
 			{ "space-science-pack", 1 },
 			{ "pelagos-science-pack", 1 },
+		},
+		time = 30,
+	}
+end
+
+if mods["pirateship"] then
+	local t = data.raw["technology"]["Pirate_Ship"]
+	t.prerequisites = { "pelagos-science-pack" }
+	t.effects = {
+		{ type = "unlock-recipe", recipe = "pirateship-cannonball" },
+	}
+	t.unit = {
+		count = 1000,
+		ingredients = {
+			{ "automation-science-pack", 1 },
+			{ "logistic-science-pack", 1 },
+			{ "chemical-science-pack", 1 },
+			{ "pelagos-science-pack", 1 },
+			{ "military-science-pack", 1 },
 		},
 		time = 30,
 	}

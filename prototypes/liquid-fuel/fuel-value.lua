@@ -1,16 +1,19 @@
 -- force override fuel_value for base fluids
 local overrides = {
-	-- vanilla
-	--	["light-oil"] = "3MJ",
-	--	["heavy-oil"] = "2.5MJ",
-	--	["petroleum-gas"] = "2MJ",
-	--	["coconut-oil"] = "1MJ",
-	--	-- pelagos
-	--	["ethanol"] = "4MJ",
-	--	["methane"] = "2MJ",
-	--	["crude-oil"] = "1.5MJ",
-	--	--bumpuff agriculture
-	--	["puff-gas"] = "2MJ",
+	---- vanilla
+	--["light-oil"] = "3MJ",
+	--["heavy-oil"] = "2.5MJ",
+	--["petroleum-gas"] = "2MJ",
+	--["coconut-oil"] = "1.5MJ",
+	---- pelagos
+	--["ethanol"] = "4.5MJ",
+	--["methane"] = "2MJ",
+	--["crude-oil"] = "1.5MJ",
+	----bumpuff agriculture
+	--["puff-gas"] = "2MJ",
+	--- maraxsis
+	--["hydrogen"] = "2.25MJ"
+	--	balanced arround solid fuel
 	-- vanilla
 	["light-oil"] = "1.2MJ",
 	["heavy-oil"] = "0.6MJ",
@@ -22,6 +25,8 @@ local overrides = {
 	["crude-oil"] = "0.3MJ",
 	--bumpuff agriculture
 	["puff-gas"] = "0.6MJ",
+	--maraxis
+	["hydrogen"] = "0.675MJ",
 }
 
 for name, value in pairs(overrides) do
