@@ -27,3 +27,24 @@ end
 require("prototypes.liquid-fuel.barrel-fuel")
 
 require("prototypes.pirate-ship")
+
+-- barreling category
+local original_recipes = {}
+for name, _ in pairs(data.raw.recipe) do
+	table.insert(original_recipes, name)
+end
+
+for _, name in ipairs(original_recipes) do
+	local recipe = data.raw.recipe[name]
+	if recipe then
+		if string.sub(name, -6) == "barrel" and string.len(name) > 6 then
+			local copy = table.deepcopy(recipe)
+			copy.name = name .. "-barreling-copy"
+			copy.category = "barreling"
+			copy.hidden = false
+			copy.hidden_in_factoriopedia = true
+			copy.enabled = true
+			data:extend({ copy })
+		end
+	end
+end

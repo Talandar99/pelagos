@@ -223,3 +223,49 @@ data:extend({
 		default_import_location = "pelagos",
 	},
 })
+-- wooden platform
+data:extend({
+	{
+		type = "item",
+		name = "wooden-platform",
+		icon = "__pelagos__/graphics/wooden-platform-icon.png",
+		subgroup = "terrain",
+		order = "c[landfill]-a[wooden-platform]",
+		inventory_move_sound = item_sounds.landfill_inventory_move,
+		pick_sound = item_sounds.landfill_inventory_pickup,
+		drop_sound = item_sounds.landfill_inventory_move,
+		stack_size = 100,
+		default_import_location = "pelagos",
+		weight = 10 * kg,
+		place_as_tile = {
+			result = "wooden-platform",
+			condition_size = 1,
+			condition = { layers = { ground_tile = true } },
+			tile_condition = {
+				--"pelagos-deep-sea", -- pelagos
+				"water",
+				"deepwater",
+				"water-green",
+				"deepwater-green", -- all water
+				"water-mud",
+				"water-shallow", -- all shallows
+				"oil-ocean-shallow",
+				"oil-ocean-deep", -- all oil ocean
+				"ammoniacal-ocean",
+				"ammoniacal-ocean-2",
+				"brash-ice", -- aquilo
+				"wetland-light-green-slime",
+				"wetland-green-slime",
+				"wetland-light-dead-skin",
+				"wetland-dead-skin",
+				"wetland-pink-tentacle",
+				"wetland-red-tentacle",
+				"wetland-yumako",
+				"wetland-jellynut",
+				"wetland-blue-slime",
+				"gleba-deep-lake", -- all gleba stuff
+			},
+		},
+		random_tint_color = item_tints.organic_green,
+	},
+})

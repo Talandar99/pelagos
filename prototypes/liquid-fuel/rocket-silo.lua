@@ -47,8 +47,8 @@ data:extend({
 		auto_recycle = false,
 		category = "rocket-building",
 		ingredients = {
-			{ type = "item", name = "processing-unit", amount = 10 },
-			{ type = "item", name = "low-density-structure", amount = 10 },
+			{ type = "item", name = "processing-unit", amount = 1 },
+			{ type = "item", name = "low-density-structure", amount = 1 },
 			{ type = "fluid", name = "ethanol", amount = 100 },
 		},
 		surface_conditions = {

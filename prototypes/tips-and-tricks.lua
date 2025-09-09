@@ -102,6 +102,18 @@ data:extend({
 			technology = "calciner",
 		},
 	},
+	{
+		type = "tips-and-tricks-item",
+		name = "wooden-platform",
+		tag = "[item=wooden-platform]",
+		category = "space-age",
+		order = "pelagos-f",
+		indent = 1,
+		trigger = {
+			type = "research",
+			technology = "deep_sea_oil_extraction",
+		},
+	},
 })
 --data:extend{
 --  {

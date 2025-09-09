@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 2025-09-09
+  Changes:
+    - added wooden platform
+    - added tips and tricks for wooden platform
+    - added barreling machine
+    - fermentation bacteria recipe is not present in assembling machines anymore
+    - fixed locale for cellulose decomposition
+    - fixed wrong cost of rocket on pelagos (now rocket will cost 10x LESS of LDS and Blue Circuits)
+    - fermentation-bacteria methane cost incresed 30 -> 150
+    - increased ethanol fermentation-bacteria cost 3 -> 5
+    - reduced ammount of mined methane 5x (10 -> 2)
+    - excavator now uses engine u
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 2025-09-07
+  Changes:
+    - increased excavator mining speed 0.5 -> 1.5
+    - increased excavator module slots 5 -> 6
+    - increased excavator power draw "180kW" -> "540kW"
+    - excavator now require 5 engine units instead of 5 electronic circuit
+    - reduced fuel slots 3 -> 2.
+    - incresed diesel drill mining speed 0.5 -> 1.5
+    - added missing locale for Galleon cannon
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 2025-09-06
   Changes:

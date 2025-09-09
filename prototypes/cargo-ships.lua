@@ -20,6 +20,10 @@ end
 if data.raw["car"]["indep-boat"] then
 	data.raw["car"]["indep-boat"].inventory_size = boat_inventory
 end
+-- oil rig
+if data.raw["electric-pole"]["or_pole"] then
+	data.raw["electric-pole"]["or_pole"].supply_area_distance = 7.5 --old was 4.5
+end
 
 -- hide bridge and all related things
 

@@ -48,8 +48,8 @@ data:extend({
 				{
 					type = "fluid",
 					name = "methane",
-					amount_min = 10,
-					amount_max = 10,
+					amount_min = 2, --base is 10
+					amount_max = 2, --base is 10
 					probability = 1,
 				},
 			},

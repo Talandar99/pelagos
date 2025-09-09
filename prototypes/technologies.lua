@@ -82,6 +82,8 @@ if mods["cargo-ships"] then
 	t.prerequisites = { "automated_water_transport" }
 	t.effects = {
 		{ type = "unlock-recipe", recipe = "oil_rig" },
+		{ type = "unlock-recipe", recipe = "wooden-platform" },
+		{ type = "unlock-recipe", recipe = "barreling-machine" },
 	}
 	t.unit = nil
 	t.research_trigger = {

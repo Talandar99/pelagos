@@ -66,10 +66,4 @@ end
 
 if data.raw["mining-drill"]["canex-excavator"] then
 	local excavator = data.raw["mining-drill"]["canex-excavator"]
-	excavator.energy_source = excavator.energy_source or {}
-	excavator.energy_source.type = "burner"
-	excavator.energy_source.fuel_categories = { "diesel-fuel" }
-	excavator.energy_source.effectivity = 1
-	excavator.energy_source.fuel_inventory_size = 3
-	excavator.energy_source.burnt_inventory_size = 3
 end

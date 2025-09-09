@@ -106,7 +106,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "fermentation-bacteria",
-		category = "organic-or-hand-crafting",
+		category = "organic",
 		surface_conditions = {
 			{
 				property = "pressure",
@@ -122,7 +122,7 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "raw-fish", amount = 2 },
 			{ type = "fluid", name = "coconut-oil", amount = 30 },
-			{ type = "fluid", name = "methane", amount = 30 },
+			{ type = "fluid", name = "methane", amount = 150 },
 		},
 		results = {
 			{ type = "item", name = "fermentation-bacteria", amount = 1, probability = 0.1 },
@@ -182,7 +182,7 @@ data:extend({
 		reset_freshness_on_craft = true,
 		energy_required = 6,
 		ingredients = {
-			{ type = "item", name = "fermentation-bacteria", amount = 3 },
+			{ type = "item", name = "fermentation-bacteria", amount = 5 },
 			{ type = "item", name = "nutrients", amount = 20 },
 			{ type = "fluid", name = "water", amount = 100 },
 			{ type = "item", name = "activated-carbon", amount = 1 },
@@ -373,5 +373,27 @@ data:extend({
 			{ type = "item", name = "coconut-sealant", amount = 2 },
 		},
 		results = { { type = "item", name = "diesel-pump", amount = 1 } },
+	},
+	{
+		type = "recipe",
+		name = "wooden-platform",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "wood", amount = 10 },
+			{ type = "item", name = "coconut-sealant", amount = 5 },
+			{ type = "item", name = "coconut-husk", amount = 5 },
+		},
+		results = { { type = "item", name = "wooden-platform", amount = 1 } },
+	},
+	{
+		type = "recipe",
+		name = "barreling-machine",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "iron-plate", amount = 10 },
+			{ type = "item", name = "iron-gear-wheel", amount = 5 },
+			{ type = "item", name = "electronic-circuit", amount = 1 },
+		},
+		results = { { type = "item", name = "barreling-machine", amount = 1 } },
 	},
 })
