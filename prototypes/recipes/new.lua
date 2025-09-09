@@ -379,9 +379,9 @@ data:extend({
 		name = "wooden-platform",
 		enabled = false,
 		ingredients = {
-			{ type = "item", name = "wood", amount = 10 },
-			{ type = "item", name = "coconut-sealant", amount = 5 },
-			{ type = "item", name = "coconut-husk", amount = 5 },
+			{ type = "item", name = "wood", amount = 20 },
+			{ type = "item", name = "coconut-sealant", amount = 10 },
+			{ type = "item", name = "coconut-husk", amount = 10 },
 		},
 		results = { { type = "item", name = "wooden-platform", amount = 1 } },
 	},
