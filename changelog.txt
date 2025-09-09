@@ -11,7 +11,7 @@ Date: 2025-09-09
     - fermentation-bacteria methane cost incresed 30 -> 150
     - increased ethanol fermentation-bacteria cost 3 -> 5
     - reduced ammount of mined methane 5x (10 -> 2)
-    - excavator now uses engine u
+    - increased oil rig power pole supply range 4.5 -> 7.5
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 2025-09-07
