@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 2025-09-09
+  Changes:
+    - added wooden platform to landfill productivity
+    - changed recipe category for Ethanol processing unit from "crafting-with-fluid" to "electronics-with-fluid" so it now can be produced using Electromagnetic Plant
+---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: 2025-09-09
   Changes:

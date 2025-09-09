@@ -73,7 +73,7 @@ data:extend({
 		type = "recipe",
 		name = "pelagos-processing-unit",
 		icon = "__pelagos__/graphics/pelagos-processing-unit.png",
-		category = "crafting-with-fluid",
+		category = "electronics-with-fluid",
 		enabled = false,
 		energy_required = 10,
 		ingredients = {
