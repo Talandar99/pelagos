@@ -396,4 +396,22 @@ data:extend({
 		},
 		results = { { type = "item", name = "barreling-machine", amount = 1 } },
 	},
+	{
+		type = "recipe",
+		name = "casting-engine-unit",
+		category = "metallurgy",
+		subgroup = "vulcanus-processes",
+		order = "b[casting]-h[casting-engine-unit]",
+		icon = "__pelagos__/graphics/casting-engine-unit.png",
+		enabled = false,
+		ingredients = {
+			{ type = "fluid", name = "molten-iron", amount = 55, fluidbox_multiplier = 55 },
+			{ type = "item", name = "activated-carbon", amount = 5 },
+		},
+		energy_required = 15,
+		-- energy_required = 10, for assembling machine
+		allow_decomposition = false,
+		results = { { type = "item", name = "engine-unit", amount = 1 } },
+		allow_productivity = true,
+	},
 })

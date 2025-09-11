@@ -23,7 +23,7 @@ if mods["cargo-ships"] then
 	if data.raw["recipe"]["floating-electric-pole"] then
 		data.raw["recipe"]["floating-electric-pole"].ingredients = {
 			{ type = "item", name = "iron-plate", amount = 5 },
-			{ type = "item", name = "big-electric-pole", amount = 20 },
+			{ type = "item", name = "big-electric-pole", amount = 2 },
 			{ type = "item", name = "barrel", amount = 4 },
 			{ type = "item", name = "coconut-sealant", amount = 4 },
 		}

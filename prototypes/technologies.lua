@@ -374,6 +374,35 @@ data:extend({
 		},
 	},
 })
+data:extend({
+	{
+		type = "technology",
+		name = "casting-engine-unit",
+		icon = "__pelagos__/graphics/casting-engine-unit.png",
+		icon_size = 64,
+		effects = {
+			{ type = "unlock-recipe", recipe = "casting-engine-unit" },
+		},
+		prerequisites = {
+			"diesel-automation",
+			"metallurgic-science-pack",
+			"production-science-pack",
+		},
+		unit = {
+			count_formula = "750",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "production-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+				{ "metallurgic-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
 
 data:extend({
 	{

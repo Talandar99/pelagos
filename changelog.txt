@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+Date: 2025-09-10
+  Changes:
+    - added engine unit casting recipe and technology
+    - added circuit network machines and radar to list of items that can be placed on wooden platform
+    - reduced floating electric pole cost (20 electric pole -> 2 electric pole)
+---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: 2025-09-09
+  Changes:
+    - incresed oil rig tank capacity to match tanker (100k -> 150k)
+---------------------------------------------------------------------------------------------------
 Version: 0.5.1
 Date: 2025-09-09
   Changes:

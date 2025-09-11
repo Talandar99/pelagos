@@ -25,6 +25,10 @@ if data.raw["electric-pole"]["or_pole"] then
 	data.raw["electric-pole"]["or_pole"].supply_area_distance = 7.5 --old was 4.5
 end
 
+if data.raw["storage-tank"]["or_tank"] then
+	data.raw["storage-tank"]["or_tank"].fluid_box.volume = 150000 --overrides default settings
+end
+
 -- hide bridge and all related things
 
 -- items

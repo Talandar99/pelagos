@@ -75,7 +75,6 @@ data:extend({
 		results = { { type = "item", name = "activated-carbon", amount = 1 } },
 		auto_recycle = false,
 	},
-
 	{
 		type = "recipe",
 		name = "calciner-advanced-steel-smelting",
@@ -90,4 +89,24 @@ data:extend({
 		results = { { type = "item", name = "steel-plate", amount = 2 } },
 		allow_productivity = true,
 	},
+	--	{
+	--		type = "recipe",
+	--		name = "scrap-burning",
+	--		icon = "__pelagos__/graphics/calciner-advanced-steel-smelting.png",
+	--		category = "calcining",
+	--		enabled = false,
+	--		energy_required = 6,
+	--		ingredients = {
+	--			{ type = "item", name = "scrap", amount = 1 },
+	--		},
+	--		results = {
+	--			{ type = "item", name = "iron-gear-wheel", probability = 0.20 },
+	--			{ type = "item", name = "concrete", probability = 0.06 },
+	--			{ type = "item", name = "steel-plate", probability = 0.04 },
+	--			{ type = "item", name = "stone", probability = 0.04 },
+	--			{ type = "item", name = "copper-cable", probability = 0.03 },
+	--			{ type = "item", name = "holmium-org", probability = 0.01 },
+	--		},
+	--		allow_productivity = true,
+	--	},
 })

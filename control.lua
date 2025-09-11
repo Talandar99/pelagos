@@ -32,6 +32,7 @@ local function build_allowed_entities()
 	-- vanilla subgrupy
 	local filters = {
 		{ filter = "subgroup", subgroup = "inserter" },
+		{ filter = "subgroup", subgroup = "circuit-network" },
 	}
 
 	-- add 1 and 2 tiers from aai containers
@@ -79,11 +80,12 @@ local function build_allowed_entities()
 	end
 
 	-- additional stuff
-	allowed["entity-ghost"] = true
-	allowed["canex-excavator"] = true
 	allowed["pipe"] = true
 	allowed["steel-chest"] = true
 	allowed["barreling-machine"] = true
+	allowed["radar"] = true
+	allowed["canex-excavator"] = true
+	allowed["entity-ghost"] = true
 
 	return allowed
 end
