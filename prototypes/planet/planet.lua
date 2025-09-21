@@ -39,7 +39,7 @@ data:extend({
 			},
 		},
 		minable = {
-			mining_time = 2,
+			mining_time = 1,
 			results = {
 				{ type = "item", name = "stone", amount = 20 },
 				{ type = "item", name = "fermentation-bacteria", amount = 5 },
@@ -435,15 +435,15 @@ data:extend({
 			},
 		},
 		autoplace = {
-			probability_expression = "0.005 * noise_layer_noise('pelagos-copper-stromatolite')",
+			probability_expression = "0.007 * noise_layer_noise('pelagos-copper-stromatolite')",
 		},
 		dying_trigger_effect = decorative_trigger_effects.big_rock(),
 		minable = {
 			mining_particle = "copper-ore-particle",
 			mining_time = 0.4,
 			results = {
-				{ type = "item", name = "stone", amount_min = 3, amount_max = 7 },
-				{ type = "item", name = "copper-ore", amount_min = 13, amount_max = 17 },
+				{ type = "item", name = "stone", amount_min = 5, amount_max = 10 },
+				{ type = "item", name = "copper-ore", amount_min = 25, amount_max = 30 },
 			},
 		},
 		resistances = {
