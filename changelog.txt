@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.7.0
+Version: 0.7.1
 Date: 2025-09-21
   Changes:
     - added missing locale for cultivation productivity tech
