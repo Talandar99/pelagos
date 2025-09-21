@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.7
+Date: 2025-09-22
+  Changes:
+    - to make sure damage is balanced flamethrower now adds only fluids listed and balanced by pelagos 
+---------------------------------------------------------------------------------------------------
 Version: 0.7.6
 Date: 2025-09-21
   Changes:

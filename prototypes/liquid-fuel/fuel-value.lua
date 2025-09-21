@@ -36,3 +36,33 @@ for name, value in pairs(overrides) do
 		fluid.fuel_value = value
 	end
 end
+
+local flameturret = data.raw["fluid-turret"]["flamethrower-turret"]
+
+for fluid_name, fuel_value in pairs(overrides) do
+	-- sprawdzamy, czy fluid faktycznie istnieje w grze
+	local fluid = data.raw.fluid[fluid_name]
+	if fluid then
+		local number_part = util.parse_energy(fuel_value) / 1000000 -- MJ
+
+		if number_part and number_part > 0 then
+			local found = false
+			for _, f in pairs(flameturret.attack_parameters.fluids) do
+				if f.type == fluid_name then
+					f.damage_modifier = number_part
+					found = true
+					break
+				end
+			end
+
+			if not found then
+				table.insert(flameturret.attack_parameters.fluids, {
+					type = fluid_name,
+					damage_modifier = number_part,
+				})
+			end
+		end
+	else
+		--log("Override skipped: fluid '" .. fluid_name .. "' not found in data.raw.fluid")
+	end
+end
