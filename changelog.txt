@@ -2,6 +2,12 @@
 Version: 0.7.0
 Date: 2025-09-21
   Changes:
+    - added missing locale for cultivation productivity tech
+    - updated spanish translation made by AnthonyDPS 
+---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 2025-09-21
+  Changes:
     - added Any planet start mod support
     - added methane explosives recipe
     - pelagos biochamber recipe now doesn't require electronic circuits but 10 extra iron plates instead
