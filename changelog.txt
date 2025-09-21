@@ -1,9 +1,17 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.7.4
+Version: 0.7.6
+Date: 2025-09-21
+  Changes:
+    - Updated cost of diggable ground (5 Spoilage + 25 water) -> 20 spoilage, and changed recipe type so it can now be crafted in assembling-machine-1
+    - fixed loading error when fulgoran enemies + explosive bitters are installed with pelagos
+    - added palm tree seed into ignored list for quality seed if quality seeds mod is installed as temporary fix
+---------------------------------------------------------------------------------------------------
+Version: 0.7.5
 Date: 2025-09-21
   Changes:
     - Any Planet Start: moved fluid handling a bit earlier in tech tree and locked diesel machines that consume barreled fuel after it
-    - moved fish breeding into automation category
+    - Any Planet Start: moved fish breeding into automation category
+    - Any Planet Start: moved barreling machine into fluid handling
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.2
 Date: 2025-09-21

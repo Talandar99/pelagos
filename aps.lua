@@ -42,6 +42,8 @@ utils.add_prerequisites("diesel-automation", { "automation-2" })
 utils.add_prerequisites("oil-gathering", { "logistic-science-pack" })
 
 utils.remove_recipes("pelagos-science-pack", { "pelagos-biolubricant", "pelagos-processing-unit", "pelagos-battery" })
+utils.remove_recipes("deep_sea_oil_extraction", { "barreling-machine" })
+utils.add_recipes("fluid-handling", { "barreling-machine" })
 utils.add_recipes("lubricant", { "pelagos-biolubricant" })
 utils.add_recipes("processing-unit", { "pelagos-processing-unit" })
 utils.add_recipes("battery", { "pelagos-battery" })

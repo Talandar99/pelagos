@@ -13,9 +13,12 @@ if mods["canal-excavator"] then
 
 	if data.raw["recipe"]["canex-digable"] then
 		data.raw["recipe"]["canex-digable"].ingredients = {
-			{ type = "item", name = "spoilage", amount = 5 },
-			{ type = "fluid", name = "water", amount = 25 },
+
+			{ type = "item", name = "spoilage", amount = 20 },
+			--{ type = "fluid", name = "water", amount = 25 },
 		}
+
+		data.raw["recipe"]["canex-digable"].category = "advanced-crafting"
 	end
 end
 --cargo-ships

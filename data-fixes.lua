@@ -16,3 +16,10 @@ if mods["corrundum"] then
 	})
 	data.raw["space-connection"]["gleba-corrundum"] = nil
 end
+-------------------------------------------------------------------------------
+-- temporary fix until miguel fixes his mod
+-------------------------------------------------------------------------------
+if mods["quality-seeds"] then
+	table.insert(quality_seeds.ignore_plants, "coconut-palm")
+end
+-------------------------------------------------------------------------------

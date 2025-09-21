@@ -7,6 +7,45 @@ require("__base__.prototypes.entity.spitter-animations")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
+function coper_spitter_spawner_idle_animation(variation, tint, captured)
+	return {
+		layers = {
+			util.sprite_load("__base__/graphics/entity/spawner/spawner-idle", {
+				frame_count = 7,
+				scale = 0.5,
+				animation_speed = 0.18,
+				run_mode = "forward-then-backward",
+				y = variation * 376 * 2,
+				allow_forced_downscale = true,
+				surface = "nauvis",
+				usage = "enemy",
+			}),
+			util.sprite_load("__base__/graphics/entity/spawner/spawner-idle-mask", {
+				frame_count = 7,
+				scale = 0.5,
+				animation_speed = 0.18,
+				run_mode = "forward-then-backward",
+				tint = tint,
+				flags = { "mask" },
+				y = variation * 230 * 2,
+				allow_forced_downscale = true,
+				surface = "nauvis",
+				usage = "enemy",
+			}),
+			util.sprite_load("__base__/graphics/entity/spawner/spawner-idle-shadow", {
+				frame_count = 7,
+				scale = 0.5,
+				animation_speed = 0.18,
+				run_mode = "forward-then-backward",
+				draw_as_shadow = true,
+				y = variation * 358 * 2,
+				allow_forced_downscale = true,
+				surface = "nauvis",
+				usage = "enemy",
+			}),
+		},
+	}
+end
 local copper_tints = {
 	--small = { r = 0.5, g = 0.3, b = 0.0, a = 1 },
 	small = { r = 0.7, g = 0.36, b = 0.2, a = 1 },
@@ -337,10 +376,10 @@ data:extend({
 		captured_spawner_entity = "captive-copper-biter-spawner",
 		graphics_set = {
 			animations = {
-				spawner_idle_animation(0, spitter_spawner_tint),
-				spawner_idle_animation(1, spitter_spawner_tint),
-				spawner_idle_animation(2, spitter_spawner_tint),
-				spawner_idle_animation(3, spitter_spawner_tint),
+				coper_spitter_spawner_idle_animation(0, spitter_spawner_tint),
+				coper_spitter_spawner_idle_animation(1, spitter_spawner_tint),
+				coper_spitter_spawner_idle_animation(2, spitter_spawner_tint),
+				coper_spitter_spawner_idle_animation(3, spitter_spawner_tint),
 			},
 		},
 
