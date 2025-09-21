@@ -13,6 +13,7 @@ utils.set_prerequisites("agriculture", { "steel-processing", "landfill" })
 utils.set_packs("agriculture", { "automation-science-pack" }, 20, 30)
 utils.remove_recipes("agriculture", { "nutrients-from-spoilage" })
 utils.add_recipes("coconut-processing-technology", { "nutrients-from-spoilage" })
+utils.set_prerequisites("fish-breeding", { "automation-science-pack" })
 utils.set_packs("fish-breeding", { "automation-science-pack" }, 25, 30)
 data.raw["technology"]["fish-breeding"].unit = {
 	count = 20,

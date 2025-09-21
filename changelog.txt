@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.7.3
+Version: 0.7.4
 Date: 2025-09-21
   Changes:
     - Any Planet Start: moved fluid handling a bit earlier in tech tree and locked diesel machines that consume barreled fuel after it
+    - moved fish breeding into automation category
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.2
 Date: 2025-09-21
