@@ -1,8 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.8
+Date: 2025-09-22
+  Changes:
+    - fixed recycling recipe for concrete
+    - fixed recycling recipe for steel plate
+    - fixed recycling recipe for capture bot rocket
+    - fixed recycling recipe for processing unit
+---------------------------------------------------------------------------------------------------
 Version: 0.7.7
 Date: 2025-09-22
   Changes:
-    - to make sure damage is balanced flamethrower now adds only fluids listed and balanced by pelagos 
+    - to make sure damage is balanced flamethrower now adds only new fluids with fuel value listed and balanced by pelagos 
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.6
 Date: 2025-09-21

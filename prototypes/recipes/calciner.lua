@@ -88,6 +88,7 @@ data:extend({
 		},
 		results = { { type = "item", name = "steel-plate", amount = 2 } },
 		allow_productivity = true,
+		auto_recycle = false,
 	},
 	--	{
 	--		type = "recipe",

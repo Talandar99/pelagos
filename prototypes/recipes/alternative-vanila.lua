@@ -75,6 +75,7 @@ data:extend({
 		icon = "__pelagos__/graphics/pelagos-processing-unit.png",
 		category = "electronics-with-fluid",
 		enabled = false,
+		auto_recycle = false,
 		energy_required = 10,
 		ingredients = {
 			{ type = "item", name = "electronic-circuit", amount = 20 },
@@ -104,6 +105,7 @@ data:extend({
 			quaternary = { r = 0.939, g = 0.763, b = 0.191, a = 1.000 }, -- #efc230ff
 		},
 		allow_productivity = true,
+		auto_recycle = false,
 	},
 	{
 		type = "recipe",
@@ -137,6 +139,7 @@ data:extend({
 			{ type = "fluid", name = "water", amount = 100 },
 		},
 		results = { { type = "item", name = "concrete", amount = 10 } },
+		auto_recycle = false,
 	},
 	{
 		type = "recipe",
@@ -164,5 +167,6 @@ data:extend({
 		},
 		results = { { type = "item", name = "capture-robot-rocket", amount = 1 } },
 		enabled = false,
+		auto_recycle = false,
 	},
 })
