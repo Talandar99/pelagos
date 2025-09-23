@@ -170,12 +170,9 @@ local function on_built_rocket_silo(event)
 	local recipe
 	if entity.surface.name == "pelagos" then
 		recipe = "pelagos-rocket-part"
-	else
-		recipe = "rocket-part"
+		entity.set_recipe(recipe)
+		entity.recipe_locked = true
 	end
-
-	entity.set_recipe(recipe)
-	entity.recipe_locked = true
 end
 
 script.on_event(defines.events.on_built_entity, function(event)

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.9
+Date: 2025-09-23
+  Changes:
+    - added missing locale to Any Planet Start dropdown menu
+    - changed how recipe for pelagos rocket silo is set in order to make sure it does not ovveride other ones by accident
+    - added russian translation made by Пружинка
+---------------------------------------------------------------------------------------------------
 Version: 0.7.8
 Date: 2025-09-22
   Changes:
