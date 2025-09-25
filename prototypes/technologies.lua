@@ -52,6 +52,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "coconut-processing" },
 			{ type = "unlock-recipe", recipe = "coconut-oil" },
 			{ type = "unlock-recipe", recipe = "coconut-sealant" },
+			{ type = "unlock-recipe", recipe = "wooden-platform" },
 		},
 		prerequisites = { "planet-discovery-pelagos" },
 		research_trigger = {
@@ -89,7 +90,6 @@ if mods["cargo-ships"] then
 	}
 	t.effects = {
 		{ type = "unlock-recipe", recipe = "oil_rig" },
-		{ type = "unlock-recipe", recipe = "wooden-platform" },
 		{ type = "unlock-recipe", recipe = "barreling-machine" },
 	}
 	t.unit = nil

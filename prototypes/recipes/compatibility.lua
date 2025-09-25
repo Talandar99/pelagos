@@ -18,7 +18,14 @@ if mods["canal-excavator"] then
 			--{ type = "fluid", name = "water", amount = 25 },
 		}
 
-		data.raw["recipe"]["canex-digable"].category = "advanced-crafting"
+		data.raw["recipe"]["canex-digable"].crafting_machine_tint = {
+			primary = { r = 0.37, g = 0.37, b = 0.18, a = 1.000 },
+			secondary = { r = 0.47, g = 0.47, b = 0.28, a = 1.000 },
+			tertiary = { r = 0.37, g = 0.37, b = 0.18, a = 1.000 },
+			quaternary = { r = 0.47, g = 0.47, b = 0.28, a = 1.000 },
+		}
+
+		data.raw["recipe"]["canex-digable"].category = "organic-or-assembling"
 	end
 end
 --cargo-ships

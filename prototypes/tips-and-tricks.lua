@@ -111,7 +111,7 @@ data:extend({
 		indent = 1,
 		trigger = {
 			type = "research",
-			technology = "deep_sea_oil_extraction",
+			technology = "coconut-processing-technology",
 		},
 	},
 })

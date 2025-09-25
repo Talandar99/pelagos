@@ -12,8 +12,10 @@ data:extend({
 		ingredients = { { type = "item", name = "coconut-meat", amount = 2 } },
 		results = { { type = "item", name = "nutrients", amount = 8 } },
 		crafting_machine_tint = {
-			primary = { r = 1.000, g = 1.000, b = 1.000, a = 1.000 },
-			secondary = { r = 0.900, g = 0.900, b = 0.900, a = 1.000 },
+			primary = { r = 1.000, g = 1.000, b = 0.900, a = 1.000 },
+			secondary = { r = 0.900, g = 0.900, b = 0.800, a = 1.000 },
+			tertiary = { r = 1.000, g = 1.000, b = 0.900, a = 1.000 },
+			quaternary = { r = 0.900, g = 0.900, b = 0.800, a = 1.000 },
 		},
 	},
 	{
@@ -33,8 +35,10 @@ data:extend({
 			{ type = "item", name = "coconut-husk", amount = 2 },
 		},
 		crafting_machine_tint = {
-			primary = { r = 0.960, g = 0.870, b = 0.690, a = 1.000 },
-			secondary = { r = 0.820, g = 0.620, b = 0.360, a = 1.000 },
+			primary = { r = 0.860, g = 0.770, b = 0.590, a = 1.000 },
+			secondary = { r = 0.720, g = 0.520, b = 0.260, a = 1.000 },
+			tertiary = { r = 0.860, g = 0.770, b = 0.590, a = 1.000 },
+			quaternary = { r = 0.720, g = 0.520, b = 0.260, a = 1.000 },
 		},
 	},
 	{
@@ -44,7 +48,7 @@ data:extend({
 		subgroup = "fluid-recipes",
 		order = "a[fluid]-b[coconut-oil]",
 		auto_recycle = false,
-		energy_required = 10,
+		energy_required = 6,
 		ingredients = {
 			{ type = "item", name = "coconut-meat", amount = 15 },
 		},
@@ -53,7 +57,9 @@ data:extend({
 		enabled = false,
 		crafting_machine_tint = {
 			primary = { r = 1.000, g = 0.940, b = 0.620, a = 1.000 },
-			secondary = { r = 0.900, g = 0.780, b = 0.400, a = 1.000 },
+			secondary = { r = 0.900, g = 0.780, b = 0.500, a = 1.000 },
+			tertiary = { r = 1.000, g = 0.940, b = 0.620, a = 1.000 },
+			quaternary = { r = 0.900, g = 0.780, b = 0.500, a = 1.000 },
 		},
 	},
 	{
@@ -72,8 +78,10 @@ data:extend({
 		allow_productivity = true,
 		enabled = false,
 		crafting_machine_tint = {
-			primary = { r = 0.750, g = 0.550, b = 0.350, a = 1.000 },
-			secondary = { r = 0.500, g = 0.350, b = 0.200, a = 1.000 },
+			primary = { r = 0.850, g = 0.650, b = 0.450, a = 1.000 },
+			secondary = { r = 0.600, g = 0.450, b = 0.300, a = 1.000 },
+			tertiary = { r = 0.850, g = 0.650, b = 0.450, a = 1.000 },
+			quaternary = { r = 0.600, g = 0.450, b = 0.300, a = 1.000 },
 		},
 	},
 	{
@@ -99,8 +107,10 @@ data:extend({
 		results = { { type = "item", name = "pelagos-science-pack", amount = 1 } },
 		allow_productivity = true,
 		crafting_machine_tint = {
-			primary = { r = 0.5, g = 0.7, b = 0.3, a = 1.000 },
-			secondary = { r = 0.7, g = 0.9, b = 0.6, a = 1.000 },
+			primary = { r = 0.39, g = 0.48, b = 0.26, a = 1.000 },
+			secondary = { r = 0.49, g = 0.58, b = 0.36, a = 1.000 },
+			tertiary = { r = 0.39, g = 0.48, b = 0.26, a = 1.000 },
+			quaternary = { r = 0.49, g = 0.58, b = 0.36, a = 1.000 },
 		},
 	},
 	{
@@ -130,8 +140,10 @@ data:extend({
 		},
 		main_product = "fermentation-bacteria",
 		crafting_machine_tint = {
-			primary = { r = 0.5, g = 0.7, b = 0.3, a = 1.000 },
-			secondary = { r = 0.7, g = 0.9, b = 0.6, a = 1.000 },
+			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
+			secondary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
+			tertiary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
+			quaternary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
 		},
 	},
 	{
@@ -160,8 +172,10 @@ data:extend({
 			{ type = "item", name = "fermentation-bacteria", amount = 4 },
 		},
 		crafting_machine_tint = {
-			primary = { r = 0.5, g = 0.7, b = 0.3, a = 1.000 },
-			secondary = { r = 0.7, g = 0.9, b = 0.6, a = 1.000 },
+			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
+			secondary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
+			tertiary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
+			quaternary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
 		},
 		show_amount_in_title = false,
 	},
@@ -180,7 +194,7 @@ data:extend({
 		enabled = false,
 		allow_productivity = true,
 		reset_freshness_on_craft = true,
-		energy_required = 6,
+		energy_required = 10,
 		ingredients = {
 			{ type = "item", name = "fermentation-bacteria", amount = 5 },
 			{ type = "item", name = "nutrients", amount = 20 },
@@ -191,8 +205,10 @@ data:extend({
 			{ type = "fluid", name = "ethanol", amount = 120 },
 		},
 		crafting_machine_tint = {
-			primary = { r = 0.5, g = 0.8, b = 1.0, a = 1.000 },
-			secondary = { r = 0.7, g = 0.9, b = 1.0, a = 1.000 },
+			primary = { r = 0.68, g = 0.83, b = 0.9, a = 1.000 },
+			secondary = { r = 0.78, g = 0.93, b = 1.0, a = 1.000 },
+			tertiary = { r = 0.68, g = 0.83, b = 0.9, a = 1.000 },
+			quaternary = { r = 0.78, g = 0.93, b = 1.0, a = 1.000 },
 		},
 		show_amount_in_title = false,
 	},
@@ -250,8 +266,10 @@ data:extend({
 			{ type = "item", name = "spoilage", amount = 50 },
 		},
 		crafting_machine_tint = {
-			primary = { r = 0.2, g = 0.4, b = 0.2, a = 1.000 },
-			secondary = { r = 0.4, g = 0.6, b = 0.3, a = 1.000 },
+			primary = { r = 0.27, g = 0.27, b = 0.08, a = 1.000 },
+			secondary = { r = 0.37, g = 0.37, b = 0.18, a = 1.000 },
+			tertiary = { r = 0.27, g = 0.27, b = 0.08, a = 1.000 },
+			quaternary = { r = 0.37, g = 0.37, b = 0.18, a = 1.000 },
 		},
 	},
 	{
@@ -272,8 +290,10 @@ data:extend({
 			{ type = "item", name = "spoilage", amount = 30 },
 		},
 		crafting_machine_tint = {
-			primary = { r = 0.2, g = 0.4, b = 0.2, a = 1.000 },
-			secondary = { r = 0.4, g = 0.6, b = 0.3, a = 1.000 },
+			primary = { r = 0.27, g = 0.27, b = 0.08, a = 1.000 },
+			secondary = { r = 0.37, g = 0.37, b = 0.18, a = 1.000 },
+			tertiary = { r = 0.27, g = 0.27, b = 0.08, a = 1.000 },
+			quaternary = { r = 0.37, g = 0.37, b = 0.18, a = 1.000 },
 		},
 	},
 	{
@@ -380,7 +400,7 @@ data:extend({
 		enabled = false,
 		ingredients = {
 			{ type = "item", name = "wood", amount = 20 },
-			{ type = "item", name = "coconut-sealant", amount = 10 },
+			{ type = "item", name = "coconut-sealant", amount = 5 },
 			{ type = "item", name = "coconut-husk", amount = 10 },
 		},
 		results = { { type = "item", name = "wooden-platform", amount = 1 } },
@@ -433,8 +453,10 @@ data:extend({
 			{ type = "item", name = "spoilage", amount = 10 },
 		},
 		crafting_machine_tint = {
-			primary = { r = 0.2, g = 0.4, b = 0.2, a = 1.000 },
-			secondary = { r = 0.4, g = 0.6, b = 0.3, a = 1.000 },
+			primary = { r = 0.45, g = 0.67, b = 0.72, a = 1.000 },
+			secondary = { r = 0.65, g = 0.87, b = 0.92, a = 1.000 },
+			tertiary = { r = 0.45, g = 0.67, b = 0.72, a = 1.000 },
+			quaternary = { r = 0.65, g = 0.87, b = 0.92, a = 1.000 },
 		},
 		main_product = "titanium-dust",
 	},
@@ -450,6 +472,12 @@ data:extend({
 		ingredients = { { type = "item", name = "titanium-dust", amount = 2 } },
 		results = { { type = "item", name = "titanium-plate", amount = 1 } },
 		allow_productivity = true,
+		crafting_machine_tint = {
+			primary = { r = 0.45, g = 0.67, b = 0.72, a = 1.000 },
+			secondary = { r = 0.65, g = 0.87, b = 0.92, a = 1.000 },
+			tertiary = { r = 0.45, g = 0.67, b = 0.72, a = 1.000 },
+			quaternary = { r = 0.65, g = 0.87, b = 0.92, a = 1.000 },
+		},
 	},
 
 	{
@@ -541,8 +569,10 @@ data:extend({
 			{ type = "item", name = "fermented-fish", amount = 5 },
 		},
 		crafting_machine_tint = {
-			primary = { r = 0.2, g = 0.6, b = 0.2, a = 1.000 },
-			secondary = { r = 0.4, g = 0.8, b = 0.3, a = 1.000 },
+			primary = { r = 0.78, g = 0.82, b = 0.35, a = 1.000 },
+			secondary = { r = 0.6, g = 0.77, b = 0.82, a = 1.000 },
+			tertiary = { r = 0.78, g = 0.82, b = 0.35, a = 1.000 },
+			quaternary = { r = 0.6, g = 0.77, b = 0.82, a = 1.000 },
 		},
 	},
 })

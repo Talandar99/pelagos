@@ -42,7 +42,9 @@ data:extend({
 		},
 		crafting_machine_tint = {
 			primary = { r = 1.0, g = 1.0, b = 1.0, a = 1.000 },
-			secondary = { r = 0.9, g = 1.0, b = 0.7, a = 1.000 },
+			secondary = { r = 0.9, g = 1.0, b = 0.8, a = 1.000 },
+			tertiary = { r = 1.0, g = 1.0, b = 1.0, a = 1.000 },
+			quaternary = { r = 0.9, g = 1.0, b = 0.8, a = 1.000 },
 		},
 	},
 	{
@@ -65,8 +67,10 @@ data:extend({
 		},
 		main_product = "lubricant",
 		crafting_machine_tint = {
-			primary = { r = 0.2, g = 0.6, b = 0.2, a = 1.000 },
-			secondary = { r = 0.4, g = 0.8, b = 0.3, a = 1.000 },
+			primary = { r = 0.22, g = 0.64, b = 0.11, a = 1.000 },
+			secondary = { r = 0.2, g = 0.22, b = 0.1, a = 1.000 },
+			tertiary = { r = 0.22, g = 0.64, b = 0.11, a = 1.000 },
+			quaternary = { r = 0.2, g = 0.22, b = 0.1, a = 1.000 },
 		},
 	},
 	{
@@ -122,8 +126,10 @@ data:extend({
 		},
 		results = { { type = "item", name = "landfill", amount = 1 } },
 		crafting_machine_tint = {
-			primary = { r = 0.35, g = 0.25, b = 0.1, a = 1.000 },
-			secondary = { r = 0.1, g = 0.3, b = 0.1, a = 1.000 },
+			primary = { r = 0.37, g = 0.37, b = 0.18, a = 1.000 },
+			secondary = { r = 0.47, g = 0.47, b = 0.28, a = 1.000 },
+			tertiary = { r = 0.37, g = 0.37, b = 0.18, a = 1.000 },
+			quaternary = { r = 0.47, g = 0.47, b = 0.28, a = 1.000 },
 		},
 	},
 	{
@@ -154,6 +160,12 @@ data:extend({
 		results = { { type = "item", name = "explosives", amount = 2 } },
 		auto_recycle = false,
 		enabled = false,
+		crafting_machine_tint = {
+			primary = { r = 1.0, g = 0.33, b = 0.15, a = 1.000 },
+			secondary = { r = 0.64, g = 0.11, b = 0.3, a = 1.000 },
+			tertiary = { r = 1.0, g = 0.33, b = 0.15, a = 1.000 },
+			quaternary = { r = 0.64, g = 0.11, b = 0.3, a = 1.000 },
+		},
 	},
 	{
 		type = "recipe",
