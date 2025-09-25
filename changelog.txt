@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.7.10
+Version: 0.8.0
 Date: 2025-09-25
   Changes:
     - moved wooden platform tips and tricks unlock from deep sea oil extraction tech to coconut processing to make it easier get early on
