@@ -74,7 +74,7 @@ data:extend({
 		enabled = false,
 		energy_required = 6,
 		ingredients = {
-			{ type = "item", name = "engine-unit", amount = 1 },
+			{ type = "item", name = "coconut-sealant", amount = 1 },
 			{ type = "item", name = "transport-belt", amount = 1 },
 		},
 		results = { { type = "item", name = "logistic-science-pack", amount = 1 } },

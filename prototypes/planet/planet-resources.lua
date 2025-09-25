@@ -25,7 +25,8 @@ data:extend({
 		order = "a-b-b",
 		infinite = true,
 		highlight = true,
-		minimum = 60000,
+		--minimum = 60000,
+		minimum = 100000,
 		normal = 250000,
 		surface_conditions = {
 			{
@@ -34,7 +35,7 @@ data:extend({
 				max = 1500,
 			},
 		},
-		infinite_depletion_amount = 20,
+		infinite_depletion_amount = 1,
 		resource_patch_search_radius = 50,
 		minable = {
 			mining_time = 1,
@@ -42,8 +43,8 @@ data:extend({
 				{
 					type = "fluid",
 					name = "titanium-sludge",
-					amount_min = 4, --base is 10
-					amount_max = 4, --base is 10
+					amount_min = 6, --base is 10
+					amount_max = 6, --base is 10
 					probability = 1,
 				},
 			},
@@ -110,7 +111,8 @@ data:extend({
 		order = "a-b-b",
 		infinite = true,
 		highlight = true,
-		minimum = 60000,
+		--minimum = 60000,
+		minimum = 100000,
 		normal = 250000,
 		surface_conditions = {
 			{
@@ -119,7 +121,7 @@ data:extend({
 				max = 1500,
 			},
 		},
-		infinite_depletion_amount = 20,
+		infinite_depletion_amount = 1,
 		resource_patch_search_radius = 50,
 		minable = {
 			mining_time = 1,
@@ -127,8 +129,8 @@ data:extend({
 				{
 					type = "fluid",
 					name = "methane",
-					amount_min = 4, --base is 10
-					amount_max = 4, --base is 10
+					amount_min = 6, --base is 10
+					amount_max = 6, --base is 10
 					probability = 1,
 				},
 			},

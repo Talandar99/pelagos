@@ -440,7 +440,7 @@ data:extend({
 		dying_trigger_effect = decorative_trigger_effects.big_rock(),
 		minable = {
 			mining_particle = "copper-ore-particle",
-			mining_time = 0.4,
+			mining_time = 1,
 			results = {
 				{ type = "item", name = "stone", amount_min = 5, amount_max = 10 },
 				{ type = "item", name = "copper-ore", amount_min = 25, amount_max = 30 },

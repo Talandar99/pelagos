@@ -87,10 +87,10 @@ if mods["cargo-ships"] then
 	if data.raw["recipe"]["oil_rig"] then
 		data.raw["recipe"]["oil_rig"].ingredients = {
 			{ type = "item", name = "steel-plate", amount = 200 },
-			{ type = "item", name = "electronic-circuit", amount = 50 },
+			{ type = "item", name = "iron-gear-wheel", amount = 50 },
 			{ type = "item", name = "pipe", amount = 100 },
-			{ type = "item", name = "steam-engine", amount = 1 },
-			{ type = "item", name = "pumpjack", amount = 5 },
+			{ type = "item", name = "steam-engine", amount = 3 },
+			{ type = "item", name = "storage-tank", amount = 6 },
 			{ type = "item", name = "coconut-sealant", amount = 300 },
 		}
 	end

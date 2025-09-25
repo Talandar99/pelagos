@@ -2219,7 +2219,7 @@ data:extend({
 			},
 			emissions_per_minute = { pollution = 16 }, --12 is burner drill ,10 is electric drill
 		},
-		energy_usage = "360kW", -- 90kW is electric drill and 150 is burner drill
+		energy_usage = "270kW", -- 90kW is electric drill and 150 is burner drill
 		resource_searching_radius = 2.49,
 		vector_to_place_result = { 0, -1.85 },
 		module_slots = 3,

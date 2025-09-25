@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+Date: 2025-09-25
+  Changes:
+    - any planet start pelagos logistic science pack recipe now require coconut sealant instead of engine unit
+    - fixed bug where you get regular pump when mining diesel pump
+    - oil rig now cost 50 gear wheel instead of 50 electric circuits
+    - oil rig cost changed (1 steam engine and 5 pumpjacks) -> (6 storage tank and 3 steam engines)
+    - increased ammount of mined methane and titanium sludge by 2
+    - methane and titanium sludge patches depletion time has been increased
+    - methane and titanium sludge patches depletion can't be lower than 40%
+    - added inserter fuel leech as optional dependency
+    - added popup after launching new any planet start run without burner leech mod, that informs that it is intended to have it
+    - increased mining time of copper stromatolite (0.4 -> 1)
+    - reduced energy usage of diesel assembling machine (400->300kW)
+    - reduced energy usage of diesel drill (360->270kW)
+    - improved cargo ship and tanker fuel efficiency
+---------------------------------------------------------------------------------------------------
 Version: 0.8.0
 Date: 2025-09-25
   Changes:
@@ -7,7 +24,7 @@ Date: 2025-09-25
     - increased ethanol crafting time (6 -> 10)
     - reduced coconut oil crafting time (10 -> 6)
     - reduced wooden platform crafting cost (10 sealant-> 5 sealant)
-    - all pelagos recipes now have 4 tint colors. They are compatible with mods like collored_biochambers
+    - all pelagos recipes now have 4 tint colors. They are compatible with mods like collored_biochamber
     - colorful_biochamber added to optional dependencies
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.9

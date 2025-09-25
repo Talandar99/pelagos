@@ -27,7 +27,7 @@ data:extend({
 		name = "diesel-pump",
 		icon = "__pelagos__/graphics/diesel-pump.png",
 		flags = { "placeable-neutral", "player-creation" },
-		minable = { mining_time = 0.2, result = "pump" },
+		minable = { mining_time = 0.2, result = "diesel-pump" },
 		max_health = 180,
 		fast_replaceable_group = "pipe",
 		corpse = "pump-remnants",

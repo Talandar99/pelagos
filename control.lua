@@ -194,3 +194,32 @@ script.on_event(defines.events.on_robot_built_entity, function(event)
 	on_entity_built(event)
 	on_built_rocket_silo(event)
 end)
+
+script.on_event(defines.events.on_player_created, function(event)
+	storage.init = storage.init or {}
+	if storage.init[event.player_index] then
+		return
+	end
+	storage.init[event.player_index] = true
+
+	if not script.active_mods["any-planet-start"] then
+		return
+	end
+
+	local setting = settings.startup["aps-planet"]
+	if not setting or setting.value ~= "pelagos" then
+		return
+	end
+
+	if
+		not script.active_mods["Burner-Leech-Fork"]
+		and not script.active_mods["Burner-Leech"]
+		and not script.active_mods["InserterFuelLeech"]
+	then
+		game.print(
+			"Pelagos: You are starting Any Planet Start game without a burner leech mod. "
+				.. "The intended experience is to use one. You can disable such a mod after the burner phase of the game. "
+				.. "See the mod page for more details."
+		)
+	end
+end)
