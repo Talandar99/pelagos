@@ -29,7 +29,7 @@ for _, fluid in pairs(data.raw.fluid) do
 						barrel.fuel_acceleration_multiplier = 1 + (number_part / 2)
 						barrel.fuel_emissions_multiplier = rocket.fuel_emissions_multiplier
 						barrel.fuel_glow_color = rocket.fuel_glow_color
-						barrel.fuel_top_speed_multiplier_quality_bonus = rocket.fuel_top_speed_multiplier_quality_bonus
+						barrel.fuel_top_speed_multiplier = rocket.fuel_top_speed_multiplier
 					end
 				end
 			end
