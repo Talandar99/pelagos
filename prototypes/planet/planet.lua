@@ -41,8 +41,9 @@ data:extend({
 		minable = {
 			mining_time = 1,
 			results = {
-				{ type = "item", name = "stone", amount = 20 },
-				{ type = "item", name = "fermentation-bacteria", amount = 5 },
+				{ type = "item", name = "stone", amount_min = 18, amount_max = 22 },
+				{ type = "item", name = "fermentation-bacteria", amount_min = 4, amount_max = 6 },
+				{ type = "item", name = "spoilage", amount_min = 2, amount_max = 3 },
 			},
 		},
 		autoplace = {
@@ -717,7 +718,7 @@ local function MapGen_Pelagos()
 			--	},
 			["iron-ore"] = {
 				frequency = 4,
-				size = 1,
+				size = 1.1,
 				richness = 2,
 				starting_area = false,
 			},

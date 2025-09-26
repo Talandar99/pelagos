@@ -239,6 +239,7 @@ data:extend({
 		type = "recipe",
 		name = "degradation-module-3",
 		enabled = false,
+		auto_recycle = false,
 		ingredients = {
 			{ type = "item", name = "degradation-module-2", amount = 4 },
 			{ type = "item", name = "advanced-circuit", amount = 5 },
@@ -587,5 +588,6 @@ data:extend({
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
 		results = { { type = "item", name = "poisonus-firearm-magazine", amount = 1 } },
+		auto_recycle = false,
 	},
 })

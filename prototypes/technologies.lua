@@ -143,6 +143,7 @@ if mods["canal-excavator"] then
 	local t = data.raw["technology"]["canex-excavator"]
 	t.prerequisites = {
 		"planet-discovery-pelagos",
+		"coconut-processing-technology",
 		--"engine", -- important for any planet start
 	}
 	t.effects = {

@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.1
+Date: 2025-09-26
+  Changes:
+    - poisonus firearm magazine can't be recycled into bacteria to prevent stacking it 
+    - degradation module can't be recycled into bacteria to prevent stacking it 
+    - diesel excavator now require coconut processing technology because it has sealant in recipe
+    - pelagos big rock now have small ammount of spoilage
+    - heating tower don't generate EM waves anymore
+---------------------------------------------------------------------------------------------------
 Version: 0.9.0
 Date: 2025-09-26
   Changes:

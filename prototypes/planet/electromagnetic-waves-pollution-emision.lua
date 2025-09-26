@@ -58,3 +58,8 @@ for _, protos in pairs(data.raw) do
 		add_em_to_generator(proto)
 	end
 end
+
+local entity = data.raw["reactor"]["heating-tower"]
+entity.energy_source = entity.energy_source or {}
+entity.energy_source.emissions_per_minute = entity.energy_source.emissions_per_minute or {}
+entity.energy_source.emissions_per_minute.electromagnetic_waves = 0
