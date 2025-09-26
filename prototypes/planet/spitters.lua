@@ -48,11 +48,11 @@ function coper_spitter_spawner_idle_animation(variation, tint, captured)
 end
 local copper_tints = {
 	--small = { r = 0.5, g = 0.3, b = 0.0, a = 1 },
-	small = { r = 0.7, g = 0.36, b = 0.2, a = 1 },
-	medium = { r = 0.7, g = 0.36, b = 0.2, a = 1 },
-	big = { r = 0.7, g = 0.36, b = 0.2, a = 1 },
-	behemoth = { r = 0.7, g = 0.36, b = 0.2, a = 1 },
-	leviathan = { r = 0.7, g = 0.36, b = 0.2, a = 1 },
+	small = { r = 0.7, g = 0.36, b = 0.1, a = 1 },
+	medium = { r = 0.7, g = 0.36, b = 0.1, a = 1 },
+	big = { r = 0.7, g = 0.36, b = 0.1, a = 1 },
+	behemoth = { r = 0.7, g = 0.36, b = 0.1, a = 1 },
+	leviathan = { r = 0.7, g = 0.36, b = 0.1, a = 1 },
 	--leviathan = { r = 0.9, g = 0.7, b = 0.3, a = 1 },
 }
 data:extend({
@@ -76,6 +76,7 @@ data:extend({
 		resistances = {
 			--{ type = "physical", decrease = 2, percent = 15 },
 			--{ type = "explosion", decrease = 5 },
+			{ type = "physical", decrease = 0, percent = 10 },
 			{ type = "fire", decrease = 0, percent = 10 },
 			{ type = "laser", decrease = 10, percent = 99 },
 			{ type = "electric", decrease = 10, percent = 99 },
@@ -133,6 +134,7 @@ data:extend({
 		min_pursue_time = 10 * 60,
 		max_pursue_distance = 50,
 		resistances = {
+			{ type = "physical", decrease = 1, percent = 10 },
 			{ type = "fire", decrease = 2, percent = 30 },
 			{ type = "laser", decrease = 10, percent = 95 },
 			{ type = "electric", decrease = 10, percent = 95 },
@@ -186,6 +188,7 @@ data:extend({
 		min_pursue_time = 10 * 60,
 		max_pursue_distance = 50,
 		resistances = {
+			{ type = "physical", decrease = 2, percent = 20 },
 			{ type = "fire", decrease = 3, percent = 50 },
 			{ type = "laser", decrease = 12, percent = 97 },
 			{ type = "electric", decrease = 12, percent = 97 },
@@ -239,6 +242,7 @@ data:extend({
 		min_pursue_time = 10 * 60,
 		max_pursue_distance = 50,
 		resistances = {
+			{ type = "physical", decrease = 5, percent = 30 },
 			{ type = "fire", decrease = 3, percent = 70 },
 			{ type = "laser", decrease = 15, percent = 99 },
 			{ type = "electric", decrease = 15, percent = 99 },
@@ -292,6 +296,7 @@ data:extend({
 		min_pursue_time = 10 * 60,
 		max_pursue_distance = 60,
 		resistances = {
+			{ type = "physical", decrease = 10, percent = 50 },
 			{ type = "explosion", decrease = 10, percent = 80 },
 			{ type = "fire", decrease = 3, percent = 90 },
 			{ type = "laser", decrease = 20, percent = 99 },

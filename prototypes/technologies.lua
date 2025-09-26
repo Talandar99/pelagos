@@ -111,6 +111,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "fermented-fish" },
 			{ type = "unlock-recipe", recipe = "pelagos-capture-robot-rocket" },
 			{ type = "unlock-recipe", recipe = "copper-biter-egg" },
+			{ type = "unlock-recipe", recipe = "poisonus-firearm-magazine" },
 		},
 		prerequisites = { "deep_sea_oil_extraction" },
 		research_trigger = {

@@ -36,6 +36,22 @@ local function add_em_to_generator(proto)
 	end
 end
 
+local tiles = { "sand-1", "sand-2" }
+for _, tile in pairs(tiles) do
+	if data.raw.tile[tile] then
+		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
+		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00003
+	end
+end
+
+local tiles = { "pelagos-deepsea", "water" }
+for _, tile in pairs(tiles) do
+	if data.raw.tile[tile] then
+		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
+		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000003
+	end
+end
+
 for _, protos in pairs(data.raw) do
 	for _, proto in pairs(protos) do
 		add_em_to_electric(proto)

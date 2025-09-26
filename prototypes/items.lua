@@ -346,3 +346,57 @@ data:extend({
 		--capsule_action = item_effects.bioflux_speed_and_regen,
 	},
 })
+
+data:extend({
+	{
+		type = "ammo",
+		name = "poisonus-firearm-magazine",
+		icon = "__pelagos__/graphics/poisonus-firearm-magazine.png",
+		ammo_category = "bullet",
+		ammo_type = {
+			action = {
+				{
+					type = "direct",
+					action_delivery = {
+						{
+							type = "instant",
+							source_effects = {
+								{
+									type = "create-explosion",
+									entity_name = "explosion-gunshot",
+									only_when_visible = true,
+								},
+							},
+							target_effects = {
+								{
+									type = "create-entity",
+									entity_name = "explosion-hit",
+									offsets = { { 0, 1 } },
+									offset_deviation = { { -0.5, -0.5 }, { 0.5, 0.5 } },
+									only_when_visible = true,
+								},
+								{
+									type = "damage",
+									damage = { amount = 5, type = "poison" },
+								},
+								{
+									type = "activate-impact",
+									deliver_category = "bullet",
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+		magazine_size = 10,
+		subgroup = "ammo",
+		order = "a[basic-clips]-a[poisonus-firearm-magazine]",
+		inventory_move_sound = item_sounds.ammo_small_inventory_move,
+		pick_sound = item_sounds.ammo_small_inventory_pickup,
+		drop_sound = item_sounds.ammo_small_inventory_move,
+		stack_size = 100,
+		weight = 20 * kg,
+		default_import_location = "pelagos",
+	},
+})

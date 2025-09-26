@@ -25,10 +25,6 @@ end
 
 require("prototypes.liquid-fuel.fuel-value")
 require("prototypes.liquid-fuel.barrel-fuel")
-if settings.startup["pelagos-fluid-value-based-flamethrower"].value then
-	require("prototypes.liquid-fuel.fuel-value-flamethrower")
-end
-
 require("prototypes.pirate-ship")
 require("prototypes.liquid-fuel.rocket-silo")
 require("prototypes.planet.electromagnetic-waves-pollution-emision")

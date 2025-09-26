@@ -60,6 +60,7 @@ data:extend({
 			},
 		},
 		energy_source = {
+
 			type = "fluid",
 			burns_fluid = true, -- fluid used as power
 			scale_fluid_usage = true,

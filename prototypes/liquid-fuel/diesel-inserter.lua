@@ -52,7 +52,9 @@ data:extend({
 		--	usage_priority = "secondary-input",
 		--	drain = "0.4kW",
 		--},
+		--
 		energy_source = {
+
 			type = "fluid",
 			burns_fluid = true, -- fluid used as power
 			scale_fluid_usage = true,

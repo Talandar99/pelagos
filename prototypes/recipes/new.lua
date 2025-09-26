@@ -50,7 +50,7 @@ data:extend({
 		auto_recycle = false,
 		energy_required = 6,
 		ingredients = {
-			{ type = "item", name = "coconut-meat", amount = 15 },
+			{ type = "item", name = "coconut-meat", amount = 10 },
 		},
 		results = { { type = "fluid", name = "coconut-oil", amount = 10 } },
 		allow_productivity = true,
@@ -574,5 +574,18 @@ data:extend({
 			tertiary = { r = 0.78, g = 0.82, b = 0.35, a = 1.000 },
 			quaternary = { r = 0.6, g = 0.77, b = 0.82, a = 1.000 },
 		},
+	},
+})
+
+data:extend({
+	{
+		type = "recipe",
+		name = "poisonus-firearm-magazine",
+		energy_required = 1,
+		ingredients = {
+			{ type = "item", name = "firearm-magazine", amount = 2 },
+			{ type = "item", name = "fermentation-bacteria", amount = 1 },
+		},
+		results = { { type = "item", name = "poisonus-firearm-magazine", amount = 1 } },
 	},
 })

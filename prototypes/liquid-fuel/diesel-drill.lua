@@ -2189,6 +2189,7 @@ data:extend({
 
 		mining_speed = 1.5, -- electric-mining-drill is 0.5 and big is 2.5
 		energy_source = {
+
 			type = "fluid",
 			burns_fluid = true, -- fluid used as power
 			scale_fluid_usage = true,
