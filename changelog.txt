@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.3
+Date: 2025-09-27
+  Changes:
+    - added 1 module slot to diesel assembling machine
+    - changed crafting speed of diesel assembling machine from 1 to 1.25
+---------------------------------------------------------------------------------------------------
 Version: 0.9.2
 Date: 2025-09-26
   Changes:
