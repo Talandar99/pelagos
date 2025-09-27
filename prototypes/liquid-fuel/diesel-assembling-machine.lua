@@ -158,7 +158,7 @@ data:extend({
 			"barreling",
 		},
 
-		crafting_speed = 1.0,
+		crafting_speed = 1.25,
 		energy_source = {
 			type = "fluid",
 			burns_fluid = true, -- fluid used as power
@@ -188,7 +188,7 @@ data:extend({
 			emissions_per_minute = { pollution = 10 }, --12 is burner drill ,10 is electric drill
 		},
 		energy_usage = "300kW",
-		module_slots = 3,
+		module_slots = 4,
 		allowed_effects = { "consumption", "speed", "productivity", "pollution", "quality" },
 	},
 })

@@ -2,6 +2,13 @@
 Version: 0.9.2
 Date: 2025-09-26
   Changes:
+    - changed locale for technology "Deep sea oil extraction" is now "Deep sea extraction"
+    - changed locale for technology description of "Deep sea extraction"
+    - reduced generation and consumption of electricity by oil rig by 100kW
+---------------------------------------------------------------------------------------------------
+Version: 0.9.2
+Date: 2025-09-26
+  Changes:
     - fuel_top_speed_multiplier now applies correctly to every fuel 
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.1

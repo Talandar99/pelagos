@@ -30,7 +30,7 @@ if data.raw["storage-tank"]["or_tank"] then
 end
 
 if data.raw["mining-drill"]["oil_rig"] then
-	data.raw["mining-drill"]["oil_rig"].energy_usage = "220kW" -- was 750
+	data.raw["mining-drill"]["oil_rig"].energy_usage = "120kW" -- was 750
 end
 
 -- hide bridge and all related things
