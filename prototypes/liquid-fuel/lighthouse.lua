@@ -45,7 +45,7 @@ data:extend({
 		energy_per_sector = "1MJ",
 		--max_distance_of_sector_revealed = 14,--vanilla
 		--max_distance_of_sector_revealed = 36,--maraxsis sonar
-		max_distance_of_sector_revealed = 28,
+		max_distance_of_sector_revealed = 42,
 		--max_distance_of_nearby_sector_revealed = 3,--vanilla
 		--max_distance_of_nearby_sector_revealed = 6,--maraxsis sonar
 		max_distance_of_nearby_sector_revealed = 1,

@@ -7,6 +7,7 @@ require("prototypes.planet.noise-expressions")
 require("prototypes.planet.planet-resources")
 require("prototypes.planet.planet")
 require("prototypes.planet.spitters")
+require("prototypes.planet.explosions")
 require("prototypes.recipes.alternative-vanila")
 require("prototypes.recipes.calciner")
 require("prototypes.recipes.new")
@@ -18,7 +19,7 @@ require("prototypes.liquid-fuel.diesel-inserter")
 require("prototypes.liquid-fuel.diesel-pump")
 require("prototypes.liquid-fuel.diesel-assembling-machine")
 require("prototypes.liquid-fuel.barreling-machine")
---require("prototypes.liquid-fuel.lighthouse")
+require("prototypes.liquid-fuel.lighthouse")
 require("prototypes.rockets")
 require("prototypes.canal-excavator")
 require("prototypes.cargo-ships")
@@ -36,7 +37,7 @@ end
 if data.raw["rocket-silo"]["rocket-silo"] then
 	local pelagos_silo = table.deepcopy(data.raw["rocket-silo"]["rocket-silo"])
 	pelagos_silo.name = "pelagos-rocket-silo"
-	pelagos_silo.hidden = true -- nie pojawi się w budowaniu
+	pelagos_silo.hidden = true
 	pelagos_silo.selectable_in_game = false
 
 	data:extend({ pelagos_silo })
