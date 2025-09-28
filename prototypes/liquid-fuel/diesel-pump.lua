@@ -29,7 +29,7 @@ data:extend({
 		flags = { "placeable-neutral", "player-creation" },
 		minable = { mining_time = 0.2, result = "diesel-pump" },
 		max_health = 180,
-		fast_replaceable_group = "pipe",
+		--fast_replaceable_group = "pipe",
 		corpse = "pump-remnants",
 		dying_explosion = "pump-explosion",
 		collision_box = { { -0.29, -0.9 }, { 0.29, 0.9 } },

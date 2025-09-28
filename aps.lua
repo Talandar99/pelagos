@@ -3,16 +3,14 @@ local utils = require("__any-planet-start__.utils")
 -- agricultural tower by się przydał
 -- spoilage into nutrients
 
+-- red science
 utils.set_packs("engine", { "automation-science-pack" }, 50, 30)
 utils.set_prerequisites("engine", { "steel-processing" })
 utils.set_prerequisites("fluid-handling", { "engine" })
 utils.set_packs("fluid-handling", { "automation-science-pack" }, 25, 30)
-utils.set_prerequisites("logistic-science-pack", { "automation-science-pack", "engine" })
-utils.set_prerequisites("jellynut", { "planet-discovery-gleba" })
 utils.set_prerequisites("agriculture", { "steel-processing", "landfill" })
 utils.set_packs("agriculture", { "automation-science-pack" }, 20, 30)
 utils.remove_recipes("agriculture", { "nutrients-from-spoilage" })
-utils.add_recipes("coconut-processing-technology", { "nutrients-from-spoilage" })
 utils.set_prerequisites("fish-breeding", { "automation-science-pack" })
 utils.set_packs("fish-breeding", { "automation-science-pack" }, 25, 30)
 data.raw["technology"]["fish-breeding"].unit = {
@@ -22,28 +20,39 @@ data.raw["technology"]["fish-breeding"].unit = {
 	},
 	time = 30,
 }
-utils.set_prerequisites("jellynut", { "planet-discovery-gleba" })
-utils.set_prerequisites("yumako", { "planet-discovery-gleba" })
 utils.set_prerequisites("landfill", { "automation-science-pack" })
+utils.set_packs("landfill", { "automation-science-pack" }, 10, 30)
 utils.add_prerequisites("automation-science-pack", { "coconut-processing-technology" })
+utils.add_prerequisites("automated_water_transport", { "engine", "fluid-handling" })
+utils.add_prerequisites("canex-excavator", { "engine", "fluid-handling" })
+utils.add_recipes("fluid-handling", { "barreling-machine" })
+
+-- green science
+utils.set_prerequisites("logistic-science-pack", { "automation-science-pack", "engine" })
+utils.add_recipes("coconut-processing-technology", { "nutrients-from-spoilage" })
+utils.set_prerequisites("jellynut", { "planet-discovery-gleba" })
 utils.set_prerequisites("oil-processing", { "deep_sea_oil_extraction" })
 utils.set_trigger("oil-processing", { type = "mine-entity", entity = "methane" })
-utils.set_packs("landfill", { "automation-science-pack" }, 10, 30)
-utils.add_prerequisites("chemical-science-pack", { "pelagos-science-pack" })
 utils.add_prerequisites("pelagos-science-pack", { "plastics" })
---utils.add_prerequisites("automated_water_transport", { "logistics-2", "engine" })
-utils.add_prerequisites("automated_water_transport", { "engine", "fluid-handling" })
-utils.add_prerequisites("logistics-2", { "automated_water_transport" })
-utils.add_prerequisites("deep_sea_oil_extraction", { "fluid-handling" })
-utils.add_prerequisites("canex-excavator", { "engine", "fluid-handling" })
+utils.add_recipes("plastics", { "pelagos-bioplastic" })
+utils.add_recipes("explosives", { "pelagos-explosives" })
+utils.add_prerequisites("plastics", { "ethanol" })
+utils.remove_recipes("ethanol", { "pelagos-bioplastic", "pelagos-processing-unit", "pelagos-battery" })
+utils.remove_recipes("fermentation-bacteria-cultivation-technology", { "pelagos-biolubricant" })
+utils.add_prerequisites("copper-biter-captivity", { "plastics" })
+utils.add_prerequisites("chemical-science-pack", { "pelagos-science-pack" })
 utils.add_prerequisites("calciner", { "advanced-material-processing" })
--- diesel-automation
+utils.add_prerequisites("deep_sea_oil_extraction", { "fluid-handling" })
+utils.add_prerequisites("logistics-2", { "automated_water_transport" })
 utils.add_prerequisites("diesel-automation", { "automation-2" })
 utils.add_prerequisites("oil-gathering", { "logistic-science-pack" })
 
-utils.remove_recipes("pelagos-science-pack", { "pelagos-biolubricant", "pelagos-processing-unit", "pelagos-battery" })
+--blue science
+utils.remove_recipes(
+	"pelagos-science-pack",
+	{ "pelagos-biolubricant", "pelagos-processing-unit", "pelagos-battery", "pelagos-explosives" }
+)
 utils.remove_recipes("deep_sea_oil_extraction", { "barreling-machine" })
-utils.add_recipes("fluid-handling", { "barreling-machine" })
 utils.add_recipes("lubricant", { "pelagos-biolubricant" })
 utils.add_recipes("processing-unit", { "pelagos-processing-unit" })
 utils.add_recipes("battery", { "pelagos-battery" })
@@ -174,3 +183,5 @@ data.raw["technology"]["heating-tower"].unit = {
 }
 
 data.raw["technology"]["heating-tower"].research_trigger = nil
+utils.set_prerequisites("jellynut", { "planet-discovery-gleba" })
+utils.set_prerequisites("yumako", { "planet-discovery-gleba" })

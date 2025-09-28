@@ -399,4 +399,30 @@ data:extend({
 		weight = 20 * kg,
 		default_import_location = "pelagos",
 	},
+	{
+		type = "ammo",
+		name = "pelagos-capture-robot-rocket",
+		icon = "__pelagos__/graphics/capture-bot.png",
+		ammo_category = "rocket",
+		ammo_type = {
+			action = {
+				type = "direct",
+				action_delivery = {
+					type = "projectile",
+					projectile = "capture-robot-rocket",
+					starting_speed = 0.1,
+				},
+			},
+			target_filter = { "copper-biter-spawner" },
+		},
+		subgroup = "ammo",
+		order = "d[rocket-launcher]-d[capture-pelagos]",
+		inventory_move_sound = item_sounds.robotic_inventory_move,
+		pick_sound = item_sounds.robotic_inventory_pickup,
+		drop_sound = item_sounds.robotic_inventory_move,
+		stack_size = 10,
+		weight = 100 * kg,
+		shoot_protected = true,
+		default_import_location = "pelagos",
+	},
 })

@@ -109,9 +109,9 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "fermentation-bacteria" },
 			{ type = "unlock-recipe", recipe = "fermentation-bacteria-cultivation" },
 			{ type = "unlock-recipe", recipe = "fermented-fish" },
-			{ type = "unlock-recipe", recipe = "pelagos-capture-robot-rocket" },
-			{ type = "unlock-recipe", recipe = "copper-biter-egg" },
 			{ type = "unlock-recipe", recipe = "poisonus-firearm-magazine" },
+			{ type = "unlock-recipe", recipe = "pelagos-biolubricant" },
+			{ type = "unlock-recipe", recipe = "ethanol" },
 		},
 		prerequisites = { "deep_sea_oil_extraction" },
 		research_trigger = {
@@ -119,23 +119,6 @@ data:extend({
 			entity = "oil_rig",
 		},
 		order = "ea[pelagos]",
-	},
-})
-
-data:extend({
-	{
-		type = "technology",
-		name = "copper-biter-captivity",
-		icon = "__space-age__/graphics/technology/captivity.png",
-		icon_size = 256,
-		effects = {
-			{ type = "unlock-recipe", recipe = "copper-plate-from-spitter-egg" },
-		},
-		prerequisites = { "fermentation-bacteria-cultivation-technology", "rocketry" },
-		research_trigger = {
-			type = "craft-item",
-			item = "copper-biter-egg",
-		},
 	},
 })
 
@@ -211,6 +194,61 @@ data:extend({
 		order = "ea[pelagos]",
 	},
 })
+
+data:extend({
+	{
+		type = "technology",
+		name = "titanium",
+		icon = "__pelagos__/graphics/titanium-technology.png",
+		icon_size = 128,
+		effects = {
+			{ type = "unlock-recipe", recipe = "titanium-dust" },
+			{ type = "unlock-recipe", recipe = "titanium-plate" },
+		},
+		prerequisites = { "fermentation-bacteria-cultivation-technology" },
+		research_trigger = {
+			type = "mine-entity",
+			entity = "titanium-sludge",
+		},
+	},
+})
+data:extend({
+	{
+		type = "technology",
+		name = "ethanol",
+		icon = "__pelagos__/graphics/ethanol.png",
+		icon_size = 64,
+		effects = {
+			{ type = "unlock-recipe", recipe = "pelagos-bioplastic" },
+			{ type = "unlock-recipe", recipe = "pelagos-processing-unit" },
+			{ type = "unlock-recipe", recipe = "pelagos-battery" },
+		},
+		prerequisites = { "fermentation-bacteria-cultivation-technology", "calciner" },
+		research_trigger = {
+			type = "craft-fluid",
+			fluid = "ethanol",
+		},
+	},
+})
+data:extend({
+	{
+		type = "technology",
+		name = "copper-biter-captivity",
+		icon = "__space-age__/graphics/technology/captivity.png",
+		icon_size = 256,
+		effects = {
+			{ type = "unlock-recipe", recipe = "pelagos-capture-robot-rocket" },
+			{ type = "unlock-recipe", recipe = "copper-biter-egg" },
+			{ type = "unlock-recipe", recipe = "copper-plate-from-spitter-egg" },
+			{ type = "unlock-recipe", recipe = "copper-ore-bitter-egg" },
+		},
+		prerequisites = { "titanium", "ethanol", "rocketry" },
+		research_trigger = {
+			type = "craft-item",
+			item = "fermented-fish",
+		},
+	},
+})
 --science pack
 data:extend({
 	{
@@ -221,16 +259,9 @@ data:extend({
 		essential = true,
 		effects = {
 			{ type = "unlock-recipe", recipe = "pelagos-science-pack" },
-			{ type = "unlock-recipe", recipe = "ethanol" },
-			{ type = "unlock-recipe", recipe = "pelagos-bioplastic" },
-			{ type = "unlock-recipe", recipe = "pelagos-biolubricant" },
-			{ type = "unlock-recipe", recipe = "pelagos-processing-unit" },
-			{ type = "unlock-recipe", recipe = "pelagos-battery" },
 			{ type = "unlock-recipe", recipe = "pelagos-explosives" },
-			{ type = "unlock-recipe", recipe = "titanium-dust" },
-			{ type = "unlock-recipe", recipe = "titanium-plate" },
 		},
-		prerequisites = { "fermentation-bacteria-cultivation-technology", "calciner" },
+		prerequisites = { "fermentation-bacteria-cultivation-technology", "titanium", "calciner" },
 		research_trigger = {
 			type = "craft-item",
 			item = "fermentation-bacteria",
@@ -403,6 +434,7 @@ data:extend({
 
 		prerequisites = { "pelagos-science-pack", "copper-biter-captivity", "agricultural-science-pack" },
 		unit = {
+			--count_formula = "1.5^L*1000",
 			count_formula = "1.5^L*1000",
 			ingredients = {
 				{ "automation-science-pack", 1 },
@@ -496,6 +528,7 @@ data:extend({
 			},
 			time = 60,
 		},
+		order = "z[pelagos]",
 	},
 })
 
@@ -564,6 +597,7 @@ if mods["Long_Range_Delivery_Drones"] then
 		},
 		time = 30,
 	}
+	t.order = "z[pelagos]"
 end
 if mods["cargo-ships"] then
 	local t = data.raw["technology"]["oversea-energy-distribution"]

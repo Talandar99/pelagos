@@ -450,8 +450,8 @@ data:extend({
 			{ type = "item", name = "fermentation-bacteria", amount = 4 },
 		},
 		results = {
-			{ type = "item", name = "titanium-dust", amount = 1, probability = 0.2 },
-			{ type = "item", name = "spoilage", amount = 10 },
+			{ type = "item", name = "titanium-dust", amount = 1, probability = 0.25 },
+			{ type = "item", name = "spoilage", amount = 8 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.45, g = 0.67, b = 0.72, a = 1.000 },
@@ -540,14 +540,40 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		icon = "__pelagos__/graphics/copper-plate.png",
 		name = "copper-plate-from-spitter-egg",
+		icon = "__pelagos__/graphics/copper-plate.png",
 		category = "smelting",
 		auto_recycle = false,
 		energy_required = 3.2,
 		ingredients = { { type = "item", name = "copper-biter-egg", amount = 1 } },
 		results = { { type = "item", name = "copper-plate", amount = 1 } },
 		allow_productivity = true,
+	},
+	{
+		type = "recipe",
+		name = "copper-ore-bitter-egg",
+		category = "organic",
+		subgroup = "agriculture-products",
+		order = "a[pelagos]-c[copper-ore-bitter-egg]",
+		icon = "__pelagos__/graphics/copper-ore.png",
+		auto_recycle = false,
+		enabled = false,
+		allow_productivity = true,
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "copper-biter-egg", amount = 5 },
+			{ type = "item", name = "calcite", amount = 1 },
+			{ type = "fluid", name = "ethanol", amount = 50 },
+		},
+		results = {
+			{ type = "item", name = "copper-ore", amount = 5 },
+		},
+		crafting_machine_tint = {
+			primary = { r = 0.7, g = 0.3, b = 0.18, a = 1.000 },
+			secondary = { r = 0.87, g = 0.41, b = 0.25, a = 1.000 },
+			tertiary = { r = 0.7, g = 0.3, b = 0.18, a = 1.000 },
+			quaternary = { r = 0.87, g = 0.41, b = 0.25, a = 1.000 },
+		},
 	},
 })
 data:extend({
@@ -570,10 +596,10 @@ data:extend({
 			{ type = "item", name = "fermented-fish", amount = 5 },
 		},
 		crafting_machine_tint = {
-			primary = { r = 0.78, g = 0.82, b = 0.35, a = 1.000 },
-			secondary = { r = 0.6, g = 0.77, b = 0.82, a = 1.000 },
-			tertiary = { r = 0.78, g = 0.82, b = 0.35, a = 1.000 },
-			quaternary = { r = 0.6, g = 0.77, b = 0.82, a = 1.000 },
+			primary = { r = 0.6, g = 0.77, b = 0.82, a = 1.000 },
+			secondary = { r = 0.78, g = 0.82, b = 0.35, a = 1.000 },
+			tertiary = { r = 0.6, g = 0.77, b = 0.82, a = 1.000 },
+			quaternary = { r = 0.78, g = 0.82, b = 0.35, a = 1.000 },
 		},
 	},
 })
@@ -588,6 +614,20 @@ data:extend({
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
 		results = { { type = "item", name = "poisonus-firearm-magazine", amount = 1 } },
+		auto_recycle = false,
+	},
+	{
+		type = "recipe",
+		name = "pelagos-capture-robot-rocket",
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "titanium-plate", amount = 3 },
+			{ type = "item", name = "fermented-fish", amount = 20 },
+			{ type = "item", name = "engine-unit", amount = 5 },
+			{ type = "item", name = "plastic-bar", amount = 10 },
+		},
+		results = { { type = "item", name = "pelagos-capture-robot-rocket", amount = 1 } },
+		enabled = false,
 		auto_recycle = false,
 	},
 })

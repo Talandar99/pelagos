@@ -1,9 +1,16 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.9.3
-Date: 2025-09-27
+Version: 0.10.0
+Date: 2025-09-28
   Changes:
     - creating nuke explosion now creates deep water
-
+    - electric pumps are now  allowed on wooden platforms 
+    - copper biter now deal 10X more dmg
+    - added recipe for making copper ore from copper biter eggs
+    - added new capture bot rocket for pelagos
+    - moved titanium processing into separate tech
+    - moved ethanol related recipes into separate tech
+    - moved copper egg recipes into "Coper biter captivity" tech
+    - updated any planet start tech tree based on changed above 
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.3
 Date: 2025-09-27

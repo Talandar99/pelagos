@@ -60,6 +60,7 @@ local function build_allowed_entities()
 	allowed["radar"] = true
 	allowed["canex-excavator"] = true
 	allowed["entity-ghost"] = true
+	allowed["pump"] = true
 
 	return allowed
 end
