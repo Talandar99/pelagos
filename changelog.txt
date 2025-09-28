@@ -1,8 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.0
+Date: 2025-09-28
+  Changes:
+    - coconut husk now stack up to 50
+    - alternative biochamber recipe now require 25 iron plates instead of 30
+    - renamed diesel inserter to extra long handed diesel inserter
+    - Extra long handed diesel inserter now require 1 more engine unit to craft
+    - added fast diesel inserter
+    - diesel machines that are similar to vanilla ones are now marked with engine for better readability
+    - every fluid that has insane fuel value will now give reasonable acceleration while used as barreled fuel
+    - removed fish productivity bonus from cultivation productivity to make people stop saying me that it breaks the game with 19 levels of productivity.
+    - renamed copper bitters in locale to copper spitters for consistency
+    - added copper tint to copper spitter spawner
+    - added Captive copper spitter spawner recipe and technology
+    - palm tree should now spawn more often on new maps
+    - Any Planet Start: fish breeding research time is shorter (30->15)
+    - Any Planet Start: landfill research time is shorter (30->10)
+    - Any Planet Start: engine research time is shorter (30->10)
+    - Any Planet Start: engine research amount of required packs reduced (50->30)
+    - Any Planet Start: added diesel drill research to move drill earlier in tech tree
+---------------------------------------------------------------------------------------------------
 Version: 0.10.0
 Date: 2025-09-28
   Changes:
-    - creating nuke explosion now creates deep water
+    - creating nuke explosion now creates deep water on pelagos
     - electric pumps are now  allowed on wooden platforms 
     - copper biter now deal 10X more dmg
     - added recipe for making copper ore from copper biter eggs

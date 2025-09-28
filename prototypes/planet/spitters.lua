@@ -54,6 +54,7 @@ local copper_tints = {
 	behemoth = { r = 0.7, g = 0.36, b = 0.1, a = 1 },
 	leviathan = { r = 0.7, g = 0.36, b = 0.1, a = 1 },
 	--leviathan = { r = 0.9, g = 0.7, b = 0.3, a = 1 },
+	spawner = { r = 0.7, g = 0.36, b = 0.1, a = 1 },
 }
 data:extend({
 	{
@@ -81,7 +82,7 @@ data:extend({
 			{ type = "laser", decrease = 10, percent = 99 },
 			{ type = "electric", decrease = 10, percent = 99 },
 		},
-		collision_mask = { layers = { ["object"] = true } },
+		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-small",
@@ -139,7 +140,7 @@ data:extend({
 			{ type = "laser", decrease = 10, percent = 95 },
 			{ type = "electric", decrease = 10, percent = 95 },
 		},
-		collision_mask = { layers = { ["object"] = true } },
+		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-medium",
@@ -193,7 +194,7 @@ data:extend({
 			{ type = "laser", decrease = 12, percent = 97 },
 			{ type = "electric", decrease = 12, percent = 97 },
 		},
-		collision_mask = { layers = { ["object"] = true } },
+		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-big",
@@ -247,7 +248,7 @@ data:extend({
 			{ type = "laser", decrease = 15, percent = 99 },
 			{ type = "electric", decrease = 15, percent = 99 },
 		},
-		collision_mask = { layers = { ["object"] = true } },
+		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-behemoth",
@@ -302,7 +303,7 @@ data:extend({
 			{ type = "laser", decrease = 20, percent = 99 },
 			{ type = "electric", decrease = 20, percent = 99 },
 		},
-		collision_mask = { layers = { ["object"] = true } },
+		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-behemoth",
@@ -367,7 +368,9 @@ data:extend({
 
 		healing_per_tick = 0.02,
 
-		collision_mask = { layers = { ["ground_tile"] = true } },
+		collision_mask = {
+			layers = { ["ground_tile"] = true, ["object"] = true, ["trigger_target"] = true },
+		},
 		--collision_mask = { layers = { water_tile = true } },
 		collision_box = { { -2.2, -2.2 }, { 2.2, 2.2 } },
 		selection_box = { { -2.5, -2.5 }, { 2.5, 2.5 } },
@@ -381,10 +384,10 @@ data:extend({
 		captured_spawner_entity = "captive-copper-biter-spawner",
 		graphics_set = {
 			animations = {
-				coper_spitter_spawner_idle_animation(0, spitter_spawner_tint),
-				coper_spitter_spawner_idle_animation(1, spitter_spawner_tint),
-				coper_spitter_spawner_idle_animation(2, spitter_spawner_tint),
-				coper_spitter_spawner_idle_animation(3, spitter_spawner_tint),
+				coper_spitter_spawner_idle_animation(0, copper_tints.spawner),
+				coper_spitter_spawner_idle_animation(1, copper_tints.spawner),
+				coper_spitter_spawner_idle_animation(2, copper_tints.spawner),
+				coper_spitter_spawner_idle_animation(3, copper_tints.spawner),
 			},
 		},
 
@@ -590,6 +593,7 @@ data:extend({
 		energy_usage = "100kW",
 		module_slots = 0,
 		allowed_effects = {},
+		collision_mask = { layers = { ["ground_tile"] = true, ["object"] = true } },
 		enable_logistic_control_behavior = false,
 	},
 })

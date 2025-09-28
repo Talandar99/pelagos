@@ -4,7 +4,7 @@ local utils = require("__any-planet-start__.utils")
 -- spoilage into nutrients
 
 -- red science
-utils.set_packs("engine", { "automation-science-pack" }, 50, 30)
+utils.set_packs("engine", { "automation-science-pack" }, 30, 10)
 utils.set_prerequisites("engine", { "steel-processing" })
 utils.set_prerequisites("fluid-handling", { "engine" })
 utils.set_packs("fluid-handling", { "automation-science-pack" }, 25, 30)
@@ -12,7 +12,7 @@ utils.set_prerequisites("agriculture", { "steel-processing", "landfill" })
 utils.set_packs("agriculture", { "automation-science-pack" }, 20, 30)
 utils.remove_recipes("agriculture", { "nutrients-from-spoilage" })
 utils.set_prerequisites("fish-breeding", { "automation-science-pack" })
-utils.set_packs("fish-breeding", { "automation-science-pack" }, 25, 30)
+utils.set_packs("fish-breeding", { "automation-science-pack" }, 25, 15)
 data.raw["technology"]["fish-breeding"].unit = {
 	count = 20,
 	ingredients = {
@@ -21,12 +21,11 @@ data.raw["technology"]["fish-breeding"].unit = {
 	time = 30,
 }
 utils.set_prerequisites("landfill", { "automation-science-pack" })
-utils.set_packs("landfill", { "automation-science-pack" }, 10, 30)
+utils.set_packs("landfill", { "automation-science-pack" }, 10, 10)
 utils.add_prerequisites("automation-science-pack", { "coconut-processing-technology" })
 utils.add_prerequisites("automated_water_transport", { "engine", "fluid-handling" })
 utils.add_prerequisites("canex-excavator", { "engine", "fluid-handling" })
 utils.add_recipes("fluid-handling", { "barreling-machine" })
-
 -- green science
 utils.set_prerequisites("logistic-science-pack", { "automation-science-pack", "engine" })
 utils.add_recipes("coconut-processing-technology", { "nutrients-from-spoilage" })
@@ -44,7 +43,9 @@ utils.add_prerequisites("chemical-science-pack", { "pelagos-science-pack" })
 utils.add_prerequisites("calciner", { "advanced-material-processing" })
 utils.add_prerequisites("deep_sea_oil_extraction", { "fluid-handling" })
 utils.add_prerequisites("logistics-2", { "automated_water_transport" })
-utils.add_prerequisites("diesel-automation", { "automation-2" })
+utils.add_prerequisites("diesel-automation", { "automation-2", "diesel-mining-drill" })
+utils.remove_recipes("diesel-automation", { "fast-diesel-inserter" })
+utils.add_recipes("fast-inserter", { "fast-diesel-inserter" })
 utils.add_prerequisites("oil-gathering", { "logistic-science-pack" })
 
 --blue science
@@ -117,12 +118,36 @@ data:extend({
 })
 utils.add_recipes("chemical-science-pack", { "aps-pelagos-chemical-science-pack" })
 --utils.set
-utils.add_prerequisites("diesel-automation", { "automation-2" })
 
 utils.add_prerequisites("planet-discovery-nauvis", { "agricultural-science-pack" })
 utils.add_prerequisites("planet-discovery-fulgora", { "agricultural-science-pack" })
 utils.add_prerequisites("planet-discovery-vulcanus", { "agricultural-science-pack" })
-
+data:extend({
+	{
+		type = "technology",
+		name = "diesel-mining-drill",
+		icon = "__pelagos__/graphics/diesel-mining-drill/diesel-mining-drill-technology.png",
+		icon_size = 512,
+		essential = true,
+		effects = {
+			{ type = "unlock-recipe", recipe = "diesel-mining-drill" },
+		},
+		prerequisites = {
+			"coconut-processing-technology",
+			"engine",
+			--"electric-mining-drill", -- important for any planet start
+		},
+		unit = {
+			count = 50,
+			ingredients = {
+				{ "automation-science-pack", 1 },
+			},
+			time = 15,
+		},
+		order = "ea[pelagos]",
+	},
+})
+utils.set_prerequisites("electric-mining-drill", { "diesel-mining-drill" })
 data.raw["technology"]["long-range-delivery-drone"].unit = {
 	count = 2000,
 	ingredients = {

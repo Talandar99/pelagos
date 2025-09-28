@@ -39,7 +39,7 @@ data:extend({
 		default_import_location = "pelagos",
 		fuel_category = "chemical",
 		fuel_value = "1MJ",
-		stack_size = 40,
+		stack_size = 50,
 		weight = 1 * kg,
 	},
 })
@@ -424,5 +424,58 @@ data:extend({
 		weight = 100 * kg,
 		shoot_protected = true,
 		default_import_location = "pelagos",
+	},
+})
+
+data:extend({
+	{
+		type = "item",
+		name = "captive-copper-biter-spawner",
+		icon = "__pelagos__/graphics/captive-biter-spawner.png",
+		subgroup = "agriculture",
+		order = "z[biter-nest]",
+		inventory_move_sound = item_sounds.mechanical_inventory_move,
+		pick_sound = item_sounds.mechanical_inventory_pickup,
+		drop_sound = item_sounds.mechanical_inventory_move,
+		place_result = "captive-copper-biter-spawner",
+		stack_size = 1,
+		--spoil_ticks = 30 * minute,
+		spoil_ticks = 30 * minute,
+		spoil_to_trigger_result = {
+			items_per_trigger = 1,
+			trigger = {
+				type = "direct",
+				action_delivery = {
+					type = "instant",
+					source_effects = {
+						{
+							type = "create-entity",
+							entity_name = "leviathan-copper-biter",
+							affects_target = true,
+							show_in_tooltip = true,
+							as_enemy = true,
+							find_non_colliding_position = true,
+							offset_deviation = { { -1, -1 }, { 1, 1 } },
+							non_colliding_fail_result = {
+								type = "direct",
+								action_delivery = {
+									type = "instant",
+									source_effects = {
+										{
+											type = "create-entity",
+											entity_name = "leviathan-copper-biter",
+											affects_target = true,
+											show_in_tooltip = false,
+											as_enemy = true,
+											offset_deviation = { { -1, -1 }, { 1, 1 } },
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		},
 	},
 })

@@ -15,7 +15,7 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "nutrients", amount = 5 },
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
-			{ type = "item", name = "iron-plate", amount = 30 },
+			{ type = "item", name = "iron-plate", amount = 25 },
 			{ type = "item", name = "landfill", amount = 1 },
 		},
 		results = { { type = "item", name = "biochamber", amount = 1 } },

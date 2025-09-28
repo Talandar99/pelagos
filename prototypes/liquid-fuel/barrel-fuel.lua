@@ -23,10 +23,13 @@ for _, fluid in pairs(data.raw.fluid) do
 					barrel.fuel_value = tostring(number_part * BARREL_CAPACITY) .. unit
 					barrel.fuel_category = "diesel-fuel"
 					barrel.burnt_result = spec.burnt
-
+					local acceleration = number_part
+					while acceleration > 10 do
+						acceleration = acceleration / 1000
+					end
 					local rocket = data.raw.item["rocket-fuel"]
 					if rocket then
-						barrel.fuel_acceleration_multiplier = 1 + (number_part / 2)
+						barrel.fuel_acceleration_multiplier = 1 + (acceleration / 2)
 						barrel.fuel_emissions_multiplier = rocket.fuel_emissions_multiplier
 						barrel.fuel_glow_color = rocket.fuel_glow_color
 						barrel.fuel_top_speed_multiplier = rocket.fuel_top_speed_multiplier

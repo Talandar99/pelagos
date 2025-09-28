@@ -365,11 +365,24 @@ data:extend({
 		enabled = false,
 		ingredients = {
 			{ type = "item", name = "pipe", amount = 4 },
-			{ type = "item", name = "engine-unit", amount = 1 },
+			{ type = "item", name = "engine-unit", amount = 2 },
 			{ type = "item", name = "coconut-sealant", amount = 4 },
 			{ type = "item", name = "burner-inserter", amount = 1 },
 		},
 		results = { { type = "item", name = "diesel-inserter", amount = 1 } },
+	},
+	{
+
+		type = "recipe",
+		name = "fast-diesel-inserter",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "pipe", amount = 4 },
+			{ type = "item", name = "engine-unit", amount = 1 },
+			{ type = "item", name = "coconut-sealant", amount = 4 },
+			{ type = "item", name = "burner-inserter", amount = 1 },
+		},
+		results = { { type = "item", name = "fast-diesel-inserter", amount = 1 } },
 	},
 	{
 		type = "recipe",
@@ -540,7 +553,7 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "copper-plate-from-spitter-egg",
+		name = "copper-plate-from-copper-biter-egg",
 		icon = "__pelagos__/graphics/copper-plate.png",
 		category = "smelting",
 		auto_recycle = false,
@@ -574,6 +587,21 @@ data:extend({
 			tertiary = { r = 0.7, g = 0.3, b = 0.18, a = 1.000 },
 			quaternary = { r = 0.87, g = 0.41, b = 0.25, a = 1.000 },
 		},
+	},
+	{
+		type = "recipe",
+		name = "captive-copper-biter-spawner",
+		category = "cryogenics",
+		energy_required = 10,
+		enabled = false,
+		reset_freshness_on_craft = true,
+		ingredients = {
+			{ type = "item", name = "copper-biter-egg", amount = 10 },
+			{ type = "item", name = "pelagos-capture-robot-rocket", amount = 1 },
+			{ type = "fluid", name = "ethanol", amount = 500 },
+			{ type = "fluid", name = "fluoroketone-cold", amount = 100 },
+		},
+		results = { { type = "item", name = "captive-copper-biter-spawner", amount = 1 } },
 	},
 })
 data:extend({

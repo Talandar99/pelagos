@@ -689,16 +689,6 @@ data:extend({
 		},
 	},
 })
--- deepwater initialization (finished in data-final-fix)
-local deepwater = table.deepcopy(data.raw.tile["deepwater"])
-deepwater.name = "pelagos-deepsea"
-deepwater.localised_name = { "tile-name.pelagos-deepsea" }
-deepwater.map_color = { r = 0.165, g = 0.278, b = 0.306 }
---deepwater.effect_color = { 34, 123, 136 }
---deepwater.effect_color = { 24, 123, 136 }
---deepwater.effect_color_secondary = { 74, 163, 176 }
---deepwater.effect_color_secondary = { 64, 163, 176 }
-data:extend({ deepwater })
 
 local function MapGen_Pelagos()
 	local map = {
@@ -736,7 +726,9 @@ local function MapGen_Pelagos()
 					},
 					["water"] = {},
 					["sand-1"] = {},
+					--["pelagos-sand-1"] = {},
 					["sand-2"] = {},
+					--["pelagos-red-desert-3"] = {},
 				},
 			},
 			["decorative"] = {

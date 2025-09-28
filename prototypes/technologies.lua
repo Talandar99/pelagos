@@ -239,13 +239,41 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "pelagos-capture-robot-rocket" },
 			{ type = "unlock-recipe", recipe = "copper-biter-egg" },
-			{ type = "unlock-recipe", recipe = "copper-plate-from-spitter-egg" },
+			{ type = "unlock-recipe", recipe = "copper-plate-from-copper-biter-egg" },
 			{ type = "unlock-recipe", recipe = "copper-ore-bitter-egg" },
 		},
 		prerequisites = { "titanium", "ethanol", "rocketry" },
 		research_trigger = {
 			type = "craft-item",
 			item = "fermented-fish",
+		},
+	},
+	{
+		type = "technology",
+		name = "captive-copper-biter-spawner",
+		icon = "__space-age__/graphics/technology/captive-biter-spawner.png",
+		icon_size = 256,
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "captive-copper-biter-spawner",
+			},
+		},
+		prerequisites = { "cryogenic-science-pack", "pelagos-science-pack" },
+		unit = {
+			count = 3000,
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "military-science-pack", 1 },
+				{ "production-science-pack", 1 },
+				{ "utility-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+				{ "cryogenic-science-pack", 1 },
+			},
+			time = 60,
 		},
 	},
 })
@@ -300,6 +328,7 @@ data:extend({
 		icon = "__pelagos__/graphics/diesel-automation.png",
 		icon_size = 256,
 		effects = {
+			{ type = "unlock-recipe", recipe = "fast-diesel-inserter" },
 			{ type = "unlock-recipe", recipe = "diesel-inserter" },
 			{ type = "unlock-recipe", recipe = "diesel-assembling-machine" },
 			{ type = "unlock-recipe", recipe = "diesel-pump" },
@@ -412,11 +441,11 @@ local cultivation_productivity_effects = {
 		recipe = "copper-bacteria-cultivation",
 		change = 0.1,
 	},
-	{
-		type = "change-recipe-productivity",
-		recipe = "fish-breeding",
-		change = 0.1,
-	},
+	--{
+	--	type = "change-recipe-productivity",
+	--	recipe = "fish-breeding",
+	--	change = 0.05,
+	--},
 	{
 		type = "change-recipe-productivity",
 		recipe = "pentapod-egg",
