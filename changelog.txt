@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.1
+Date: 2025-09-29
+  Changes:
+    - reduced pollution absorbtion by ground and water 3x
+    - added engine unit to decomposition science recipe
+    - added tooltips for EM waves
+    - coconut oil can now be crafted with cryogenic plant
+    - pelagos battery can now be crafted with cryogenic plant
+    - fixed typo in locale 
+---------------------------------------------------------------------------------------------------
 Version: 0.11.0
 Date: 2025-09-28
   Changes:

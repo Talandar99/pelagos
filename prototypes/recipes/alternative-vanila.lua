@@ -93,7 +93,7 @@ data:extend({
 		type = "recipe",
 		name = "pelagos-battery",
 		icon = "__pelagos__/graphics/pelagos-battery.png",
-		category = "chemistry",
+		category = "chemistry-or-cryogenics",
 		energy_required = 4,
 		enabled = false,
 		ingredients = {

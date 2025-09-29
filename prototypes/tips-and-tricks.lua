@@ -67,10 +67,22 @@ data:extend({
 	},
 	{
 		type = "tips-and-tricks-item",
+		name = "electromagnetic_waves",
+		--tag = "[pollutant=electromagnetic_waves]",
+		category = "space-age",
+		order = "pelagos-b",
+		indent = 1,
+		trigger = {
+			type = "research",
+			technology = "coconut-processing-technology",
+		},
+	},
+	{
+		type = "tips-and-tricks-item",
 		name = "pelagos-coconuts-and-oil",
 		tag = "[item=coconut-sealant]",
 		category = "space-age",
-		order = "pelagos-b",
+		order = "pelagos-c",
 		indent = 1,
 		trigger = {
 			type = "research",

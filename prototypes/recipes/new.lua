@@ -45,6 +45,7 @@ data:extend({
 		type = "recipe",
 		name = "coconut-oil",
 		category = "organic-or-chemistry",
+		additional_categories = { "cryogenics" },
 		subgroup = "fluid-recipes",
 		order = "a[fluid]-b[coconut-oil]",
 		auto_recycle = false,
@@ -99,6 +100,7 @@ data:extend({
 		enabled = false,
 		ingredients = {
 			{ type = "item", name = "coconut-sealant", amount = 2 },
+			{ type = "item", name = "engine-unit", amount = 1 },
 			{ type = "item", name = "fermentation-bacteria", amount = 3 },
 			{ type = "item", name = "activated-carbon", amount = 1 },
 			{ type = "item", name = "titanium-dust", amount = 1 },
