@@ -41,6 +41,7 @@ for _, tile in pairs(tiles) do
 	if data.raw.tile[tile] then
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
 		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00001
+		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00003 -- a bit too high
 	end
 end
 
@@ -48,7 +49,9 @@ local tiles = { "pelagos-deepsea", "water" }
 for _, tile in pairs(tiles) do
 	if data.raw.tile[tile] then
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
+		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000001
 		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000001
+		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000003 -- a bit to high
 	end
 end
 

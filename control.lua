@@ -61,6 +61,12 @@ local function build_allowed_entities()
 	allowed["canex-excavator"] = true
 	allowed["entity-ghost"] = true
 	allowed["pump"] = true
+	allowed["long-range-delivery-drone-request-depot"] = true
+	allowed["cargo_ship"] = true
+	allowed["cargo_ship_engine"] = true
+	allowed["oil_tanker"] = true
+	allowed["indep-boat"] = true
+	allowed["boat_engine"] = true
 
 	return allowed
 end

@@ -1,10 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.11.2
+Date: 2025-09-29
+  Changes:
+    - long range delivery drone request depot
+    - fixed bug that not allowed placement of cargo ships next to wooden platform
+---------------------------------------------------------------------------------------------------
 Version: 0.11.1
 Date: 2025-09-29
   Changes:
     - reduced pollution absorbtion by ground and water 3x
     - added engine unit to decomposition science recipe
-    - added tooltips for EM waves
+    - added tips and tricks for EM waves
     - coconut oil can now be crafted with cryogenic plant
     - pelagos battery can now be crafted with cryogenic plant
     - fixed typo in locale 
