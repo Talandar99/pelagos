@@ -74,6 +74,7 @@ data:extend({
 			secondary = { r = 1.000, g = 0.0, b = 0.0, a = 1.000 },
 		},
 		allow_productivity = true,
+		auto_recycle = false,
 	},
 })
 utils.add_recipes("automation-science-pack", { "aps-pelagos-automation-science-pack" })
@@ -93,6 +94,7 @@ data:extend({
 			secondary = { r = 0.0, g = 1.0, b = 0.0, a = 1.000 },
 		},
 		allow_productivity = true,
+		auto_recycle = false,
 	},
 })
 utils.add_recipes("logistic-science-pack", { "aps-pelagos-logistic-science-pack" })
@@ -114,9 +116,31 @@ data:extend({
 			secondary = { r = 0.0, g = 0.8, b = 1.0, a = 1.000 },
 		},
 		allow_productivity = true,
+		auto_recycle = false,
 	},
 })
 utils.add_recipes("chemical-science-pack", { "aps-pelagos-chemical-science-pack" })
+data:extend({
+	{
+		type = "recipe",
+		name = "aps-pelagos-military-science-pack",
+		enabled = false,
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "poisonus-firearm-magazine", amount = 1 },
+			{ type = "item", name = "grenade", amount = 1 },
+			{ type = "item", name = "wooden-platform", amount = 2 },
+		},
+		results = { { type = "item", name = "military-science-pack", amount = 2 } },
+		crafting_machine_tint = {
+			primary = { r = 0.3, g = 0.3, b = 0.3, a = 1.000 },
+			secondary = { r = 0.3, g = 0.3, b = 0.3, a = 1.000 },
+		},
+		allow_productivity = true,
+		auto_recycle = false,
+	},
+})
+utils.add_recipes("military-science-pack", { "aps-pelagos-military-science-pack" })
 --utils.set
 
 utils.add_prerequisites("planet-discovery-nauvis", { "agricultural-science-pack" })

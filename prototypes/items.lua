@@ -391,7 +391,7 @@ data:extend({
 		},
 		magazine_size = 10,
 		subgroup = "ammo",
-		order = "a[basic-clips]-a[poisonus-firearm-magazine]",
+		order = "a[basic-clips]-a[poisonous-firearm-magazine]",
 		inventory_move_sound = item_sounds.ammo_small_inventory_move,
 		pick_sound = item_sounds.ammo_small_inventory_pickup,
 		drop_sound = item_sounds.ammo_small_inventory_move,

@@ -299,19 +299,122 @@ data:extend({
 		trigger_effect = tile_trigger_effects.sand_trigger_effect(),
 	},
 })
+
 -------------------------------------------------------------------------------
--- pelagos-red-desert-3
+-- pelagos-sand-3
+-------------------------------------------------------------------------------
+---
+data:extend({
+	{
+		name = "pelagos-sand-3",
+		type = "tile",
+		order = "b[natural]-c[sand]-c[sand-3]",
+		subgroup = "nauvis-tiles",
+		collision_mask = tile_collision_masks.ground(),
+		autoplace = {
+
+			probability_expression = "max(expression_in_range_base(-10, -10, 0.05, 0.15), expression_in_range_base(0.25, -10, 0.3, 0.15)) + noise_layer_noise(46)",
+			--probability_expression = "max(expression_in_range_base(-10, 0.2, 0.4, 0.25), expression_in_range_base(0.3, -10, 0.4, 0.2)) + noise_layer_noise(49)",
+		},
+		layer = 10,
+		variants = tile_variations_template(
+			"__base__/graphics/terrain/sand-3.png",
+			"__base__/graphics/terrain/masks/transition-4.png",
+			{
+				max_size = 4,
+				[1] = {
+					weights = {
+						0.085,
+						0.085,
+						0.085,
+						0.085,
+						0.087,
+						0.085,
+						0.065,
+						0.085,
+						0.045,
+						0.045,
+						0.045,
+						0.045,
+						0.005,
+						0.025,
+						0.045,
+						0.045,
+					},
+				},
+				[2] = {
+					probability = 0.39,
+					weights = {
+						0.025,
+						0.010,
+						0.013,
+						0.025,
+						0.025,
+						0.100,
+						0.100,
+						0.005,
+						0.010,
+						0.010,
+						0.005,
+						0.005,
+						0.001,
+						0.015,
+						0.020,
+						0.020,
+					},
+				},
+				[4] = {
+					probability = 0.39,
+					weights = {
+						0.025,
+						0.010,
+						0.013,
+						0.025,
+						0.025,
+						0.100,
+						0.100,
+						0.005,
+						0.010,
+						0.010,
+						0.005,
+						0.005,
+						0.001,
+						0.015,
+						0.020,
+						0.020,
+					},
+				},
+				--[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
+			}
+		),
+		factoriopedia_alternative = "sand-1",
+
+		transitions = sand_transitions,
+		transitions_between_transitions = sand_transitions_between_transitions,
+
+		walking_sound = tile_sounds.walking.sand,
+		driving_sound = tile_sounds.driving.sand,
+		map_color = { 115, 83, 47 },
+		scorch_mark_color = { r = 0.620, g = 0.472, b = 0.279, a = 1.000 },
+		absorptions_per_second = tile_pollution.sand,
+		vehicle_friction_modifier = sand_vehicle_speed_modifier,
+
+		trigger_effect = tile_trigger_effects.sand_trigger_effect(),
+	},
+})
+-------------------------------------------------------------------------------
+-- pelagos-red-desert-3 (sand-4)
 -------------------------------------------------------------------------------
 data:extend({
 	{
-		name = "pelagos-red-desert-3",
+		name = "pelagos-sand-4",
 		type = "tile",
 		order = "b[natural]-d[red-desert]-d[red-desert-3]",
 		subgroup = "nauvis-tiles",
 		collision_mask = tile_collision_masks.ground(),
 		autoplace = {
-			probability_expression = "max(expression_in_range_base(-10, -10, 0.05, 0.15),\z
-			                                   expression_in_range_base(0.25, -10, 0.3, 0.15)) + noise_layer_noise(38)",
+			--probability_expression = "max(expression_in_range_base(-10, -10, 0.05, 0.15),\z
+			probability_expression = "max(expression_in_range_base(-10, -10, 0.05, 0.15), expression_in_range_base(0.25, -10, 0.3, 0.15)) + noise_layer_noise(47)", --50
 		},
 		--autoplace = { probability_expression = "expression_in_range_base(0.8, -10, 11, 0.2) + noise_layer_noise(33)" },
 		--
@@ -406,7 +509,7 @@ data:extend({
 				},
 			}
 		),
-		factoriopedia_alternative = "pelagos-red-desert-3",
+		factoriopedia_alternative = "pelagos-sand-4",
 
 		transitions = sand_transitions,
 		transitions_between_transitions = sand_transitions_between_transitions,

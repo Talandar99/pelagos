@@ -21,6 +21,34 @@ local function add_em_to_generator(proto)
 				proto.energy_source.emissions_per_minute["electromagnetic_waves"] = value
 			end
 		end
+	elseif proto.type == "fusion-generator" then
+		local waves = 50
+		proto.emissions_per_second = proto.emissions_per_second or {}
+		proto.emissions_per_second.electromagnetic_waves = waves / 60
+		local em_line = { "", "", { "airborne-pollutant-name-with-amount.electromagnetic_waves", waves .. "/m" } }
+		if proto.localised_description then
+			proto.localised_description = { "", proto.localised_description, em_line }
+		else
+			proto.localised_description = em_line
+		end
+	elseif proto.type == "accumulator" and proto.energy_source and proto.energy_source.buffer_capacity then
+		local value = util.parse_energy(proto.energy_source.buffer_capacity) / 1000 / 1000 -- kW and correction because it's cappacity
+		if value > 0 then
+			proto.energy_source.emissions_per_minute = proto.energy_source.emissions_per_minute or {}
+			proto.energy_source.emissions_per_minute["electromagnetic_waves"] = value
+			proto.emissions_per_second = proto.emissions_per_second or {}
+			proto.emissions_per_second.electromagnetic_waves = value / 60
+		end
+	elseif proto.type == "solar-panel" and proto.production then
+		local value = util.parse_energy(proto.production) / 1000 -- kW
+		proto.emissions_per_second = proto.emissions_per_second or {}
+		proto.emissions_per_second.electromagnetic_waves = value / 60
+		local em_line = { "", "", { "airborne-pollutant-name-with-amount.electromagnetic_waves", value .. "/m" } }
+		if proto.localised_description then
+			proto.localised_description = { "", proto.localised_description, em_line }
+		else
+			proto.localised_description = em_line
+		end
 	elseif proto.type == "reactor" and proto.consumption then
 		local value = util.parse_energy(proto.consumption) / 1000 -- kW
 		if value > 0 then
@@ -36,7 +64,8 @@ local function add_em_to_generator(proto)
 	end
 end
 
-local tiles = { "sand-1", "sand-2" }
+local tiles = { "sand-1", "sand-2", "pelagos-sand-3", "pelagos-sand-4" }
+
 for _, tile in pairs(tiles) do
 	if data.raw.tile[tile] then
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}

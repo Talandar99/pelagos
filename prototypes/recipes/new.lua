@@ -444,7 +444,7 @@ data:extend({
 			{ type = "fluid", name = "molten-iron", amount = 55, fluidbox_multiplier = 55 },
 			{ type = "item", name = "activated-carbon", amount = 5 },
 		},
-		energy_required = 15,
+		energy_required = 10,
 		-- energy_required = 10, for assembling machine
 		allow_decomposition = false,
 		results = { { type = "item", name = "engine-unit", amount = 1 } },

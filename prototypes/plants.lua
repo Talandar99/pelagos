@@ -4,7 +4,6 @@ local planet_catalogue_gleba = require("__space-age__.prototypes.planet.processi
 local effects = require("__core__.lualib.surface-render-parameter-effects")
 local seconds = 60
 local minutes = 60 * seconds
-
 data:extend({
 	{
 		type = "plant",
@@ -47,6 +46,7 @@ data:extend({
 				water_tile = true,
 			},
 		},
+
 		--collision_mask = {
 		--	layers = { player = true, train = true, is_object = true, is_lower_object = true },
 		--},
@@ -65,7 +65,160 @@ data:extend({
 					scale = 0.6,
 				},
 				leaves = {
-					filename = "__pelagos__/graphics/coconut-tree-leaves.png",
+					filename = "__pelagos__/graphics/coconut-tree-leaves-variant1.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				shadow = {
+					filename = "__pelagos__/graphics/coconut-tree-shadow.png",
+					width = 640,
+					height = 560,
+					frame_count = 2,
+					--shift = { 6.5, -2.3 },
+					shift = { 4.1, -1.2 },
+					scale = 0.6,
+					draw_as_shadow = false,
+				},
+			},
+			{
+				trunk = {
+					filename = "__pelagos__/graphics/coconut-tree-trunk.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				leaves = {
+					filename = "__pelagos__/graphics/coconut-tree-leaves-variant2.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				shadow = {
+					filename = "__pelagos__/graphics/coconut-tree-shadow.png",
+					width = 640,
+					height = 560,
+					frame_count = 2,
+					--shift = { 6.5, -2.3 },
+					shift = { 4.1, -1.2 },
+					scale = 0.6,
+					draw_as_shadow = false,
+				},
+			},
+
+			{
+				trunk = {
+					filename = "__pelagos__/graphics/coconut-tree-trunk.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				leaves = {
+					filename = "__pelagos__/graphics/coconut-tree-leaves-variant3.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				shadow = {
+					filename = "__pelagos__/graphics/coconut-tree-shadow.png",
+					width = 640,
+					height = 560,
+					frame_count = 2,
+					--shift = { 6.5, -2.3 },
+					shift = { 4.1, -1.2 },
+					scale = 0.6,
+					draw_as_shadow = false,
+				},
+			},
+			{
+				trunk = {
+					filename = "__pelagos__/graphics/coconut-tree-trunk.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				leaves = {
+					filename = "__pelagos__/graphics/coconut-tree-leaves-variant3.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				shadow = {
+					filename = "__pelagos__/graphics/coconut-tree-shadow.png",
+					width = 640,
+					height = 560,
+					frame_count = 2,
+					--shift = { 6.5, -2.3 },
+					shift = { 4.1, -1.2 },
+					scale = 0.6,
+					draw_as_shadow = false,
+				},
+			},
+
+			{
+				trunk = {
+					filename = "__pelagos__/graphics/coconut-tree-trunk.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				leaves = {
+					filename = "__pelagos__/graphics/coconut-tree-leaves-variant4.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				shadow = {
+					filename = "__pelagos__/graphics/coconut-tree-shadow.png",
+					width = 640,
+					height = 560,
+					frame_count = 2,
+					--shift = { 6.5, -2.3 },
+					shift = { 4.1, -1.2 },
+					scale = 0.6,
+					draw_as_shadow = false,
+				},
+			},
+
+			{
+				trunk = {
+					filename = "__pelagos__/graphics/coconut-tree-trunk.png",
+					width = 640,
+					height = 560,
+					frame_count = 1,
+					--shift = { -5.5, -3.6 },
+					shift = { -3, -2 },
+					scale = 0.6,
+				},
+				leaves = {
+					filename = "__pelagos__/graphics/coconut-tree-leaves-variant5.png",
 					width = 640,
 					height = 560,
 					frame_count = 1,
@@ -85,6 +238,7 @@ data:extend({
 				},
 			},
 		},
+
 		autoplace = {
 			-- autoplace settings are added in palm-autoplace-settings to make sure it overrides changes made by other mods
 		},

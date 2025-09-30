@@ -1,8 +1,26 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.0
+Date: 2025-09-29
+  Changes:
+    - terrain generation: added 4 new palm leaves variants
+    - terrain generation: added 2 new sand variants
+    - terrain generation: added 2 new decorative rocks variants
+    - terrain generation: changed clouds to more "tropical" ones
+    - terrain generation: incresed palm generation by 66%
+    - any planet start: added Pelagos military science pack
+    - engine casting recipe is now 50% quicker
+    - pelagos pollution type now works with accumulators, fusion generator, and solar power
+---------------------------------------------------------------------------------------------------
+Version: 0.11.3
+Date: 2025-09-29
+  Changes:
+    - long range delivery drone request depot can now be placed on wooden platform
+    - fixed bug that not allowed placement of cargo ships next to wooden platform
+---------------------------------------------------------------------------------------------------
 Version: 0.11.2
 Date: 2025-09-29
   Changes:
-    - long range delivery drone request depot
+    - long range delivery drone request depot can now be placed on wooden platform
     - fixed bug that not allowed placement of cargo ships next to wooden platform
 ---------------------------------------------------------------------------------------------------
 Version: 0.11.1
