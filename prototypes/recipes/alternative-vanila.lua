@@ -121,8 +121,8 @@ data:extend({
 		category = "organic",
 		order = "a[organic-products]-c[improvised-landfill]",
 		ingredients = {
-			{ type = "item", name = "stone", amount = 20 },
-			{ type = "item", name = "spoilage", amount = 80 },
+			{ type = "item", name = "stone", amount = 10 },
+			{ type = "item", name = "spoilage", amount = 40 },
 		},
 		results = { { type = "item", name = "landfill", amount = 1 } },
 		crafting_machine_tint = {
@@ -146,6 +146,7 @@ data:extend({
 		},
 		results = { { type = "item", name = "concrete", amount = 10 } },
 		auto_recycle = false,
+		allow_productivity = true,
 	},
 	{
 		type = "recipe",
@@ -158,6 +159,7 @@ data:extend({
 			{ type = "fluid", name = "water", amount = 10 },
 		},
 		results = { { type = "item", name = "explosives", amount = 2 } },
+		allow_productivity = true,
 		auto_recycle = false,
 		enabled = false,
 		crafting_machine_tint = {

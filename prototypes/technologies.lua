@@ -242,7 +242,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "copper-plate-from-copper-biter-egg" },
 			{ type = "unlock-recipe", recipe = "copper-ore-bitter-egg" },
 		},
-		prerequisites = { "titanium", "ethanol", "rocketry" },
+		prerequisites = { "titanium", "ethanol", "gun-turret" },
 		research_trigger = {
 			type = "craft-item",
 			item = "fermented-fish",

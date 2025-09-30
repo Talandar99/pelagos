@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.12.1
+Date: 2025-09-29
+  Changes:
+    - reduced cost of improvised landfill (20 rock + 80 spoilage) -> (10 rock + 40 spoilage)
+    - pelagos capture bot rocket is not bullet not rocket. Don't ask why. Embrace 
+    - improved collisions for copper spitter
+    - oil rig can now be placed next to wooden platform
+    - methane explosive recipe can now be used with productivity bonus
+    - calcite concrete recipe can now be used with productivity bonus
+---------------------------------------------------------------------------------------------------
 Version: 0.12.0
 Date: 2025-09-29
   Changes:

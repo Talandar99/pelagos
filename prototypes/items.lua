@@ -403,7 +403,7 @@ data:extend({
 		type = "ammo",
 		name = "pelagos-capture-robot-rocket",
 		icon = "__pelagos__/graphics/capture-bot.png",
-		ammo_category = "rocket",
+		ammo_category = "bullet",
 		ammo_type = {
 			action = {
 				type = "direct",

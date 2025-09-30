@@ -67,6 +67,11 @@ local function build_allowed_entities()
 	allowed["oil_tanker"] = true
 	allowed["indep-boat"] = true
 	allowed["boat_engine"] = true
+	allowed["oil_rig"] = true
+	allowed["or_power_electric"] = true
+	allowed["or_pole"] = true
+	allowed["or_radar"] = true
+	allowed["or_tank"] = true
 
 	return allowed
 end

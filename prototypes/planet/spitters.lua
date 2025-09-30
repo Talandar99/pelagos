@@ -82,7 +82,7 @@ data:extend({
 			{ type = "laser", decrease = 10, percent = 99 },
 			{ type = "electric", decrease = 10, percent = 99 },
 		},
-		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
+		collision_mask = { layers = { ["is_object"] = true, ["train"] = true }, not_colliding_with_itself = true },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-small",
@@ -140,7 +140,7 @@ data:extend({
 			{ type = "laser", decrease = 10, percent = 95 },
 			{ type = "electric", decrease = 10, percent = 95 },
 		},
-		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
+		collision_mask = { layers = { ["is_object"] = true, ["train"] = true }, not_colliding_with_itself = true },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-medium",
@@ -194,7 +194,7 @@ data:extend({
 			{ type = "laser", decrease = 12, percent = 97 },
 			{ type = "electric", decrease = 12, percent = 97 },
 		},
-		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
+		collision_mask = { layers = { ["is_object"] = true, ["train"] = true }, not_colliding_with_itself = true },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-big",
@@ -248,7 +248,7 @@ data:extend({
 			{ type = "laser", decrease = 15, percent = 99 },
 			{ type = "electric", decrease = 15, percent = 99 },
 		},
-		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
+		collision_mask = { layers = { ["is_object"] = true, ["train"] = true }, not_colliding_with_itself = true },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-behemoth",
@@ -303,7 +303,7 @@ data:extend({
 			{ type = "laser", decrease = 20, percent = 99 },
 			{ type = "electric", decrease = 20, percent = 99 },
 		},
-		collision_mask = { layers = { ["object"] = true, ["trigger_target"] = true } },
+		collision_mask = { layers = { ["is_object"] = true, ["train"] = true }, not_colliding_with_itself = true },
 		alternative_attacking_frame_sequence = spitter_alternative_attacking_animation_sequence,
 		attack_parameters = spitter_attack_parameters({
 			acid_stream_name = "acid-stream-spitter-behemoth",
@@ -360,7 +360,7 @@ data:extend({
 		subgroup = "enemies",
 		resistances = {
 			{ type = "physical", decrease = 2, percent = 15 },
-			{ type = "explosion", decrease = 5 },
+			{ type = "explosion", decrease = 5, percent = 20 },
 			{ type = "fire", decrease = 3, percent = 60 },
 			{ type = "laser", decrease = 10, percent = 99 },
 			{ type = "electric", decrease = 10, percent = 99 },
@@ -369,7 +369,7 @@ data:extend({
 		healing_per_tick = 0.02,
 
 		collision_mask = {
-			layers = { ["ground_tile"] = true, ["object"] = true, ["trigger_target"] = true },
+			layers = { ["ground_tile"] = true, ["is_object"] = true, ["trigger_target"] = true },
 		},
 		--collision_mask = { layers = { water_tile = true } },
 		collision_box = { { -2.2, -2.2 }, { 2.2, 2.2 } },
