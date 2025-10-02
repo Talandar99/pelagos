@@ -9,9 +9,6 @@ else
 	end
 end
 
--- make sure plants can grow on sand-1
-require("prototypes.plants-autoplace-settings")
-
 -- force small electric generator
 if settings.startup["pelagos-force-small-electric-generator"].value then
 	if data.raw["generator"]["or_power_electric"] then
@@ -23,11 +20,14 @@ if settings.startup["pelagos-force-small-electric-generator"].value then
 	end
 end
 
+-- make sure plants can grow on sand-1
+require("prototypes.plants-autoplace-settings")
 require("prototypes.liquid-fuel.fuel-value")
 require("prototypes.liquid-fuel.barrel-fuel")
 require("prototypes.pirate-ship")
 require("prototypes.liquid-fuel.rocket-silo")
 require("prototypes.planet.electromagnetic-waves-pollution-emision")
+require("prototypes.corrosive-dmg-resistances")
 
 -- allow foundation on pelagos-deepsea
 local landfill = data.raw.item["foundation"]

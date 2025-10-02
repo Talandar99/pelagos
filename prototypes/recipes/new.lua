@@ -301,32 +301,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "poison-rocket",
-		enabled = false,
-		energy_required = 4,
-		ingredients = {
-			{ type = "item", name = "iron-plate", amount = 1 },
-			{ type = "item", name = "poison-capsule", amount = 1 },
-			{ type = "item", name = "coconut-sealant", amount = 1 },
-			{ type = "item", name = "explosives", amount = 1 },
-		},
-		results = { { type = "item", name = "poison-rocket", amount = 1 } },
-	},
-	{
-		type = "recipe",
-		name = "slowdown-rocket",
-		enabled = false,
-		energy_required = 4,
-		ingredients = {
-			{ type = "item", name = "iron-plate", amount = 1 },
-			{ type = "item", name = "slowdown-capsule", amount = 1 },
-			{ type = "item", name = "coconut-sealant", amount = 1 },
-			{ type = "item", name = "explosives", amount = 1 },
-		},
-		results = { { type = "item", name = "slowdown-rocket", amount = 1 } },
-	},
-	{
-		type = "recipe",
 		name = "calciner",
 		category = "advanced-crafting",
 		surface_conditions = {
@@ -633,8 +607,34 @@ data:extend({
 		},
 	},
 })
-
+--weapons
 data:extend({
+	{
+		type = "recipe",
+		name = "poison-rocket",
+		enabled = false,
+		energy_required = 4,
+		ingredients = {
+			{ type = "item", name = "iron-plate", amount = 1 },
+			{ type = "item", name = "poison-capsule", amount = 1 },
+			{ type = "item", name = "coconut-sealant", amount = 1 },
+			{ type = "item", name = "explosives", amount = 1 },
+		},
+		results = { { type = "item", name = "poison-rocket", amount = 1 } },
+	},
+	{
+		type = "recipe",
+		name = "slowdown-rocket",
+		enabled = false,
+		energy_required = 4,
+		ingredients = {
+			{ type = "item", name = "iron-plate", amount = 1 },
+			{ type = "item", name = "slowdown-capsule", amount = 1 },
+			{ type = "item", name = "coconut-sealant", amount = 1 },
+			{ type = "item", name = "explosives", amount = 1 },
+		},
+		results = { { type = "item", name = "slowdown-rocket", amount = 1 } },
+	},
 	{
 		type = "recipe",
 		name = "corrosive-firearm-magazine",
@@ -659,5 +659,31 @@ data:extend({
 		results = { { type = "item", name = "pelagos-capture-robot-rocket", amount = 1 } },
 		enabled = false,
 		auto_recycle = false,
+	},
+	{
+		type = "recipe",
+		name = "corrosive-firearm-magazine",
+		energy_required = 1,
+		ingredients = {
+			{ type = "item", name = "firearm-magazine", amount = 2 },
+			{ type = "item", name = "fermentation-bacteria", amount = 1 },
+		},
+		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 1 } },
+		auto_recycle = false,
+	},
+	{
+		type = "recipe",
+		name = "heavy-gun-turret",
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "titanium-plate", amount = 10 },
+			{ type = "item", name = "iron-gear-wheel", amount = 20 },
+			{ type = "item", name = "steel-plate", amount = 30 },
+			{ type = "item", name = "engine-unit", amount = 10 },
+			{ type = "item", name = "plastic-bar", amount = 15 },
+		},
+		results = { { type = "item", name = "heavy-gun-turret", amount = 1 } },
+		enabled = false,
+		--auto_recycle = false,
 	},
 })

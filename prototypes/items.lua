@@ -377,7 +377,7 @@ data:extend({
 								},
 								{
 									type = "damage",
-									damage = { amount = 5, type = "corrosive" },
+									damage = { amount = 7, type = "corrosive" },
 								},
 								{
 									type = "activate-impact",
@@ -391,7 +391,7 @@ data:extend({
 		},
 		magazine_size = 10,
 		subgroup = "ammo",
-		order = "a[basic-clips]-a[decomposition-firearm-magazine]",
+		order = "a[basic-clips]-b[decomposition-firearm-magazine]",
 		inventory_move_sound = item_sounds.ammo_small_inventory_move,
 		pick_sound = item_sounds.ammo_small_inventory_pickup,
 		drop_sound = item_sounds.ammo_small_inventory_move,
