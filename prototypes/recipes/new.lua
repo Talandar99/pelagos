@@ -637,13 +637,13 @@ data:extend({
 data:extend({
 	{
 		type = "recipe",
-		name = "poisonus-firearm-magazine",
+		name = "corrosive-firearm-magazine",
 		energy_required = 1,
 		ingredients = {
 			{ type = "item", name = "firearm-magazine", amount = 2 },
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
-		results = { { type = "item", name = "poisonus-firearm-magazine", amount = 1 } },
+		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 1 } },
 		auto_recycle = false,
 	},
 	{

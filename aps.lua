@@ -127,7 +127,7 @@ data:extend({
 		enabled = false,
 		energy_required = 10,
 		ingredients = {
-			{ type = "item", name = "poisonus-firearm-magazine", amount = 1 },
+			{ type = "item", name = "corrosive-firearm-magazine", amount = 1 },
 			{ type = "item", name = "grenade", amount = 1 },
 			{ type = "item", name = "wooden-platform", amount = 2 },
 		},

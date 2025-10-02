@@ -2,8 +2,15 @@
 Version: 0.12.1
 Date: 2025-10-01
   Changes:
+    - added heavy machine gun
+    - increased leviathan copper spitter size by 25%
+    - increased leviathan copper spitter dmg by 50%
+---------------------------------------------------------------------------------------------------
+Version: 0.12.1
+Date: 2025-10-01
+  Changes:
     - reduced cost of improvised landfill (20 rock + 80 spoilage) -> (10 rock + 40 spoilage)
-    - pelagos capture bot rocket is not bullet not rocket. Don't ask why. Embrace 
+    - pelagos capture bot rocket is now bullet not rocket.
     - improved collisions for copper spitter
     - oil rig can now be placed next to wooden platform
     - methane explosive recipe can now be used with productivity bonus

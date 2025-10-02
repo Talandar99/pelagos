@@ -109,7 +109,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "fermentation-bacteria" },
 			{ type = "unlock-recipe", recipe = "fermentation-bacteria-cultivation" },
 			{ type = "unlock-recipe", recipe = "fermented-fish" },
-			{ type = "unlock-recipe", recipe = "poisonus-firearm-magazine" },
+			{ type = "unlock-recipe", recipe = "corrosive-firearm-magazine" },
 			{ type = "unlock-recipe", recipe = "pelagos-biolubricant" },
 			{ type = "unlock-recipe", recipe = "ethanol" },
 		},
