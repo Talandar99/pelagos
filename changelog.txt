@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.13.0
-Date: 2025-10-02
+Date: 2025-10-03
   Changes:
     - added heavy gun turret and it's recipe. It has the same range as regular one (+2 because of offset correction needed because it's bigger, and range is counted from turret center), and 3x shooting speed
     - any planet start: heavy gun turret has cheaper technology research
