@@ -179,7 +179,7 @@ data:extend({
 		icon = "__pelagos__/graphics/heavy-gun-turret.png",
 		flags = { "placeable-player", "player-creation" },
 		minable = { mining_time = 0.5, result = "heavy-gun-turret" },
-		max_health = 600,
+		max_health = 800,
 		corpse = "rocket-turret-remnants",
 		dying_explosion = "gun-turret-explosion",
 		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
@@ -296,7 +296,7 @@ data:extend({
 				starting_frame_speed = 0.2,
 				starting_frame_speed_deviation = 0.1,
 			},
-			range = 18,
+			range = 20,
 			sound = sounds.gun_turret_gunshot,
 		},
 		--		attack_parameters = {

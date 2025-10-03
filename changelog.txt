@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.13.1
+Date: 2025-10-03
+  Changes:
+    - forgot to add +2 range that I talk about in 0.13.0 changelog
+    - addd 200 hp for heavy gun turret
+---------------------------------------------------------------------------------------------------
 Version: 0.13.0
 Date: 2025-10-03
   Changes:
@@ -10,6 +16,7 @@ Date: 2025-10-03
     - renamed poisonous ammo into corrosive ammo
     - changed pelagos explosive recipe (1 coal -> 1 carbon)
     - updated galleon graphic with one improved by snouz 
+    - moved little engine icon on diesel machines into upper right corner to improve it's readability
   Balancing:
     - accumulators should now generate 5x less pollution
     - increased leviathan copper spitter size by 25%
