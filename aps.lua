@@ -234,3 +234,14 @@ data.raw["technology"]["heating-tower"].unit = {
 data.raw["technology"]["heating-tower"].research_trigger = nil
 utils.set_prerequisites("jellynut", { "planet-discovery-gleba" })
 utils.set_prerequisites("yumako", { "planet-discovery-gleba" })
+data.raw["technology"]["heavy-gun-turret"].unit = {
+	count = 500,
+	ingredients = {
+		{ "automation-science-pack", 1 },
+		{ "logistic-science-pack", 1 },
+		{ "chemical-science-pack", 1 },
+		{ "pelagos-science-pack", 1 },
+		{ "military-science-pack", 1 },
+	},
+	time = 30,
+}

@@ -1,10 +1,11 @@
 local pirate_ship = data.raw["car"]["pirateship"]
+pirate_ship.icon = "__pelagos__/graphics/pirateship/pirateship_icon.png"
+pirate_ship.icon_size = 64
 pirate_ship.inventory_size = 50
 --pirate_ship.friction = 0.002
 --pirate_ship.friction = 0.03
 pirate_ship.friction = 0.01
 pirate_ship.terrain_friction_modifier = 0.2
-
 pirate_ship.animation = {
 	layers = {
 		{
@@ -31,6 +32,9 @@ pirate_ship.animation = {
 		},
 	},
 }
+local pirate_ship_item = data.raw["item-with-entity-data"]["pirateship"]
+pirate_ship_item.icon = "__pelagos__/graphics/pirateship/pirateship_icon.png"
+pirate_ship_item.icon_size = 64
 --pirate_ship.water_reflection = {
 --	pictures = {
 --		{

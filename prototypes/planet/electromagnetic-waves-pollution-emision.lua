@@ -32,7 +32,7 @@ local function add_em_to_generator(proto)
 			proto.localised_description = em_line
 		end
 	elseif proto.type == "accumulator" and proto.energy_source and proto.energy_source.buffer_capacity then
-		local value = util.parse_energy(proto.energy_source.buffer_capacity) / 1000 / 1000 -- kW and correction because it's cappacity
+		local value = util.parse_energy(proto.energy_source.buffer_capacity) / 1000 / 5000 -- kW and correction because it's cappacity
 		if value > 0 then
 			proto.energy_source.emissions_per_minute = proto.energy_source.emissions_per_minute or {}
 			proto.energy_source.emissions_per_minute["electromagnetic_waves"] = value

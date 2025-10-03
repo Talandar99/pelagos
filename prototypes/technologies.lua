@@ -571,7 +571,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "poison-rocket" },
 			{ type = "unlock-recipe", recipe = "slowdown-rocket" },
 		},
-		prerequisites = { "pelagos-science-pack", "utility-science-pack", "military-3" },
+		prerequisites = { "pelagos-science-pack", "military-3" },
 		unit = {
 			count_formula = "1000",
 			ingredients = {
@@ -581,6 +581,30 @@ data:extend({
 				{ "space-science-pack", 1 },
 				{ "utility-science-pack", 1 },
 				{ "agricultural-science-pack", 1 },
+				{ "military-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+data:extend({
+	{
+		type = "technology",
+		name = "heavy-gun-turret",
+		icon = "__pelagos__/graphics/heavy-gun-turret-technology.png",
+		icon_size = 305,
+		effects = {
+			{ type = "unlock-recipe", recipe = "heavy-gun-turret" },
+		},
+		prerequisites = { "pelagos-science-pack", "military-3" },
+		unit = {
+			count_formula = "1000",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
 				{ "military-science-pack", 1 },
 				{ "pelagos-science-pack", 1 },
 			},
@@ -665,6 +689,9 @@ end
 
 if mods["pirateship"] then
 	local t = data.raw["technology"]["Pirate_Ship"]
+
+	t.icon = "__pelagos__/graphics/pirateship/pirateship_tech_icon.png"
+	t.icon_size = 256
 	t.prerequisites = { "pelagos-science-pack", "chemical-science-pack", "military-science-pack" }
 	t.effects = {
 		{ type = "unlock-recipe", recipe = "pirateship-cannonball" },

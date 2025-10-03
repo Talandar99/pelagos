@@ -1,15 +1,26 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.12.1
+Version: 0.13.0
 Date: 2025-10-02
   Changes:
-    - added heavy gun turret and it's recipe
-    - increased leviathan copper spitter size by 25%
-    - increased leviathan copper spitter dmg by 50%
-    - introduced corrosive dmg type
+    - added heavy gun turret and it's recipe. It has the same range as regular one (+2 because of offset correction needed because it's bigger, and range is counted from turret center), and 3x shooting speed
+    - any planet start: heavy gun turret has cheaper technology research
+    - introduced corrosive dmg type. It is intended as alternative to use rockets to shoot big asteroids. Expect space recipe related to it in future c;
     - added corrosive dmg resistances for demolishers
     - added corrosive dmg resistances for hudge asteroids
     - renamed poisonous ammo into corrosive ammo
+    - changed pelagos explosive recipe (1 coal -> 1 carbon)
+    - updated galleon graphic with one improved by snouz 
+  Balancing:
+    - accumulators should now generate 5x less pollution
+    - increased leviathan copper spitter size by 25%
+    - increased leviathan copper spitter dmg by 50%
     - increased corrosive magazine dmg (5 -> 7)
+    - changed pelagos explosive recipe cost (50 methane -> 25 methane)
+    - changed cost of fermentation bacteria recipe (150 methane -> 100 methane)
+    - increased coconut stack size (50 -> 100)
+    - fermented fish now require less raw-fish (15 -> 10)
+    - pelagos capture bot bullet now require less fermented fish (20 -> 10)
+    - fermentation-bacteria cultivation now give more bacteria (4 -> 8) to reduce ammount of needed fish 
 ---------------------------------------------------------------------------------------------------
 Version: 0.12.1
 Date: 2025-10-01

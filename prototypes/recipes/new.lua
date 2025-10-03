@@ -134,7 +134,7 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "raw-fish", amount = 2 },
 			{ type = "fluid", name = "coconut-oil", amount = 30 },
-			{ type = "fluid", name = "methane", amount = 150 },
+			{ type = "fluid", name = "methane", amount = 100 },
 		},
 		results = {
 			{ type = "item", name = "fermentation-bacteria", amount = 1, probability = 0.1 },
@@ -171,7 +171,7 @@ data:extend({
 			{ type = "item", name = "raw-fish", amount = 1 },
 		},
 		results = {
-			{ type = "item", name = "fermentation-bacteria", amount = 4 },
+			{ type = "item", name = "fermentation-bacteria", amount = 8 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
@@ -593,7 +593,7 @@ data:extend({
 		energy_required = 10,
 		ingredients = {
 			{ type = "item", name = "coconut-meat", amount = 5 },
-			{ type = "item", name = "raw-fish", amount = 15 },
+			{ type = "item", name = "raw-fish", amount = 10 },
 			{ type = "item", name = "fermentation-bacteria", amount = 5 },
 		},
 		results = {
@@ -652,7 +652,7 @@ data:extend({
 		energy_required = 10,
 		ingredients = {
 			{ type = "item", name = "titanium-plate", amount = 3 },
-			{ type = "item", name = "fermented-fish", amount = 20 },
+			{ type = "item", name = "fermented-fish", amount = 10 },
 			{ type = "item", name = "engine-unit", amount = 5 },
 			{ type = "item", name = "plastic-bar", amount = 10 },
 		},

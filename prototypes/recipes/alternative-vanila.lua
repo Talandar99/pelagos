@@ -154,8 +154,8 @@ data:extend({
 		category = "organic-or-assembling",
 		icon = "__pelagos__/graphics/methane-explosives.png",
 		ingredients = {
-			{ type = "item", name = "coal", amount = 1 },
-			{ type = "fluid", name = "methane", amount = 50 },
+			{ type = "item", name = "carbon", amount = 1 },
+			{ type = "fluid", name = "methane", amount = 25 },
 			{ type = "fluid", name = "water", amount = 10 },
 		},
 		results = { { type = "item", name = "explosives", amount = 2 } },

@@ -163,7 +163,7 @@ data:extend({
 	{
 		type = "item",
 		name = "heavy-gun-turret",
-		icon = "__space-age__/graphics/icons/rocket-turret.png",
+		icon = "__pelagos__/graphics/heavy-gun-turret.png",
 		subgroup = "turret",
 		order = "b[turret]-e[rocket-turret]-a[turret]",
 		inventory_move_sound = item_sounds.turret_inventory_move,
@@ -176,9 +176,9 @@ data:extend({
 	{
 		type = "ammo-turret",
 		name = "heavy-gun-turret",
-		icon = "__space-age__/graphics/icons/rocket-turret.png",
+		icon = "__pelagos__/graphics/heavy-gun-turret.png",
 		flags = { "placeable-player", "player-creation" },
-		minable = { mining_time = 0.5, result = "gun-turret" },
+		minable = { mining_time = 0.5, result = "heavy-gun-turret" },
 		max_health = 600,
 		corpse = "rocket-turret-remnants",
 		dying_explosion = "gun-turret-explosion",

@@ -34,5 +34,6 @@ local landfill = data.raw.item["foundation"]
 if landfill and landfill.place_as_tile and landfill.place_as_tile.tile_condition then
 	table.insert(landfill.place_as_tile.tile_condition, "pelagos-deepsea")
 end
+
 -- make pelagos-deepsea water_tile_type
 table.insert(water_tile_type_names, "pelagos-deepsea")
