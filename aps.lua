@@ -173,7 +173,7 @@ data:extend({
 })
 utils.set_prerequisites("electric-mining-drill", { "diesel-mining-drill" })
 data.raw["technology"]["long-range-delivery-drone"].unit = {
-	count = 2000,
+	count = 500,
 	ingredients = {
 		{ "automation-science-pack", 1 },
 		{ "logistic-science-pack", 1 },
@@ -184,7 +184,7 @@ data.raw["technology"]["long-range-delivery-drone"].unit = {
 	time = 30,
 }
 data.raw["technology"]["improvised-landfill"].unit = {
-	count = 1000,
+	count = 100,
 	ingredients = {
 		{ "automation-science-pack", 1 },
 		{ "logistic-science-pack", 1 },
@@ -194,7 +194,7 @@ data.raw["technology"]["improvised-landfill"].unit = {
 }
 
 data.raw["technology"]["wood-spoiling-technology"].unit = {
-	count = 500,
+	count = 100,
 	ingredients = {
 		{ "automation-science-pack", 1 },
 		{ "logistic-science-pack", 1 },
@@ -206,7 +206,7 @@ data.raw["technology"]["wood-spoiling-technology"].unit = {
 utils.add_prerequisites("wood-spoiling-technology", { "chemical-science-pack" })
 
 data.raw["technology"]["tank_ship"].unit = {
-	count = 1500,
+	count = 500,
 	ingredients = {
 		{ "automation-science-pack", 1 },
 		{ "logistic-science-pack", 1 },

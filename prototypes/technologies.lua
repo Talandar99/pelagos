@@ -571,7 +571,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "poison-rocket" },
 			{ type = "unlock-recipe", recipe = "slowdown-rocket" },
 		},
-		prerequisites = { "pelagos-science-pack", "military-3" },
+		prerequisites = { "pelagos-science-pack", "military-3", "agricultural-science-pack" },
 		unit = {
 			count_formula = "1000",
 			ingredients = {

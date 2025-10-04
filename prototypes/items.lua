@@ -338,7 +338,7 @@ data:extend({
 		pick_sound = space_age_item_sounds.agriculture_inventory_pickup,
 		drop_sound = space_age_item_sounds.agriculture_inventory_move,
 		fuel_category = "food",
-		fuel_value = "2MJ",
+		fuel_value = "3MJ",
 		stack_size = 20,
 		default_import_location = "pelagos",
 		spoil_ticks = 1 * hour,

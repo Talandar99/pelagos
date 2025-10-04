@@ -1,9 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.13.2
+Date: 2025-10-03
+  Changes:
+    - fixed titanium sludge color
+    - capsule rocket now require agricultural science pack tech requiremend because you can't research it without it anyway
+  Balancing:
+    - increased energy value of fermented fish (2MJ -> 3MJ), so you can get more copper with the same ammount of fermented fish
+    - changed cost of improvised landfill (10 stone -> 20 stone) (30 spoilage -> 60 spoilage)
+    - any planet start: improvised landfill research cost reduced (1000 -> 100)
+    - any planet start: wood spoiling technology cost reduced (500 -> 100)
+    - any planet start: tanker ship technology cost reduced (1500 -> 500)
+    - any planet start: long range delivery drones technology cost reduced (2000 -> 500)
+---------------------------------------------------------------------------------------------------
 Version: 0.13.1
 Date: 2025-10-03
   Changes:
     - forgot to add +2 range that I talk about in 0.13.0 changelog
-    - addd 200 hp for heavy gun turret
+    - added 200 hp for heavy gun turret
 ---------------------------------------------------------------------------------------------------
 Version: 0.13.0
 Date: 2025-10-03

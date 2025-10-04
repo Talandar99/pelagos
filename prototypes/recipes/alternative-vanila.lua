@@ -121,8 +121,8 @@ data:extend({
 		category = "organic",
 		order = "a[organic-products]-c[improvised-landfill]",
 		ingredients = {
-			{ type = "item", name = "stone", amount = 10 },
-			{ type = "item", name = "spoilage", amount = 40 },
+			{ type = "item", name = "stone", amount = 20 },
+			{ type = "item", name = "spoilage", amount = 60 },
 		},
 		results = { { type = "item", name = "landfill", amount = 1 } },
 		crafting_machine_tint = {
