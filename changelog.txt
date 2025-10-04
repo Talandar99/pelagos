@@ -7,6 +7,7 @@ Date: 2025-10-03
   Balancing:
     - increased energy value of fermented fish (2MJ -> 3MJ), so you can get more copper with the same ammount of fermented fish
     - changed cost of improvised landfill (10 stone -> 20 stone) (30 spoilage -> 60 spoilage)
+    - increased pollution absorbtion by water by 50%
     - any planet start: improvised landfill research cost reduced (1000 -> 100)
     - any planet start: wood spoiling technology cost reduced (500 -> 100)
     - any planet start: tanker ship technology cost reduced (1500 -> 500)
