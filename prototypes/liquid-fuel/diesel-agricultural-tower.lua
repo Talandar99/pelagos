@@ -6,7 +6,7 @@ data:extend({
 	{
 		type = "item",
 		name = "diesel-agricultural-tower",
-		icon = "__space-age__/graphics/icons/agricultural-tower.png",
+		icon = "__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower.png",
 		subgroup = "agriculture",
 		order = "a[agricultural-tower]",
 		inventory_move_sound = item_sounds.mechanical_large_inventory_move,
@@ -17,14 +17,41 @@ data:extend({
 		default_import_location = "pelagos",
 	},
 	{
+		type = "corpse",
+		name = "diesel-agricultural-tower-remnants",
+		icon = "__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower.png",
+		flags = { "placeable-neutral", "not-on-map" },
+		hidden_in_factoriopedia = true,
+		subgroup = "agriculture-remnants",
+		order = "a[agricultural-tower]",
+		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+		tile_width = 3,
+		tile_height = 3,
+		selectable_in_game = false,
+		time_before_removed = 60 * 60 * 15, -- 15 minutes
+		expires = false,
+		final_render_layer = "remnants",
+		remove_on_tile_placement = false,
+		animation = {
+			filename = "__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-remnants.png",
+			line_length = 1,
+			width = 250,
+			height = 250,
+			frame_count = 1,
+			direction_count = 1,
+			shift = util.by_pixel(0, 0),
+			scale = 0.5,
+		},
+	},
+	{
 		type = "agricultural-tower",
 		name = "diesel-agricultural-tower",
-		icon = "__space-age__/graphics/icons/agricultural-tower.png",
+		icon = "__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
 		minable = { mining_time = 0.2, result = "diesel-agricultural-tower" },
 		fast_replaceable_group = "agricultural-tower",
 		max_health = 500,
-		corpse = "agricultural-tower-remnants",
+		corpse = "diesel-agricultural-tower-remnants",
 		dying_explosion = "agricultural-tower-explosion",
 		open_sound = sounds.mech_large_open,
 		close_sound = sounds.mech_large_close,
@@ -56,8 +83,10 @@ data:extend({
 		},
 		drawing_box_vertical_extension = 2.5,
 		heating_energy = "100kW",
-		energy_usage = "100kW",
-		crane_energy_usage = "100kW",
+		energy_usage = "200kW",
+		crane_energy_usage = "200kW",
+		--energy_usage = "100kW",
+		--crane_energy_usage = "100kW",
 		working_sound = {
 			sound = {
 				filename = "__space-age__/sound/entity/agricultural-tower/agricultural-tower-hub-loop.ogg",
@@ -171,20 +200,20 @@ data:extend({
 			smoke = {
 				{
 					name = "smoke",
-					frequency = 5,
-					position = { 0, 10 },
-					starting_vertical_speed = 0.10, --base 0.08
+					frequency = 7.5,
+					position = { 0.75, -4 },
+					starting_vertical_speed = 0.1, --base 0.08
 					starting_frame_deviation = 60,
 				},
 			},
-			emissions_per_minute = { pollution = 10 }, --12 is burner drill ,10 is electric drill
+			emissions_per_minute = { pollution = 2, spores = 4 }, --12 is burner drill ,10 is electric drill
 		},
 		circuit_connector = circuit_connector_definitions["agricultural-tower"],
 		circuit_wire_max_distance = 30,
 		graphics_set = {
 			animation = {
 				layers = {
-					util.sprite_load("__space-age__/graphics/entity/agricultural-tower/agricultural-tower-base", {
+					util.sprite_load("__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-base", {
 						priority = "high",
 						animation_speed = 0.25,
 						frame_count = 64,
@@ -211,7 +240,7 @@ data:extend({
 					always_draw = true,
 					fog_mask = { rect = { { -30, -30 }, { 30, -2.75 } }, falloff = 1 },
 					animation = util.sprite_load(
-						"__space-age__/graphics/entity/agricultural-tower/agricultural-tower-base",
+						"__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-base",
 						{
 							frame_count = 1,
 							scale = 0.5,

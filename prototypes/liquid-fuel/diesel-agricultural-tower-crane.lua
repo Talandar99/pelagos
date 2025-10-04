@@ -41,7 +41,7 @@ return {
 	parts = {
 		{
 			rotated_sprite = util.sprite_load(
-				"__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-1",
+				"__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-1",
 				{
 					priority = "very-low",
 					dice = 4,
@@ -79,7 +79,7 @@ return {
 		},
 		{
 			rotated_sprite = util.sprite_load(
-				"__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-3",
+				"__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-3",
 				{
 					priority = "very-low",
 					direction_count = 128,
@@ -115,7 +115,7 @@ return {
 		},
 		{
 			rotated_sprite = util.sprite_load(
-				"__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-4",
+				"__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-4",
 				{
 					priority = "very-low",
 					direction_count = 128,
@@ -152,7 +152,7 @@ return {
 		},
 		{
 			rotated_sprite = util.sprite_load(
-				"__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-5",
+				"__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-5",
 				{
 					priority = "very-low",
 					direction_count = 128,
@@ -187,7 +187,7 @@ return {
 		},
 		{
 			rotated_sprite = util.sprite_load(
-				"__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-6",
+				"__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-6",
 				{
 					priority = "very-low",
 					direction_count = 128,
@@ -224,7 +224,7 @@ return {
 		},
 		{
 			rotated_sprite = util.sprite_load(
-				"__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-7",
+				"__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-7",
 				{
 					priority = "very-low",
 					direction_count = 128,
@@ -260,7 +260,7 @@ return {
 		},
 		{
 			rotated_sprite = util.sprite_load(
-				"__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-8",
+				"__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-8",
 				{
 					priority = "very-low",
 					direction_count = 64,
@@ -290,7 +290,7 @@ return {
 			name = "grappler-hub",
 		},
 		{
-			sprite = util.sprite_load("__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-9", {
+			sprite = util.sprite_load("__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-9", {
 				priority = "very-low",
 				scale = 0.5,
 			}),
@@ -318,7 +318,7 @@ return {
 			name = "telescope",
 		},
 		{
-			sprite = util.sprite_load("__space-age__/graphics/entity/agricultural-tower/agricultural-tower-crane-10", {
+			sprite = util.sprite_load("__pelagos__/graphics/diesel-agricultural-tower/agricultural-tower-crane-10", {
 				priority = "very-low",
 				scale = 0.5,
 			}),

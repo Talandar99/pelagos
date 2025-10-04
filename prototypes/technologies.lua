@@ -62,6 +62,26 @@ data:extend({
 		order = "ea[pelagos]",
 	},
 })
+
+data:extend({
+	{
+		type = "technology",
+		name = "diesel-agriculture",
+		icon = "__pelagos__/graphics/diesel-agricultural-tower/agriculture.png",
+		icon_size = 256,
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "diesel-agricultural-tower",
+			},
+		},
+		prerequisites = { "coconut-processing-technology", "engine", "landfill" },
+		research_trigger = {
+			type = "craft-item",
+			item = "coconut-seed",
+		},
+	},
+})
 if mods["cargo-ships"] then
 	local t = data.raw["technology"]["automated_water_transport"]
 	t.prerequisites = {

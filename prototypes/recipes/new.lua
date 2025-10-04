@@ -386,6 +386,20 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "diesel-agricultural-tower",
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "coconut-sealant", amount = 2 },
+			{ type = "item", name = "steel-plate", amount = 10 },
+			{ type = "item", name = "engine-unit", amount = 3 },
+			{ type = "item", name = "spoilage", amount = 20 },
+			{ type = "item", name = "landfill", amount = 1 },
+		},
+		results = { { type = "item", name = "diesel-agricultural-tower", amount = 1 } },
+		enabled = false,
+	},
+	{
+		type = "recipe",
 		name = "wooden-platform",
 		enabled = false,
 		ingredients = {

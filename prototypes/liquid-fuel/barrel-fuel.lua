@@ -52,6 +52,16 @@ if data.raw["locomotive"]["cargo_ship_engine"] then
 	ship.energy_source.burnt_inventory_size = 10
 	ship.max_power = "1.2MW"
 end
+if data.raw["locomotive"]["boat_engine"] then
+	local boat_engine = data.raw["locomotive"]["boat_engine"]
+	boat_engine.energy_source = boat_engine.energy_source or {}
+	boat_engine.energy_source.type = "burner"
+	boat_engine.energy_source.fuel_categories = { "diesel-fuel" }
+	boat_engine.energy_source.effectivity = 1
+	boat_engine.energy_source.fuel_inventory_size = 3
+	boat_engine.energy_source.burnt_inventory_size = 3
+	boat_engine.max_power = "0.3MW"
+end
 -- cargo ships boat
 if data.raw["car"]["indep-boat"] then
 	local boat = data.raw["car"]["indep-boat"]

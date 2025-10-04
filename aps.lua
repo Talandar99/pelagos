@@ -8,8 +8,8 @@ utils.set_packs("engine", { "automation-science-pack" }, 30, 10)
 utils.set_prerequisites("engine", { "steel-processing" })
 utils.set_prerequisites("fluid-handling", { "engine" })
 utils.set_packs("fluid-handling", { "automation-science-pack" }, 25, 30)
-utils.set_prerequisites("agriculture", { "steel-processing", "landfill" })
-utils.set_packs("agriculture", { "automation-science-pack" }, 20, 30)
+--utils.set_prerequisites("agriculture", { "steel-processing", "landfill" })
+--utils.set_packs("agriculture", { "automation-science-pack" }, 20, 30)
 utils.remove_recipes("agriculture", { "nutrients-from-spoilage" })
 utils.set_prerequisites("fish-breeding", { "automation-science-pack" })
 utils.set_packs("fish-breeding", { "automation-science-pack" }, 25, 15)
@@ -29,7 +29,6 @@ utils.add_recipes("fluid-handling", { "barreling-machine" })
 -- green science
 utils.set_prerequisites("logistic-science-pack", { "automation-science-pack", "engine" })
 utils.add_recipes("coconut-processing-technology", { "nutrients-from-spoilage" })
-utils.set_prerequisites("jellynut", { "planet-discovery-gleba" })
 utils.set_prerequisites("oil-processing", { "deep_sea_oil_extraction" })
 utils.set_trigger("oil-processing", { type = "mine-entity", entity = "methane" })
 utils.add_prerequisites("pelagos-science-pack", { "plastics" })
@@ -232,8 +231,6 @@ data.raw["technology"]["heating-tower"].unit = {
 }
 
 data.raw["technology"]["heating-tower"].research_trigger = nil
-utils.set_prerequisites("jellynut", { "planet-discovery-gleba" })
-utils.set_prerequisites("yumako", { "planet-discovery-gleba" })
 data.raw["technology"]["heavy-gun-turret"].unit = {
 	count = 500,
 	ingredients = {
