@@ -1,13 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.14.0
-Date: 2025-10-03
+Date: 2025-10-04
   Changes:
     - cargo ship boat placed on waterway now has diesel engine not burner.
     - added diesel agricultural tower
     - any planet start: moved agricultural tower research back to gleba
 ---------------------------------------------------------------------------------------------------
 Version: 0.13.2
-Date: 2025-10-03
+Date: 2025-10-04
   Changes:
     - fixed titanium sludge color
     - capsule rocket now require agricultural science pack tech requiremend because you can't research it without it anyway
