@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.14.2
+Date: 2025-10-05
+  Changes:
+    - reduced mining time of wooden platform (0.5 -> 0.2)
+    - fix: forcebuild on pelagos deepsea, now works and will default to wooden platform
+---------------------------------------------------------------------------------------------------
 Version: 0.14.1
 Date: 2025-10-04
   Changes:

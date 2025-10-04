@@ -63,7 +63,7 @@ data:extend({
 		order = "a[artificial]-f",
 		subgroup = "artificial-tiles",
 		needs_correction = false,
-		minable = { mining_time = 0.5, result = "wooden-platform" },
+		minable = { mining_time = 0.2, result = "wooden-platform" },
 		mined_sound = base_sounds.deconstruct_bricks(0.8),
 		is_foundation = false,
 		collision_mask = tile_collision_masks.ground(), --for everything
