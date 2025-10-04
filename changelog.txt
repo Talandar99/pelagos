@@ -1,9 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.14.1
+Date: 2025-10-04
+  Changes:
+    - cargo ship boat placed on waterway now has diesel engine not burner.
+    - added diesel agricultural tower with research and it's recipe
+    - any planet start: moved agricultural tower research back to gleba
+---------------------------------------------------------------------------------------------------
 Version: 0.14.0
 Date: 2025-10-04
   Changes:
     - cargo ship boat placed on waterway now has diesel engine not burner.
-    - added diesel agricultural tower
+    - added diesel agricultural tower with research and it's recipe
     - any planet start: moved agricultural tower research back to gleba
 ---------------------------------------------------------------------------------------------------
 Version: 0.13.2

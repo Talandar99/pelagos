@@ -376,6 +376,11 @@ local productivity_effects = {
 	},
 	{
 		type = "change-recipe-productivity",
+		recipe = "improvised-landfill",
+		change = 0.1,
+	},
+	{
+		type = "change-recipe-productivity",
 		recipe = "artificial-yumako-soil",
 		change = 0.1,
 	},
