@@ -286,7 +286,7 @@ data:extend({
 		drop_sound = space_age_item_sounds.agriculture_inventory_move,
 		stack_size = 100,
 		weight = 2 * kg,
-		spoil_ticks = 0.5 * hour,
+		spoil_ticks = 1.0 * hour,
 		spoil_to_trigger_result = {
 			items_per_trigger = 25,
 			trigger = {
@@ -341,7 +341,7 @@ data:extend({
 		fuel_value = "3MJ",
 		stack_size = 20,
 		default_import_location = "pelagos",
-		spoil_ticks = 1 * hour,
+		spoil_ticks = 2 * hour,
 		spoil_result = "spoilage",
 		weight = 5 * kg,
 		--capsule_action = item_effects.bioflux_speed_and_regen,

@@ -10,7 +10,8 @@ data:extend({
 		order = "c[nutrients]-d[nutrients-from-coconut-meat]",
 		energy_required = 4,
 		ingredients = { { type = "item", name = "coconut-meat", amount = 2 } },
-		results = { { type = "item", name = "nutrients", amount = 8 } },
+		--results = { { type = "item", name = "nutrients", amount = 8 } },
+		results = { { type = "item", name = "nutrients", amount = 10 } },
 		crafting_machine_tint = {
 			primary = { r = 1.000, g = 1.000, b = 0.900, a = 1.000 },
 			secondary = { r = 0.900, g = 0.900, b = 0.800, a = 1.000 },
