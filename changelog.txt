@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.14.4
+Date: 2025-10-05
+  Changes:
+    - change: inserter fishing now follow cargo ship setting so it's disabled by default
+    - fix: titanium barrels now unlock properly with titanium barrel technology
+  Balancing:
+    - any planet start: pelagos chemical science pack recipe now gives 3 packs instead of 2
+    - copper bitter spawner now make more eggs (5 -> 10)
+---------------------------------------------------------------------------------------------------
 Version: 0.14.3
 Date: 2025-10-05
   Changes:

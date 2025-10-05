@@ -538,7 +538,7 @@ data:extend({
 		energy_required = 10,
 		ingredients = {},
 		results = {
-			{ type = "item", name = "copper-biter-egg", amount = 5 },
+			{ type = "item", name = "copper-biter-egg", amount = 10 },
 		},
 		enabled = false,
 	},

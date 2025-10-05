@@ -643,7 +643,9 @@ data:extend({
 		name = "titanium-barrels",
 		icon = "__pelagos__/graphics/titanium-barreling/titanium-barrels.png",
 		icon_size = 128,
-		effects = {},
+		effects = {
+			{ type = "unlock-recipe", recipe = "titanium-barrel" },
+		},
 		prerequisites = { "pelagos-science-pack", "utility-science-pack" },
 		unit = {
 			count_formula = "1000",

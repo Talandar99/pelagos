@@ -109,7 +109,7 @@ data:extend({
 			{ type = "item", name = "advanced-circuit", amount = 3 },
 			{ type = "fluid", name = "ethanol", amount = 30 },
 		},
-		results = { { type = "item", name = "chemical-science-pack", amount = 2 } },
+		results = { { type = "item", name = "chemical-science-pack", amount = 3 } },
 		crafting_machine_tint = {
 			primary = { r = 0.0, g = 0.8, b = 1.0, a = 1.000 },
 			secondary = { r = 0.0, g = 0.8, b = 1.0, a = 1.000 },
