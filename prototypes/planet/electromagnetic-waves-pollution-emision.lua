@@ -87,8 +87,10 @@ end
 
 for _, protos in pairs(data.raw) do
 	for _, proto in pairs(protos) do
-		add_em_to_electric(proto)
-		add_em_to_generator(proto)
+		if not (proto.type == "lamp" or proto.subgroup == "energy-lamp") then
+			add_em_to_electric(proto)
+			add_em_to_generator(proto)
+		end
 	end
 end
 
