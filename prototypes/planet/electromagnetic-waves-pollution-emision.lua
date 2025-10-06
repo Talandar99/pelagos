@@ -98,3 +98,17 @@ local entity = data.raw["reactor"]["heating-tower"]
 entity.energy_source = entity.energy_source or {}
 entity.energy_source.emissions_per_minute = entity.energy_source.emissions_per_minute or {}
 entity.energy_source.emissions_per_minute.electromagnetic_waves = 0
+
+------------------------------------------------------------------------------------------------------------------------
+--- compat
+------------------------------------------------------------------------------------------------------------------------
+--- mulana
+------------------------------------------------------------------------------------------------------------------------
+---
+--if mods["planet-muluna"] then
+--	local mulana_vacuum_assembler = data.raw["reactor"]["heat-assembling-machine-muluna-vacuum-heating-tower-reactor"]
+--	mulana_vacuum_assembler.energy_source = mulana_vacuum_assembler.energy_source or {}
+--	mulana_vacuum_assembler.energy_source.emissions_per_minute = mulana_vacuum_assembler.energy_source.emissions_per_minute
+--		or {}
+--	mulana_vacuum_assembler.energy_source.emissions_per_minute.electromagnetic_waves = 0
+--end

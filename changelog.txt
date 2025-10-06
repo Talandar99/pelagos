@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.14.5
+Date: 2025-10-07
+  Changes:
+    - fix: Yuoki Industries no longer crash on startup
+    - fix: 5dim new energy no longer crash on startup
+    - mulana-vacum-heating-tower no longer emit em waves
+    - fixed locale for em tips and tricks
+---------------------------------------------------------------------------------------------------
 Version: 0.14.4
 Date: 2025-10-05
   Changes:
