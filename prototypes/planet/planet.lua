@@ -999,6 +999,8 @@ data:extend({
 	},
 })
 
+--data:extend({})
+
 local function MapGen_Pelagos()
 	local map = {
 		aux_climate_control = false,
