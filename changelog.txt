@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.14.5
-Date: 2025-10-07
+Version: 0.14.6
+Date: 2025-10-08
   Changes:
     - fix: added missing crafting category to degradation modules. Now they can be crafted with electromagnetic plant
 ---------------------------------------------------------------------------------------------------
