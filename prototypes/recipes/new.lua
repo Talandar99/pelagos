@@ -219,6 +219,7 @@ data:extend({
 		type = "recipe",
 		name = "degradation-module",
 		enabled = false,
+		category = "electronics",
 		ingredients = {
 			{ type = "item", name = "electronic-circuit", amount = 5 },
 			{ type = "item", name = "advanced-circuit", amount = 5 },
@@ -230,6 +231,7 @@ data:extend({
 		type = "recipe",
 		name = "degradation-module-2",
 		enabled = false,
+		category = "electronics",
 		ingredients = {
 			{ type = "item", name = "degradation-module", amount = 4 },
 			{ type = "item", name = "advanced-circuit", amount = 5 },
@@ -243,6 +245,7 @@ data:extend({
 		name = "degradation-module-3",
 		enabled = false,
 		auto_recycle = false,
+		category = "electronics",
 		ingredients = {
 			{ type = "item", name = "degradation-module-2", amount = 4 },
 			{ type = "item", name = "advanced-circuit", amount = 5 },

@@ -2,6 +2,11 @@
 Version: 0.14.5
 Date: 2025-10-07
   Changes:
+    - fix: added missing crafting category to degradation modules. Now they can be crafted with electromagnetic plant
+---------------------------------------------------------------------------------------------------
+Version: 0.14.5
+Date: 2025-10-07
+  Changes:
     - fix: Yuoki Industries no longer crash on startup
     - fix: 5dim new energy no longer crash on startup
     - fixed locale for em tips and tricks
