@@ -224,6 +224,7 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "titanium-dust" },
 			{ type = "unlock-recipe", recipe = "titanium-plate" },
+			{ type = "unlock-recipe", recipe = "crane-bulk-diesel-inserter" },
 		},
 		prerequisites = { "fermentation-bacteria-cultivation-technology" },
 		research_trigger = {

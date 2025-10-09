@@ -365,6 +365,21 @@ data:extend({
 		results = { { type = "item", name = "fast-diesel-inserter", amount = 1 } },
 	},
 	{
+
+		type = "recipe",
+		name = "crane-bulk-diesel-inserter",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "pipe", amount = 4 },
+			{ type = "item", name = "engine-unit", amount = 5 },
+			{ type = "item", name = "coconut-sealant", amount = 6 },
+			{ type = "item", name = "burner-inserter", amount = 1 },
+			{ type = "item", name = "iron-plate", amount = 10 },
+			{ type = "item", name = "titanium-plate", amount = 5 },
+		},
+		results = { { type = "item", name = "crane-bulk-diesel-inserter", amount = 1 } },
+	},
+	{
 		type = "recipe",
 		name = "diesel-assembling-machine",
 		enabled = false,
