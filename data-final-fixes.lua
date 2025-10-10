@@ -72,3 +72,34 @@ if mods["planetaris-unbounded"] then
 		})
 	end
 end
+
+-- 1️⃣ Create a custom collision layer for coral blocking if it doesn't exist
+if not data.raw["collision-layer"]["pelagos-coral-block"] then
+	data:extend({
+		{
+			type = "collision-layer",
+			name = "pelagos-coral-block",
+		},
+	})
+end
+
+-- 2️⃣ Assign that layer to the coral so foundations collide with it
+local coral = data.raw["simple-entity"]["pelagos-titanium-coral"]
+if coral then
+	coral.collision_mask = coral.collision_mask or { layers = {} }
+	if not coral.collision_mask.layers then
+		coral.collision_mask = { layers = coral.collision_mask }
+	end
+	coral.collision_mask.layers["pelagos-coral-block"] = true
+end
+
+-- 3️⃣ Make foundations respect that layer and refuse to place on it
+for _, tile in pairs(data.raw.tile) do
+	if tile.name == "foundation" or tile.name == "landfill" or tile.name == "wooden-platform" then
+		tile.collision_mask = tile.collision_mask or { layers = {} }
+		if not tile.collision_mask.layers then
+			tile.collision_mask = { layers = tile.collision_mask }
+		end
+		tile.collision_mask.layers["pelagos-coral-block"] = true
+	end
+end

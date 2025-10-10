@@ -4,8 +4,13 @@ Date: 2025-10-08
   Changes:
     - added crane bulk diesel inserter
     - any planet start: automation, logistic, military and chemical science pack pelagos recipes now have different icon
+    - added setting to enable galleon before pelagos
+    - added titanium coral new mineable decorative found in deep sea of pelagos
   Balancing:
     - arig high support electric pole can't be build on pelagos deepsea
+    - changed cost for titanium dust (fermentation bacteria 4 -> 1)
+    - changed ammount of fermentation bacteria gained with fermentation bacteria breeding recipe (8 -> 16)
+    - changed cost of corrosive firearm magazine (2 firearm magazine + 1 bacteria -> 1 firearm magazine + 1 bacteria)
 ---------------------------------------------------------------------------------------------------
 Version: 0.14.6
 Date: 2025-10-08

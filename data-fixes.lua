@@ -17,9 +17,14 @@ if mods["corrundum"] then
 	data.raw["space-connection"]["gleba-corrundum"] = nil
 end
 -------------------------------------------------------------------------------
--- temporary fix until miguel fixes his mod
+-- temporary fix until miguel
 -------------------------------------------------------------------------------
 if mods["quality-seeds"] then
 	table.insert(quality_seeds.ignore_plants, "coconut-palm")
 end
 -------------------------------------------------------------------------------
+if settings.startup["allow-galleon-before-pelagos"].value then
+	if mods["pirateship"] and data.raw.technology["steel-axe"] and data.raw.recipe["pirateship"] then
+		table.insert(data.raw.technology["steel-axe"].effects, { type = "unlock-recipe", recipe = "pirateship" })
+	end
+end

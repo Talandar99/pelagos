@@ -999,101 +999,101 @@ data:extend({
 	},
 })
 
---data:extend({
---	{
---		name = "pelagos-titanium-coral",
---		type = "simple-entity",
---		flags = { "placeable-neutral", "placeable-off-grid" },
---		icon = "__space-age__/graphics/icons/copper-stromatolite.png",
---		subgroup = "grass",
---		order = "b[decorative]-l[rock]-c[gleba]-a[copper-stromatolite]",
---		collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } },
---		selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
---
---		--	collision_mask = {
---		--		layers = { ["ground_tile"] = true },
---		--	},
---		collision_mask = { layers = {} },
---		--collision_mask = {
---		--	layers = { player = true, train = true, is_object = true, is_lower_object = true },
---		--},
---		damaged_trigger_effect = hit_effects.rock(),
---		--render_layer = "object",
---		render_layer = "decals",
---		--render_layer = "ground-layer-4",
---		--render_layer = "under-tiles",
---		protected_from_tile_building = false,
---		max_health = 50,
---		surface_conditions = {
---			{
---				property = "pressure",
---				min = 1500,
---				max = 1500,
---			},
---		},
---		autoplace = {
---			probability_expression = "0.50 * min(1, max(noise_layer_noise('pelagos-titanium-coral') - 0.35, 0) ^ 4)",
---			tile_restriction = { "pelagos-deepsea" },
---			richness_expression = 20,
---		},
---		dying_trigger_effect = decorative_trigger_effects.big_rock(),
---		minable = {
---			mining_time = 0.4,
---			results = {
---				{ type = "item", name = "titanium-dust", amount_min = 0, amount_max = 2 },
---				{ type = "item", name = "stone", amount_min = 0, amount_max = 4 },
---			},
---		},
---		resistances = {
---			{
---				type = "fire",
---				percent = 100,
---			},
---		},
---		map_color = { 61, 90, 94 },
---		count_as_rock_for_filtered_deconstruction = true,
---		mined_sound = base_sounds.deconstruct_bricks(1.0),
---		impact_category = "stone",
---		pictures = {
---			{
---				filename = "__pelagos__/graphics/coral/coral1.png",
---				width = 128,
---				height = 96,
---				--shift = { 0.304688, -0.4 },
---				scale = 0.5,
---			},
---			{
---				filename = "__pelagos__/graphics/coral/coral2.png",
---				width = 128,
---				height = 96,
---				--shift = { 0.304688, -0.4 },
---				scale = 0.5,
---			},
---
---			{
---				filename = "__pelagos__/graphics/coral/coral3.png",
---				width = 128,
---				height = 96,
---				--shift = { 0.304688, -0.4 },
---				scale = 0.5,
---			},
---			{
---				filename = "__pelagos__/graphics/coral/coral4.png",
---				width = 128,
---				height = 96,
---				--shift = { 0.304688, -0.4 },
---				scale = 0.5,
---			},
---			{
---				filename = "__pelagos__/graphics/coral/coral5.png",
---				width = 128,
---				height = 96,
---				--shift = { 0.304688, -0.4 },
---				scale = 0.5,
---			},
---		},
---	},
---})
+data:extend({
+	{
+		name = "pelagos-titanium-coral",
+		type = "simple-entity",
+		flags = { "placeable-neutral", "placeable-off-grid" },
+		icon = "__space-age__/graphics/icons/copper-stromatolite.png",
+		subgroup = "grass",
+		order = "b[decorative]-l[rock]-c[gleba]-a[pelagos-titanium-coral]",
+		collision_box = { { -0.3, -0.3 }, { 0.3, 0.3 } },
+		selection_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
+
+		--	collision_mask = {
+		--		layers = { ["ground_tile"] = true },
+		--	},
+		collision_mask = { layers = {} },
+		--collision_mask = {
+		--	layers = { player = true, train = true, is_object = true, is_lower_object = true },
+		--},
+		damaged_trigger_effect = hit_effects.rock(),
+		--render_layer = "object",
+		render_layer = "decals",
+		--render_layer = "ground-layer-4",
+		--render_layer = "under-tiles",
+		protected_from_tile_building = false,
+		max_health = 50,
+		surface_conditions = {
+			{
+				property = "pressure",
+				min = 1500,
+				max = 1500,
+			},
+		},
+		autoplace = {
+			probability_expression = "0.40 * min(1, max(noise_layer_noise('pelagos-titanium-coral') - 0.35, 0) ^ 4)",
+			tile_restriction = { "pelagos-deepsea" },
+			richness_expression = 20,
+		},
+		dying_trigger_effect = decorative_trigger_effects.big_rock(),
+		minable = {
+			mining_time = 0.4,
+			results = {
+				{ type = "item", name = "titanium-dust", amount_min = 0, amount_max = 2 },
+				{ type = "item", name = "stone", amount_min = 0, amount_max = 4 },
+			},
+		},
+		resistances = {
+			{
+				type = "fire",
+				percent = 100,
+			},
+		},
+		map_color = { 61, 90, 94 },
+		count_as_rock_for_filtered_deconstruction = true,
+		mined_sound = base_sounds.deconstruct_bricks(1.0),
+		impact_category = "stone",
+		pictures = {
+			{
+				filename = "__pelagos__/graphics/coral/coral1.png",
+				width = 128,
+				height = 96,
+				--shift = { 0.304688, -0.4 },
+				scale = 0.5,
+			},
+			{
+				filename = "__pelagos__/graphics/coral/coral2.png",
+				width = 128,
+				height = 96,
+				--shift = { 0.304688, -0.4 },
+				scale = 0.5,
+			},
+
+			{
+				filename = "__pelagos__/graphics/coral/coral3.png",
+				width = 128,
+				height = 96,
+				--shift = { 0.304688, -0.4 },
+				scale = 0.5,
+			},
+			{
+				filename = "__pelagos__/graphics/coral/coral4.png",
+				width = 128,
+				height = 96,
+				--shift = { 0.304688, -0.4 },
+				scale = 0.5,
+			},
+			{
+				filename = "__pelagos__/graphics/coral/coral5.png",
+				width = 128,
+				height = 96,
+				--shift = { 0.304688, -0.4 },
+				scale = 0.5,
+			},
+		},
+	},
+})
 
 --data:extend({})
 
@@ -1156,7 +1156,7 @@ local function MapGen_Pelagos()
 					--["copper-ore"] = {},
 					["pelagos-big-rock"] = {},
 					["pelagos-copper-stromatolite"] = {},
-					--["pelagos-titanium-coral"] = {},
+					["pelagos-titanium-coral"] = {},
 					--["dead-tree-desert"] = {},
 					["methane"] = {},
 					["titanium-sludge"] = {},

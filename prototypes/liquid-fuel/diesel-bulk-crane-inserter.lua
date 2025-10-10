@@ -167,7 +167,9 @@ data:extend({
 			scale = 0.25,
 		},
 
-		platform_picture = make_4way_animation_from_spritesheet({
+		-- Overlay Platform Layer
+		integration_patch_render_layer = "object",
+		integration_patch = make_4way_animation_from_spritesheet({
 			layers = {
 				{
 					filename = "__pelagos__/graphics/diesel-titanium-crane-bulk-inserter/platform.png",
@@ -175,6 +177,17 @@ data:extend({
 					width = 384,
 					height = 192,
 					scale = 0.5,
+				},
+			},
+		}),
+		platform_picture = make_4way_animation_from_spritesheet({
+			layers = {
+				{
+					filename = "__pelagos__/graphics/diesel-titanium-crane-bulk-inserter/platform.png",
+					priority = "extra-high",
+					width = 384,
+					height = 192,
+					scale = 0.00000001,
 				},
 				--				{
 				--          		filename = "__inserter-cranes-fork__/graphics/entity/crane-platform-3x1-sh.png",

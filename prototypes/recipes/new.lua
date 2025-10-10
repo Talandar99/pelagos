@@ -172,7 +172,7 @@ data:extend({
 			{ type = "item", name = "raw-fish", amount = 1 },
 		},
 		results = {
-			{ type = "item", name = "fermentation-bacteria", amount = 8 },
+			{ type = "item", name = "fermentation-bacteria", amount = 16 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
@@ -469,7 +469,7 @@ data:extend({
 		energy_required = 5,
 		ingredients = {
 			{ type = "fluid", name = "titanium-sludge", amount = 100 },
-			{ type = "item", name = "fermentation-bacteria", amount = 4 },
+			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
 		results = {
 			{ type = "item", name = "titanium-dust", amount = 1, probability = 0.25 },
@@ -670,17 +670,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "corrosive-firearm-magazine",
-		energy_required = 1,
-		ingredients = {
-			{ type = "item", name = "firearm-magazine", amount = 2 },
-			{ type = "item", name = "fermentation-bacteria", amount = 1 },
-		},
-		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 1 } },
-		auto_recycle = false,
-	},
-	{
-		type = "recipe",
 		name = "pelagos-capture-robot-rocket",
 		energy_required = 10,
 		ingredients = {
@@ -698,7 +687,7 @@ data:extend({
 		name = "corrosive-firearm-magazine",
 		energy_required = 1,
 		ingredients = {
-			{ type = "item", name = "firearm-magazine", amount = 2 },
+			{ type = "item", name = "firearm-magazine", amount = 1 },
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
 		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 1 } },
