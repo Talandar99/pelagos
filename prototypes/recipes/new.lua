@@ -570,6 +570,7 @@ data:extend({
 		ingredients = { { type = "item", name = "copper-biter-egg", amount = 1 } },
 		results = { { type = "item", name = "copper-plate", amount = 1 } },
 		allow_productivity = true,
+		enabled = false,
 	},
 	{
 		type = "recipe",
@@ -691,6 +692,7 @@ data:extend({
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
 		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 1 } },
+		enabled = false,
 		auto_recycle = false,
 	},
 	{

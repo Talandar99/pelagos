@@ -1,6 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 2025-10-10
+  Changes:
+    - fix: corrosive firearm magazine recipe is no longer unlocked from start of the game
+    - fix: copper plate from copper biter egg recipe is no longer unlocked from start of the game
+    - fix: mulana heat assembling machine muluna vacuum heating tower reactor no longer emmit electromagnetic waves
+---------------------------------------------------------------------------------------------------
 Version: 0.15.0
-Date: 2025-10-08
+Date: 2025-10-10
   Changes:
     - added crane bulk diesel inserter
     - any planet start: automation, logistic, military and chemical science pack pelagos recipes now have different icon
