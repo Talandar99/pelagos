@@ -61,6 +61,10 @@ data:extend({
 	{
 		type = "recipe",
 		name = "aps-pelagos-automation-science-pack",
+		icons = {
+			{ icon = "__base__/graphics/icons/automation-science-pack.png", icon_size = 64 },
+			{ icon = "__pelagos__/graphics/pelagos.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		},
 		enabled = false,
 		energy_required = 5,
 		ingredients = {
@@ -81,6 +85,10 @@ data:extend({
 	{
 		type = "recipe",
 		name = "aps-pelagos-logistic-science-pack",
+		icons = {
+			{ icon = "__base__/graphics/icons/logistic-science-pack.png", icon_size = 64 },
+			{ icon = "__pelagos__/graphics/pelagos.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		},
 		enabled = false,
 		energy_required = 6,
 		ingredients = {
@@ -101,6 +109,10 @@ data:extend({
 	{
 		type = "recipe",
 		name = "aps-pelagos-chemical-science-pack",
+		icons = {
+			{ icon = "__base__/graphics/icons/chemical-science-pack.png", icon_size = 64 },
+			{ icon = "__pelagos__/graphics/pelagos.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		},
 		enabled = false,
 		energy_required = 24,
 		category = "organic",
@@ -123,6 +135,10 @@ data:extend({
 	{
 		type = "recipe",
 		name = "aps-pelagos-military-science-pack",
+		icons = {
+			{ icon = "__base__/graphics/icons/military-science-pack.png", icon_size = 64 },
+			{ icon = "__pelagos__/graphics/pelagos.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		},
 		enabled = false,
 		energy_required = 10,
 		ingredients = {

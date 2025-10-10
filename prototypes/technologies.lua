@@ -680,23 +680,28 @@ if mods["Long_Range_Delivery_Drones"] then
 	}
 	t.order = "z[pelagos]"
 end
+
 if mods["cargo-ships"] then
-	local t = data.raw["technology"]["oversea-energy-distribution"]
-	t.prerequisites = { "pelagos-science-pack", "space-science-pack" }
-	t.effects = {
-		{ type = "unlock-recipe", recipe = "floating-electric-pole" },
-	}
-	t.unit = {
-		count = 1000,
-		ingredients = {
-			{ "automation-science-pack", 1 },
-			{ "logistic-science-pack", 1 },
-			{ "chemical-science-pack", 1 },
-			{ "space-science-pack", 1 },
-			{ "pelagos-science-pack", 1 },
-		},
-		time = 30,
-	}
+	local t = data.raw["technology"] and data.raw["technology"]["oversea-energy-distribution"]
+
+	-- Only modify if the tech actually exists (e.g. not disabled in settings)
+	if t then
+		t.prerequisites = { "pelagos-science-pack", "space-science-pack" }
+		t.effects = {
+			{ type = "unlock-recipe", recipe = "floating-electric-pole" },
+		}
+		t.unit = {
+			count = 1000,
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 30,
+		}
+	end
 end
 
 if mods["cargo-ships"] then

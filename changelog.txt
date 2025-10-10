@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 2025-10-08
+  Changes:
+    - added crane bulk diesel inserter
+    - any planet start: automation, logistic, military and chemical science pack pelagos recipes now have different icon
+  Balancing:
+    - arig high support electric pole can't be build on pelagos deepsea
+---------------------------------------------------------------------------------------------------
 Version: 0.14.6
 Date: 2025-10-08
   Changes:

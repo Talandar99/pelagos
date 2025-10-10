@@ -26,3 +26,49 @@ end
 
 -- make pelagos-deepsea water_tile_type
 table.insert(water_tile_type_names, "pelagos-deepsea")
+
+-- Disable Arig's high-support electric poles on Pelagos deep sea tiles
+
+-- Register a new collision layer if it doesn't exist yet
+if not data.raw["collision-layer"]["pelagos-deepsea"] then
+	data:extend({
+		{
+			type = "collision-layer",
+			name = "pelagos-deepsea",
+		},
+	})
+end
+
+-- Add this collision layer to the "pelagos-deepsea" tile
+local deepsea = data.raw.tile["pelagos-deepsea"]
+if deepsea then
+	-- Ensure the tile has a proper collision_mask structure
+	if not deepsea.collision_mask then
+		deepsea.collision_mask = { layers = {} }
+	elseif not deepsea.collision_mask.layers then
+		deepsea.collision_mask = { layers = deepsea.collision_mask }
+	end
+
+	deepsea.collision_mask.layers["pelagos-deepsea"] = true
+end
+
+-- If Planetaris Unbounded is installed, restrict pole placement on deep sea
+if mods["planetaris-unbounded"] then
+	local pole = data.raw["electric-pole"] and data.raw["electric-pole"]["planetaris-high-support-electric-pole"]
+	if pole then
+		-- Ensure the pole collides with our deep sea layer
+		pole.collision_mask = pole.collision_mask or { layers = {} }
+		if not pole.collision_mask.layers then
+			pole.collision_mask = { layers = pole.collision_mask }
+		end
+		pole.collision_mask.layers["pelagos-deepsea"] = true
+
+		-- Add a buildability rule for clarity (optional but harmless)
+		pole.tile_buildability_rules = pole.tile_buildability_rules or {}
+		table.insert(pole.tile_buildability_rules, {
+			area = { { -1, -1 }, { 1, 1 } },
+			colliding_tiles = { layers = { ["pelagos-deepsea"] = true } },
+			remove_on_collision = true,
+		})
+	end
+end
