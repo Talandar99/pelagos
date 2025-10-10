@@ -221,7 +221,7 @@ data.raw["technology"]["wood-spoiling-technology"].unit = {
 utils.add_prerequisites("wood-spoiling-technology", { "chemical-science-pack" })
 
 data.raw["technology"]["tank_ship"].unit = {
-	count = 500,
+	count = 300,
 	ingredients = {
 		{ "automation-science-pack", 1 },
 		{ "logistic-science-pack", 1 },

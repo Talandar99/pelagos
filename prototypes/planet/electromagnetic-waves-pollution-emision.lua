@@ -102,10 +102,10 @@ entity.energy_source.emissions_per_minute.electromagnetic_waves = 0
 ------------------------------------------------------------------------------------------------------------------------
 --- compat mulana
 ------------------------------------------------------------------------------------------------------------------------
-if mods["planet-muluna"] then
-	local muluna_vacuum_assembler = data.raw["reactor"]["heat-assembling-machine-muluna-vacuum-heating-tower-reactor"]
-	muluna_vacuum_assembler.energy_source = muluna_vacuum_assembler.energy_source or {}
-	muluna_vacuum_assembler.energy_source.emissions_per_minute = muluna_vacuum_assembler.energy_source.emissions_per_minute
-		or {}
-	muluna_vacuum_assembler.energy_source.emissions_per_minute.electromagnetic_waves = 0
-end
+--if mods["planet-muluna"] then
+--	local muluna_vacuum_assembler = data.raw["reactor"]["heat-assembling-machine-muluna-vacuum-heating-tower-reactor"]
+--	muluna_vacuum_assembler.energy_source = muluna_vacuum_assembler.energy_source or {}
+--	muluna_vacuum_assembler.energy_source.emissions_per_minute = muluna_vacuum_assembler.energy_source.emissions_per_minute
+--		or {}
+--	muluna_vacuum_assembler.energy_source.emissions_per_minute.electromagnetic_waves = 0
+--end

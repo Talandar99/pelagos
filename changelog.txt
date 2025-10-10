@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 2025-10-11
+  Balancing:
+    - any planet start: tanker ship research cost reduced (500->300)
+    - reverted fix: mulana heat assembling machine muluna vacuum heating tower reactor no longer emmit electromagnetic waves
+---------------------------------------------------------------------------------------------------
 Version: 0.15.1
 Date: 2025-10-10
   Changes:
