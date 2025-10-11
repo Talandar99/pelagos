@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 2025-10-12
+  Balancing:
+    - any planet start: added safe asteroids on pelagos orbit (medium asteroids and bigger one don't spawn on pelagos orbit)
+---------------------------------------------------------------------------------------------------
 Version: 0.16.0
 Date: 2025-10-11
   Changes:
