@@ -1,11 +1,3 @@
---pelagos fish breeding
-local fish_breeding = data.raw.recipe["fish-breeding"]
-
-fish_breeding.surface_conditions = {
-	{ property = "pressure", min = 1000, max = 1500 }, -- Nauvis: 1000, Pelagos: 1500
-}
-fish_breeding.enabled = false
-
 -- pre science pack progression
 data:extend({
 	{
@@ -741,6 +733,56 @@ if mods["pirateship"] then
 		time = 30,
 	}
 end
+
+data:extend({
+	{
+		type = "technology",
+		name = "pelagos-asteroid-bioprocessing",
+		icon = "__pelagos__/graphics/asteroids-bioprocessing.png",
+		icon_size = 120,
+		effects = {
+			{ type = "unlock-recipe", recipe = "oxide-asteroid-melting" },
+			{ type = "unlock-recipe", recipe = "metallic-asteroid-methane-crushing" },
+			{ type = "unlock-recipe", recipe = "carbonic-asteroid-gasification" },
+		},
+		prerequisites = { "pelagos-science-pack" },
+		unit = {
+			count_formula = "500",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+
+data:extend({
+	{
+		type = "technology",
+		name = "ethanol-thruster",
+		icon = "__pelagos__/graphics/thruster/ethanol_thruster_tech.png",
+		icon_size = 256,
+		effects = {
+			{ type = "unlock-recipe", recipe = "ethanol-thruster" },
+		},
+		prerequisites = { "pelagos-science-pack", "ethanol" },
+		unit = {
+			count_formula = "1000",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
 
 -- remove unused researches
 if mods["cargo-ships"] then

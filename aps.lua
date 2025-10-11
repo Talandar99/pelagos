@@ -258,3 +258,63 @@ data.raw["technology"]["heavy-gun-turret"].unit = {
 	},
 	time = 30,
 }
+--utils.add_recipes(
+--	"space-platform",
+--	{ "metallic-asteroid-methane-crushing", "carbonic-asteroid-gasification", "oxide-asteroid-melting" }
+--)
+----------------------------------------------------------------------------------------------------------
+-- space changes
+----------------------------------------------------------------------------------------------------------
+data.raw.technology["pelagos-asteroid-bioprocessing"].hidden = true
+data.raw.technology["ethanol-thruster"].hidden = true
+----------------------------------------------------------------------------------------------------------
+utils.add_recipes(
+	"space-platform",
+	{ "oxide-asteroid-melting", "metallic-asteroid-methane-crushing", "carbonic-asteroid-gasification" }
+)
+utils.remove_recipes(
+	"space-platform",
+	{ "crusher", "metallic-asteroid-crushing", "carbonic-asteroid-crushing", "oxide-asteroid-crushing" }
+)
+utils.add_recipes(
+	"advanced-asteroid-processing",
+	{ "crusher", "metallic-asteroid-crushing", "carbonic-asteroid-crushing", "oxide-asteroid-crushing" }
+)
+
+utils.add_recipes("space-platform-thruster", { "ethanol-thruster" })
+utils.remove_recipes("space-platform-thruster", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })
+utils.add_recipes("advanced-asteroid-processing", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })
+data:extend({
+	{
+		type = "recipe",
+		name = "aps-pelagos-space-science-pack",
+		icons = {
+			{ icon = "__base__/graphics/icons/space-science-pack.png", icon_size = 64 },
+			{ icon = "__pelagos__/graphics/pelagos.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		},
+		enabled = false,
+		energy_required = 15,
+		category = "organic",
+		ingredients = {
+			{ type = "item", name = "iron-plate", amount = 2 },
+			{ type = "fluid", name = "water", amount = 20 },
+			{ type = "fluid", name = "methane", amount = 10 },
+		},
+		surface_conditions = {
+			{
+				property = "pressure",
+				min = 0,
+				max = 0,
+			},
+		},
+		results = { { type = "item", name = "space-science-pack", amount = 5 } },
+		crafting_machine_tint = {
+			primary = { r = 1.0, g = 1.0, b = 1.0, a = 1.000 },
+			secondary = { r = 1.0, g = 1.0, b = 1.0, a = 1.000 },
+		},
+		allow_productivity = true,
+		auto_recycle = false,
+	},
+})
+utils.add_recipes("space-science-pack", { "aps-pelagos-space-science-pack" })
+----------------------------------------------------------------------------------------------------------

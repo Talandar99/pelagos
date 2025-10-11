@@ -34,8 +34,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		minable = {
@@ -189,8 +189,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		autoplace = {
@@ -427,8 +427,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		walking_sound = tile_sounds.walking.pebble,
@@ -583,8 +583,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		trigger_effect = decorative_trigger_effects.tiny_rock(),
@@ -740,8 +740,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		autoplace = {
@@ -1027,8 +1027,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		autoplace = {
@@ -1198,8 +1198,8 @@ PlanetsLib:extend({
 			["day-night-cycle"] = 10 * minute,
 			["magnetic-field"] = 50,
 			["solar-power"] = 50,
-			pressure = 1500,
-			gravity = 15,
+			pressure = 1809,
+			gravity = 18.09,
 		},
 
 		surface_render_parameters = {

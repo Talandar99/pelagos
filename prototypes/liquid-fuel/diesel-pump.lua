@@ -89,8 +89,9 @@ data:extend({
 			emissions_per_minute = { pollution = 2 }, --12 is burner drill
 		},
 		--energy_usage = "29kW",
-		energy_usage = "50kW",
-		pumping_speed = 30,
+		--energy_usage = "50kW",
+		energy_usage = "20kW",
+		pumping_speed = 20,
 		impact_category = "metal",
 		open_sound = sounds.machine_open,
 		close_sound = sounds.machine_close,

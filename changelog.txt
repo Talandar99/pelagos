@@ -1,9 +1,32 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 2025-10-11
+  Changes:
+    - changed surface restriction on fermentation-bacteria to allow this recipe in space
+    - changed surface restriction on fermentation-bacteria-cultivation to allow this recipe in space
+    - changed surface restriction on fish breeding to allow this recipe in space
+    - added metallic asteroid methane crushing recipe
+    - added carbonic asteroid gasification recipe
+    - added oxide asteroid melting recipe
+    - added asteroid bioprocessing technology to unlock new asteroid processing recipes
+    - any planet start: moved asteroids processing and crusher into advanced asteroid processing, 
+    - any planet start: added pelagos space science pack recipe
+      and changed progression to unlock asteroid bioprocessing after launching first space station
+    - added ethanol thruster and related technology to unlock it
+    - any planet start: moved regular thruster and related recipes into advanced asteroid processing. Thruster research now enable ethanol thruster
+    - fix: changed planet pressure and gravity to not collide with other mods
+  Balancing:
+    - changed corrosive ammo dmg to match red ammo (7->8)
+    - you can now craft more corrosive magazines with 1 bacteria (1 firearm-magazine -> 4 firearm-magazine)
+    - reduced pumping speed of diesel pump (1800->1200) now it's the same as electric pump
+    - reduced energy usage of diesel pump (50kW->20kW)
+---------------------------------------------------------------------------------------------------
 Version: 0.15.2
 Date: 2025-10-11
+  Changes:
+    - reverted fix: mulana heat assembling machine muluna vacuum heating tower reactor no longer emmit electromagnetic waves
   Balancing:
     - any planet start: tanker ship research cost reduced (500->300)
-    - reverted fix: mulana heat assembling machine muluna vacuum heating tower reactor no longer emmit electromagnetic waves
 ---------------------------------------------------------------------------------------------------
 Version: 0.15.1
 Date: 2025-10-10

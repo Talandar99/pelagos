@@ -378,7 +378,7 @@ data:extend({
 								},
 								{
 									type = "damage",
-									damage = { amount = 7, type = "corrosive" },
+									damage = { amount = 8, type = "corrosive" },
 								},
 								{
 									type = "activate-impact",

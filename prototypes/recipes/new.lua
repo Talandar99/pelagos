@@ -94,8 +94,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		enabled = false,
@@ -123,8 +123,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 0,
+				max = 1809,
 			},
 		},
 		subgroup = "agriculture-processes",
@@ -157,8 +157,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 0,
+				max = 1809,
 			},
 		},
 		subgroup = "agriculture-processes",
@@ -190,8 +190,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		enabled = false,
@@ -310,8 +310,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		enabled = false,
@@ -535,8 +535,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		results = { { type = "item", name = "rocket-part", amount = 1 } },
@@ -688,10 +688,10 @@ data:extend({
 		name = "corrosive-firearm-magazine",
 		energy_required = 1,
 		ingredients = {
-			{ type = "item", name = "firearm-magazine", amount = 1 },
+			{ type = "item", name = "firearm-magazine", amount = 4 },
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
-		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 1 } },
+		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 4 } },
 		enabled = false,
 		auto_recycle = false,
 	},
@@ -709,5 +709,71 @@ data:extend({
 		results = { { type = "item", name = "heavy-gun-turret", amount = 1 } },
 		enabled = false,
 		--auto_recycle = false,
+	},
+})
+
+data:extend({
+	{
+		type = "recipe",
+		name = "metallic-asteroid-methane-crushing",
+		icon = "__pelagos__/graphics/metallic-asteroid-methane-crushing.png",
+		category = "organic-or-chemistry",
+		subgroup = "space-crushing",
+		order = "g-a-a",
+		auto_recycle = false,
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "metallic-asteroid-chunk", amount = 1 },
+			{ type = "fluid", name = "methane", amount = 20 },
+		},
+		energy_required = 2,
+		results = {
+			{ type = "item", name = "iron-ore", amount = 25 },
+		},
+		allow_productivity = true,
+		allow_decomposition = false,
+	},
+	{
+		type = "recipe",
+		name = "carbonic-asteroid-gasification",
+		icon = "__pelagos__/graphics/carbonic-asteroid-gasification.png",
+		category = "organic",
+		subgroup = "space-crushing",
+		order = "g-a-b",
+		auto_recycle = false,
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "carbonic-asteroid-chunk", amount = 1 },
+			{ type = "fluid", name = "water", amount = 20 },
+		},
+		energy_required = 2,
+		results = {
+			{ type = "fluid", name = "methane", amount = 100 },
+		},
+		allow_productivity = true,
+		allow_decomposition = false,
+	},
+	{
+		type = "recipe",
+		name = "oxide-asteroid-melting",
+		icons = {
+			{ icon = "__space-age__/graphics/icons/oxide-asteroid-chunk.png", icon_size = 64 },
+			{ icon = "__base__/graphics/icons/fluid/water.png", icon_size = 64, scale = 0.4, shift = { 8, -8 } },
+		},
+		category = "organic",
+		subgroup = "space-crushing",
+		order = "g-a-c",
+		auto_recycle = false,
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "oxide-asteroid-chunk", amount = 1 },
+			{ type = "item", name = "spoilage", amount = 1 },
+		},
+		energy_required = 2,
+		results = {
+			{ type = "fluid", name = "water", amount = 100 },
+		},
+		allow_productivity = true,
+		allow_decomposition = false,
 	},
 })

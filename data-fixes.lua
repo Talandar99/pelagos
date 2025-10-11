@@ -16,6 +16,15 @@ if mods["corrundum"] then
 	})
 	data.raw["space-connection"]["gleba-corrundum"] = nil
 end
+
+-------------------------------------------------------------------------------
+--pelagos fish breeding
+local fish_breeding = data.raw.recipe["fish-breeding"]
+
+fish_breeding.surface_conditions = {
+	{ property = "pressure", min = 0, max = 2000 }, -- Nauvis: 1000, Pelagos: 1500
+}
+fish_breeding.enabled = false
 -------------------------------------------------------------------------------
 -- temporary fix until miguel
 -------------------------------------------------------------------------------
@@ -28,3 +37,4 @@ if settings.startup["allow-galleon-before-pelagos"].value then
 		table.insert(data.raw.technology["steel-axe"].effects, { type = "unlock-recipe", recipe = "pirateship" })
 	end
 end
+-----------------------------------

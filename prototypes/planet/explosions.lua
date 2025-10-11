@@ -16,8 +16,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		created_effect = {

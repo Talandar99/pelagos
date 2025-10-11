@@ -9,7 +9,7 @@ if palm then
 		},
 		tile_restriction = { "sand-1", "sand-2", "pelagos-sand-3", "pelagos-sand-4" },
 		surface_conditions = {
-			{ property = "pressure", min = 1500, max = 1500 },
+			{ property = "pressure", min = 1809, max = 1809 },
 		},
 	}
 end
@@ -27,7 +27,7 @@ if palm then
 		},
 		tile_restriction = { "sand-1", "sand-2", "red-desert-1", "red-desert-2" },
 		surface_conditions = {
-			{ property = "pressure", min = 1500, max = 1500 },
+			{ property = "pressure", min = 1809, max = 1809 },
 		},
 	}
 end

@@ -31,8 +31,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		infinite_depletion_amount = 1,
@@ -117,8 +117,8 @@ data:extend({
 		surface_conditions = {
 			{
 				property = "pressure",
-				min = 1500,
-				max = 1500,
+				min = 1809,
+				max = 1809,
 			},
 		},
 		infinite_depletion_amount = 1,
