@@ -1,4 +1,5 @@
-for _, surface in pairs(game.surfaces) do
+local surface = game.surfaces["pelagos"]
+if surface and surface.valid then
 	for chunk in surface.get_chunks() do
 		local tiles_to_fix = {}
 		for x = chunk.x * 32, (chunk.x + 1) * 32 - 1 do
@@ -35,6 +36,5 @@ for _, planet in pairs(game.planets or {}) do
 		log(
 			"Updated Pelagos map generator tile settings: removed pelagos-sand-3/4, ensured sand-1/2 and pelagos-deepsea exist."
 		)
-		--game.print("🌊 Pelagos terrain generation updated: replaced old sands with new base sand layers.")
 	end
 end
