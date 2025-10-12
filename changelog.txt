@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.16.1
+Version: 0.16.2
 Date: 2025-10-12
   Changes:
     - titanium barrels technology now require tanker
