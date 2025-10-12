@@ -186,9 +186,10 @@ data:extend({
 		order = "ea[pelagos]",
 	},
 })
+
 utils.set_prerequisites("electric-mining-drill", { "diesel-mining-drill" })
 data.raw["technology"]["long-range-delivery-drone"].unit = {
-	count = 500,
+	count = 250,
 	ingredients = {
 		{ "automation-science-pack", 1 },
 		{ "logistic-science-pack", 1 },
@@ -198,6 +199,7 @@ data.raw["technology"]["long-range-delivery-drone"].unit = {
 	},
 	time = 30,
 }
+utils.set_prerequisites("long-range-delivery-drone", { "pelagos-science-pack", "utility-science-pack" })
 data.raw["technology"]["improvised-landfill"].unit = {
 	count = 100,
 	ingredients = {
@@ -262,6 +264,9 @@ data.raw["technology"]["heavy-gun-turret"].unit = {
 --	"space-platform",
 --	{ "metallic-asteroid-methane-crushing", "carbonic-asteroid-gasification", "oxide-asteroid-melting" }
 --)
+--
+data.raw["technology"]["degradation-module-technology"].unit.count = 500
+data.raw["technology"]["titanium-barrels"].unit.count = 200
 ----------------------------------------------------------------------------------------------------------
 -- space changes
 ----------------------------------------------------------------------------------------------------------

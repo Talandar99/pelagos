@@ -510,7 +510,7 @@ data:extend({
 		},
 		prerequisites = { "pelagos-science-pack", "production-science-pack" },
 		unit = {
-			count_formula = "2000",
+			count = 2000,
 			ingredients = {
 				{ "automation-science-pack", 1 },
 				{ "logistic-science-pack", 1 },
@@ -639,9 +639,9 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "titanium-barrel" },
 		},
-		prerequisites = { "pelagos-science-pack", "utility-science-pack" },
+		prerequisites = { "pelagos-science-pack", "utility-science-pack", "tank_ship" },
 		unit = {
-			count_formula = "1000",
+			count = 1000,
 			ingredients = {
 				{ "automation-science-pack", 1 },
 				{ "logistic-science-pack", 1 },
@@ -657,9 +657,9 @@ data:extend({
 
 if mods["Long_Range_Delivery_Drones"] then
 	local t = data.raw["technology"]["long-range-delivery-drone"]
-	t.prerequisites = { "pelagos-science-pack", "utility-science-pack", "diesel-automation" }
+	t.prerequisites = { "pelagos-science-pack", "utility-science-pack", "diesel-automation", "ethanol-thruster" }
 	t.unit = {
-		count = 2500,
+		count = 2000,
 		ingredients = {
 			{ "automation-science-pack", 1 },
 			{ "logistic-science-pack", 1 },
@@ -771,7 +771,7 @@ data:extend({
 		},
 		prerequisites = { "pelagos-science-pack", "ethanol" },
 		unit = {
-			count_formula = "1000",
+			count = 1000,
 			ingredients = {
 				{ "automation-science-pack", 1 },
 				{ "logistic-science-pack", 1 },

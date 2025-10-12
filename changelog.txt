@@ -1,6 +1,18 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.1
 Date: 2025-10-12
+  Changes:
+    - titanium barrels technology now require tanker
+    - delivery drones technology now require ethanol thruster 
+    - disabled pelagos-sand-3 and pelagos-sand-4 in world generation because they don't look tropical
+  Balancing:
+    - reduced long range delivery drones research cost (2500 -> 2000)
+    - any planet start: degradation module technology research cost reduced (2000 -> 500)
+    - any planet start: titanium barrels technology research cost reduced (1000 -> 200)
+    - any planet start: long range delivery drones technology research cost reduced (500 -> 250)
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 2025-10-12
   Balancing:
     - any planet start: added safe asteroids on pelagos orbit (medium asteroids and bigger one don't spawn on pelagos orbit)
 ---------------------------------------------------------------------------------------------------
