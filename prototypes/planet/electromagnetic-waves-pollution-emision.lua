@@ -98,6 +98,10 @@ local entity = data.raw["reactor"]["heating-tower"]
 entity.energy_source = entity.energy_source or {}
 entity.energy_source.emissions_per_minute = entity.energy_source.emissions_per_minute or {}
 entity.energy_source.emissions_per_minute.electromagnetic_waves = 0
+local silo = data.raw["rocket-silo"]["rocket-silo"]
+silo.energy_source = silo.energy_source or {}
+silo.energy_source.emissions_per_minute = silo.energy_source.emissions_per_minute or {}
+silo.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
 
 ------------------------------------------------------------------------------------------------------------------------
 --- compat mulana
