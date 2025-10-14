@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 2025-10-14
+  Changes:
+    - boat now have built in radar
+    - boat can now be remotely controlled
+    - boat now have equipment grid
+    - boat is now faster
+    - added starter iron path that will ALWAYS generate next to 0,0 to make sure player have fair start on pelagos
+---------------------------------------------------------------------------------------------------
 Version: 0.16.4
 Date: 2025-10-12
   Balancing:

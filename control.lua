@@ -235,3 +235,36 @@ script.on_event(defines.events.on_player_created, function(event)
 		)
 	end
 end)
+
+local generated_iron_patch = false
+
+script.on_event(defines.events.on_surface_created, function(event)
+	local surface = game.surfaces[event.surface_index]
+	if surface.name == "pelagos" and not generated_iron_patch then
+		generated_iron_patch = true
+
+		local center = { x = 10, y = 10 }
+		local radius = 10
+		local max_amount = 2000
+
+		for x = -radius, radius do
+			for y = -radius, radius do
+				local distance = math.sqrt(x * x + y * y)
+				if distance <= radius then
+					local noise = math.random()
+
+					local density = 1 - (distance / radius) + (noise - 0.5) * 0.3
+
+					if density > 0.2 then
+						local amount = math.floor(max_amount * density)
+						surface.create_entity({
+							name = "iron-ore",
+							amount = amount,
+							position = { center.x + x, center.y + y },
+						})
+					end
+				end
+			end
+		end
+	end
+end)

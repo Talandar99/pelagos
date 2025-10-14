@@ -8,6 +8,7 @@ end
 local boat_inventory = settings.startup["pelagos-boat-inventory"].value
 local cargo_inventory = settings.startup["pelagos-cargoship-inventory"].value
 local tanker_capacity = settings.startup["pelagos-tanker-capacity"].value
+local boat_friction = settings.startup["pelagos-boat-friction"].value
 
 if data.raw["cargo-wagon"]["cargo_ship"] then
 	data.raw["cargo-wagon"]["cargo_ship"].inventory_size = cargo_inventory
@@ -19,6 +20,12 @@ end
 
 if data.raw["car"]["indep-boat"] then
 	data.raw["car"]["indep-boat"].inventory_size = boat_inventory
+	data.raw["car"]["indep-boat"].allow_remote_driving = true
+	data.raw["car"]["indep-boat"].equipment_grid = "medium-equipment-grid"
+	data.raw["car"]["indep-boat"].trash_inventory_size = 10
+	data.raw["car"]["indep-boat"].chunk_exploration_radius = 3
+	data.raw["car"]["indep-boat"].friction = boat_friction
+	--indep_boat.friction = 0.002/speed_modifier -- default speed_modifier is 1
 end
 -- oil rig
 if data.raw["electric-pole"]["or_pole"] then

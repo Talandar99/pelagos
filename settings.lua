@@ -41,6 +41,16 @@ data:extend({
 		order = "pelagos-e",
 	},
 	{
+		type = "double-setting",
+		name = "pelagos-boat-friction",
+		setting_type = "startup",
+		minimum_value = 0.0001,
+		default_value = 0.001,
+		--maximum_value = 0.002,
+		maximum_value = 0.01,
+		order = "pelagos-f",
+	},
+	{
 		type = "bool-setting",
 		name = "allow-galleon-before-pelagos",
 		setting_type = "startup",
