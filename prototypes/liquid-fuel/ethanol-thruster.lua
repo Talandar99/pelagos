@@ -53,7 +53,7 @@ data:extend({
 			},
 		},
 		max_health = 300,
-		minable = { mining_time = 0.1, result = "thruster" },
+		minable = { mining_time = 0.1, result = "ethanol-thruster" },
 		fast_replaceable_group = "thruster",
 		impact_category = "metal",
 		surface_conditions = {
