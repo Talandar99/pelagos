@@ -46,7 +46,6 @@ return {
 			flags = { "group=effect-texture", "linear-minification", "linear-magnification" },
 		},
 	},
-
 	{
 		index = procession_graphic_catalogue.planet_cloudscape_lvl1,
 		type = "sprite",
@@ -108,7 +107,7 @@ return {
 		index = procession_graphic_catalogue.planet_cloudscape_lvl3_mask,
 		type = "sprite",
 		sprite = {
-			filename = "__pelagos__/graphics/procession/aquilo-sky-tint.png",
+			filename = "__space-age__/graphics/procession/clouds/mask-cloudscape-layered-3.png",
 			width = 1200,
 			height = 900,
 			priority = "no-atlas",

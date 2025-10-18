@@ -107,11 +107,14 @@ if mods["pirateship"] then
 end
 --delivery drones
 if mods["Long_Range_Delivery_Drones"] then
+	data.raw["item"]["long-range-delivery-drone"].weight = 5 * kg
+
+	data.raw["recipe"]["long-range-delivery-drone"].category = "crafting-with-fluid"
 	data.raw["recipe"]["long-range-delivery-drone"].ingredients = {
 		{ type = "item", name = "titanium-plate", amount = 5 },
 		{ type = "item", name = "advanced-circuit", amount = 1 },
 		{ type = "item", name = "engine-unit", amount = 1 },
-		{ type = "item", name = "ethanol-barrel", amount = 1 },
+		{ type = "fluid", name = "ethanol", amount = 50 },
 	}
 	data.raw["recipe"]["long-range-delivery-drone-depot"].ingredients = {
 		{ type = "item", name = "advanced-circuit", amount = 10 },

@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 2025-10-16
+  Changes:
+    - fixed bug that caused crash on startup related to wrong procession catalogue
+    - long range delivery drone recipe now use 50 ethanol instead of 1 ethanol barrel
+  Balancing:
+    - long range delivery drones weight changed. Now you can pack 10 into single rocket instead of 1
+---------------------------------------------------------------------------------------------------
 Version: 0.17.1
 Date: 2025-10-16
   Changes:
