@@ -30,7 +30,6 @@ require("prototypes.rockets")
 require("prototypes.heavy-gun-turret")
 require("prototypes.canal-excavator")
 require("prototypes.cargo-ships")
-require("prototypes.delivery-drones")
 require("prototypes.tips-and-tricks")
 require("data-fixes")
 
