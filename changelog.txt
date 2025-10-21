@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 2025-10-22
+  Changes:
+    - fix: added categories back to diesel assembler so they will be overridden but wanted to make sure they does not cause crash with tenebris 
+---------------------------------------------------------------------------------------------------
 Version: 0.17.4
 Date: 2025-10-21
   Changes:
