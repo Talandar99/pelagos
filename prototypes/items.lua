@@ -143,6 +143,8 @@ data:extend({
 		inventory_move_sound = space_age_item_sounds.agriculture_inventory_move,
 		pick_sound = space_age_item_sounds.agriculture_inventory_pickup,
 		drop_sound = space_age_item_sounds.agriculture_inventory_move,
+		fuel_category = "chemical",
+		fuel_value = "25kJ",
 		stack_size = 50,
 		default_import_location = "pelagos",
 		weight = 1 * kg,

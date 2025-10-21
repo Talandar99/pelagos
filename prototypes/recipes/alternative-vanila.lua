@@ -151,7 +151,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "pelagos-explosives",
-		category = "organic-or-assembling",
+		category = "organic",
 		icon = "__pelagos__/graphics/methane-explosives.png",
 		ingredients = {
 			{ type = "item", name = "carbon", amount = 1 },

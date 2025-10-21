@@ -103,3 +103,8 @@ for _, tile in pairs(data.raw.tile) do
 		tile.collision_mask.layers["pelagos-coral-block"] = true
 	end
 end
+
+-- diesel assembling-machine recipes
+data.raw["assembling-machine"]["diesel-assembling-machine"].crafting_categories =
+	data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories
+table.insert(data.raw["assembling-machine"]["diesel-assembling-machine"].crafting_categories, "barreling")

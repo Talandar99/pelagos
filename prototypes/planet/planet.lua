@@ -1118,8 +1118,8 @@ local function MapGen_Pelagos()
 			--	},
 			["iron-ore"] = {
 				frequency = 4,
-				size = 1.1,
-				richness = 2,
+				size = 1.2,
+				richness = 2.5,
 				starting_area = false,
 			},
 			["methane"] = {},

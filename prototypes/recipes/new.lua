@@ -196,7 +196,6 @@ data:extend({
 		},
 		enabled = false,
 		allow_productivity = true,
-		reset_freshness_on_craft = true,
 		energy_required = 10,
 		ingredients = {
 			{ type = "item", name = "fermentation-bacteria", amount = 5 },
@@ -728,7 +727,13 @@ data:extend({
 		},
 		energy_required = 2,
 		results = {
-			{ type = "item", name = "iron-ore", amount = 25 },
+			{ type = "item", name = "iron-ore", amount = 30 },
+		},
+		crafting_machine_tint = {
+			primary = { r = 79, g = 121, b = 148, a = 1.000 },
+			secondary = { r = 85, g = 132, b = 161, a = 1.000 },
+			tertiary = { r = 79, g = 121, b = 148, a = 1.000 },
+			quaternary = { r = 85, g = 132, b = 161, a = 1.000 },
 		},
 		allow_productivity = true,
 		allow_decomposition = false,
@@ -749,6 +754,12 @@ data:extend({
 		energy_required = 2,
 		results = {
 			{ type = "fluid", name = "methane", amount = 100 },
+		},
+		crafting_machine_tint = {
+			primary = { r = 163, g = 209, b = 62, a = 1.000 },
+			secondary = { r = 193, g = 239, b = 92, a = 1.000 },
+			tertiary = { r = 163, g = 209, b = 62, a = 1.000 },
+			quaternary = { r = 193, g = 239, b = 92, a = 1.000 },
 		},
 		allow_productivity = true,
 		allow_decomposition = false,
@@ -772,6 +783,12 @@ data:extend({
 		energy_required = 2,
 		results = {
 			{ type = "fluid", name = "water", amount = 100 },
+		},
+		crafting_machine_tint = {
+			primary = { r = 42, g = 143, b = 189, a = 1.000 },
+			secondary = { r = 7, g = 80, b = 98, a = 1.000 },
+			tertiary = { r = 42, g = 143, b = 189, a = 1.000 },
+			quaternary = { r = 7, g = 80, b = 98, a = 1.000 },
 		},
 		allow_productivity = true,
 		allow_decomposition = false,

@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 2025-10-21
+  Changes:
+    - changed recipe icon location on calciner for improved readability
+    - added biochamber colors for metallic asteroid methane crushing recipe
+    - added biochamber colors for carbonic asteroid gasification
+    - added biochamber colors for oxide asteroid melting
+    - added fuel value to fermentation-bacteria, so now you can keep cultivation it running even if you have more bacteria than you need
+    - fix: changed recipe category for methane explosives to "organic" to make sure it does not show, even with bugged fluid boxes from other mods
+    - fix: added code that copy assembler 3 recipes to diesel assembler to make sure every assembling machine recipe is present in diesel assembler 
+  Balancing:
+    - terrain generator: changed iron ore patches size (1.1 -> 1.2)
+    - terrain generator: changed iron ore richness (2 -> 2.5)
+    - terrain generator: changed starting iron ore patch radius (10 -> 12)
+    - terrain generator: changed starting iron ore patch richness 
+    - metallic asteroid methane crushing gives 5 iron more (25 -> 30)
+---------------------------------------------------------------------------------------------------
 Version: 0.17.3
 Date: 2025-10-16
   Balancing:

@@ -1,3 +1,108 @@
+---------------------------------------------------------------------------------
+---- lighthouse
+---------------------------------------------------------------------------------
+--local function on_built_lighthouse(event)
+--	local entity = event.entity or event.created_entity
+--	if not (entity and entity.valid and entity.name == "lighthouse") then
+--		return
+--	end
+--
+--	local surface = entity.surface
+--	local pos = entity.position
+--
+--	local lamp_position = { x = pos.x - 0.1, y = pos.y }
+--
+--	local lamp = surface.create_entity({
+--		name = "lighthouse-light",
+--		position = lamp_position,
+--		force = entity.force,
+--		create_build_effect_smoke = false,
+--	})
+--
+--	if lamp then
+--		lamp.destructible = false
+--		lamp.operable = false
+--		storage.lighthouse_lamps = storage.lighthouse_lamps or {}
+--		table.insert(storage.lighthouse_lamps, {
+--			lamp_unit_number = lamp.unit_number,
+--			parent_unit_number = entity.unit_number,
+--			surface_index = surface.index,
+--		})
+--	end
+--end
+--
+--local function on_removed_lighthouse(event)
+--	local entity = event.entity
+--	if not (entity and entity.valid and entity.name == "lighthouse") then
+--		return
+--	end
+--
+--	local surface = entity.surface
+--	for _, lamp in
+--		pairs(surface.find_entities_filtered({
+--			name = "lighthouse-light",
+--			area = {
+--				{ entity.position.x - 1, entity.position.y - 1 },
+--				{ entity.position.x + 1, entity.position.y + 1 },
+--			},
+--		}))
+--	do
+--		lamp.destroy()
+--	end
+--
+--	if storage.lighthouse_lamps then
+--		for i = #storage.lighthouse_lamps, 1, -1 do
+--			local entry = storage.lighthouse_lamps[i]
+--			if entry.parent_unit_number == entity.unit_number then
+--				table.remove(storage.lighthouse_lamps, i)
+--			end
+--		end
+--	end
+--end
+--
+---------------------------------------------------------------------------------
+---- lighthouse: spawn/remove lamp based on fuel state
+---------------------------------------------------------------------------------
+--script.on_nth_tick(120, function()
+--	storage.lighthouse_lamps = storage.lighthouse_lamps or {}
+--
+--	for _, surface in pairs(game.surfaces) do
+--		for _, lighthouse in pairs(surface.find_entities_filtered({ name = "lighthouse" })) do
+--			if lighthouse.valid then
+--				local fluid = lighthouse.fluidbox and lighthouse.fluidbox[1]
+--				local has_fuel = (fluid and fluid.amount or 0) > 0
+--
+--				local lamp = surface.find_entities_filtered({
+--					name = "lighthouse-light",
+--					area = {
+--						{ lighthouse.position.x - 1, lighthouse.position.y - 1 },
+--						{ lighthouse.position.x + 1, lighthouse.position.y + 1 },
+--					},
+--				})[1]
+--
+--				if has_fuel and not lamp then
+--					local lamp_position = { x = lighthouse.position.x - 0.1, y = lighthouse.position.y }
+--					local new_lamp = surface.create_entity({
+--						name = "lighthouse-light",
+--						position = lamp_position,
+--						force = lighthouse.force,
+--						create_build_effect_smoke = false,
+--					})
+--
+--					if new_lamp then
+--						new_lamp.destructible = false
+--						new_lamp.operable = false
+--						storage.lighthouse_lamps[lighthouse.unit_number] = new_lamp.unit_number
+--					end
+--				elseif (not has_fuel) and lamp then
+--					lamp.destroy()
+--					storage.lighthouse_lamps[lighthouse.unit_number] = nil
+--				end
+--			end
+--		end
+--	end
+--end)
+-------------------------------------------------------------------------------
 -- Define the initial machine groups and allowed tiles for each group.
 local function build_allowed_entities()
 	local allowed = {}
@@ -78,6 +183,7 @@ end
 
 local function on_init(event)
 	storage.allowed_entities = build_allowed_entities()
+	--storage.lighthouse_lamps = storage.lighthouse_lamps or {}
 end
 script.on_init(on_init)
 local function on_configuration_changed(event)
@@ -195,6 +301,7 @@ script.on_event(defines.events.on_built_entity, function(event)
 
 	on_entity_built(event)
 	on_built_rocket_silo(event)
+	--on_built_lighthouse(event)
 end)
 
 script.on_event(defines.events.on_robot_built_entity, function(event)
@@ -205,8 +312,17 @@ script.on_event(defines.events.on_robot_built_entity, function(event)
 
 	on_entity_built(event)
 	on_built_rocket_silo(event)
+	--on_built_lighthouse(event)
 end)
 
+script.on_event({
+	defines.events.on_entity_died,
+	defines.events.on_player_mined_entity,
+	defines.events.on_robot_mined_entity,
+}, on_removed_lighthouse)
+-------------------------------------------------------------------------------
+--- starting patch
+-------------------------------------------------------------------------------
 script.on_event(defines.events.on_player_created, function(event)
 	storage.init = storage.init or {}
 	if storage.init[event.player_index] then
@@ -244,8 +360,8 @@ script.on_event(defines.events.on_surface_created, function(event)
 		generated_iron_patch = true
 
 		local center = { x = 10, y = 10 }
-		local radius = 10
-		local max_amount = 2000
+		local radius = 12
+		local max_amount = 3000
 
 		for x = -radius, radius do
 			for y = -radius, radius do
@@ -268,3 +384,4 @@ script.on_event(defines.events.on_surface_created, function(event)
 		end
 	end
 end)
+-------------------------------------------------------------------------------
