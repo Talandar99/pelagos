@@ -207,7 +207,7 @@ data:extend({
 		corpse = "lamp-remnants",
 		dying_explosion = "lamp-explosion",
 		--collision_box = { { -0.15, -0.15 }, { 0.15, 0.15 } },
-		selection_box = { { 0, -0.9 }, { 1, 0.1 } },
+		--selection_box = { { 0, -0.9 }, { 1, 0.1 } },
 		damaged_trigger_effect = hit_effects.entity(),
 		impact_category = "glass",
 		open_sound = { filename = "__base__/sound/open-close/electric-small-open.ogg", volume = 0.7 },

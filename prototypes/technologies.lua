@@ -235,7 +235,7 @@ data:extend({
 		icon_size = 128,
 		effects = {
 			{ type = "unlock-recipe", recipe = "titanium-dust" },
-			{ type = "unlock-recipe", recipe = "titanium-plate" },
+			{ type = "unlock-recipe", recipe = "titanium-plate-from-dust" },
 			{ type = "unlock-recipe", recipe = "crane-bulk-diesel-inserter" },
 		},
 		prerequisites = { "fermentation-bacteria-cultivation-technology" },

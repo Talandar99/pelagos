@@ -505,7 +505,8 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "titanium-plate",
+		name = "titanium-plate-from-dust",
+		icon = "__pelagos__/graphics/titanium/titanium-plate-from-dust.png",
 		--subgroup = "agriculture-products",
 		--order = "a[seeds]-c[]",
 		auto_recycle = false,
