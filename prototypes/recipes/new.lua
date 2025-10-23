@@ -326,6 +326,27 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "lighthouse",
+		category = "advanced-crafting",
+		surface_conditions = {
+			{
+				property = "pressure",
+				min = 1809,
+				max = 1809,
+			},
+		},
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "pipe", amount = 10 },
+			{ type = "item", name = "iron-plate", amount = 20 },
+			{ type = "item", name = "concrete", amount = 100 },
+			{ type = "item", name = "coconut-sealant", amount = 10 },
+		},
+		energy_required = 10,
+		results = { { type = "item", name = "lighthouse", amount = 1 } },
+	},
+	{
+		type = "recipe",
 		name = "diesel-mining-drill",
 		energy_required = 2,
 		ingredients = {
@@ -447,8 +468,8 @@ data:extend({
 		icon = "__pelagos__/graphics/casting-engine-unit.png",
 		enabled = false,
 		ingredients = {
-			{ type = "fluid", name = "molten-iron", amount = 55, fluidbox_multiplier = 55 },
-			{ type = "item", name = "activated-carbon", amount = 5 },
+			{ type = "fluid", name = "molten-iron", amount = 50, fluidbox_multiplier = 50 },
+			{ type = "item", name = "activated-carbon", amount = 3 },
 		},
 		energy_required = 10,
 		-- energy_required = 10, for assembling machine

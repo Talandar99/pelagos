@@ -63,8 +63,8 @@ data:extend({
 		stack_size_bonus = 250 - 1,
 		minable = { mining_time = 0.1, result = "crane-bulk-diesel-inserter" },
 		max_health = 160,
-		corpse = "bulk-inserter-remnants",
-		dying_explosion = "bulk-inserter-explosion",
+		corpse = "fast-inserter-remnants",
+		dying_explosion = "fast-inserter-explosion",
 		resistances = {
 			{
 				type = "fire",

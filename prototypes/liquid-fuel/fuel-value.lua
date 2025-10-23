@@ -18,11 +18,11 @@ local overrides = {
 	["light-oil"] = "1.2MJ",
 	["heavy-oil"] = "0.6MJ",
 	["petroleum-gas"] = "0.6MJ",
-	["coconut-oil"] = "0.3MJ",
+	["crude-oil"] = "0.3MJ",
 	-- pelagos
 	["ethanol"] = "2MJ",
 	["methane"] = "0.6MJ",
-	["crude-oil"] = "0.3MJ",
+	["coconut-oil"] = "0.3MJ",
 	["titanium-sludge"] = "0.15MJ",
 	--bumpuff agriculture
 	["puff-gas"] = "0.6MJ",

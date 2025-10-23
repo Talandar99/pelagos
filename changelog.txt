@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 2025-10-22
+  Changes:
+    - added lighthouse - pelagos liquid fuel radar for discovering new lands
+    - graphics: calciner now has proper unique remnants
+    - graphics: changed remnants of diesel assembling machine to ones that match closer it's look
+    - graphics: changed remnants of barreling machine to ones that match closer it's look
+    - graphics: changed remnants of crane bulk diesel inserter to ones that match closer it's look
+    - graphics: changed remnants of fast diesel inserter for to ones that match closer it's look
+    - graphics: changed remnants of extra long handed diesel inserter to ones that match closer it's look
+    - fix: changed titanium plate default import location to pelagos
+  Balancing:
+    - engine casting recipe now require less molten iron (55 -> 50)
+---------------------------------------------------------------------------------------------------
 Version: 0.17.5
 Date: 2025-10-22
   Changes:

@@ -240,7 +240,7 @@ data:extend({
 		pick_sound = item_sounds.metal_small_inventory_pickup,
 		drop_sound = item_sounds.metal_small_inventory_move,
 		stack_size = 100,
-		default_import_location = "fulgora",
+		default_import_location = "pelagos",
 		weight = 1 * kg,
 	},
 	{

@@ -27,7 +27,7 @@ data:extend({
 		--circuit_wire_max_distance = furnace_circuit_wire_max_distance,
 		--circuit_connector = circuit_connector_definitions["electric-furnace"],
 		max_health = 350,
-		corpse = "electric-furnace-remnants",
+		corpse = "calciner-remnants",
 		dying_explosion = "electric-furnace-explosion",
 		resistances = {
 			{
@@ -177,6 +177,32 @@ data:extend({
 				rotate = false,
 				orientation_to_variation = false,
 			},
+		},
+	},
+	{
+		type = "corpse",
+		name = "calciner-remnants",
+		icon = "__pelagos__/graphics/calciner/calciner-icon.png",
+		flags = { "placeable-neutral", "building-direction-8-way", "not-on-map" },
+		hidden_in_factoriopedia = true,
+		subgroup = "smelting-machine-remnants",
+		order = "a-a-a",
+		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+		tile_width = 3,
+		tile_height = 3,
+		selectable_in_game = false,
+		time_before_removed = 60 * 60 * 15, -- 15 minutes
+		expires = false,
+		final_render_layer = "remnants",
+		remove_on_tile_placement = false,
+		animation = {
+			filename = "__pelagos__/graphics/calciner/calciner-remnants.png",
+			line_length = 1,
+			width = 454,
+			height = 448,
+			direction_count = 1,
+			shift = util.by_pixel(-3.25, 7.25),
+			scale = 0.5,
 		},
 	},
 })

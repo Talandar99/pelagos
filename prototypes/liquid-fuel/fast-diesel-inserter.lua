@@ -26,8 +26,8 @@ data:extend({
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
 		minable = { mining_time = 0.1, result = "fast-diesel-inserter" },
 		max_health = 150,
-		corpse = "fast-inserter-remnants",
-		dying_explosion = "fast-inserter-explosion",
+		corpse = "inserter-remnants",
+		dying_explosion = "inserter-explosion",
 		resistances = {
 			{
 				type = "fire",

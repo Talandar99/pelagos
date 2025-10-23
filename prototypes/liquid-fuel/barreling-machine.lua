@@ -75,8 +75,8 @@ data:extend({
 		circuit_wire_max_distance = furnace_circuit_wire_max_distance,
 		circuit_connector = circuit_connector_definitions["electric-furnace"],
 		max_health = 350,
-		corpse = "requester-chest-remnants",
-		dying_explosion = "requester-chest-explosion",
+		corpse = "iron-chest-remnants",
+		dying_explosion = "iron-chest-explosion",
 		resistances = {
 			{
 				type = "fire",

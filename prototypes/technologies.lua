@@ -74,6 +74,26 @@ data:extend({
 		},
 	},
 })
+data:extend({
+	{
+		type = "technology",
+		name = "lighthouse",
+		icon = "__pelagos__/graphics/lighthouse/lighthouse-technology.png",
+		icon_size = 256,
+		effects = {
+			{
+				type = "unlock-recipe",
+				recipe = "lighthouse",
+			},
+		},
+		prerequisites = { "automated_water_transport", "concrete", "radar" },
+
+		research_trigger = {
+			type = "build-entity",
+			entity = "indep-boat",
+		},
+	},
+})
 if mods["cargo-ships"] then
 	local t = data.raw["technology"]["automated_water_transport"]
 	t.prerequisites = {

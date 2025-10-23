@@ -5,7 +5,7 @@ data:extend({
 	{
 		type = "item",
 		name = "lighthouse",
-		icon = "__base__/graphics/icons/radar.png",
+		icon = "__pelagos__/graphics/lighthouse/lighthouse-icon.png",
 		subgroup = "defensive-structure",
 		order = "d[radar]-a[radar]",
 		inventory_move_sound = item_sounds.metal_large_inventory_move,
@@ -21,12 +21,12 @@ data:extend({
 	{
 		type = "radar",
 		name = "lighthouse",
-		icon = "__base__/graphics/icons/radar.png",
+		icon = "__pelagos__/graphics/lighthouse/lighthouse-icon.png",
 		flags = { "placeable-player", "player-creation" },
 		minable = { mining_time = 0.1, result = "lighthouse" },
 		fast_replaceable_group = "radar",
 		max_health = 250,
-		corpse = "radar-remnants",
+		corpse = "lighthouse-remnants",
 		dying_explosion = "radar-explosion",
 		resistances = {
 			{
@@ -36,6 +36,13 @@ data:extend({
 			{
 				type = "impact",
 				percent = 30,
+			},
+		},
+		surface_conditions = {
+			{
+				property = "pressure",
+				min = 300,
+				max = 1809,
 			},
 		},
 		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
@@ -54,6 +61,9 @@ data:extend({
 			type = "fluid",
 			burns_fluid = true, -- fluid used as power
 			scale_fluid_usage = true,
+			light_flicker = {
+				color = { 0, 0, 0, 0 }, -- to remove default burner glow
+			},
 			fluid_box = {
 				--pipe_covers = pipecoverspictures(),
 				--pipe_picture = dieselassemblingmachinepipes(),
@@ -158,12 +168,38 @@ data:extend({
 		circuit_connector = circuit_connector_definitions["radar"],
 		circuit_wire_max_distance = default_circuit_wire_max_distance,
 	},
+	{
+		type = "corpse",
+		name = "lighthouse-remnants",
+		icon = "__pelagos__/graphics/lighthouse/lighthouse-icon.png",
+		flags = { "placeable-neutral", "not-on-map" },
+		hidden_in_factoriopedia = true,
+		subgroup = "defensive-structure-remnants",
+		order = "a-g-a",
+		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+		tile_width = 3,
+		tile_height = 3,
+		selectable_in_game = false,
+		time_before_removed = 60 * 60 * 15, -- 15 minutes
+		expires = false,
+		final_render_layer = "remnants",
+		remove_on_tile_placement = false,
+		animation = {
+			filename = "__pelagos__/graphics/lighthouse/lighthouse-remnants.png",
+			line_length = 1,
+			width = 282,
+			height = 212,
+			direction_count = 1,
+			shift = util.by_pixel(12, 4.5),
+			scale = 0.5,
+		},
+	},
 })
 data:extend({
 	{
 		type = "lamp",
 		name = "lighthouse-light",
-		icon = "__base__/graphics/icons/small-lamp.png",
+		icon = "__pelagos__/graphics/lighthouse/lighthouse-icon.png",
 		flags = { "not-on-map" },
 		fast_replaceable_group = "lamp",
 		--minable = { mining_time = 0.1, result = "small-lamp" },
