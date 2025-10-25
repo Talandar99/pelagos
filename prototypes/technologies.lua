@@ -783,6 +783,30 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
+		name = "diesel-asteroid-collector",
+		icon = "__pelagos__/graphics/diesel-asteroid-collector/asteroid-collector.png",
+		icon_size = 64,
+		effects = {
+			{ type = "unlock-recipe", recipe = "diesel-asteroid-collector" },
+		},
+		prerequisites = { "pelagos-asteroid-bioprocessing" },
+		unit = {
+			count_formula = "1000",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+
+data:extend({
+	{
+		type = "technology",
 		name = "ethanol-thruster",
 		icon = "__pelagos__/graphics/thruster/ethanol_thruster_tech.png",
 		icon_size = 256,

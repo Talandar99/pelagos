@@ -272,19 +272,29 @@ data.raw["technology"]["titanium-barrels"].unit.count = 200
 ----------------------------------------------------------------------------------------------------------
 data.raw.technology["pelagos-asteroid-bioprocessing"].hidden = true
 data.raw.technology["ethanol-thruster"].hidden = true
+data.raw.technology["diesel-asteroid-collector"].hidden = true
+data.raw.technology["space-science-pack"].research_trigger.entity = "diesel-asteroid-collector"
 ----------------------------------------------------------------------------------------------------------
-utils.add_recipes(
-	"space-platform",
-	{ "oxide-asteroid-melting", "metallic-asteroid-methane-crushing", "carbonic-asteroid-gasification" }
-)
-utils.remove_recipes(
-	"space-platform",
-	{ "crusher", "metallic-asteroid-crushing", "carbonic-asteroid-crushing", "oxide-asteroid-crushing" }
-)
-utils.add_recipes(
-	"advanced-asteroid-processing",
-	{ "crusher", "metallic-asteroid-crushing", "carbonic-asteroid-crushing", "oxide-asteroid-crushing" }
-)
+utils.add_recipes("space-platform", {
+	"oxide-asteroid-melting",
+	"metallic-asteroid-methane-crushing",
+	"carbonic-asteroid-gasification",
+	"diesel-asteroid-collector",
+})
+utils.remove_recipes("space-platform", {
+	"crusher",
+	"metallic-asteroid-crushing",
+	"carbonic-asteroid-crushing",
+	"oxide-asteroid-crushing",
+	"asteroid-collector",
+})
+utils.add_recipes("advanced-asteroid-processing", {
+	"crusher",
+	"metallic-asteroid-crushing",
+	"carbonic-asteroid-crushing",
+	"oxide-asteroid-crushing",
+	"asteroid-collector",
+})
 
 utils.add_recipes("space-platform-thruster", { "ethanol-thruster" })
 utils.remove_recipes("space-platform-thruster", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })

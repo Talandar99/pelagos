@@ -24,7 +24,8 @@ data:extend({
 				action_delivery = {
 					type = "projectile",
 					projectile = "slowdown-capsule",
-					starting_speed = 0.05,
+					acceleration = 0.01,
+					starting_speed = 0.3,
 					source_effects = {
 						type = "create-entity",
 						entity_name = "explosion-hit",
@@ -67,7 +68,8 @@ data:extend({
 				action_delivery = {
 					type = "projectile",
 					projectile = "poison-capsule",
-					starting_speed = 0.05,
+					acceleration = 0.01,
+					starting_speed = 0.3,
 					source_effects = {
 						type = "create-entity",
 						entity_name = "explosion-hit",

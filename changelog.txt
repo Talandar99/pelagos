@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.19.0
+Date: 2025-10-25
+  Changes:
+    - added space age feature flags to make sure pelagos show up as space age mod on mod portal
+    - added diesel asteroid collector
+    - any planet start: diesel asteroid collector replaces regular one in progression
+    - any planet start: asteroid collector (regular one) is unlocked with advanced asteroid processing
+  Balancing:
+    - increased speed and added rocket acceleration to poison capsule rocket making it faster
+    - increased speed and added rocket acceleration to slowdown capsule rocket making it faster
+    - increased fuel efficiency of ethanol thruster
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 2025-10-23
+  Balancing:
+    - increased max distance of nearby sector revealed by lighthouse (1 -> 2)
+---------------------------------------------------------------------------------------------------
 Version: 0.18.1
 Date: 2025-10-23
   Changes:

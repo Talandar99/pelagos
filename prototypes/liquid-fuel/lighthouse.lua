@@ -55,7 +55,7 @@ data:extend({
 		max_distance_of_sector_revealed = 36,
 		--max_distance_of_nearby_sector_revealed = 3,--vanilla
 		--max_distance_of_nearby_sector_revealed = 6,--maraxsis sonar
-		max_distance_of_nearby_sector_revealed = 1,
+		max_distance_of_nearby_sector_revealed = 2,
 		energy_per_nearby_scan = "2kJ",
 		energy_source = {
 			type = "fluid",
