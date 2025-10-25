@@ -227,10 +227,27 @@ end
 -------------------------------------------------------------------------------
 --- init
 -------------------------------------------------------------------------------
+local function register_with_cargo_ships()
+	-- add pirateship to cargo_ship ships so it can be entered the same way as other ships
+	if remote.interfaces["cargo-ships"] and remote.interfaces["cargo-ships"].add_boat then
+		if prototypes.entity["pirateship"] then
+			remote.call("cargo-ships", "add_boat", {
+				name = "pirateship",
+				rail_version = nil,
+			})
+			log("Pelagos: Registered Pirate Ship as a boat for Cargo Ships system.")
+		else
+			log("Pelagos: Pirate Ship entity not found.")
+		end
+	else
+		log("Pelagos: Cargo Ships API not available (add_boat missing).")
+	end
+end
 local function on_init(event)
 	storage.allowed_entities = build_allowed_entities()
 	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
+	register_with_cargo_ships()
 end
 script.on_init(on_init)
 
@@ -238,6 +255,7 @@ local function on_configuration_changed(event)
 	storage.allowed_entities = build_allowed_entities()
 	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
+	register_with_cargo_ships()
 end
 script.on_configuration_changed(on_configuration_changed)
 -------------------------------------------------------------------------------
@@ -455,3 +473,22 @@ script.on_event(defines.events.on_surface_created, function(event)
 	end
 end)
 -------------------------------------------------------------------------------
+---
+script.on_init(function()
+	if remote.interfaces["cargo-ships"] and remote.interfaces["cargo-ships"].add_boat then
+		remote.call("cargo-ships", "add_boat", {
+			name = "pirateship", -- dokładna nazwa encji z Pirate Ship
+			rail_version = nil, -- nie potrzebujesz wersji torowej
+		})
+		log("Pelagos: Pirate Ship registered as boat for Cargo Ships system.")
+	else
+		log("Pelagos: Cargo Ships API not available, could not register Pirate Ship.")
+	end
+end)
+script.on_configuration_changed(function()
+	if remote.interfaces["cargo-ships"] and remote.interfaces["cargo-ships"].add_boat then
+		remote.call("cargo-ships", "add_boat", {
+			name = "pirateship",
+		})
+	end
+end)

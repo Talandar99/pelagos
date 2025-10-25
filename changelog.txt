@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.19.2
+Date: 2025-10-25
+  Changes:
+    - fix: pirate ship enter boat code is now overridden to not cause issues with player location. You can now enter pirateship the same way you enter cargo ship ships
+---------------------------------------------------------------------------------------------------
 Version: 0.19.1
 Date: 2025-10-25
   Changes:

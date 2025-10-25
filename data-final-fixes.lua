@@ -108,3 +108,13 @@ end
 data.raw["assembling-machine"]["diesel-assembling-machine"].crafting_categories =
 	data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories
 table.insert(data.raw["assembling-machine"]["diesel-assembling-machine"].crafting_categories, "barreling")
+
+-- remove buggy input from pirate ship mod
+data:extend({
+	{
+		type = "custom-input",
+		name = "enter-pirate-ship",
+		key_sequence = "",
+		consuming = "none",
+	},
+})
