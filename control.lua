@@ -367,6 +367,16 @@ script.on_event(defines.events.on_robot_built_entity, function(event)
 	on_built_lighthouse(event)
 	on_built_collector(event)
 end)
+script.on_event(defines.events.on_space_platform_built_entity, function(event)
+	local e = event.entity
+	if not (e and e.valid) then
+		return
+	end
+
+	on_built_rocket_silo(event)
+	on_built_lighthouse(event)
+	on_built_collector(event)
+end)
 
 script.on_event(
 	{ defines.events.on_entity_died, defines.events.on_player_mined_entity, defines.events.on_robot_mined_entity },
