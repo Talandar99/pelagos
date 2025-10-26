@@ -431,6 +431,18 @@ if mods["planetaris-unbounded"] then
 		change = 0.1,
 	})
 end
+if mods["gleba_cultured_soil"] then
+	table.insert(productivity_effects, {
+		type = "change-recipe-productivity",
+		recipe = "cultured-yumako-soil",
+		change = 0.1,
+	})
+	table.insert(productivity_effects, {
+		type = "change-recipe-productivity",
+		recipe = "cultured-jellynut-soil",
+		change = 0.1,
+	})
+end
 -- add back in future
 --if mods["skewer_planet_vesta"] then
 --	table.insert(productivity_effects, {

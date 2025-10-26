@@ -45,7 +45,11 @@ data:extend({
 		extension_speed = 0.05,
 		rotation_speed = 0.02,
 		filter_count = 5,
-		icon_draw_specification = { scale = 0.5 },
+		icon_draw_specification = {
+			--shift = {0, -0.3},
+			scale = 0.8,
+			render_layer = "entity-info-icon-above",
+		},
 		hand_size = 2, --was 1.5
 		--energy_source = {
 		--	type = "electric",

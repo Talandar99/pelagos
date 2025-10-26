@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.19.4
+Date: 2025-10-26
+  Changes:
+    - alt mode icons above diesel inserters are now visible
+    - added support for gleba_cultured_soil
+    - fix: error when trying to place wooden platform if storage was corrupted. Code should now check if wooden platform blacklist exist before placing attempt to prevent crash (create list it if does not exist)
+    - you should be now able to place heavy-gun-turret on wooden platform 
+---------------------------------------------------------------------------------------------------
 Version: 0.19.3
 Date: 2025-10-26
   Changes:

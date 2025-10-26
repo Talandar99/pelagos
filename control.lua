@@ -150,7 +150,6 @@ end)
 -- Define the initial machine groups and allowed tiles for each group.
 local function build_allowed_entities()
 	local allowed = {}
-
 	local filters = {
 		{ filter = "subgroup", subgroup = "inserter" },
 		{ filter = "subgroup", subgroup = "circuit-network" },
@@ -201,6 +200,7 @@ local function build_allowed_entities()
 
 	-- additional stuff
 	allowed["gun-turret"] = true
+	allowed["heavy-gun-turret"] = true
 	allowed["flamethrower-turret"] = true
 	allowed["rocket-turret"] = true
 	allowed["pipe"] = true
@@ -243,24 +243,24 @@ local function register_with_cargo_ships()
 		log("Pelagos: Cargo Ships API not available (add_boat missing).")
 	end
 end
-local function on_init(event)
-	storage.allowed_entities = build_allowed_entities()
-	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
-	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
-	register_with_cargo_ships()
-end
-script.on_init(on_init)
 
-local function on_configuration_changed(event)
-	storage.allowed_entities = build_allowed_entities()
+local function ensure_storage_integrity()
+	if not storage then
+		return
+	end
+
+	if not storage.allowed_entities then
+		storage.allowed_entities = build_allowed_entities()
+	end
+
 	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
-	register_with_cargo_ships()
 end
-script.on_configuration_changed(on_configuration_changed)
 -------------------------------------------------------------------------------
-
+-- on_entity_built logic
+-------------------------------------------------------------------------------
 local function on_entity_built(event)
+	ensure_storage_integrity()
 	local entity = event.entity
 	if not (entity and entity.valid) then
 		return
@@ -361,7 +361,23 @@ local function on_built_rocket_silo(event)
 		entity.recipe_locked = true
 	end
 end
+-------------------------------------------------------------------------------
+local function on_init(event)
+	storage.allowed_entities = build_allowed_entities()
+	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
+	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
+	register_with_cargo_ships()
+end
+script.on_init(on_init)
 
+local function on_configuration_changed(event)
+	storage.allowed_entities = build_allowed_entities()
+	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
+	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
+	register_with_cargo_ships()
+end
+script.on_configuration_changed(on_configuration_changed)
+-------------------------------------------------------------------------------
 script.on_event(defines.events.on_built_entity, function(event)
 	local e = event.created_entity or event.entity
 	if not e then
@@ -379,7 +395,6 @@ script.on_event(defines.events.on_robot_built_entity, function(event)
 	if not e then
 		return
 	end
-
 	on_entity_built(event)
 	on_built_rocket_silo(event)
 	on_built_lighthouse(event)
@@ -409,7 +424,7 @@ script.on_event(
 	end
 )
 -------------------------------------------------------------------------------
---- starting patch
+--- starting ore patch
 -------------------------------------------------------------------------------
 script.on_event(defines.events.on_player_created, function(event)
 	storage.init = storage.init or {}
@@ -473,22 +488,3 @@ script.on_event(defines.events.on_surface_created, function(event)
 	end
 end)
 -------------------------------------------------------------------------------
----
-script.on_init(function()
-	if remote.interfaces["cargo-ships"] and remote.interfaces["cargo-ships"].add_boat then
-		remote.call("cargo-ships", "add_boat", {
-			name = "pirateship", -- dokładna nazwa encji z Pirate Ship
-			rail_version = nil, -- nie potrzebujesz wersji torowej
-		})
-		log("Pelagos: Pirate Ship registered as boat for Cargo Ships system.")
-	else
-		log("Pelagos: Cargo Ships API not available, could not register Pirate Ship.")
-	end
-end)
-script.on_configuration_changed(function()
-	if remote.interfaces["cargo-ships"] and remote.interfaces["cargo-ships"].add_boat then
-		remote.call("cargo-ships", "add_boat", {
-			name = "pirateship",
-		})
-	end
-end)

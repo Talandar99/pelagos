@@ -73,7 +73,11 @@ data:extend({
 		extension_speed = 0.1,
 		rotation_speed = 0.04,
 		filter_count = 5,
-		icon_draw_specification = { scale = 0.5 },
+		icon_draw_specification = {
+			--shift = {0, -0.3},
+			scale = 0.8,
+			render_layer = "entity-info-icon-above",
+		},
 		fast_replaceable_group = "inserter",
 		next_upgrade = "bulk-inserter",
 		impact_category = "metal",
