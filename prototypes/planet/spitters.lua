@@ -454,6 +454,7 @@ data:extend({
 		richness = false,
 		order = "b[enemy]-z[white]",
 		category = "enemy",
+		hidden = true,
 	},
 })
 

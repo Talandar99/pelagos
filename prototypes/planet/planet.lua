@@ -17,6 +17,7 @@ data:extend({
 		richness = false,
 		order = "a[doodad]-a[rock]-b",
 		category = "resource",
+		hidden = true,
 	},
 })
 -- map generation

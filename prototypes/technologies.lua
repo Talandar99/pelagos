@@ -838,3 +838,22 @@ end
 if mods["cargo-ships"] then
 	data.raw["technology"]["automated_bridges"] = nil
 end
+-- add heavy-gun-turret to dmg researches
+local function add_heavy_turret_bonus(tech_name, modifier)
+	local tech = data.raw.technology[tech_name]
+	if tech and tech.effects then
+		table.insert(tech.effects, {
+			type = "turret-attack",
+			turret_id = "heavy-gun-turret",
+			modifier = modifier,
+		})
+	end
+end
+
+add_heavy_turret_bonus("physical-projectile-damage-1", 0.1)
+add_heavy_turret_bonus("physical-projectile-damage-2", 0.1)
+add_heavy_turret_bonus("physical-projectile-damage-3", 0.2)
+add_heavy_turret_bonus("physical-projectile-damage-4", 0.2)
+add_heavy_turret_bonus("physical-projectile-damage-5", 0.2)
+add_heavy_turret_bonus("physical-projectile-damage-6", 0.2)
+add_heavy_turret_bonus("physical-projectile-damage-7", 0.2)

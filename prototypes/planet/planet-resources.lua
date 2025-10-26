@@ -9,6 +9,8 @@ data:extend({
 		order = "a-e-b",
 		category = "resource",
 		icon = "__pelagos__/graphics/titanium/titanium-sludge.png",
+
+		hidden = true,
 	},
 	{
 		type = "resource-category",
@@ -95,6 +97,8 @@ data:extend({
 		order = "a-e-b",
 		category = "resource",
 		icon = "__pelagos__/graphics/methane.png",
+
+		hidden = true,
 	},
 	{
 		type = "resource-category",

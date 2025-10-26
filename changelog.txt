@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.19.3
+Date: 2025-10-26
+  Changes:
+    - pelagos terrain generation settings that can't be tweaked are now hidden
+    - fix: dmg research now works with heavy gun turret as well (just like it works with regular one)
+---------------------------------------------------------------------------------------------------
 Version: 0.19.2
 Date: 2025-10-25
   Changes:
