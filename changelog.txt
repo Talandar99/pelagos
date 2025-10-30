@@ -6,7 +6,6 @@ Date: 2025-10-30
     - graphics-fix: Crane bulk diesel inserter no longer clip on belt
     - marked barreling machine mods as incompatible. Pelagos adds it's own barreling machine and don't lock away ability to use regular barrels with assemblers.
     - fix: regular assembling machine 3 no longer can use titanium barrels, it was added by accident. Ability to use titanium barrels should be locked only to diesel assembler and barreling machine
-    - you can now burn wooden platforms as fuel
   Balancing:
     - changed heavy-gun-turret health (800 -> 1200)
     - reduced weight of wooden platform to make it easier to export (10kg -> 5kg)
