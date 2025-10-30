@@ -60,7 +60,7 @@ data:extend({
 		icon = "__pelagos__/graphics/diesel-titanium-crane-bulk-inserter/bulk-inserter.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
 		bulk = true,
-		stack_size_bonus = 500 - 1,
+		stack_size_bonus = 250 - 1,
 		minable = { mining_time = 0.1, result = "crane-bulk-diesel-inserter" },
 		max_health = 160,
 		corpse = "fast-inserter-remnants",

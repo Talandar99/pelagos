@@ -22,7 +22,8 @@ data:extend({
 		drop_sound = item_sounds.landfill_inventory_move,
 		stack_size = 100,
 		default_import_location = "pelagos",
-		weight = 10 * kg,
+		fuel_value = "12MJ",
+		weight = 5 * kg,
 		place_as_tile = {
 			result = "wooden-platform",
 			condition_size = 1,
