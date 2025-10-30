@@ -400,6 +400,20 @@ data:extend({
 		results = { { type = "item", name = "crane-bulk-diesel-inserter", amount = 1 } },
 	},
 	{
+
+		type = "recipe",
+		name = "crane-stack-diesel-inserter",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "engine-unit", amount = 5 },
+			{ type = "item", name = "coconut-sealant", amount = 6 },
+			{ type = "item", name = "stack-inserter", amount = 1 },
+			{ type = "item", name = "crane-bulk-diesel-inserter", amount = 1 },
+			{ type = "item", name = "titanium-plate", amount = 10 },
+		},
+		results = { { type = "item", name = "crane-stack-diesel-inserter", amount = 1 } },
+	},
+	{
 		type = "recipe",
 		name = "diesel-assembling-machine",
 		enabled = false,

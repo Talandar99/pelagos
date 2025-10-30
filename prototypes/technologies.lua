@@ -357,6 +357,31 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
+		name = "crane-stack-diesel-inserter",
+		icon = "__pelagos__/graphics/diesel-titanium-crane-stack-inserter/stack-inserter.png",
+		icon_size = 64,
+		effects = {
+			{ type = "unlock-recipe", recipe = "crane-stack-diesel-inserter" },
+		},
+		prerequisites = { "pelagos-science-pack", "stack-inserter", "utility-science-pack" },
+		unit = {
+			count_formula = "1000",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+				{ "agricultural-science-pack", 1 },
+				{ "utility-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+data:extend({
+	{
+		type = "technology",
 		name = "diesel-automation",
 		icon = "__pelagos__/graphics/diesel-automation.png",
 		icon_size = 256,

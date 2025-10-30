@@ -179,7 +179,7 @@ data:extend({
 		icon = "__pelagos__/graphics/heavy-gun-turret.png",
 		flags = { "placeable-player", "player-creation" },
 		minable = { mining_time = 0.5, result = "heavy-gun-turret" },
-		max_health = 800,
+		max_health = 1200,
 		corpse = "rocket-turret-remnants",
 		dying_explosion = "gun-turret-explosion",
 		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
