@@ -64,11 +64,11 @@ data:extend({
 		wait_for_full_hand = true,
 		enter_drop_mode_if_held_stack_spoiled = true,
 		max_belt_stack_size = 4,
-		stack_size_bonus = 250 - 1,
+		stack_size_bonus = 500 - 1,
 		minable = { mining_time = 0.1, result = "crane-stack-diesel-inserter" },
 		max_health = 160,
-		corpse = "fast-inserter-remnants",
-		dying_explosion = "fast-inserter-explosion",
+		corpse = "stack-inserter-remnants",
+		dying_explosion = "stack-inserter-explosion",
 		resistances = {
 			{
 				type = "fire",

@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.19.5
+Version: 0.20.0
 Date: 2025-10-30
   Changes:
     - added Crane stack diesel inserter with it's research and own recipe
@@ -8,6 +8,7 @@ Date: 2025-10-30
     - fix: regular assembling machine 3 no longer can use titanium barrels, it was added by accident. Ability to use titanium barrels should be locked only to diesel assembler and barreling machine
   Balancing:
     - changed heavy-gun-turret health (800 -> 1200)
+    - changed max hand size to make sure crane inserters can handle modded items (250->500)
 ---------------------------------------------------------------------------------------------------
 Version: 0.19.4
 Date: 2025-10-26
