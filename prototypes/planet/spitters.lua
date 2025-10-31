@@ -1,7 +1,3 @@
--- ======================================================================
--- White Spitter Mod – data.lua
--- ======================================================================
-
 require("__base__.prototypes.entity.biter-ai-settings")
 require("__base__.prototypes.entity.spitter-animations")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
