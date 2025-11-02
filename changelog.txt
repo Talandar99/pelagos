@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.21.1
+Date: 2025-11-01
+  Changes:
+    - reduced 4k planet star map icon to 2k to allow players with lower atlas size to play mod
+    - removed some unused graphical assets to reduce mod size
+---------------------------------------------------------------------------------------------------
 Version: 0.21.0
 Date: 2025-10-31
   Changes:

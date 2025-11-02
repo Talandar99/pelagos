@@ -1171,7 +1171,7 @@ local function MapGen_Pelagos()
 	return map
 end
 
---planet pleagos definition
+--local max = graphics.get_max_texture_size and graphics.get_max_texture_size() or 8192
 PlanetsLib:extend({
 	{
 		type = "planet",
@@ -1185,8 +1185,8 @@ PlanetsLib:extend({
 		subgroup = "planets",
 		icon = "__pelagos__/graphics/pelagos.png",
 		icon_size = 64,
-		starmap_icon = "__pelagos__/graphics/starmap-planet-pelagos.png",
-		starmap_icon_size = 4096,
+		starmap_icon = "__pelagos__/graphics/starmap-planet-pelagos-2k.png",
+		starmap_icon_size = 2048,
 		map_gen_settings = MapGen_Pelagos(),
 		draw_orbit = true,
 		magnitude = 1.1,

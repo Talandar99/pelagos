@@ -4,7 +4,7 @@ data:extend({
 		type = "technology",
 		name = "planet-discovery-pelagos",
 		icon_size = 512,
-		icons = PlanetsLib.technology_icon_constant_planet("__pelagos__/graphics/starmap-planet-pelagos.png", 512),
+		icons = PlanetsLib.technology_icon_constant_planet("__pelagos__/graphics/starmap-planet-pelagos-2k.png", 2048),
 		essential = true,
 		effects = {
 			{
