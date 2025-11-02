@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.21.2
+Date: 2025-11-02
+    - any planet start fix: with lignumis installed copper processing technology require to mine pelagos copper stromatolite instead of copper ore patch
+  Balancing:
+    - any planet start: landfill technology is now unlocked with trigger instead of science pack
+    - any planet start: fish breeding technology now is quicker to research and cost less (time 30 -> 10, science 30 -> 10)
+---------------------------------------------------------------------------------------------------
 Version: 0.21.1
 Date: 2025-11-01
   Changes:

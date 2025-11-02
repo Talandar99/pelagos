@@ -14,14 +14,17 @@ utils.remove_recipes("agriculture", { "nutrients-from-spoilage" })
 utils.set_prerequisites("fish-breeding", { "automation-science-pack" })
 utils.set_packs("fish-breeding", { "automation-science-pack" }, 25, 15)
 data.raw["technology"]["fish-breeding"].unit = {
-	count = 20,
+	count = 10,
 	ingredients = {
 		{ "automation-science-pack", 1 },
 	},
-	time = 30,
+	time = 10,
 }
-utils.set_prerequisites("landfill", { "automation-science-pack" })
-utils.set_packs("landfill", { "automation-science-pack" }, 10, 10)
+utils.set_prerequisites("landfill", { "coconut-processing-technology" })
+data.raw.technology["landfill"].research_trigger = {
+	type = "mine-entity",
+	entity = "pelagos-big-rock",
+}
 utils.add_prerequisites("automation-science-pack", { "coconut-processing-technology" })
 utils.add_prerequisites("automated_water_transport", { "engine", "fluid-handling" })
 utils.add_prerequisites("canex-excavator", { "engine", "fluid-handling" })
@@ -341,4 +344,11 @@ for i = #planet.asteroid_spawn_definitions, 1, -1 do
 	if def.asteroid:sub(-6) ~= "-chunk" then
 		table.remove(planet.asteroid_spawn_definitions, i)
 	end
+end
+----------------------------------------------------------------------------------------------------------
+if mods["lignumis"] then
+	data.raw.technology["copper-processing"].research_trigger = {
+		type = "mine-entity",
+		entity = "pelagos-copper-stromatolite",
+	}
 end
