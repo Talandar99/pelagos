@@ -213,17 +213,12 @@ data.raw["technology"]["improvised-landfill"].unit = {
 	time = 30,
 }
 
-data.raw["technology"]["wood-spoiling-technology"].unit = {
-	count = 100,
-	ingredients = {
-		{ "automation-science-pack", 1 },
-		{ "logistic-science-pack", 1 },
-		{ "chemical-science-pack", 1 },
-		{ "pelagos-science-pack", 1 },
-	},
-	time = 30,
+data.raw["technology"]["wood-spoiling-technology"].unit = nil
+data.raw["technology"]["wood-spoiling-technology"].research_trigger = {
+	type = "build-entity",
+	entity = "biochamber",
 }
-utils.add_prerequisites("wood-spoiling-technology", { "chemical-science-pack" })
+data.raw["technology"]["wood-spoiling-technology"].prerequisites = { "coconut-processing-technology" }
 
 data.raw["technology"]["tank_ship"].unit = {
 	count = 300,

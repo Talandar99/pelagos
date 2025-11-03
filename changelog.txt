@@ -1,6 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.21.2
 Date: 2025-11-02
+  Changes:
+    - any planet start: cellulose decomposition now is available after placing biochamber on ground to allow for easy coconut husk voiding by turning them in spoilage and later in nutrients.
+  Balancing:
+    - decomposition science pack recipe now gives 2 science packs instead of one but recipe is 2 times slower
+---------------------------------------------------------------------------------------------------
+Version: 0.21.2
+Date: 2025-11-02
+  Changes:
     - any planet start fix: with lignumis installed copper processing technology require to mine pelagos copper stromatolite instead of copper ore patch
   Balancing:
     - any planet start: landfill technology is now unlocked with trigger instead of science pack

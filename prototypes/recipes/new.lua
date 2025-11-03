@@ -106,8 +106,8 @@ data:extend({
 			{ type = "item", name = "activated-carbon", amount = 1 },
 			{ type = "item", name = "titanium-dust", amount = 1 },
 		},
-		energy_required = 4,
-		results = { { type = "item", name = "pelagos-science-pack", amount = 1 } },
+		energy_required = 8,
+		results = { { type = "item", name = "pelagos-science-pack", amount = 2 } },
 		allow_productivity = true,
 		crafting_machine_tint = {
 			primary = { r = 0.39, g = 0.48, b = 0.26, a = 1.000 },
