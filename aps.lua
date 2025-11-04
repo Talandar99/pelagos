@@ -346,4 +346,5 @@ if mods["lignumis"] then
 		type = "mine-entity",
 		entity = "pelagos-copper-stromatolite",
 	}
+	require("prototypes.steam-inserter")
 end
