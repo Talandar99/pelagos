@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.21.2
-Date: 2025-11-02
+Version: 0.21.3
+Date: 2025-11-04
   Changes:
     - any planet start: cellulose decomposition now is available after placing biochamber on ground to allow for easy coconut husk voiding by turning them in spoilage and later in nutrients.
   Balancing:
