@@ -1,11 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.23.0
+Version: 0.22.0
 Date: 2025-11-05
   Changes:
     - any planet start: added steam inserter. Only present if lignumis is installed 
-    - any planet start: added lignumi steam assmebling machine recipe that uses regular pipes to make it possible to craft on pelagos later
+    - any planet start: added lignumis steam assmebling machine recipe that uses regular pipes to make it possible to craft on pelagos later
 ---------------------------------------------------------------------------------------------------
-Version: 0.22.3
+Version: 0.21.3
 Date: 2025-11-04
   Changes:
     - any planet start: cellulose decomposition now is available after placing biochamber on ground to allow for easy coconut husk voiding by turning them in spoilage and later in nutrients.
