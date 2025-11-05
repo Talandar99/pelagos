@@ -347,4 +347,52 @@ if mods["lignumis"] then
 		entity = "pelagos-copper-stromatolite",
 	}
 	require("prototypes.steam-inserter")
+	data:extend({
+		{
+			type = "recipe",
+			name = "steam-inserter",
+			enabled = false,
+			ingredients = {
+				{ type = "item", name = "burner-inserter", amount = 1 },
+				{ type = "item", name = "gold-pipe", amount = 4 },
+			},
+			results = { { type = "item", name = "steam-inserter", amount = 1 } },
+			allow_productivity = false,
+		},
+		{
+			type = "recipe",
+			name = "steam-inserter-iron-pipe",
+			icons = {
+				{ icon = "__base__/graphics/icons/inserter.png", icon_size = 64 },
+				{ icon = "__base__/graphics/icons/fluid/steam.png", icon_size = 64, scale = 0.25, shift = { 8, -8 } },
+				{ icon = "__base__/graphics/icons/pipe.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+			},
+			enabled = false,
+			ingredients = {
+				{ type = "item", name = "burner-inserter", amount = 1 },
+				{ type = "item", name = "pipe", amount = 4 },
+			},
+			results = { { type = "item", name = "steam-inserter", amount = 1 } },
+			allow_productivity = false,
+		},
+		{
+			type = "recipe",
+			name = "steam-assembling-machine-iron-pipe",
+			icons = {
+				{ icon = "__lignumis-assets__/graphics/icons/steam-assembling-machine.png", icon_size = 64 },
+				{ icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+			},
+			enabled = false,
+			ingredients = {
+				{ type = "item", name = "burner-assembling-machine", amount = 1 },
+				{ type = "item", name = "pipe", amount = 5 },
+			},
+			results = { { type = "item", name = "steam-assembling-machine", amount = 1 } },
+			allow_productivity = false,
+		},
+	})
+
+	utils.add_recipes("steam-automation", { "steam-inserter" })
+	utils.add_recipes("steam-power", { "steam-inserter-iron-pipe" })
+	utils.add_recipes("steam-power", { "steam-assembling-machine-iron-pipe" })
 end

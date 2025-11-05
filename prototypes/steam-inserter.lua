@@ -8,7 +8,10 @@ data:extend({
 	{
 		type = "item",
 		name = "steam-inserter",
-		icon = "__base__/graphics/icons/inserter.png",
+		icons = {
+			{ icon = "__base__/graphics/icons/inserter.png", icon_size = 64 },
+			{ icon = "__base__/graphics/icons/fluid/steam.png", icon_size = 64, scale = 0.25, shift = { 8, -8 } },
+		},
 		subgroup = "inserter",
 		color_hint = { text = "Y" },
 		order = "b[inserter-steam]",
@@ -21,7 +24,10 @@ data:extend({
 	{
 		type = "inserter",
 		name = "steam-inserter",
-		icon = "__base__/graphics/icons/inserter.png",
+		icons = {
+			{ icon = "__base__/graphics/icons/inserter.png", icon_size = 64 },
+			{ icon = "__base__/graphics/icons/fluid/steam.png", icon_size = 64, scale = 0.25, shift = { 8, -8 } },
+		},
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
 		minable = { mining_time = 0.1, result = "steam-inserter" },
 		max_health = 150,
