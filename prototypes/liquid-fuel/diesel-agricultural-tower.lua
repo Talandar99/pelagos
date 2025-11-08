@@ -62,7 +62,7 @@ data:extend({
 			width = 10,
 			height = 10,
 		},
-		radius = 3,
+		radius = 4,
 		crane = require("__pelagos__.prototypes.liquid-fuel.diesel-agricultural-tower-crane"),
 		planting_procedure_points = {
 			{ 0.0, 0.0, 0.75 },
@@ -83,8 +83,10 @@ data:extend({
 		},
 		drawing_box_vertical_extension = 2.5,
 		heating_energy = "100kW",
-		energy_usage = "200kW",
-		crane_energy_usage = "200kW",
+		--energy_usage = "200kW",
+		energy_usage = "400kW",
+		--crane_energy_usage = "200kW",
+		crane_energy_usage = "400kW",
 		--energy_usage = "100kW",
 		--crane_energy_usage = "100kW",
 		working_sound = {
@@ -200,7 +202,8 @@ data:extend({
 			smoke = {
 				{
 					name = "smoke",
-					frequency = 7.5,
+					--frequency = 7.5,
+					frequency = 9,
 					position = { 0.75, -4 },
 					starting_vertical_speed = 0.1, --base 0.08
 					starting_frame_deviation = 60,

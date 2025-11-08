@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.22.1
+Date: 2025-11-06
+  Balancing:
+    - increased range of diesel agricultural tower by 1 
+    - doubled diesel agricultural tower energy demand (200kW->400kW)
+    - reduced EM pollution emited by beacons (8->2)
+---------------------------------------------------------------------------------------------------
 Version: 0.22.0
 Date: 2025-11-05
   Changes:
