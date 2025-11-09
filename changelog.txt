@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.23.0
+Date: 2025-11-09
+  Changes:
+    - new palm tree graphics
+    - palm tree no longer snaps to grid which should result in more natural look
+  Balancing:
+    - wooden platforms now require less wood (20 -> 15)
+---------------------------------------------------------------------------------------------------
 Version: 0.22.1
 Date: 2025-11-06
   Balancing:

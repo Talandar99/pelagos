@@ -18,11 +18,11 @@ data:extend({ deepwater })
 local pelagossand3 = table.deepcopy(data.raw.tile["sand-1"])
 pelagossand3.name = "pelagos-sand-3"
 pelagossand3.localised_name = { "tile-name.pelagos-sand-3" }
-pelagossand3.effect_color = { 194, 147, 78 }
+pelagossand3.tint = { 255, 255, 255 }
 data:extend({ pelagossand3 })
 
 local pelagossand4 = table.deepcopy(data.raw.tile["sand-2"])
 pelagossand4.name = "pelagos-sand-4"
 pelagossand4.localised_name = { "tile-name.pelagos-sand-4" }
-pelagossand4.effect_color = { 165, 120, 57 }
+pelagossand4.tint = { 255, 255, 255 }
 data:extend({ pelagossand4 })
