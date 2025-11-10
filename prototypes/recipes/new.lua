@@ -172,7 +172,7 @@ data:extend({
 			{ type = "item", name = "raw-fish", amount = 1 },
 		},
 		results = {
-			{ type = "item", name = "fermentation-bacteria", amount = 16 },
+			{ type = "item", name = "fermentation-bacteria", amount = 12 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
@@ -264,12 +264,12 @@ data:extend({
 		auto_recycle = false,
 		enabled = false,
 		allow_productivity = true,
-		energy_required = 7,
+		energy_required = 6,
 		ingredients = {
 			{ type = "item", name = "wood", amount = 5 },
 		},
 		results = {
-			{ type = "item", name = "spoilage", amount = 50 },
+			{ type = "item", name = "spoilage", amount = 40 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.27, g = 0.27, b = 0.08, a = 1.000 },
@@ -288,12 +288,12 @@ data:extend({
 		auto_recycle = false,
 		enabled = false,
 		allow_productivity = true,
-		energy_required = 7,
+		energy_required = 6,
 		ingredients = {
 			{ type = "item", name = "coconut-husk", amount = 5 },
 		},
 		results = {
-			{ type = "item", name = "spoilage", amount = 30 },
+			{ type = "item", name = "spoilage", amount = 20 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.27, g = 0.27, b = 0.08, a = 1.000 },

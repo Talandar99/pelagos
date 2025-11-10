@@ -42,7 +42,7 @@ data:extend({
 			{
 				property = "pressure",
 				min = 300,
-				max = 1809,
+				max = 2000,
 			},
 		},
 		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },

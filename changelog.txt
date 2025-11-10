@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.23.1
+Date: 2025-11-10
+  Changes:
+    - palm tree texture should blend a little bit better with ground
+    - lighthouse can not be placed on gleba
+  Balancing:
+    - reduced stack size of fermentation bacteria (50->20) to make it harder to stockpile as output in biochamber and spoil by accident
+    - reduced ammount of bacteria produced by breeding recipe (16->12)
+    - reduced ammount of spoilage from coconut husk spoiling recipe (30->20)
+    - reduced ammount of spoilage from wood spoiling recipe (50->40)
+---------------------------------------------------------------------------------------------------
 Version: 0.23.0
 Date: 2025-11-09
   Changes:

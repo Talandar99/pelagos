@@ -145,10 +145,11 @@ data:extend({
 		drop_sound = space_age_item_sounds.agriculture_inventory_move,
 		fuel_category = "chemical",
 		fuel_value = "25kJ",
-		stack_size = 50,
+		stack_size = 20,
 		default_import_location = "pelagos",
 		weight = 1 * kg,
 		spoil_ticks = 5 * minute,
+		--spoil_ticks = 3 * minute,
 		spoil_result = "spoilage",
 	},
 })
