@@ -746,7 +746,7 @@ data:extend({
 			},
 		},
 		autoplace = {
-			probability_expression = "0.007 * noise_layer_noise('pelagos-copper-stromatolite')",
+			probability_expression = "0.008 * noise_layer_noise('pelagos-copper-stromatolite')",
 		},
 		dying_trigger_effect = decorative_trigger_effects.big_rock(),
 		minable = {

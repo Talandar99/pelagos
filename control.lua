@@ -158,6 +158,10 @@ local function build_allowed_entities()
 	if script.active_mods["aai-containers"] then
 		table.insert(filters, { filter = "subgroup", subgroup = "container-1" })
 	end
+	if script.active_mods["kry-inserters"] then
+		table.insert(filters, { filter = "subgroup", subgroup = "shinyinserter1" })
+		table.insert(filters, { filter = "subgroup", subgroup = "shinyinserter2" })
+	end
 
 	-- get items from filters
 	local items = {}

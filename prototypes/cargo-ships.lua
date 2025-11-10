@@ -90,3 +90,6 @@ if data.raw["recipe"]["bridge_gate"] then
 	data.raw["recipe"]["bridge_gate"].hidden = true
 	data.raw["recipe"]["bridge_gate"].hidden_in_factoriopedia = true
 end
+data.raw["tips-and-tricks-item"]["cargo-ships"].category = "space-age"
+data.raw["tips-and-tricks-item"]["cargo-ships"].order = "pelagos-g"
+data.raw["tips-and-tricks-item"]["cargo-ships"].indent = 1

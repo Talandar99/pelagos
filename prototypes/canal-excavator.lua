@@ -27,5 +27,11 @@ if mods["canal-excavator"] then
 		excavator.energy_source.burnt_inventory_size = 2
 		excavator.module_slots = 6
 		excavator.energy_usage = "540kW" --base was 180kW
+
+		data.raw["tips-and-tricks-item"]["canex-excavator-tnt"].category = "space-age"
+		data.raw["tips-and-tricks-item"]["canex-excavator-tnt"].order = "pelagos-da"
+
+		data.raw["tips-and-tricks-item"]["canex-canals-tnt"].category = "space-age"
+		data.raw["tips-and-tricks-item"]["canex-canals-tnt"].order = "pelagos-db"
 	end
 end

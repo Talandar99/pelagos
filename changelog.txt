@@ -1,9 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.23.2
+Date: 2025-11-10
+  Balancing:
+    - reduced rocket capacity for lighthouse (50 -> 1)
+    - increased lighthouse recipe price (100 concrete -> 200 concrete)
+    - increased probability to generate copper stromatolite
+  Changes:
+    - kry-inserters mod should now work properly with wooden platform
+    - lighthouse is not allowed on gleba
+    - tips and tricks for pelagos now uses cool simulations for excavator mod made by mod's author Jurgy
+    - tips and tricks for cargo ships is moved to pelagos planet category to make it easier to find
+---------------------------------------------------------------------------------------------------
 Version: 0.23.1
 Date: 2025-11-10
   Changes:
     - palm tree texture should blend a little bit better with ground
     - lighthouse can not be placed on gleba
+    - removed unused graphics to reduce mod size
   Balancing:
     - reduced stack size of fermentation bacteria (50->20) to make it harder to stockpile as output in biochamber and spoil by accident
     - reduced ammount of bacteria produced by breeding recipe (16->12)

@@ -13,7 +13,7 @@ data:extend({
 		drop_sound = item_sounds.metal_large_inventory_move,
 		place_result = "lighthouse",
 		default_import_location = "pelagos",
-		weight = 20 * kg,
+		weight = 1000 * kg,
 		stack_size = 50,
 		random_tint_color = item_tints.iron_rust,
 	},
@@ -42,7 +42,7 @@ data:extend({
 			{
 				property = "pressure",
 				min = 300,
-				max = 2000,
+				max = 1809,
 			},
 		},
 		collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },

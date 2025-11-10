@@ -339,7 +339,7 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "pipe", amount = 10 },
 			{ type = "item", name = "iron-plate", amount = 20 },
-			{ type = "item", name = "concrete", amount = 100 },
+			{ type = "item", name = "concrete", amount = 200 },
 			{ type = "item", name = "coconut-sealant", amount = 10 },
 		},
 		energy_required = 10,

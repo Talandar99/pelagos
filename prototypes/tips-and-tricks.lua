@@ -91,19 +91,6 @@ data:extend({
 	},
 	{
 		type = "tips-and-tricks-item",
-		name = "canex-excavator",
-		tag = "[item=canex-excavator]",
-		category = "space-age",
-		order = "pelagos-d",
-		indent = 1,
-		image = "__pelagos__/graphics/canex-tips-and-tricks.png",
-		trigger = {
-			type = "research",
-			technology = "canex-excavator",
-		},
-	},
-	{
-		type = "tips-and-tricks-item",
 		name = "pelagos-calciners",
 		tag = "[item=calciner]",
 		category = "space-age",
@@ -127,18 +114,3 @@ data:extend({
 		},
 	},
 })
---data:extend{
---  {
---    type = "tips-and-tricks-item-category",
---    name = "cargo-ships",
---    order = "fa-[cargo-ships]",
---  },
---  {
---    type = "tips-and-tricks-item",
---    name = "cargo-ships",
---    category = "cargo-ships",
---    is_title = true,
---    order = "a",
---    image = "__cargo-ships-graphics__/assets/shortcut-tutorial.png"
---  },
---}
