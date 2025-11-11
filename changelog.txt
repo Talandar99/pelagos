@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.24.0
-Date: 2025-11-10
+Date: 2025-11-11
   Changes:
     - Vesta: added vesta as optional dependency
     - Vesta: added option to change methane generation to spawn methane stain instead of tile on planet. 
