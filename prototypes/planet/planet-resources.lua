@@ -119,11 +119,11 @@ data:extend({
 		minimum = 100000,
 		normal = 250000,
 		surface_conditions = {
-			{
-				property = "pressure",
-				min = 1809,
-				max = 1809,
-			},
+			--	{
+			--		property = "pressure",
+			--		min = 1809,
+			--		max = 1809,
+			--	},
 		},
 		infinite_depletion_amount = 1,
 		resource_patch_search_radius = 50,

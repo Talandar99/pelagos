@@ -14,6 +14,22 @@ if mods["canal-excavator"] then
 		},
 	})
 
+	if mods["skewer_planet_vesta"] then
+		data:extend({
+			{
+				type = "mod-data",
+				name = "canex-vesta-config",
+				data_type = "canex-planet-config",
+				data = {
+					mineResult = "stone",
+					oreStartingAmount = 20,
+					tint = { r = 245, g = 173, b = 103 },
+					isDefault = false,
+				},
+			},
+		})
+	end
+
 	-- allow productivity
 	if data.raw["mining-drill"]["canex-excavator"] then
 		local excavator = data.raw["mining-drill"]["canex-excavator"]

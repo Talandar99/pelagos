@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.23.2",
+    "version": "0.24.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -21,6 +21,7 @@
         "? colorful_biochamber",
         "? InserterFuelLeech",
         "? gleba_cultured_soil",
+        "? skewer_planet_vesta",
         "! auto-barrel",
         "! fct-barreling-machine"
     ],

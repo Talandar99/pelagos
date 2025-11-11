@@ -57,6 +57,20 @@ data:extend({
 		default_value = false,
 		order = "pelagos-f",
 	},
+	{
+		type = "bool-setting",
+		name = "pelagos-methane-on-vesta",
+		setting_type = "startup",
+		default_value = false,
+		order = "pelagos-g",
+	},
+	{
+		type = "bool-setting",
+		name = "pelagos-override-vesta-methane-fluid-icon",
+		setting_type = "startup",
+		default_value = true,
+		order = "pelagos-h",
+	},
 })
 
 if mods["any-planet-start"] then

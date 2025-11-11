@@ -469,13 +469,13 @@ if mods["gleba_cultured_soil"] then
 	})
 end
 -- add back in future
---if mods["skewer_planet_vesta"] then
---	table.insert(productivity_effects, {
---		type = "change-recipe-productivity",
---		recipe = "ske_vesta_foundation",
---		change = 0.1,
---	})
---end
+if mods["skewer_planet_vesta"] then
+	table.insert(productivity_effects, {
+		type = "change-recipe-productivity",
+		recipe = "vesta-foundation",
+		change = 0.1,
+	})
+end
 data:extend({
 	{
 		type = "technology",

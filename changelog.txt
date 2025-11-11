@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.24.0
+Date: 2025-11-10
+  Changes:
+    - Vesta: added vesta as optional dependency
+    - Vesta: added option to change methane generation to spawn methane stain instead of tile on planet. 
+    - Vesta: Gas giant platform now benefits from landfill productivity research
+    - Vesta: canal excavator can now be used on vesta
+    - Vesta: added option to override Vesta methane icon (turned on by default)
+---------------------------------------------------------------------------------------------------
 Version: 0.23.2
 Date: 2025-11-10
   Balancing:

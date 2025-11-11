@@ -31,20 +31,6 @@ data:extend({
 	{
 		type = "fluid",
 		subgroup = "fluid",
-		name = "methane",
-		default_temperature = 25,
-		base_color = { r = 0.5, g = 0.8, b = 0.1 },
-		flow_color = { r = 0.7, g = 1.0, b = 0.3 },
-		icon = "__pelagos__/graphics/methane.png",
-		icon_size = 64,
-		order = "a[fluid]-b[methane]",
-		pressure_to_speed_ratio = 0.4,
-		flow_to_energy_ratio = 0.59,
-		auto_barrel = true,
-	},
-	{
-		type = "fluid",
-		subgroup = "fluid",
 		name = "ethanol",
 		default_temperature = 25,
 		base_color = { r = 0.5, g = 0.75, b = 0.85 },
@@ -57,3 +43,41 @@ data:extend({
 		auto_barrel = true,
 	},
 })
+
+if mods["skewer_planet_vesta"] then
+	if settings.startup["pelagos-override-vesta-methane-fluid-icon"].value then
+		data:extend({
+			{
+				type = "fluid",
+				subgroup = "fluid",
+				name = "methane",
+				default_temperature = 25,
+				base_color = { r = 0.5, g = 0.8, b = 0.1 },
+				flow_color = { r = 0.7, g = 1.0, b = 0.3 },
+				icon = "__pelagos__/graphics/methane.png",
+				icon_size = 64,
+				order = "a[fluid]-b[methane]",
+				pressure_to_speed_ratio = 0.4,
+				flow_to_energy_ratio = 0.59,
+				auto_barrel = true,
+			},
+		})
+	end
+else
+	data:extend({
+		{
+			type = "fluid",
+			subgroup = "fluid",
+			name = "methane",
+			default_temperature = 25,
+			base_color = { r = 0.5, g = 0.8, b = 0.1 },
+			flow_color = { r = 0.7, g = 1.0, b = 0.3 },
+			icon = "__pelagos__/graphics/methane.png",
+			icon_size = 64,
+			order = "a[fluid]-b[methane]",
+			pressure_to_speed_ratio = 0.4,
+			flow_to_energy_ratio = 0.59,
+			auto_barrel = true,
+		},
+	})
+end
