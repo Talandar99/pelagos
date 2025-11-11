@@ -208,6 +208,7 @@ local function build_allowed_entities()
 	allowed["flamethrower-turret"] = true
 	allowed["rocket-turret"] = true
 	allowed["pipe"] = true
+	allowed["diesel-pump"] = true
 	allowed["steel-chest"] = true
 	allowed["barreling-machine"] = true
 	allowed["radar"] = true
