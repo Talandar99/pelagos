@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.24.1
+Date: 2025-11-12
+  Changes:
+    - Updated logic responsible for wooden platforms to make sure modded inserters, chests and belts will work in future
+---------------------------------------------------------------------------------------------------
 Version: 0.24.0
 Date: 2025-11-11
   Changes:

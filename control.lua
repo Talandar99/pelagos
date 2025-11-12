@@ -151,16 +151,16 @@ end)
 local function build_allowed_entities()
 	local allowed = {}
 	local filters = {
-		{ filter = "subgroup", subgroup = "inserter" },
 		{ filter = "subgroup", subgroup = "circuit-network" },
 	}
+	local entity_filters = {
+		{ filter = "type", type = "inserter" },
+		{ filter = "type", type = "transport-belt" },
+	}
 
-	if script.active_mods["aai-containers"] then
-		table.insert(filters, { filter = "subgroup", subgroup = "container-1" })
-	end
-	if script.active_mods["kry-inserters"] then
-		table.insert(filters, { filter = "subgroup", subgroup = "shinyinserter1" })
-		table.insert(filters, { filter = "subgroup", subgroup = "shinyinserter2" })
+	local entities = prototypes.get_entity_filtered(entity_filters)
+	for _, ent in pairs(entities) do
+		allowed[ent.name] = true
 	end
 
 	-- get items from filters
@@ -175,30 +175,31 @@ local function build_allowed_entities()
 		end
 	end
 
-	-- storage group but only chest
-	local storage_filters = { { filter = "subgroup", subgroup = "storage" } }
-	local storage_items = prototypes.get_item_filtered(storage_filters)
-	for _, item in pairs(storage_items) do
-		if item.place_result and string.find(item.name, "chest") then
-			allowed[item.place_result.name] = true
+	-- chest with size 1x1
+	local chest_filters = { { filter = "type", type = "container" } }
+	local chests = prototypes.get_entity_filtered(chest_filters)
+	for _, chest in pairs(chests) do
+		local box = chest.selection_box
+		if box and box.left_top and box.right_bottom then
+			local width = math.abs(box.right_bottom.x - box.left_top.x)
+			local height = math.abs(box.right_bottom.y - box.left_top.y)
+			if width < 1.1 and height < 1.1 then
+				allowed[chest.name] = true
+			end
 		end
 	end
 
-	-- logistic group but only chest
-	local logistic_filters = { { filter = "subgroup", subgroup = "logistic-network" } }
-	local logistic_items = prototypes.get_item_filtered(logistic_filters)
-	for _, item in pairs(logistic_items) do
-		if item.place_result and string.find(item.name, "chest") then
-			allowed[item.place_result.name] = true
-		end
-	end
-
-	-- logistic group but only chest
-	local belt_filters = { { filter = "subgroup", subgroup = "belt" } }
-	local belt_items = prototypes.get_item_filtered(belt_filters)
-	for _, item in pairs(belt_items) do
-		if item.place_result and string.find(item.name, "transport") then
-			allowed[item.place_result.name] = true
+	-- logistic chest with size 1x1
+	local logistic_chest_filters = { { filter = "type", type = "logistic-container" } }
+	local logistic_chests = prototypes.get_entity_filtered(logistic_chest_filters)
+	for _, chest in pairs(logistic_chests) do
+		local box = chest.selection_box
+		if box and box.left_top and box.right_bottom then
+			local width = math.abs(box.right_bottom.x - box.left_top.x)
+			local height = math.abs(box.right_bottom.y - box.left_top.y)
+			if width < 1.1 and height < 1.1 then
+				allowed[chest.name] = true
+			end
 		end
 	end
 
