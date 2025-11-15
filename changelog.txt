@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.25.0
+Date: 2025-11-13
+  Balancing:
+    - Boompuff agriculture: increased fuel value (600kJ -> 800kJ)
+  Bugfixes:
+    - Excavator entity and item descriptions should now be the same as base mod 
+    - Fixed Crash that prevented Dreadgeworks frozen reaches to launch with vesta methane patches option turned on
+---------------------------------------------------------------------------------------------------
 Version: 0.24.1
 Date: 2025-11-12
   Changes:
