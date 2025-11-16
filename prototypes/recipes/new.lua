@@ -749,6 +749,22 @@ data:extend({
 		enabled = false,
 		--auto_recycle = false,
 	},
+	{
+		type = "recipe",
+		name = "portable-diesel-generator",
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "titanium-plate", amount = 100 },
+			{ type = "item", name = "iron-gear-wheel", amount = 60 },
+			{ type = "item", name = "pipe", amount = 50 },
+			{ type = "item", name = "engine-unit", amount = 150 },
+			{ type = "item", name = "plastic-bar", amount = 30 },
+			{ type = "item", name = "coconut-sealant", amount = 50 },
+		},
+		results = { { type = "item", name = "portable-diesel-generator", amount = 1 } },
+		enabled = false,
+		--auto_recycle = false,
+	},
 })
 
 data:extend({

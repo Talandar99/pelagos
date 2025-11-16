@@ -417,7 +417,7 @@ data:extend({
 					starting_speed = 0.1,
 				},
 			},
-			target_filter = { "copper-biter-spawner" },
+			target_filter = { "copper-biter-spawner", "spitter-spawner", "biter-spawner" },
 		},
 		subgroup = "ammo",
 		order = "d[rocket-launcher]-d[capture-pelagos]",

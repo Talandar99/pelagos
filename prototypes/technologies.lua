@@ -401,6 +401,35 @@ data:extend({
 		},
 	},
 })
+data:extend({
+	{
+		type = "technology",
+		name = "portable-diesel-generator",
+		icons = util.technology_icon_constant_equipment("__pelagos__/graphics/portable-diesel-generator.png"),
+		icon_size = 256,
+		effects = {
+			{ type = "unlock-recipe", recipe = "portable-diesel-generator" },
+		},
+		prerequisites = {
+			"pelagos-science-pack",
+			--	"automation-2", -- important for any planet start
+			"power-armor",
+			"utility-science-pack",
+		},
+		unit = {
+			count_formula = "1000",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+				{ "utility-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
 local productivity_effects = {
 	{
 		type = "change-recipe-productivity",

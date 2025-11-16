@@ -1,8 +1,18 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.25.0
-Date: 2025-11-13
+Date: 2025-11-16
+  Changes:
+    - introduced portable diesel generator with it's technology and recipe
+    - any planet start: portable diesel generator require 200 science packs to research
+    - added simplified chinese locale support
+    - capture bot bullet can now target regular biter and and spitter nests
   Balancing:
     - Boompuff agriculture: increased fuel value (600kJ -> 800kJ)
+    - reduced "pollution to join attack" property for all copper spitter to make sure more of them will join attacks so they will be harder to deal with
+    - changed probability related to planet pollution for medium, big, behemoth, leviathan to make sure they spawn on earlier levels of pollution so they will be harder to deal with
+    - changed probability to spawn for medium, big, behemoth, leviathan to make sure more of them will spawn on every level of pollution so they will be harder to deal with
+    - added explosion resistances increasing with type for medium, big, behemoth copper spitter. Leviathan already  had it
+    - Leviathan size copper spitter has now 100% imunity to lasers and electric dmg
   Bugfixes:
     - Excavator entity and item descriptions should now be the same as base mod 
     - Fixed Crash that prevented Dreadgeworks frozen reaches to launch with vesta methane patches option turned on

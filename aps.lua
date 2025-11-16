@@ -213,6 +213,18 @@ data.raw["technology"]["improvised-landfill"].unit = {
 	time = 30,
 }
 
+data.raw["technology"]["portable-diesel-generator"].unit = {
+	count = 200,
+	ingredients = {
+		{ "automation-science-pack", 1 },
+		{ "logistic-science-pack", 1 },
+		{ "pelagos-science-pack", 1 },
+		{ "chemical-science-pack", 1 },
+		{ "utility-science-pack", 1 },
+	},
+	time = 30,
+}
+
 data.raw["technology"]["wood-spoiling-technology"].unit = nil
 data.raw["technology"]["wood-spoiling-technology"].research_trigger = {
 	type = "build-entity",
