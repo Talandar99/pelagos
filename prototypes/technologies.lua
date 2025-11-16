@@ -923,3 +923,21 @@ add_heavy_turret_bonus("physical-projectile-damage-4", 0.2)
 add_heavy_turret_bonus("physical-projectile-damage-5", 0.2)
 add_heavy_turret_bonus("physical-projectile-damage-6", 0.2)
 add_heavy_turret_bonus("physical-projectile-damage-7", 0.2)
+
+if mods["Cerys-Moon-of-Fulgora"] then
+	data:extend({
+		{
+			type = "technology",
+			name = "coconut-drop-technology",
+			icon = "__pelagos__/graphics/coconut-drop-technology.png",
+			icon_size = 256,
+			prerequisites = { "coconut-processing-technology", "moon-discovery-cerys" },
+
+			research_trigger = {
+				type = "mine-entity",
+				entity = "coconut-palm",
+			},
+		},
+	})
+	PlanetsLib.add_item_name_to_global_cargo_drops_whitelist("coconut")
+end

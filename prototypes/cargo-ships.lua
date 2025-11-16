@@ -25,6 +25,7 @@ if data.raw["car"]["indep-boat"] then
 	data.raw["car"]["indep-boat"].trash_inventory_size = 10
 	data.raw["car"]["indep-boat"].chunk_exploration_radius = 3
 	data.raw["car"]["indep-boat"].friction = boat_friction
+	data.raw["car"]["indep-boat"].braking_power = "0.75MW"
 	--indep_boat.friction = 0.002/speed_modifier -- default speed_modifier is 1
 end
 -- oil rig

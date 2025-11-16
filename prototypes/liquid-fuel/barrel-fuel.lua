@@ -71,6 +71,7 @@ if data.raw["car"]["indep-boat"] then
 	boat.energy_source.effectivity = 1
 	boat.energy_source.fuel_inventory_size = 3
 	boat.energy_source.burnt_inventory_size = 3
+	--boat.max_power = "0.3MW"
 	boat.max_power = "0.3MW"
 end
 

@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.26.0
+Date: 2025-11-16
+  Changes:
+    - improved speed control for yellow boat (now breaks faster)
+    - portable diesel generator default import location is now set to pelagos
+    - you can drop coconuts on cerys (ignoring drop restriction) if pelagos and cerys are installed
+  Bugfixes:
+    - fixed bug realted to chinese locale
+---------------------------------------------------------------------------------------------------
 Version: 0.25.0
 Date: 2025-11-16
   Changes:
