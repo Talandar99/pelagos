@@ -26,7 +26,7 @@ fish_breeding.surface_conditions = {
 }
 fish_breeding.enabled = false
 -------------------------------------------------------------------------------
--- temporary fix until miguel
+-- temporary fix until miguel moves his ass
 -------------------------------------------------------------------------------
 if mods["quality-seeds"] then
 	table.insert(quality_seeds.ignore_plants, "coconut-palm")

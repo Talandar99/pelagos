@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.26.1
+Date: 2025-11-18
+  Changes:
+    - improved Coconut drop technology icon
+    - cultured soil is now hidden dependency
+  Balancing:
+    - reduced fuel slots for portable diesel generator (4->3)
+---------------------------------------------------------------------------------------------------
 Version: 0.26.0
 Date: 2025-11-16
   Changes:

@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.26.0",
+    "version": "0.26.1",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -20,7 +20,7 @@
         "? ironclad-gunboat-and-mortar-turret-fork",
         "? colorful_biochamber",
         "? InserterFuelLeech",
-        "? gleba_cultured_soil",
+        "(?) gleba_cultured_soil",
         "? skewer_planet_vesta",
         "! auto-barrel",
         "! fct-barreling-machine"

@@ -12,6 +12,7 @@ data:extend({
 		inventory_move_sound = item_sounds.reactor_inventory_move,
 		pick_sound = item_sounds.reactor_inventory_pickup,
 		drop_sound = item_sounds.reactor_inventory_move,
+		default_import_location = "pelagos",
 		stack_size = 20,
 		weight = 0.25 * tons,
 	},
@@ -42,13 +43,13 @@ data:extend({
 			type = "burner",
 			fuel_categories = { "diesel-fuel" },
 			emissions_per_minute = { pollution = 5 },
-			fuel_inventory_size = 4,
-			burnt_inventory_size = 4,
+			fuel_inventory_size = 3,
+			burnt_inventory_size = 3,
 			smoke = {
 				{
 					name = "smoke",
 					deviation = { 0.1, 0.1 },
-					frequency = 5,
+					frequency = 6,
 					position = { 0, 0 },
 					starting_vertical_speed = 0.08,
 					starting_frame_deviation = 60,
@@ -59,7 +60,7 @@ data:extend({
 			type = "electric",
 			usage_priority = "primary-output",
 		},
-		power = "900kW",
+		power = "800kW",
 		categories = { "armor" },
 	},
 })
