@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.26.3
+Date: 2025-11-19
+  Changes:
+    - updated resource map colors for improved visibility
+    - map icons for methane and titanium sludge are now bigger  
+    - added new optional dependency: Spoiled Trenches of Fulgora
+---------------------------------------------------------------------------------------------------
+Version: 0.26.2
+Date: 2025-11-18
+  Bugfixes:
+    - fixed chinese locale. 
+---------------------------------------------------------------------------------------------------
 Version: 0.26.1
 Date: 2025-11-18
   Changes:

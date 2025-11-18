@@ -53,6 +53,7 @@ data:extend({
 		},
 		map_generator_bounding_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+		collision_box = table.deepcopy(data.raw.resource["crude-oil"].collision_box),
 		autoplace = resource_autoplace.resource_autoplace_settings({
 			name = "titanium-sludge",
 			order = "b",
@@ -81,7 +82,7 @@ data:extend({
 				scale = 0.6,
 			},
 		},
-		map_color = { r = 0.88, g = 0.79, b = 0.26 },
+		map_color = { r = 1.0, g = 0.7, b = 0.0 },
 		map_grid = false,
 	},
 })
@@ -141,6 +142,7 @@ data:extend({
 		},
 		map_generator_bounding_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
+		collision_box = table.deepcopy(data.raw.resource["crude-oil"].collision_box),
 		autoplace = resource_autoplace.resource_autoplace_settings({
 			name = "methane",
 			order = "b",
@@ -169,7 +171,7 @@ data:extend({
 				scale = 0.6,
 			},
 		},
-		map_color = { 0.5, 1.0, 0.5 },
+		map_color = { 0.0, 1.0, 0.0 },
 		map_grid = false,
 	},
 })
