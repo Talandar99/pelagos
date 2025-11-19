@@ -41,6 +41,7 @@ if mods["canal-excavator"] then
 		excavator.energy_source.effectivity = 1
 		excavator.energy_source.fuel_inventory_size = 2
 		excavator.energy_source.burnt_inventory_size = 2
+		excavator.uses_force_mining_productivity_bonus = false
 		excavator.module_slots = 6
 		excavator.energy_usage = "540kW" --base was 180kW
 

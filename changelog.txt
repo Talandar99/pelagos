@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.26.4
+Date: 2025-11-19
+  Balancing:
+    - calcite concrete recipe now gives more concrete (10 -> 20)
+    - calcite concrete recipe now require less calcite (10 -> 8)
+    - excavator is no longer affected by mining productivity
+---------------------------------------------------------------------------------------------------
 Version: 0.26.3
 Date: 2025-11-19
   Changes:

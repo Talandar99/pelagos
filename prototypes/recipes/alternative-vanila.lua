@@ -140,11 +140,11 @@ data:extend({
 		enabled = false,
 		category = "crafting-with-fluid",
 		ingredients = {
-			{ type = "item", name = "calcite", amount = 10 },
+			{ type = "item", name = "calcite", amount = 8 },
 			{ type = "item", name = "iron-ore", amount = 2 },
 			{ type = "fluid", name = "water", amount = 100 },
 		},
-		results = { { type = "item", name = "concrete", amount = 10 } },
+		results = { { type = "item", name = "concrete", amount = 20 } },
 		auto_recycle = false,
 		allow_productivity = true,
 	},
