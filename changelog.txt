@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.27.0
+Date: 2025-11-22
+  Changes:
+    - added soundtrack: "decomposing by the beach" by JonJon licensed under CC BY-NC-ND 4.0
+    - added soundtrack: "horizonwide fractured mirror" by JonJon licensed under CC BY-NC-ND 4.0
+    - added soundtrack: "stranded far apart" by JonJon licensed under CC BY-NC-ND 4.0
+  Bugfixes:
+    - elevated rails can no longer be placed on deepsea of pelagos 
+
+---------------------------------------------------------------------------------------------------
 Version: 0.26.4
 Date: 2025-11-19
   Balancing:

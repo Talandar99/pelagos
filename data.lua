@@ -36,7 +36,7 @@ require("prototypes.heavy-gun-turret")
 require("prototypes.canal-excavator")
 require("prototypes.cargo-ships")
 require("prototypes.tips-and-tricks")
---require("prototypes.music")
+require("prototypes.music")
 require("data-fixes")
 
 if mods["any-planet-start"] then

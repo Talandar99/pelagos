@@ -119,3 +119,8 @@ data:extend({
 		consuming = "none",
 	},
 })
+
+-- disable elevated rails on pleagos deep sea
+if mods["elevated-rails"] then
+	data.raw["utility-constants"].default.default_collision_masks["rail-support"].layers["pelagos-deepsea"] = true
+end
