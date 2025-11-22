@@ -7,12 +7,12 @@ data:extend({
 		planet = "pelagos",
 		sound = {
 			filename = "__pelagos__/sound/stranded_far_apart.ogg",
-			volume = 0.4,
+			volume = 0.5,
 		},
 	},
 	{
 		type = "ambient-sound",
-		name = "horizonwide_fractured_mirror",
+		name = "pelagos_horizonwide_fractured_mirror",
 		track_type = "main-track",
 		weight = 10,
 		planet = "pelagos",
