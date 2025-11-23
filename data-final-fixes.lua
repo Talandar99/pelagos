@@ -30,11 +30,11 @@ table.insert(water_tile_type_names, "pelagos-deepsea")
 -- Disable Arig's high-support electric poles on Pelagos deep sea tiles
 
 -- Register a new collision layer if it doesn't exist yet
-if not data.raw["collision-layer"]["pelagos-deepsea"] then
+if not data.raw["collision-layer"]["deepsea-mechanic"] then
 	data:extend({
 		{
 			type = "collision-layer",
-			name = "pelagos-deepsea",
+			name = "deepsea-mechanic",
 		},
 	})
 end
@@ -49,7 +49,7 @@ if deepsea then
 		deepsea.collision_mask = { layers = deepsea.collision_mask }
 	end
 
-	deepsea.collision_mask.layers["pelagos-deepsea"] = true
+	deepsea.collision_mask.layers["deepsea-mechanic"] = true
 end
 
 -- If Planetaris Unbounded is installed, restrict pole placement on deep sea
@@ -61,47 +61,26 @@ if mods["planetaris-unbounded"] then
 		if not pole.collision_mask.layers then
 			pole.collision_mask = { layers = pole.collision_mask }
 		end
-		pole.collision_mask.layers["pelagos-deepsea"] = true
+		pole.collision_mask.layers["deepsea-mechanic"] = true
 
 		-- Add a buildability rule for clarity (optional but harmless)
 		pole.tile_buildability_rules = pole.tile_buildability_rules or {}
 		table.insert(pole.tile_buildability_rules, {
 			area = { { -1, -1 }, { 1, 1 } },
-			colliding_tiles = { layers = { ["pelagos-deepsea"] = true } },
+			colliding_tiles = { layers = { ["deepsea-mechanic"] = true } },
 			remove_on_collision = true,
 		})
 	end
 end
 
--- 1️⃣ Create a custom collision layer for coral blocking if it doesn't exist
-if not data.raw["collision-layer"]["pelagos-coral-block"] then
-	data:extend({
-		{
-			type = "collision-layer",
-			name = "pelagos-coral-block",
-		},
-	})
-end
-
--- 2️⃣ Assign that layer to the coral so foundations collide with it
+-- Assign that layer to the coral so foundations collide with it
 local coral = data.raw["simple-entity"]["pelagos-titanium-coral"]
 if coral then
 	coral.collision_mask = coral.collision_mask or { layers = {} }
 	if not coral.collision_mask.layers then
 		coral.collision_mask = { layers = coral.collision_mask }
 	end
-	coral.collision_mask.layers["pelagos-coral-block"] = true
-end
-
--- 3️⃣ Make foundations respect that layer and refuse to place on it
-for _, tile in pairs(data.raw.tile) do
-	if tile.name == "foundation" or tile.name == "landfill" or tile.name == "wooden-platform" then
-		tile.collision_mask = tile.collision_mask or { layers = {} }
-		if not tile.collision_mask.layers then
-			tile.collision_mask = { layers = tile.collision_mask }
-		end
-		tile.collision_mask.layers["pelagos-coral-block"] = true
-	end
+	coral.collision_mask.layers["water_resource"] = true
 end
 
 -- diesel assembling-machine recipes
@@ -122,5 +101,15 @@ data:extend({
 
 -- disable elevated rails on pleagos deep sea
 if mods["elevated-rails"] then
-	data.raw["utility-constants"].default.default_collision_masks["rail-support"].layers["pelagos-deepsea"] = true
+	data.raw["utility-constants"].default.default_collision_masks["rail-support"].layers["deepsea-mechanic"] = true
+end
+
+-- add placeholder layer for wooden-platform rework
+if not data.raw["collision-layer"]["wooden-platform"] then
+	data:extend({
+		{
+			type = "collision-layer",
+			name = "wooden-platform",
+		},
+	})
 end

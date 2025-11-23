@@ -7,7 +7,7 @@ data:extend({
 		planet = "pelagos",
 		sound = {
 			filename = "__pelagos__/sound/stranded_far_apart.ogg",
-			volume = 0.5,
+			volume = 0.8,
 		},
 	},
 	{
@@ -18,7 +18,7 @@ data:extend({
 		planet = "pelagos",
 		sound = {
 			filename = "__pelagos__/sound/horizonwide_fractured_mirror.ogg",
-			volume = 0.5,
+			volume = 0.8,
 		},
 	},
 	{
@@ -29,7 +29,7 @@ data:extend({
 		planet = "pelagos",
 		sound = {
 			filename = "__pelagos__/sound/stranded_far_apart.ogg",
-			volume = 0.5,
+			volume = 0.8,
 		},
 	},
 	{
@@ -40,7 +40,7 @@ data:extend({
 		planet = "pelagos",
 		sound = {
 			filename = "__pelagos__/sound/decomposing_by_the_beach.ogg",
-			volume = 0.5,
+			volume = 0.8,
 		},
 	},
 })
