@@ -2,6 +2,13 @@
 Version: 0.27.1
 Date: 2025-11-23
   Changes:
+  Balancing:
+  Bugfixes:
+    - setting processing unit recipe via circuits no longer prioritize ethanol processing unit 
+---------------------------------------------------------------------------------------------------
+Version: 0.27.1
+Date: 2025-11-23
+  Changes:
     - increased soundtrack volume (0.4 -> 0.8)
   Balancing:
     - reduced EM pollution for beacons (2->1)

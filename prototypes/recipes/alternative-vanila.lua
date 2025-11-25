@@ -78,6 +78,7 @@ data:extend({
 		name = "pelagos-processing-unit",
 		icon = "__pelagos__/graphics/pelagos-processing-unit.png",
 		category = "electronics-with-fluid",
+		order = "b[circuits]-d[pelagos-processing-unit]",
 		enabled = false,
 		auto_recycle = false,
 		energy_required = 10,
