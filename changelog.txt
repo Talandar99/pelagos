@@ -1,8 +1,26 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.27.1
-Date: 2025-11-23
+Version: 0.28.0
+Date: 2025-11-28
+  Bugfixes:
+    - oil rig rocket cappacity is not set to 1. Before it was some number close to 0.9
+    - reduced puff gas fuel value (0.8MJ -> 0.7MJ)
   Changes:
-  Balancing:
+    - added biodiesel fluid with fuel value 0.9MJ
+    - added biodiesel technology and related recipes
+    - any planet start: ice melting is unlocked on planet discovery fulgora and advanced asteroid processing instead just on advanced asteroid processing.
+---------------------------------------------------------------------------------------------------
+Version: 0.27.4
+Date: 2025-11-28
+  Bugfixes:
+    - if fluid has fuel value equal 0 it will be treated like not having fuel value at all. 
+      So game won't crash at startup if some mod decide to set fuel value to 0 instead of not setting or removing it
+    - added prefix to casting-engine-unit recipe. So it won't collide with other mods that have recipe with the same name
+---------------------------------------------------------------------------------------------------
+Version: 0.27.2
+Date: 2025-11-26
+  Changes:
+    - powerpoles are now ALWAYS allowed on amonia and oil ocean. This was done to save 2 collision layers in code
+    - unified deepsea_mechanic collision layer name to save some layers if pelagos is installed with other mods that use this mechanic
   Bugfixes:
     - setting processing unit recipe via circuits no longer prioritize ethanol processing unit 
 ---------------------------------------------------------------------------------------------------

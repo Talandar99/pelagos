@@ -636,11 +636,35 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
-		name = "casting-engine-unit",
+		name = "pelagos-biodiesel",
+		icon = "__pelagos__/graphics/biodiesel.png",
+		icon_size = 64,
+		effects = {
+			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-tree" },
+			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-bioflux" },
+		},
+		prerequisites = { "pelagos-science-pack", "wood-spoiling-technology" },
+		unit = {
+			count_formula = "500",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+data:extend({
+	{
+		type = "technology",
+		name = "pelagos-casting-engine-unit",
 		icon = "__pelagos__/graphics/casting-engine-unit.png",
 		icon_size = 64,
 		effects = {
-			{ type = "unlock-recipe", recipe = "casting-engine-unit" },
+			{ type = "unlock-recipe", recipe = "pelagos-casting-engine-unit" },
 		},
 		prerequisites = {
 			"diesel-automation",

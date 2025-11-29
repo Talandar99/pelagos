@@ -94,3 +94,4 @@ end
 data.raw["tips-and-tricks-item"]["cargo-ships"].category = "space-age"
 data.raw["tips-and-tricks-item"]["cargo-ships"].order = "pelagos-g"
 data.raw["tips-and-tricks-item"]["cargo-ships"].indent = 1
+data.raw["item"]["oil_rig"].weight = 1000 * kg

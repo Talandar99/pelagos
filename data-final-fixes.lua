@@ -30,11 +30,11 @@ table.insert(water_tile_type_names, "pelagos-deepsea")
 -- Disable Arig's high-support electric poles on Pelagos deep sea tiles
 
 -- Register a new collision layer if it doesn't exist yet
-if not data.raw["collision-layer"]["deepsea-mechanic"] then
+if not data.raw["collision-layer"]["deepsea_mechanic"] then
 	data:extend({
 		{
 			type = "collision-layer",
-			name = "deepsea-mechanic",
+			name = "deepsea_mechanic",
 		},
 	})
 end
@@ -49,7 +49,7 @@ if deepsea then
 		deepsea.collision_mask = { layers = deepsea.collision_mask }
 	end
 
-	deepsea.collision_mask.layers["deepsea-mechanic"] = true
+	deepsea.collision_mask.layers["deepsea_mechanic"] = true
 end
 
 -- If Planetaris Unbounded is installed, restrict pole placement on deep sea
@@ -61,13 +61,13 @@ if mods["planetaris-unbounded"] then
 		if not pole.collision_mask.layers then
 			pole.collision_mask = { layers = pole.collision_mask }
 		end
-		pole.collision_mask.layers["deepsea-mechanic"] = true
+		pole.collision_mask.layers["deepsea_mechanic"] = true
 
 		-- Add a buildability rule for clarity (optional but harmless)
 		pole.tile_buildability_rules = pole.tile_buildability_rules or {}
 		table.insert(pole.tile_buildability_rules, {
 			area = { { -1, -1 }, { 1, 1 } },
-			colliding_tiles = { layers = { ["deepsea-mechanic"] = true } },
+			colliding_tiles = { layers = { ["deepsea_mechanic"] = true } },
 			remove_on_collision = true,
 		})
 	end
@@ -101,7 +101,7 @@ data:extend({
 
 -- disable elevated rails on pleagos deep sea
 if mods["elevated-rails"] then
-	data.raw["utility-constants"].default.default_collision_masks["rail-support"].layers["deepsea-mechanic"] = true
+	data.raw["utility-constants"].default.default_collision_masks["rail-support"].layers["deepsea_mechanic"] = true
 end
 
 -- add placeholder layer for wooden-platform rework

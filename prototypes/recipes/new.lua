@@ -184,6 +184,64 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "pelagos-biodiesel-tree",
+		category = "oil-processing",
+		subgroup = "fluid-recipes",
+		additional_categories = { "organic" },
+		icons = {
+			{ icon = "__pelagos__/graphics/biodiesel.png", icon_size = 64 },
+			{ icon = "__space-age__/graphics/icons/tree-seed.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		},
+		surface_conditions = {},
+		enabled = false,
+		allow_productivity = true,
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "tree-seed", amount = 5 },
+			{ type = "fluid", name = "steam", amount = 50 },
+		},
+		results = {
+			{ type = "fluid", name = "biodiesel", amount = 50 },
+		},
+		crafting_machine_tint = {
+			primary = { r = 0.54, g = 0.45, b = 0.05 },
+			secondary = { r = 0.64, g = 0.55, b = 0.15 },
+			tertiary = { r = 0.54, g = 0.45, b = 0.05 },
+			quaternary = { r = 0.64, g = 0.55, b = 0.15 },
+		},
+		show_amount_in_title = false,
+	},
+	{
+		type = "recipe",
+		name = "pelagos-biodiesel-bioflux",
+		category = "organic",
+		icons = {
+			{ icon = "__pelagos__/graphics/biodiesel.png", icon_size = 64 },
+			{ icon = "__space-age__/graphics/icons/bioflux.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		},
+		subgroup = "fluid-recipes",
+		surface_conditions = {},
+		enabled = false,
+		allow_productivity = true,
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "yumako-seed", amount = 1 },
+			{ type = "item", name = "jellynut-seed", amount = 1 },
+			{ type = "item", name = "bioflux", amount = 3 },
+		},
+		results = {
+			{ type = "fluid", name = "biodiesel", amount = 50 },
+		},
+		crafting_machine_tint = {
+			primary = { r = 0.54, g = 0.45, b = 0.05 },
+			secondary = { r = 0.64, g = 0.55, b = 0.15 },
+			tertiary = { r = 0.54, g = 0.45, b = 0.05 },
+			quaternary = { r = 0.64, g = 0.55, b = 0.15 },
+		},
+		show_amount_in_title = false,
+	},
+	{
+		type = "recipe",
 		name = "ethanol",
 		category = "organic",
 		subgroup = "fluid-recipes",
@@ -475,7 +533,7 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "casting-engine-unit",
+		name = "pelagos-casting-engine-unit",
 		category = "metallurgy",
 		subgroup = "vulcanus-processes",
 		order = "b[casting]-h[casting-engine-unit]",

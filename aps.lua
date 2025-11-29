@@ -309,6 +309,7 @@ utils.add_recipes("advanced-asteroid-processing", {
 utils.add_recipes("space-platform-thruster", { "ethanol-thruster" })
 utils.remove_recipes("space-platform-thruster", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })
 utils.add_recipes("advanced-asteroid-processing", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })
+utils.add_recipes("planet-discovery-fulgora", { "ice-melting" })
 data:extend({
 	{
 		type = "recipe",
