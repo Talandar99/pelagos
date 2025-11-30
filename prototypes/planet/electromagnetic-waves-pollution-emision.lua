@@ -106,7 +106,12 @@ silo.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
 local beacon = data.raw["beacon"]["beacon"]
 beacon.energy_source = beacon.energy_source or {}
 beacon.energy_source.emissions_per_minute = beacon.energy_source.emissions_per_minute or {}
-beacon.energy_source.emissions_per_minute.electromagnetic_waves = 1
+beacon.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
+
+local lab = data.raw["lab"]["lab"]
+lab.energy_source = lab.energy_source or {}
+lab.energy_source.emissions_per_minute = lab.energy_source.emissions_per_minute or {}
+lab.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
 
 ------------------------------------------------------------------------------------------------------------------------
 --- compat mulana

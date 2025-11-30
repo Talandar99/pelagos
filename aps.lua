@@ -324,7 +324,7 @@ data:extend({
 		category = "organic",
 		ingredients = {
 			{ type = "item", name = "iron-plate", amount = 2 },
-			{ type = "fluid", name = "water", amount = 20 },
+			{ type = "fluid", name = "water", amount = 10 },
 			{ type = "fluid", name = "methane", amount = 10 },
 		},
 		surface_conditions = {
