@@ -166,7 +166,7 @@ data:extend({
 	},
 })
 -- arig compatibility
-if mods["planetaris-unbounded"] then
+if mods["planetaris-arig"] then
 	local item = data.raw.item["wooden-platform"]
 	if item and item.place_as_tile and data.raw.tile["arig-sand"] then
 		table.insert(item.place_as_tile.tile_condition, "arig-sand")

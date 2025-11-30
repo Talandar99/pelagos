@@ -227,10 +227,10 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "yumako-seed", amount = 1 },
 			{ type = "item", name = "jellynut-seed", amount = 1 },
-			{ type = "item", name = "bioflux", amount = 3 },
+			{ type = "item", name = "bioflux", amount = 5 },
 		},
 		results = {
-			{ type = "fluid", name = "biodiesel", amount = 50 },
+			{ type = "fluid", name = "biodiesel", amount = 100 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.54, g = 0.45, b = 0.05 },
@@ -239,6 +239,31 @@ data:extend({
 			quaternary = { r = 0.64, g = 0.55, b = 0.15 },
 		},
 		show_amount_in_title = false,
+	},
+	{
+		type = "recipe",
+		name = "pelagos-biodiesel-solid-fuel",
+		icons = {
+			{ icon = "__base__/graphics/icons/solid-fuel.png", icon_size = 64 },
+			{ icon = "__pelagos__/graphics/biodiesel.png", icon_size = 64, scale = 0.3, shift = { -8, -8 } },
+		},
+		energy_required = 2,
+		enabled = false,
+		category = "organic-or-chemistry",
+		auto_recycle = false,
+		subgroup = "fluid-recipes",
+		order = "b[fluid-chemistry]-b[solid-fuel-from-biodiesel]",
+		ingredients = {
+			{ type = "fluid", name = "biodiesel", amount = 15 },
+		},
+		results = { { type = "item", name = "solid-fuel", amount = 1 } },
+		allow_productivity = true,
+		crafting_machine_tint = {
+			primary = { r = 0.54, g = 0.45, b = 0.05 },
+			secondary = { r = 0.64, g = 0.55, b = 0.15 },
+			tertiary = { r = 0.54, g = 0.45, b = 0.05 },
+			quaternary = { r = 0.64, g = 0.55, b = 0.15 },
+		},
 	},
 	{
 		type = "recipe",

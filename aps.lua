@@ -164,6 +164,7 @@ utils.add_recipes("military-science-pack", { "aps-pelagos-military-science-pack"
 utils.add_prerequisites("planet-discovery-nauvis", { "agricultural-science-pack" })
 utils.add_prerequisites("planet-discovery-fulgora", { "agricultural-science-pack" })
 utils.add_prerequisites("planet-discovery-vulcanus", { "agricultural-science-pack" })
+utils.add_prerequisites("planet-discovery-gleba", { "pelagos-biodiesel" })
 data:extend({
 	{
 		type = "technology",

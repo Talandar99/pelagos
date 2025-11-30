@@ -1,13 +1,25 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.28.0
-Date: 2025-11-28
-  Bugfixes:
-    - oil rig rocket cappacity is not set to 1. Before it was some number close to 0.9
-    - reduced puff gas fuel value (0.8MJ -> 0.7MJ)
+Version: 0.28.1
+Date: 2025-11-30
   Changes:
-    - added biodiesel fluid with fuel value 0.9MJ
-    - added biodiesel technology and related recipes
-    - any planet start: ice melting is unlocked on planet discovery fulgora and advanced asteroid processing instead just on advanced asteroid processing.
+    - added warning communicate if pelagos and depths of nauvis are installed togeather, player start on nauvis, and oil patches are disabled on land. 
+---------------------------------------------------------------------------------------------------
+Version: 0.28.0
+Date: 2025-11-29
+  Bugfixes:
+    - compatibilities with Arig now reference planetaris-arig not planetaris-unbounded 
+    - any planet start: ice melting is unlocked on planet discovery fulgora and advanced 
+      asteroid processing instead just on advanced asteroid processing to prevent lack of 
+      ability to melt ice if player goes to fulgora before researching advanced asteroid processing
+  Changes:
+    - added technology: biodiesel 
+    - added fluid: biodiesel with fuel value 0.8MJ
+    - added recipe: biodiesel from tree seed
+    - added recipe: biodiesel from bioflux
+    - added recipe: solid fuel from biodiesel 
+    - any planet start: planet discovery gleba now require biodiesel to be researched first
+  Balancing:
+    - reduced puff gas fuel value (0.8MJ -> 0.7MJ)
 ---------------------------------------------------------------------------------------------------
 Version: 0.27.4
 Date: 2025-11-28

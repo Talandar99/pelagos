@@ -53,7 +53,7 @@ if deepsea then
 end
 
 -- If Planetaris Unbounded is installed, restrict pole placement on deep sea
-if mods["planetaris-unbounded"] then
+if mods["planetaris-arig"] then
 	local pole = data.raw["electric-pole"] and data.raw["electric-pole"]["planetaris-high-support-electric-pole"]
 	if pole then
 		-- Ensure the pole collides with our deep sea layer

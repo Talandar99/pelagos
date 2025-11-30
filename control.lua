@@ -439,6 +439,17 @@ script.on_event(defines.events.on_player_created, function(event)
 	storage.init[event.player_index] = true
 
 	if not script.active_mods["any-planet-start"] then
+		if script.active_mods["depths_of_nauvis"] then
+			if settings.startup["generate-oil-only-on-water"].value then
+				game.print(
+					"Creator of Pelagos and Depths of Nauvis:\nHi. Looks like this combination of mods and settings will lock your progreesion:\n"
+						.. "Pelagos is a place where you unlock oil rig and ships but you probably spawned on Nauvis.\n"
+						.. "Depths of nauvis by default remove oil from ground, and leave just offshore oil. And looks like this setting is turned on\n"
+						.. "Without oil you can't leave Nauvis.\n"
+						.. "You can enable oil patches on ground in settings and generate new world, or temporarly remove pelagos form list of mods, until you setup oil rig on nauvis"
+				)
+			end
+		end
 		return
 	end
 

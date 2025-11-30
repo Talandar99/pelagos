@@ -478,7 +478,7 @@ local productivity_effects = {
 	},
 }
 
-if mods["planetaris-unbounded"] then
+if mods["planetaris-arig"] then
 	table.insert(productivity_effects, {
 		type = "change-recipe-productivity",
 		recipe = "planetaris-sandstone-foundation",
@@ -642,8 +642,9 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-tree" },
 			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-bioflux" },
+			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-solid-fuel" },
 		},
-		prerequisites = { "pelagos-science-pack", "wood-spoiling-technology" },
+		prerequisites = { "pelagos-science-pack", "wood-spoiling-technology", "space-science-pack" },
 		unit = {
 			count_formula = "500",
 			ingredients = {
