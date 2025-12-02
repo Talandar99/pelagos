@@ -5,6 +5,7 @@ Date: 2025-11-30
     - reduced beacon EM pollution (1->0.5)
     - reduced lab EM pollution (1->0.5)
     - any planet start: changed Pelagos space science recipe (water 20 -> 10)
+    - added new required dependency: barreling group
 ---------------------------------------------------------------------------------------------------
 Version: 0.28.1
 Date: 2025-11-30
