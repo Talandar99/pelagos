@@ -315,8 +315,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "pelagos-science-pack",
-		icon = "__pelagos__/graphics/pelagos-science-pack.png",
-		icon_size = 64,
+		icon = "__pelagos__/graphics/pelagos-science-pack-technology.png",
+		icon_size = 256,
 		essential = true,
 		effects = {
 			{ type = "unlock-recipe", recipe = "pelagos-science-pack" },
@@ -340,7 +340,32 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "improvised-landfill" },
 		},
+		order = "cb[pelagos]",
 		prerequisites = { "pelagos-science-pack" },
+		unit = {
+			count_formula = "1000",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+data:extend({
+	{
+		type = "technology",
+		name = "improvised-concrete",
+		icon = "__pelagos__/graphics/improvised-landfill.png",
+		icon_size = 64,
+		effects = {
+			{ type = "unlock-recipe", recipe = "cococoncrete" },
+			{ type = "unlock-recipe", recipe = "pelagos-spoilage-concrete" },
+		},
+		prerequisites = { "pelagos-science-pack", "improvised-landfill", "wood-spoiling-technology" },
 		unit = {
 			count_formula = "1000",
 			ingredients = {
@@ -631,6 +656,7 @@ data:extend({
 			},
 			time = 60,
 		},
+		order = "cc[pelagos]",
 	},
 })
 data:extend({
