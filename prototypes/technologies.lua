@@ -359,13 +359,19 @@ data:extend({
 	{
 		type = "technology",
 		name = "improvised-concrete",
-		icon = "__pelagos__/graphics/improvised-landfill.png",
-		icon_size = 64,
+		icon = "__pelagos__/graphics/concrete-technology.png",
+		icon_size = 128,
 		effects = {
 			{ type = "unlock-recipe", recipe = "cococoncrete" },
 			{ type = "unlock-recipe", recipe = "pelagos-spoilage-concrete" },
 		},
-		prerequisites = { "pelagos-science-pack", "improvised-landfill", "wood-spoiling-technology" },
+		prerequisites = {
+			"pelagos-science-pack",
+			"improvised-landfill",
+			"wood-spoiling-technology",
+			"chemical-science-pack",
+			"concrete",
+		},
 		unit = {
 			count_formula = "1000",
 			ingredients = {

@@ -271,6 +271,16 @@ data.raw["technology"]["heavy-gun-turret"].unit = {
 	},
 	time = 30,
 }
+data.raw["technology"]["improvised-concrete"].unit = {
+	count = 500,
+	ingredients = {
+		{ "automation-science-pack", 1 },
+		{ "logistic-science-pack", 1 },
+		{ "chemical-science-pack", 1 },
+		{ "pelagos-science-pack", 1 },
+	},
+	time = 30,
+}
 --utils.add_recipes(
 --	"space-platform",
 --	{ "metallic-asteroid-methane-crushing", "carbonic-asteroid-gasification", "oxide-asteroid-melting" }

@@ -1,11 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.28.2
-Date: 2025-11-30
+Version: 0.29.0
+Date: 2025-12-05
   Changes:
     - added new required dependency: barreling group
     - changed pelagos science pack technology graphic
     - added cococoncrete recipe
     - added spoilage concrete recipe
+    - added improvised concrete technology
+    - any planet start: improvised concrete technology is unlockable earlier than in regular game
   Balancing:
     - reduced beacon EM pollution (1->0.5)
     - reduced lab EM pollution (1->0.5)
