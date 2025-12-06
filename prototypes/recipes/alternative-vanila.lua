@@ -180,7 +180,7 @@ data:extend({
 		},
 		energy_required = 10,
 		enabled = false,
-		category = "organic-or-assembling",
+		category = "organic",
 		ingredients = {
 			{ type = "item", name = "spoilage", amount = 50 },
 			{ type = "item", name = "iron-ore", amount = 1 },

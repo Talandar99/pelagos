@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.30.0
+Date: 2025-12-05
+  Changes:
+    - arig: added biodiesel from cactus recipe if arig is installed
+    - arig: coconut drop technology now has mention of arig in description to suggest that it works there as well
+    - added sand seas of arig as optional dependency
+    - added depths of nauvis as optional dependency
+  Balancing:
+    - spoilage concrete now can be make only in biochamber
+---------------------------------------------------------------------------------------------------
 Version: 0.29.0
 Date: 2025-12-05
   Changes:
@@ -16,7 +26,7 @@ Date: 2025-12-05
 Version: 0.28.1
 Date: 2025-11-30
   Changes:
-    - added warning communicate if pelagos and depths of nauvis are installed togeather, player start on nauvis, and oil patches are disabled on land. 
+    - added warning communicate if pelagos and depths of nauvis are installed together, player start on nauvis, and oil patches are disabled on land. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.28.0
 Date: 2025-11-29

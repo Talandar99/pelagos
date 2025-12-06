@@ -171,3 +171,41 @@ if mods["aai-vehicles-ironclad"] then
 		{ type = "item", name = "coconut-sealant", amount = 40 },
 	}
 end
+
+if mods["planetaris-arig"] then
+	data:extend({
+		{
+			type = "recipe",
+			name = "pelagos-biodiesel-arig-cactus",
+			category = "compressing",
+			subgroup = "fluid-recipes",
+			icons = {
+				{ icon = "__pelagos__/graphics/biodiesel.png", icon_size = 64 },
+				{
+					icon = "__planetaris-arig__/graphics/icons/cactus.png",
+					icon_size = 64,
+					scale = 0.25,
+					shift = { 8, 8 },
+				},
+			},
+			surface_conditions = {},
+			enabled = false,
+			allow_productivity = true,
+			energy_required = 10,
+			ingredients = {
+				{ type = "item", name = "planetaris-cactus", amount = 10 },
+				{ type = "fluid", name = "steam", amount = 50 },
+			},
+			results = {
+				{ type = "fluid", name = "biodiesel", amount = 100 },
+			},
+			crafting_machine_tint = {
+				primary = { r = 0.54, g = 0.45, b = 0.05 },
+				secondary = { r = 0.64, g = 0.55, b = 0.15 },
+				tertiary = { r = 0.54, g = 0.45, b = 0.05 },
+				quaternary = { r = 0.64, g = 0.55, b = 0.15 },
+			},
+			show_amount_in_title = false,
+		},
+	})
+end

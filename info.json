@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.29.0",
+    "version": "0.30.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -22,6 +22,8 @@
         "? colorful_biochamber",
         "? InserterFuelLeech",
         "? spoiled_trenches_of_fulgora",
+        "? sand_seas_of_arig",
+        "? depths_of_nauvis",
         "? skewer_planet_vesta",
         "(?) gleba_cultured_soil",
         "! auto-barrel",
