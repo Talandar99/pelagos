@@ -304,16 +304,16 @@ utils.add_recipes("space-platform", {
 })
 utils.remove_recipes("space-platform", {
 	"crusher",
-	"metallic-asteroid-crushing",
-	"carbonic-asteroid-crushing",
-	"oxide-asteroid-crushing",
+	--"metallic-asteroid-crushing",
+	--"carbonic-asteroid-crushing",
+	--"oxide-asteroid-crushing",
 	"asteroid-collector",
 })
 utils.add_recipes("advanced-asteroid-processing", {
 	"crusher",
-	"metallic-asteroid-crushing",
-	"carbonic-asteroid-crushing",
-	"oxide-asteroid-crushing",
+	--"metallic-asteroid-crushing",
+	--"carbonic-asteroid-crushing",
+	--"oxide-asteroid-crushing",
 	"asteroid-collector",
 })
 
@@ -356,14 +356,10 @@ data:extend({
 utils.add_recipes("space-science-pack", { "aps-pelagos-space-science-pack" })
 ----------------------------------------------------------------------------------------------------------
 -- safe asteroids
-local planet = data.raw.planet.pelagos
-
-for i = #planet.asteroid_spawn_definitions, 1, -1 do
-	local def = planet.asteroid_spawn_definitions[i]
-	if def.asteroid:sub(-6) ~= "-chunk" then
-		table.remove(planet.asteroid_spawn_definitions, i)
-	end
-end
+local planet_nauvis = table.deepcopy(data.raw.planet.nauvis.asteroid_spawn_definitions)
+local planet_pelagos = table.deepcopy(data.raw.planet.pelagos.asteroid_spawn_definitions)
+data.raw.planet.pelagos.asteroid_spawn_definitions = planet_nauvis
+data.raw.planet.nauvis.asteroid_spawn_definitions = planet_pelagos
 ----------------------------------------------------------------------------------------------------------
 if mods["lignumis"] then
 	data.raw.technology["copper-processing"].research_trigger = {

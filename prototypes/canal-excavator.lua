@@ -4,12 +4,14 @@ if mods["canal-excavator"] then
 		{
 			type = "mod-data",
 			name = "canex-pelagos-config",
-			data_type = "canex-planet-config",
+			data_type = "canex-surface-config",
 			data = {
+				surfaceName = "pelagos",
+				localisation = { "planet-name.pelagos" },
 				mineResult = "stone",
 				oreStartingAmount = 20,
+				--tint = { r = 133, g = 100, b = 34 },
 				tint = { r = 205, g = 133, b = 63 },
-				isDefault = false,
 			},
 		},
 	})
@@ -19,12 +21,13 @@ if mods["canal-excavator"] then
 			{
 				type = "mod-data",
 				name = "canex-vesta-config",
-				data_type = "canex-planet-config",
+				data_type = "canex-surface-config",
 				data = {
+					surfaceName = "vesta",
+					localisation = { "space-location-name.vesta" },
 					mineResult = "stone",
 					oreStartingAmount = 20,
-					tint = { r = 245, g = 173, b = 103 },
-					isDefault = false,
+					tint = { r = 220, g = 216, b = 235 },
 				},
 			},
 		})
