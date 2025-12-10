@@ -3,6 +3,123 @@ local procession_graphic_catalogue_types = require("__base__/prototypes/planet/p
 local procession_audio_catalogue_types = require("__base__/prototypes/planet/procession-audio-catalogue-types")
 local sounds = require("__base__.prototypes.entity.sounds")
 
+calcinerpipecoverspictures = function()
+	return {
+		north = {
+			layers = {
+				{
+					filename = "__pelagos__/graphics/pipe_covers/long/pipe-N.png",
+					priority = "extra-high",
+					width = 71,
+					height = 38,
+					shift = util.by_pixel(2.25, 13.5),
+					scale = 0.5,
+				},
+				--	{
+				--		filename = "__base__/graphics/entity/pipe-covers/pipe-cover-north-shadow.png",
+				--		priority = "extra-high",
+				--		width = 128,
+				--		height = 128,
+				--		scale = 0.5,
+				--		draw_as_shadow = true,
+				--	},
+			},
+		},
+		east = {
+			layers = {
+				{
+					filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east.png",
+					priority = "extra-high",
+					width = 128,
+					height = 128,
+					scale = 0.5,
+				},
+				{
+					filename = "__base__/graphics/entity/pipe-covers/pipe-cover-east-shadow.png",
+					priority = "extra-high",
+					width = 128,
+					height = 128,
+					scale = 0.5,
+					draw_as_shadow = true,
+				},
+			},
+		},
+		south = {
+			layers = {
+				{
+					filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south.png",
+					priority = "extra-high",
+					width = 128,
+					height = 128,
+					scale = 0.5,
+				},
+				{
+					filename = "__base__/graphics/entity/pipe-covers/pipe-cover-south-shadow.png",
+					priority = "extra-high",
+					width = 128,
+					height = 128,
+					scale = 0.5,
+					draw_as_shadow = true,
+				},
+			},
+		},
+		west = {
+			layers = {
+				{
+					filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west.png",
+					priority = "extra-high",
+					width = 128,
+					height = 128,
+					scale = 0.5,
+				},
+				{
+					filename = "__base__/graphics/entity/pipe-covers/pipe-cover-west-shadow.png",
+					priority = "extra-high",
+					width = 128,
+					height = 128,
+					scale = 0.5,
+					draw_as_shadow = true,
+				},
+			},
+		},
+	}
+end
+function calcinerpipepictures()
+	return {
+		north = {
+			filename = "__pelagos__/graphics/pipe_covers/calciner/pipe-N.png",
+			priority = "low",
+			width = 71,
+			height = 38,
+			shift = util.by_pixel(2.25, 13.5),
+			scale = 0.5,
+		},
+		east = {
+			filename = "__pelagos__/graphics/pipe_covers/calciner/pipe-E.png",
+			priority = "extra-high",
+			width = 42,
+			height = 76,
+			shift = util.by_pixel(-24.5, 1),
+			scale = 0.5,
+		},
+		south = {
+			filename = "__pelagos__/graphics/pipe_covers/calciner/pipe-S.png",
+			priority = "extra-high",
+			width = 88,
+			height = 61,
+			shift = util.by_pixel(0, -31.25),
+			scale = 0.5,
+		},
+		west = {
+			filename = "__pelagos__/graphics/pipe_covers/calciner/pipe-W.png",
+			priority = "extra-high",
+			width = 39,
+			height = 73,
+			shift = util.by_pixel(25.75, 1.25),
+			scale = 0.5,
+		},
+	}
+end
 data:extend({
 	{
 
@@ -56,8 +173,8 @@ data:extend({
 			burns_fluid = true, -- fluid used as power
 			scale_fluid_usage = true,
 			fluid_box = {
-				pipe_covers = pipecoverspictures(),
-				--pipe_picture = assemblerpipepictures(),
+				pipe_covers = calcinerpipecoverspictures(),
+				pipe_picture = calcinerpipepictures(),
 				always_draw_covers = true,
 				volume = 100,
 				pipe_connections = {

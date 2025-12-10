@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.32.0
+Date: 2025-12-10
+  Changes:
+    - Calciner has now new graphic
+    - any planet start: sending first space station now unlock carbon crushing to prevent softlock while playing with cerys
+---------------------------------------------------------------------------------------------------
 Version: 0.31.0
 Date: 2025-12-07
   Changes:

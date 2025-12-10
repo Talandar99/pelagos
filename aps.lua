@@ -304,16 +304,16 @@ utils.add_recipes("space-platform", {
 })
 utils.remove_recipes("space-platform", {
 	"crusher",
-	--"metallic-asteroid-crushing",
+	"metallic-asteroid-crushing",
 	--"carbonic-asteroid-crushing",
-	--"oxide-asteroid-crushing",
+	"oxide-asteroid-crushing",
 	"asteroid-collector",
 })
 utils.add_recipes("advanced-asteroid-processing", {
 	"crusher",
-	--"metallic-asteroid-crushing",
+	"metallic-asteroid-crushing",
 	--"carbonic-asteroid-crushing",
-	--"oxide-asteroid-crushing",
+	"oxide-asteroid-crushing",
 	"asteroid-collector",
 })
 
