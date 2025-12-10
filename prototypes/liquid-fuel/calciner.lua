@@ -222,7 +222,7 @@ data:extend({
 						priority = "high",
 						width = 239,
 						height = 339,
-						shift = util.by_pixel(0, -18),
+						shift = util.by_pixel(0, -25),
 						scale = 0.5,
 					},
 					{
