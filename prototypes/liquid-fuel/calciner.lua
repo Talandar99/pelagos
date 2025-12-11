@@ -248,8 +248,8 @@ data:extend({
 						height = 81,
 						frame_count = 48,
 						draw_as_glow = true,
-						shift = util.by_pixel(-2.75, 5.2),
-						scale = 0.7,
+						shift = util.by_pixel(-2, 0.5),
+						scale = 0.8,
 					},
 				},
 
