@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.33.1
+Date: 2025-12-15
+  Balancing:
+    - any planet start: fermentation bacteria cultivation is now unlocked with fish breeding
+    - fish calcining now gives more calcite (1 -> 3)
+    - coconut husk spoiling recipe crafting time lowered (6 -> 5)
+    - increased amount of stone you get from pelagos big rock to make sure you always can craft 
+      landfill if you mined at least 2 of them (amount_min 18->25) (amount_max 22->28)
+  Changes:
+    - any planet start: calciner now require concrete to research, which makes sense because you need concrete to make it
+    - any planet start: heating tower now require concrete to research, which makes sense because you need concrete to make it
+---------------------------------------------------------------------------------------------------
+Version: 0.33.0
+Date: 2025-12-13
+  Changes:
+    - added dependency on internal tweaks mod
+---------------------------------------------------------------------------------------------------
 Version: 0.32.3
 Date: 2025-12-10
   Changes:

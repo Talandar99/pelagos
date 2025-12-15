@@ -49,8 +49,8 @@ if data.raw["locomotive"]["cargo_ship_engine"] then
 	ship.energy_source.type = "burner"
 	ship.energy_source.fuel_categories = { "diesel-fuel" }
 	--ship.energy_source.effectivity = 1
-	ship.energy_source.effectivity = 1.5
-	ship.energy_source.fuel_inventory_size = 10
+	--ship.energy_source.effectivity = 1.5 -- moved to separate mod
+	--ship.energy_source.fuel_inventory_size = 10 -- moved to separate mod
 	ship.energy_source.burnt_inventory_size = 10
 	--ship.max_power = "1.2MW"
 	ship.max_power = "1.2MW"

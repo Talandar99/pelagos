@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.32.3",
+    "version": "0.33.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -13,6 +13,7 @@
         "pirateship",
         "Long_Range_Delivery_Drones",
         "barreling-group2",
+        "talandar_cargo_ships_tweaks",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-arig",
         "? maraxsis",

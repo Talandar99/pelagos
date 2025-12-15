@@ -59,7 +59,7 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "raw-fish", amount = 1 },
 		},
-		results = { { type = "item", name = "calcite", amount = 1 } },
+		results = { { type = "item", name = "calcite", amount = 3 } },
 		auto_recycle = false,
 	},
 	{

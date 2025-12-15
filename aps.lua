@@ -20,6 +20,7 @@ data.raw["technology"]["fish-breeding"].unit = {
 	},
 	time = 10,
 }
+utils.add_recipes("fish-breeding", { "fermentation-bacteria-cultivation" })
 utils.set_prerequisites("landfill", { "coconut-processing-technology" })
 data.raw.technology["landfill"].research_trigger = {
 	type = "mine-entity",
@@ -40,6 +41,7 @@ utils.add_recipes("explosives", { "pelagos-explosives" })
 utils.add_prerequisites("plastics", { "ethanol" })
 utils.remove_recipes("ethanol", { "pelagos-bioplastic", "pelagos-processing-unit", "pelagos-battery" })
 utils.remove_recipes("fermentation-bacteria-cultivation-technology", { "pelagos-biolubricant" })
+utils.remove_recipes("fermentation-bacteria-cultivation-technology", { "fermentation-bacteria-cultivation" })
 utils.add_prerequisites("copper-biter-captivity", { "plastics" })
 utils.add_prerequisites("chemical-science-pack", { "pelagos-science-pack" })
 utils.add_prerequisites("calciner", { "advanced-material-processing" })
@@ -248,6 +250,7 @@ utils.add_prerequisites("tank_ship", { "chemical-science-pack" })
 data.raw["technology"]["heating-tower"].prerequisites = {
 	"logistic-science-pack",
 	"advanced-material-processing",
+	"concrete",
 }
 
 data.raw["technology"]["heating-tower"].unit = {

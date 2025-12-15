@@ -1,14 +1,3 @@
--- force small electric generator
-if settings.startup["pelagos-force-small-electric-generator"].value then
-	if data.raw["generator"]["or_power_electric"] then
-		local gen = data.raw["generator"]["or_power_electric"]
-		gen.max_power_output = "350kW" --was 850
-		gen.energy_source.output_flow_limit = "350kW" --was 850
-		gen.fluid_box.volume = 500
-		gen.effectivity = 5000
-	end
-end
-
 -- make sure plants can grow on sand-1
 require("prototypes.plants-autoplace-settings")
 require("prototypes.liquid-fuel.fuel-value")

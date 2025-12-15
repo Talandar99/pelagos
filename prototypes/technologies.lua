@@ -217,6 +217,7 @@ data:extend({
 		prerequisites = {
 			--"diesel-mining-drill",
 			--"advanced-material-processing", -- important for any planet start
+			"concrete",
 			"canex-excavator",
 		},
 		research_trigger = {
