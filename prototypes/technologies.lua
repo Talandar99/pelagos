@@ -205,7 +205,7 @@ data:extend({
 		essential = true,
 		effects = {
 			{ type = "unlock-recipe", recipe = "calciner" },
-			{ type = "unlock-recipe", recipe = "calcite-concrete" },
+			{ type = "unlock-recipe", recipe = "calciner-calcite-brick" },
 			{ type = "unlock-recipe", recipe = "calciner-fish-calcining" },
 			{ type = "unlock-recipe", recipe = "calciner-coal-purification" },
 			{ type = "unlock-recipe", recipe = "calciner-wood-carbonization" },
@@ -674,7 +674,7 @@ data:extend({
 		icon_size = 64,
 		effects = {
 			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-tree" },
-			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-bioflux" },
+			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-spoilage" },
 			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-solid-fuel" },
 		},
 		prerequisites = { "pelagos-science-pack", "wood-spoiling-technology", "space-science-pack" },

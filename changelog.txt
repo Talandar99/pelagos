@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.34.0
+Date: 2025-12-16
+  Balancing:
+  Changes:
+    - Recipe Removed: biodiesel from bioflux 
+    - Recipe Added: biodiesel from spoilage
+    - Recipe Removed: calcite concrete
+    - Recipe Added: calcite brick
+    - Recipe changed: coconut oil lubricant require activated carbon to make instead of bacteria 
+
+  Balancing:
+    - Copper ore from copper biter egg now require less ethanol (50->25)
+    - corrosive firearm magazine now inputs and outputs more magazines (4->6) which means you can use less bacteria
+    - ethanol recipe now require more activated carbon (1->3)
+---------------------------------------------------------------------------------------------------
 Version: 0.33.1
 Date: 2025-12-15
   Balancing:

@@ -213,11 +213,11 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "pelagos-biodiesel-bioflux",
+		name = "pelagos-biodiesel-spoilage",
 		category = "organic",
 		icons = {
 			{ icon = "__pelagos__/graphics/biodiesel.png", icon_size = 64 },
-			{ icon = "__space-age__/graphics/icons/bioflux.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+			{ icon = "__space-age__/graphics/icons/spoilage.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
 		},
 		subgroup = "fluid-recipes",
 		surface_conditions = {},
@@ -225,12 +225,11 @@ data:extend({
 		allow_productivity = true,
 		energy_required = 10,
 		ingredients = {
-			{ type = "item", name = "yumako-seed", amount = 1 },
-			{ type = "item", name = "jellynut-seed", amount = 1 },
-			{ type = "item", name = "bioflux", amount = 5 },
+			{ type = "item", name = "spoilage", amount = 40 },
+			{ type = "fluid", name = "lubricant", amount = 10 },
 		},
 		results = {
-			{ type = "fluid", name = "biodiesel", amount = 100 },
+			{ type = "fluid", name = "biodiesel", amount = 20 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.54, g = 0.45, b = 0.05 },
@@ -284,7 +283,7 @@ data:extend({
 			{ type = "item", name = "fermentation-bacteria", amount = 5 },
 			{ type = "item", name = "nutrients", amount = 20 },
 			{ type = "fluid", name = "water", amount = 100 },
-			{ type = "item", name = "activated-carbon", amount = 1 },
+			{ type = "item", name = "activated-carbon", amount = 3 },
 		},
 		results = {
 			{ type = "fluid", name = "ethanol", amount = 120 },
@@ -678,7 +677,7 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "copper-biter-egg", amount = 5 },
 			{ type = "item", name = "calcite", amount = 1 },
-			{ type = "fluid", name = "ethanol", amount = 50 },
+			{ type = "fluid", name = "ethanol", amount = 25 },
 		},
 		results = {
 			{ type = "item", name = "copper-ore", amount = 5 },
@@ -780,10 +779,10 @@ data:extend({
 		name = "corrosive-firearm-magazine",
 		energy_required = 1,
 		ingredients = {
-			{ type = "item", name = "firearm-magazine", amount = 4 },
+			{ type = "item", name = "firearm-magazine", amount = 6 },
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
-		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 4 } },
+		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 6 } },
 		enabled = false,
 		auto_recycle = false,
 	},

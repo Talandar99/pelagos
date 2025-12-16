@@ -90,6 +90,24 @@ data:extend({
 		allow_productivity = true,
 		auto_recycle = false,
 	},
+	{
+		type = "recipe",
+		name = "calciner-calcite-brick",
+		icons = {
+			{ icon = "__base__/graphics/icons/stone-brick.png", icon_size = 64 },
+			{ icon = "__space-age__/graphics/icons/calcite.png", icon_size = 64, scale = 0.3, shift = { 8, 8 } },
+		},
+		category = "calcining",
+		enabled = false,
+		energy_required = 4,
+		ingredients = {
+			{ type = "item", name = "calcite", amount = 1 },
+			{ type = "item", name = "activated-carbon", amount = 1 },
+		},
+		results = { { type = "item", name = "stone-brick", amount = 2 } },
+		allow_productivity = true,
+		auto_recycle = false,
+	},
 	--	{
 	--		type = "recipe",
 	--		name = "scrap-burning",
