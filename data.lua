@@ -37,6 +37,9 @@ require("prototypes.canal-excavator")
 require("prototypes.cargo-ships")
 require("prototypes.tips-and-tricks")
 require("prototypes.music")
+if mods["multi_surface_promethium_plate_recipe"] then
+	require("prototypes.msppr")
+end
 require("data-fixes")
 
 if mods["any-planet-start"] then
