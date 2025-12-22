@@ -140,6 +140,7 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "fermentation-bacteria" },
 			{ type = "unlock-recipe", recipe = "fermentation-bacteria-cultivation" },
+			{ type = "unlock-recipe", recipe = "fermentation-bacteria-cultivation-fermented-fish" },
 			{ type = "unlock-recipe", recipe = "fermented-fish" },
 			{ type = "unlock-recipe", recipe = "corrosive-firearm-magazine" },
 			{ type = "unlock-recipe", recipe = "pelagos-biolubricant" },
@@ -565,6 +566,11 @@ local cultivation_productivity_effects = {
 	{
 		type = "change-recipe-productivity",
 		recipe = "fermentation-bacteria-cultivation",
+		change = 0.1,
+	},
+	{
+		type = "change-recipe-productivity",
+		recipe = "fermentation-bacteria-cultivation-fermented-fish",
 		change = 0.1,
 	},
 	{

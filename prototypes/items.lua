@@ -344,7 +344,7 @@ data:extend({
 		fuel_value = "3MJ",
 		stack_size = 20,
 		default_import_location = "pelagos",
-		spoil_ticks = 2 * hour,
+		spoil_ticks = 4 * hour,
 		spoil_result = "spoilage",
 		weight = 5 * kg,
 		--capsule_action = item_effects.bioflux_speed_and_regen,

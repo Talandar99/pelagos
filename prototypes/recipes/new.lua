@@ -152,7 +152,10 @@ data:extend({
 	{
 		type = "recipe",
 		name = "fermentation-bacteria-cultivation",
-		icon = "__pelagos__/graphics/fermentation-bacteria-cultivation.png",
+		icons = {
+			{ icon = "__pelagos__/graphics/fermentation-bacteria-cultivation.png", icon_size = 64 },
+			{ icon = "__base__/graphics/icons/fish.png", icon_size = 64, scale = 0.3, shift = { 8, 8 } },
+		},
 		category = "organic",
 		surface_conditions = {
 			{
@@ -170,6 +173,36 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 			{ type = "item", name = "raw-fish", amount = 1 },
+		},
+		results = {
+			{ type = "item", name = "fermentation-bacteria", amount = 12 },
+		},
+		crafting_machine_tint = {
+			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
+			secondary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
+			tertiary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
+			quaternary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
+		},
+		show_amount_in_title = false,
+	},
+	{
+		type = "recipe",
+		name = "fermentation-bacteria-cultivation-fermented-fish",
+		icons = {
+			{ icon = "__pelagos__/graphics/fermentation-bacteria-cultivation.png", icon_size = 64 },
+			{ icon = "__pelagos__/graphics/fermented-fish.png", icon_size = 64, scale = 0.3, shift = { 8, 8 } },
+		},
+		category = "organic",
+		surface_conditions = {},
+		subgroup = "agriculture-processes",
+		order = "b[agriculture]-d[bacteria]-b[fermentation-bacteria-cultivation]",
+		enabled = false,
+		allow_productivity = true,
+		reset_freshness_on_craft = true,
+		energy_required = 4,
+		ingredients = {
+			{ type = "item", name = "fermentation-bacteria", amount = 1 },
+			{ type = "item", name = "fermented-fish", amount = 1 },
 		},
 		results = {
 			{ type = "item", name = "fermentation-bacteria", amount = 12 },
@@ -722,7 +755,8 @@ data:extend({
 			{ type = "item", name = "fermentation-bacteria", amount = 5 },
 		},
 		results = {
-			{ type = "item", name = "fermented-fish", amount = 5 },
+			--{ type = "item", name = "fermented-fish", amount = 5 },
+			{ type = "item", name = "fermented-fish", amount = 10 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 0.6, g = 0.77, b = 0.82, a = 1.000 },

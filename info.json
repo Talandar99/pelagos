@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.34.0",
+    "version": "0.35.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -26,6 +26,7 @@
         "? sand_seas_of_arig",
         "? depths_of_nauvis",
         "? skewer_planet_vesta",
+        "? multi_surface_promethium_plate_recipe",
         "(?) gleba_cultured_soil",
         "! auto-barrel",
         "! fct-barreling-machine"
