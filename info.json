@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.35.0",
+    "version": "0.36.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -8,6 +8,7 @@
         "space-age",
         "quality",
         "PlanetsLib",
+        "cargo_crates",
         "canal-excavator >= 1.9.0",
         "cargo-ships",
         "pirateship",

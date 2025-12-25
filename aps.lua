@@ -370,31 +370,19 @@ if mods["lignumis"] then
 		type = "mine-entity",
 		entity = "pelagos-copper-stromatolite",
 	}
-	require("prototypes.steam-inserter")
 	data:extend({
-		{
-			type = "recipe",
-			name = "steam-inserter",
-			enabled = false,
-			ingredients = {
-				{ type = "item", name = "burner-inserter", amount = 1 },
-				{ type = "item", name = "gold-pipe", amount = 4 },
-			},
-			results = { { type = "item", name = "steam-inserter", amount = 1 } },
-			allow_productivity = false,
-		},
 		{
 			type = "recipe",
 			name = "steam-inserter-iron-pipe",
 			icons = {
-				{ icon = "__base__/graphics/icons/inserter.png", icon_size = 64 },
+				{ icon = "__lignumis-assets__/graphics/icons/burner-inserter.png", icon_size = 64 },
 				{ icon = "__base__/graphics/icons/fluid/steam.png", icon_size = 64, scale = 0.25, shift = { 8, -8 } },
 				{ icon = "__base__/graphics/icons/pipe.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
 			},
 			enabled = false,
 			ingredients = {
 				{ type = "item", name = "burner-inserter", amount = 1 },
-				{ type = "item", name = "pipe", amount = 4 },
+				{ type = "item", name = "pipe", amount = 2 },
 			},
 			results = { { type = "item", name = "steam-inserter", amount = 1 } },
 			allow_productivity = false,
@@ -419,4 +407,17 @@ if mods["lignumis"] then
 	utils.add_recipes("steam-automation", { "steam-inserter" })
 	utils.add_recipes("steam-power", { "steam-inserter-iron-pipe" })
 	utils.add_recipes("steam-power", { "steam-assembling-machine-iron-pipe" })
+end
+
+if mods["cargo_crates"] then
+	data.raw["technology"]["cargo-crates"].prerequisites = { "pelagos-science-pack" }
+	data.raw["technology"]["cargo-crates"].unit = {
+		count = 200,
+		ingredients = {
+			{ "automation-science-pack", 1 },
+			{ "logistic-science-pack", 1 },
+			{ "pelagos-science-pack", 1 },
+		},
+		time = 30,
+	}
 end

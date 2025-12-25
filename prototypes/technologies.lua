@@ -988,6 +988,21 @@ add_heavy_turret_bonus("physical-projectile-damage-5", 0.2)
 add_heavy_turret_bonus("physical-projectile-damage-6", 0.2)
 add_heavy_turret_bonus("physical-projectile-damage-7", 0.2)
 
+if mods["cargo_crates"] then
+	data.raw["technology"]["cargo-crates"].prerequisites = { "pelagos-science-pack" }
+	data.raw["technology"]["cargo-crates"].unit = {
+		count = 1000,
+		ingredients = {
+			{ "automation-science-pack", 1 },
+			{ "logistic-science-pack", 1 },
+			{ "chemical-science-pack", 1 },
+			{ "space-science-pack", 1 },
+			{ "pelagos-science-pack", 1 },
+		},
+		time = 60,
+	}
+end
+
 if mods["Cerys-Moon-of-Fulgora"] or mods["planetaris-arig"] then
 	data:extend({
 		{

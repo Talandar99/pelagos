@@ -107,7 +107,7 @@ if mods["pirateship"] then
 end
 --delivery drones
 if mods["Long_Range_Delivery_Drones"] then
-	data.raw["item"]["long-range-delivery-drone"].weight = 5 * kg
+	data.raw["item"]["long-range-delivery-drone"].weight = 50 * kg
 
 	data.raw["recipe"]["long-range-delivery-drone"].category = "crafting-with-fluid"
 	data.raw["recipe"]["long-range-delivery-drone"].ingredients = {
