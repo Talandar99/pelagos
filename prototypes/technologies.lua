@@ -420,6 +420,7 @@ data:extend({
 		icon_size = 256,
 		effects = {
 			{ type = "unlock-recipe", recipe = "fast-diesel-inserter" },
+			{ type = "unlock-recipe", recipe = "long-handed-diesel-inserter" },
 			{ type = "unlock-recipe", recipe = "diesel-inserter" },
 			{ type = "unlock-recipe", recipe = "diesel-assembling-machine" },
 			{ type = "unlock-recipe", recipe = "diesel-pump" },

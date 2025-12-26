@@ -167,7 +167,11 @@ utils.add_prerequisites("planet-discovery-nauvis", { "tree-seeding" })
 utils.add_prerequisites("planet-discovery-nauvis", { "agricultural-science-pack" })
 utils.add_prerequisites("planet-discovery-fulgora", { "agricultural-science-pack" })
 utils.add_prerequisites("planet-discovery-vulcanus", { "agricultural-science-pack" })
-utils.add_prerequisites("planet-discovery-gleba", { "pelagos-biodiesel" })
+utils.set_prerequisites("planet-discovery-gleba", { "pelagos-biodiesel", "ethanol-thruster", "landfill" })
+utils.set_prerequisites("ethanol-thruster", { "space-science-pack" })
+data.raw["technology"]["ethanol-thruster"].unit.count = 500
+utils.set_prerequisites("space-platform-thruster", { "agricultural-science-pack" })
+table.insert(data.raw["technology"]["space-platform-thruster"].unit.ingredients, { "agricultural-science-pack", 1 })
 data:extend({
 	{
 		type = "technology",
@@ -296,7 +300,7 @@ data.raw["technology"]["titanium-barrels"].unit.count = 200
 -- space changes
 ----------------------------------------------------------------------------------------------------------
 data.raw.technology["pelagos-asteroid-bioprocessing"].hidden = true
-data.raw.technology["ethanol-thruster"].hidden = true
+--data.raw.technology["ethanol-thruster"].hidden = true
 data.raw.technology["diesel-asteroid-collector"].hidden = true
 data.raw.technology["space-science-pack"].research_trigger.entity = "diesel-asteroid-collector"
 ----------------------------------------------------------------------------------------------------------
@@ -321,9 +325,10 @@ utils.add_recipes("advanced-asteroid-processing", {
 	"asteroid-collector",
 })
 
-utils.add_recipes("space-platform-thruster", { "ethanol-thruster" })
-utils.remove_recipes("space-platform-thruster", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })
-utils.add_recipes("advanced-asteroid-processing", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })
+--utils.add_recipes("space-platform-thruster", { "ethanol-thruster" })
+--utils.remove_recipes("space-platform-thruster", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })
+--utils.add_recipes("advanced-asteroid-processing", { "thruster", "ice-melting", "thruster-fuel", "thruster-oxidizer" })
+utils.add_prerequisites("advanced-asteroid-processing", { "space-platform-thruster" })
 utils.add_recipes("planet-discovery-fulgora", { "ice-melting" })
 data:extend({
 	{

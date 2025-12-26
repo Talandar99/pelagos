@@ -15,6 +15,19 @@ data:extend({ deepwater })
 -- sand_transitions
 -------------------------------------------------------------------------------
 ---
+---
+local pelagossand1 = table.deepcopy(data.raw.tile["sand-1"])
+pelagossand1.name = "pelagos-sand-1"
+pelagossand1.localised_name = { "tile-name.pelagos-sand-1" }
+pelagossand1.tint = { 255, 255, 255 }
+data:extend({ pelagossand1 })
+
+local pelagossand2 = table.deepcopy(data.raw.tile["sand-2"])
+pelagossand2.name = "pelagos-sand-2"
+pelagossand2.localised_name = { "tile-name.pelagos-sand-2" }
+pelagossand2.tint = { 255, 255, 255 }
+data:extend({ pelagossand2 })
+
 local pelagossand3 = table.deepcopy(data.raw.tile["sand-1"])
 pelagossand3.name = "pelagos-sand-3"
 pelagossand3.localised_name = { "tile-name.pelagos-sand-3" }

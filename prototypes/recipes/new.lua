@@ -502,6 +502,19 @@ data:extend({
 	{
 
 		type = "recipe",
+		name = "long-handed-diesel-inserter",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "pipe", amount = 4 },
+			{ type = "item", name = "engine-unit", amount = 1 },
+			{ type = "item", name = "coconut-sealant", amount = 4 },
+			{ type = "item", name = "burner-inserter", amount = 1 },
+		},
+		results = { { type = "item", name = "long-handed-diesel-inserter", amount = 1 } },
+	},
+	{
+
+		type = "recipe",
 		name = "crane-bulk-diesel-inserter",
 		enabled = false,
 		ingredients = {

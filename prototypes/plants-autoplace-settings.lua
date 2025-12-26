@@ -5,9 +5,9 @@ if palm then
 		probability_expression = 0.005,
 		richness_expression = 1,
 		peaks = {
-			{ influence = 0.2, tile_restriction = { "sand-1", "sand-2", "pelagos-sand-3", "pelagos-sand-4" } },
+			{ influence = 0.2, tile_restriction = { "sand-1", "sand-2", "pelagos-sand-1", "pelagos-sand-2" } },
 		},
-		tile_restriction = { "sand-1", "sand-2", "pelagos-sand-3", "pelagos-sand-4" },
+		tile_restriction = { "sand-1", "sand-2", "pelagos-sand-1", "pelagos-sand-2" },
 		surface_conditions = {
 			{ property = "pressure", min = 1809, max = 1809 },
 		},

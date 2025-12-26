@@ -10,7 +10,7 @@ data:extend({
 		icon = "__pelagos__/graphics/diesel-long-handed-inserter/diesel-inserter-engine.png",
 		subgroup = "inserter",
 		color_hint = { text = "L" },
-		order = "cd[diesel-inserter]",
+		order = "gd[diesel-inserter-c]",
 		inventory_move_sound = item_sounds.inserter_inventory_move,
 		pick_sound = item_sounds.inserter_inventory_pickup,
 		drop_sound = item_sounds.inserter_inventory_move,

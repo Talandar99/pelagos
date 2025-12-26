@@ -28,9 +28,11 @@ data:extend({
 		icon = "__base__/graphics/icons/big-rock.png",
 		icon_size = 64,
 		flags = { "placeable-neutral" },
+		order = "a[decorative]-[pelagos-big-rock]",
 		map_color = { 129, 105, 78 },
 		count_as_rock_for_filtered_deconstruction = true,
 		mined_sound = sounds.deconstruct_bricks(1.0),
+		subgroup = "grass",
 		impact_category = "stone",
 		surface_conditions = {
 			{
@@ -1134,11 +1136,8 @@ local function MapGen_Pelagos()
 						probability_expression = "pelagos_elevation < -100",
 					},
 					["water"] = {},
-					["sand-1"] = {},
-					["sand-2"] = {},
-					--["pelagos-sand-1"] = {},
-					["pelagos-sand-3"] = {},
-					["pelagos-sand-4"] = {},
+					["pelagos-sand-1"] = {},
+					["pelagos-sand-2"] = {},
 				},
 			},
 			["decorative"] = {

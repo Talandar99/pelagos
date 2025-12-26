@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.37.0
+Date: 2025-12-26
+  Balancing:
+  Changes:
+    - added long handed diesel inserter 
+    - added recipe for long handed diesel inserter
+    - long handed diesel inserter is now unlocked with diesel automation research
+    - increased rotation speed of fast diesel inserter by 50%
+    - any planet start: added ethanol thruster back to tech tree and moved 
+      regular thruster research post gleba to simplify progression
+    - added missing locale for pelagos sands
+    - pelagos big rock is now in environment tab
+---------------------------------------------------------------------------------------------------
 Version: 0.36.0
 Date: 2025-12-25
   Balancing:
