@@ -1,7 +1,5 @@
 -- make sure plants can grow on sand-1
 require("prototypes.plants-autoplace-settings")
-require("prototypes.liquid-fuel.fuel-value")
-require("prototypes.liquid-fuel.barrel-fuel")
 require("prototypes.pirate-ship")
 require("prototypes.liquid-fuel.rocket-silo")
 require("prototypes.planet.electromagnetic-waves-pollution-emision")

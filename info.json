@@ -8,6 +8,7 @@
         "space-age",
         "quality",
         "PlanetsLib",
+        "diesel_engine",
         "cargo_crates",
         "canal-excavator >= 1.9.0",
         "cargo-ships",
