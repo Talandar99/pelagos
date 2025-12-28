@@ -80,7 +80,8 @@ for _, tile in pairs(tiles) do
 	if data.raw.tile[tile] then
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000001 -- too low
-		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000015
+		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000015
+		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000016
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000003 -- a bit to high
 	end
 end

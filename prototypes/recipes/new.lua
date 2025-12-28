@@ -630,7 +630,7 @@ data:extend({
 		allow_productivity = true,
 		energy_required = 5,
 		ingredients = {
-			{ type = "fluid", name = "titanium-sludge", amount = 100 },
+			{ type = "fluid", name = "titanium-sludge", amount = 50 },
 			{ type = "item", name = "fermentation-bacteria", amount = 1 },
 		},
 		results = {
