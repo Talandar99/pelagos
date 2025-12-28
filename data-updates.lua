@@ -51,3 +51,4 @@ if mods["ironclad-gunboat-and-mortar-turret-fork"] then
 end
 
 require("prototypes.recipes.barreling")
+require("aps-lignumis-updates")

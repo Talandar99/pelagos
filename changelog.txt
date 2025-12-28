@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.39.0
+Date: 2025-12-27
+  Changes:
+    - any planet start + lignumis: added long handed recipe for inserter that uses iron pipe
+    - any planet start + lignumis: utility science can now be research after ethanol thruster
+    - any planet start + lignumis: production science can now be research after ethanol thruster
+    - any planet start + lignumis: steam assembler recipe with iron pipes is no longer needed because it's provided by lignumis
+    - any planet start: pelagos biodiesel now require only lubricant instead of all science
+    - any planet start: ethanol thruster is now trigger tech and require crafting 500 of white science
+---------------------------------------------------------------------------------------------------
 Version: 0.38.1
 Date: 2025-12-27
   Bugfixes:

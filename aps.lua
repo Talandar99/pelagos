@@ -1,5 +1,4 @@
 local utils = require("__any-planet-start__.utils")
-
 -- agricultural tower by się przydał
 -- spoilage into nutrients
 
@@ -167,9 +166,21 @@ utils.add_prerequisites("planet-discovery-nauvis", { "tree-seeding" })
 utils.add_prerequisites("planet-discovery-nauvis", { "agricultural-science-pack" })
 utils.add_prerequisites("planet-discovery-fulgora", { "agricultural-science-pack" })
 utils.add_prerequisites("planet-discovery-vulcanus", { "agricultural-science-pack" })
+data.raw["technology"]["pelagos-biodiesel"].unit.ingredients = {
+	{ "automation-science-pack", 1 },
+	{ "logistic-science-pack", 1 },
+	{ "chemical-science-pack", 1 },
+	{ "pelagos-science-pack", 1 },
+}
+utils.set_prerequisites("pelagos-biodiesel", { "lubricant" })
 utils.set_prerequisites("planet-discovery-gleba", { "pelagos-biodiesel", "ethanol-thruster", "landfill" })
 utils.set_prerequisites("ethanol-thruster", { "space-science-pack" })
-data.raw["technology"]["ethanol-thruster"].unit.count = 500
+data.raw["technology"]["ethanol-thruster"].unit = nil
+data.raw["technology"]["ethanol-thruster"].research_trigger = {
+	type = "craft-item",
+	item = "space-science-pack",
+	count = 500,
+}
 utils.set_prerequisites("space-platform-thruster", { "agricultural-science-pack" })
 table.insert(data.raw["technology"]["space-platform-thruster"].unit.ingredients, { "agricultural-science-pack", 1 })
 data:extend({
@@ -394,24 +405,24 @@ if mods["lignumis"] then
 		},
 		{
 			type = "recipe",
-			name = "steam-assembling-machine-iron-pipe",
+			name = "steam-long-handed-inserter-iron-pipe",
 			icons = {
-				{ icon = "__lignumis-assets__/graphics/icons/steam-assembling-machine.png", icon_size = 64 },
-				{ icon = "__base__/graphics/icons/iron-plate.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+				{ icon = "__lignumis-assets__/graphics/icons/burner-long-handed-inserter.png", icon_size = 64 },
+				{ icon = "__base__/graphics/icons/fluid/steam.png", icon_size = 64, scale = 0.25, shift = { 8, -8 } },
+				{ icon = "__base__/graphics/icons/pipe.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
 			},
 			enabled = false,
 			ingredients = {
-				{ type = "item", name = "burner-assembling-machine", amount = 1 },
-				{ type = "item", name = "pipe", amount = 5 },
+				{ type = "item", name = "burner-long-handed-inserter", amount = 1 },
+				{ type = "item", name = "pipe", amount = 2 },
 			},
-			results = { { type = "item", name = "steam-assembling-machine", amount = 1 } },
+			results = { { type = "item", name = "steam-long-handed-inserter", amount = 1 } },
 			allow_productivity = false,
 		},
 	})
 
-	utils.add_recipes("steam-automation", { "steam-inserter" })
 	utils.add_recipes("steam-power", { "steam-inserter-iron-pipe" })
-	utils.add_recipes("steam-power", { "steam-assembling-machine-iron-pipe" })
+	utils.add_recipes("steam-power", { "steam-long-handed-inserter-iron-pipe" })
 end
 
 if mods["cargo_crates"] then
