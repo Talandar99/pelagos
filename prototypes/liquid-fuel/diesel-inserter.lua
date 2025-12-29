@@ -87,7 +87,6 @@ data:extend({
 				},
 			},
 		},
-		fast_replaceable_group = "long-handed-inserter",
 		impact_category = "metal",
 		open_sound = sounds.inserter_open,
 		close_sound = sounds.inserter_close,
