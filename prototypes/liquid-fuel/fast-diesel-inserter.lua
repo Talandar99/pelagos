@@ -81,7 +81,6 @@ data:extend({
 			render_layer = "entity-info-icon-above",
 		},
 		fast_replaceable_group = "inserter",
-		next_upgrade = "bulk-inserter",
 		impact_category = "metal",
 		open_sound = sounds.inserter_open,
 		close_sound = sounds.inserter_close,
