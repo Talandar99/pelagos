@@ -1,13 +1,6 @@
 data:extend({
 	{
 		type = "bool-setting",
-		name = "pelagos-fluid-value-based-flamethrower",
-		setting_type = "startup",
-		default_value = true,
-		order = "pelagos-e",
-	},
-	{
-		type = "bool-setting",
 		name = "allow-galleon-before-pelagos",
 		setting_type = "startup",
 		default_value = false,
