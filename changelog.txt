@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.39.2
+Date: 2025-12-30
+  Bugfixes:
+    - temporarly fixed aps crash with muluna that was caused by attempt of adding agriculture science pack  
+  Changes:
+    - cargo crates now can be only crafted in diesel assembling machine
+    - removed fast replaceable group from diesel inserter because it was more confusing than helpfull
+---------------------------------------------------------------------------------------------------
 Version: 0.39.1
 Date: 2025-12-27
   Balancing:

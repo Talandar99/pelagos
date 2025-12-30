@@ -80,7 +80,7 @@ data:extend({
 			scale = 0.8,
 			render_layer = "entity-info-icon-above",
 		},
-		fast_replaceable_group = "inserter",
+		--fast_replaceable_group = "inserter",
 		impact_category = "metal",
 		open_sound = sounds.inserter_open,
 		close_sound = sounds.inserter_close,

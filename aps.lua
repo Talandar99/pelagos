@@ -182,7 +182,7 @@ data.raw["technology"]["ethanol-thruster"].research_trigger = {
 	count = 500,
 }
 utils.set_prerequisites("space-platform-thruster", { "agricultural-science-pack" })
-table.insert(data.raw["technology"]["space-platform-thruster"].unit.ingredients, { "agricultural-science-pack", 1 })
+--table.insert(data.raw["technology"]["space-platform-thruster"].unit.ingredients, { "agricultural-science-pack", 1 })
 data:extend({
 	{
 		type = "technology",

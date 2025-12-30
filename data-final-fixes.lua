@@ -74,6 +74,7 @@ end
 local base_categories = data.raw["assembling-machine"]["assembling-machine-3"].crafting_categories
 local diesel_categories = table.deepcopy(base_categories)
 table.insert(diesel_categories, "barreling")
+table.insert(diesel_categories, "cargo-crates")
 data.raw["assembling-machine"]["diesel-assembling-machine"].crafting_categories = diesel_categories
 
 -- remove buggy input from pirate ship mod
