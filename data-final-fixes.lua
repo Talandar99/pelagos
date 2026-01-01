@@ -151,3 +151,22 @@ end
 if data.raw["mining-drill"]["canex-excavator"] then
 	local excavator = data.raw["mining-drill"]["canex-excavator"]
 end
+
+if mods["lignumis"] then
+	--add advanced-crafting to steam assembler if lignumis is installed
+	local steam_assembler = data.raw["assembling-machine"]["steam-assembling-machine"]
+	if steam_assembler and steam_assembler.crafting_categories then
+		local has_advanced = false
+
+		for _, category in pairs(steam_assembler.crafting_categories) do
+			if category == "advanced-crafting" then
+				has_advanced = true
+				break
+			end
+		end
+
+		if not has_advanced then
+			table.insert(steam_assembler.crafting_categories, "advanced-crafting")
+		end
+	end
+end

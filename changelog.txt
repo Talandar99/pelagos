@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.39.4
+Date: 2026-01-01
+  Changes:
+    - if lignumis is installed steam assembling machine has advanced-crafting category in order to be able to craft engine units
+---------------------------------------------------------------------------------------------------
 Version: 0.39.3
 Date: 2025-12-30
   Changes:
