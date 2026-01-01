@@ -44,20 +44,6 @@ if settings.startup["pelagos-methane-on-vesta"].value then
 			local resource_autoplace = require("resource-autoplace")
 			resource_autoplace.initialize_patch_set("methane", false, "vesta")
 
-			data.raw.resource["methane"].autoplace = resource_autoplace.resource_autoplace_settings({
-				name = "methane",
-				order = "b",
-				base_density = 1,
-				base_spots_per_km2 = 3,
-				random_probability = 1 / 100,
-				random_spot_size_minimum = 1,
-				random_spot_size_maximum = 2,
-				additional_richness = 250000,
-				has_starting_area_placement = true,
-				regular_rq_factor_multiplier = 1,
-				planet = "vesta",
-			})
-
 			data.raw.planet.vesta.map_gen_settings.autoplace_controls["methane"] = {}
 			data.raw.planet.vesta.map_gen_settings.autoplace_settings.entity.settings["methane"] = {}
 
