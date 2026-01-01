@@ -1,5 +1,6 @@
 local resource_autoplace = require("resource-autoplace")
 --titanium-sludge
+local crude_oil_collision_box = table.deepcopy(data.raw.resource["crude-oil"].collision_box)
 data:extend({
 	{
 		type = "autoplace-control",
@@ -53,7 +54,7 @@ data:extend({
 		},
 		map_generator_bounding_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-		collision_box = table.deepcopy(data.raw.resource["crude-oil"].collision_box),
+		collision_box = crude_oil_collision_box,
 		autoplace = resource_autoplace.resource_autoplace_settings({
 			name = "titanium-sludge",
 			order = "b",
@@ -141,8 +142,9 @@ data:extend({
 			},
 		},
 		map_generator_bounding_box = { { -3.5, -3.5 }, { 3.5, 3.5 } },
+		--map_generator_bounding_box = { { -10, -10 }, { 10, 10 } },
 		selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
-		collision_box = table.deepcopy(data.raw.resource["crude-oil"].collision_box),
+		collision_box = crude_oil_collision_box,
 		autoplace = resource_autoplace.resource_autoplace_settings({
 			name = "methane",
 			order = "b",
