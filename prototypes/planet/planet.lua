@@ -1132,9 +1132,7 @@ local function MapGen_Pelagos()
 		autoplace_settings = {
 			["tile"] = {
 				settings = {
-					["pelagos-deepsea"] = {
-						probability_expression = "pelagos_elevation < -100",
-					},
+					["pelagos-deepsea"] = {},
 					["water"] = {},
 					["pelagos-sand-1"] = {},
 					["pelagos-sand-2"] = {},
