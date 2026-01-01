@@ -9,7 +9,7 @@ local pelagos_elevation_persistence = 0.8
 -- -----------------------
 -- -- tweak this later
 -- -----------------------
-local pelagos_elevation_bias = -15
+local pelagos_elevation_bias = -14
 --local pelagos_elevation_bias = 15
 -- amplitude (higher = deeper oceans / higher lands)
 local pelagos_elevation_amplitude = 7.0 --
@@ -32,20 +32,6 @@ data:extend({
 		type = "noise-expression",
 		name = "pelagos_central_elevation_boost",
 		expression = "clamp((40 - distance) / 40, 0, 1) * 100",
-	},
-})
-data:extend({
-	{
-		type = "noise-expression",
-		name = "pelagos_starting_island_shallows",
-		expression = string.format(
-			[[
-        max(0, 1 - abs(distance - %d) / %d)
-        * 0.5
-      ]],
-			pelagos_starting_radius, -- ring center (a bit further than the island radius)
-			pelagos_starting_radius * 5 -- ring width
-		),
 	},
 })
 data:extend({
@@ -95,7 +81,6 @@ data:extend({
           input_scale = %f, output_scale = 1
         }
       + pelagos_starting_island * (%f*2)
-      + pelagos_starting_island_shallows * 6
       + pelagos_central_elevation_boost
       + %f * abs(multioctave_noise{
           x = x, y = y,
