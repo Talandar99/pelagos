@@ -46,7 +46,7 @@ data:extend({
 	{
 		type = "item",
 		name = "diesel-dragon",
-		icon = "__base__/graphics/icons/rocket-silo.png",
+		icon = "__pelagos__/graphics/diesel-dragon/rocket-silo.png",
 		subgroup = "space-related",
 		order = "a[rocket-silo]",
 		inventory_move_sound = item_sounds.mechanical_large_inventory_move,
@@ -59,7 +59,7 @@ data:extend({
 	{
 		type = "rocket-silo",
 		name = "diesel-dragon",
-		icon = "__base__/graphics/icons/rocket-silo.png",
+		icon = "__pelagos__/graphics/diesel-dragon/rocket-silo.png",
 		flags = { "placeable-player", "player-creation" },
 		fast_transfer_modules_into_module_slots_only = true,
 		crafting_categories = { "diesel-rocket-building" },
@@ -75,7 +75,7 @@ data:extend({
 		to_be_inserted_to_rocket_inventory_size = 1,
 		logistic_trash_inventory_size = 0,
 		icon_draw_specification = { shift = { 0, 2 } },
-		module_slots = 5,
+		module_slots = 6,
 		icons_positioning = {
 			{ inventory_index = defines.inventory.assembling_machine_modules, shift = { 0, 3.3 } },
 		},
@@ -83,7 +83,7 @@ data:extend({
 		show_recipe_icon = false,
 		allowed_effects = { "consumption", "speed", "productivity", "pollution" },
 		minable = { mining_time = 1, result = "diesel-dragon" },
-		max_health = 5000,
+		max_health = 6000,
 		corpse = "rocket-silo-remnants",
 		dying_explosion = "rocket-silo-explosion",
 		collision_box = { { -4.20, -4.20 }, { 4.20, 4.20 } },
@@ -122,13 +122,13 @@ data:extend({
 			},
 			-- need to fix position on rotation
 			smoke = {
-				{
-					name = "smoke",
-					frequency = 20,
-					position = { 2.8, -3.2 },
-					starting_vertical_speed = 0.16, --base 0.08
-					starting_frame_deviation = 60,
-				},
+				--{
+				--	name = "smoke",
+				--	frequency = 5,
+				--	position = { 2.8, -3.2 },
+				--	starting_vertical_speed = 0.08, --base 0.08
+				--	starting_frame_deviation = 60,
+				--},
 			},
 			--emissions_per_minute = { pollution = 10 }, --12 is burner drill ,10 is electric drill
 		},

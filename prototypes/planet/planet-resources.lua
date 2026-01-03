@@ -53,8 +53,8 @@ data:extend({
 			base_spots_per_km2 = 1.8,
 			--random_probability = 1 / 400,
 			random_probability = 1 / 100,
-			random_spot_size_minimum = 1, --base 2
-			random_spot_size_maximum = 2, --base 4
+			random_spot_size_minimum = 2, --base 2
+			random_spot_size_maximum = 4, --base 4
 			additional_richness = 250000,
 			has_starting_area_placement = false,
 			regular_rq_factor_multiplier = 1,
@@ -135,8 +135,8 @@ data:extend({
 			base_spots_per_km2 = 1.8,
 			--random_probability = 1 / 400,
 			random_probability = 1 / 100,
-			random_spot_size_minimum = 1, --base 2
-			random_spot_size_maximum = 2, --base 4
+			random_spot_size_minimum = 2, --base 2
+			random_spot_size_maximum = 4, --base 4
 			additional_richness = 250000,
 			has_starting_area_placement = false,
 			regular_rq_factor_multiplier = 1,

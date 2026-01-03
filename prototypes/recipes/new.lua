@@ -647,6 +647,29 @@ data:extend({
 	},
 	{
 		type = "recipe",
+		name = "advanced-titanium-plate-from-dust",
+		icon = "__pelagos__/graphics/titanium/advanced-titanium-plate-from-dust.png",
+		--subgroup = "agriculture-products",
+		--order = "a[seeds]-c[]",
+		auto_recycle = false,
+		category = "smelting",
+		enabled = false,
+		energy_required = 10,
+		ingredients = {
+			{ type = "item", name = "titanium-dust", amount = 1 },
+			{ type = "item", name = "activated-carbon", amount = 10 },
+		},
+		results = { { type = "item", name = "titanium-plate", amount = 1 } },
+		allow_productivity = true,
+		crafting_machine_tint = {
+			primary = { r = 0.45, g = 0.67, b = 0.72, a = 1.000 },
+			secondary = { r = 0.65, g = 0.87, b = 0.92, a = 1.000 },
+			tertiary = { r = 0.45, g = 0.67, b = 0.72, a = 1.000 },
+			quaternary = { r = 0.65, g = 0.87, b = 0.92, a = 1.000 },
+		},
+	},
+	{
+		type = "recipe",
 		name = "titanium-plate-from-dust",
 		icon = "__pelagos__/graphics/titanium/titanium-plate-from-dust.png",
 		--subgroup = "agriculture-products",
@@ -678,6 +701,22 @@ data:extend({
 		},
 		results = { { type = "item", name = "titanium-barrel", amount = 1 } },
 		allow_productivity = true,
+	},
+	{
+		type = "recipe",
+		name = "diesel-dragon",
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "titanium-plate", amount = 500 },
+			{ type = "item", name = "steel-plate", amount = 1000 },
+			{ type = "item", name = "concrete", amount = 1000 },
+			{ type = "item", name = "pipe", amount = 300 },
+			{ type = "item", name = "processing-unit", amount = 200 },
+			{ type = "item", name = "engine-unit", amount = 400 },
+		},
+		energy_required = 30,
+		results = { { type = "item", name = "diesel-dragon", amount = 1 } },
+		requester_paste_multiplier = 1,
 	},
 })
 
