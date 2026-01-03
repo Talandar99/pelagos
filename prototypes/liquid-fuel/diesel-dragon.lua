@@ -71,7 +71,7 @@ data:extend({
 			is_output_station = true,
 			hatch_definitions = { silo_cargo_hatch({ 0, 0 }) },
 		},
-		crafting_speed = 1,
+		crafting_speed = 2,
 		to_be_inserted_to_rocket_inventory_size = 1,
 		logistic_trash_inventory_size = 0,
 		icon_draw_specification = { shift = { 0, 2 } },

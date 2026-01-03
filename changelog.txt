@@ -3,10 +3,10 @@ Version: 0.40.0
 Date: 2026-01-03
   Changes:
     - Pelagos hit 10 000 unique downloads. If you are reading this then thank you in all time 
-      you spend with my mod so far :D 
-    - Introduced new technology prepared for 10 000 downloads: Project diesel dragon. 
+      you spend with my mod so far C: 
+    - Introduced new technology for 10 000 downloads: Project diesel dragon. 
       Special rocket silo powered by liquid fuel. It does not require rocked fuel, 
-      require half of rocket parts of regular silo, parts crafting is quicker, 
+      need half of rocket parts of regular silo, crafting is quicker, 
       but it also require titanium plates instead of LDS. 
     - renamed locale from "Titanium plate from dust" to "Titanium plate smelting"
     - Added "Advanced titanium plate smelting" recipe. Two times more efficient method of making 
@@ -16,8 +16,6 @@ Date: 2026-01-03
       report any issues
     - updated terrain generation, pelagos should now generate a bit more land, titanium sludge and methane patches
   Bugfixes:
-    - any planet start pelagos + lignumis: fixed crash caused by pelagos adding wooden science pack 
-      to nauvis research. Lignumis now provide it so my code is no longer needed
     - methane and titanium patches now generate in a way you can always place oil rigs on all sources in single patch
 ---------------------------------------------------------------------------------------------------
 Version: 0.39.4
