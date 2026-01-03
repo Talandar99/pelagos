@@ -834,23 +834,23 @@ data:extend({
 	},
 })
 
-if mods["Long_Range_Delivery_Drones"] then
-	local t = data.raw["technology"]["long-range-delivery-drone"]
-	t.prerequisites = { "pelagos-science-pack", "utility-science-pack", "diesel-automation", "ethanol-thruster" }
-	t.unit = {
-		count = 2000,
-		ingredients = {
-			{ "automation-science-pack", 1 },
-			{ "logistic-science-pack", 1 },
-			{ "chemical-science-pack", 1 },
-			{ "space-science-pack", 1 },
-			{ "utility-science-pack", 1 },
-			{ "pelagos-science-pack", 1 },
-		},
-		time = 30,
-	}
-	t.order = "z[pelagos]"
-end
+--if mods["Long_Range_Delivery_Drones"] then
+local t = data.raw["technology"]["long-range-delivery-drone"]
+t.prerequisites = { "pelagos-science-pack", "utility-science-pack", "diesel-automation", "ethanol-thruster" }
+t.unit = {
+	count = 2000,
+	ingredients = {
+		{ "automation-science-pack", 1 },
+		{ "logistic-science-pack", 1 },
+		{ "chemical-science-pack", 1 },
+		{ "space-science-pack", 1 },
+		{ "utility-science-pack", 1 },
+		{ "pelagos-science-pack", 1 },
+	},
+	time = 30,
+}
+t.order = "z[pelagos]"
+--end
 
 if mods["cargo-ships"] then
 	local t = data.raw["technology"] and data.raw["technology"]["oversea-energy-distribution"]
