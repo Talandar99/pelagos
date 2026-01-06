@@ -57,6 +57,7 @@ utils.remove_recipes(
 	{ "pelagos-biolubricant", "pelagos-processing-unit", "pelagos-battery", "pelagos-explosives" }
 )
 utils.remove_recipes("deep_sea_oil_extraction", { "barreling-machine" })
+utils.add_recipes("deep_sea_oil_extraction", { "nutrients-from-spoilage-methane" })
 utils.add_recipes("lubricant", { "pelagos-biolubricant" })
 utils.add_recipes("processing-unit", { "pelagos-processing-unit" })
 utils.add_recipes("battery", { "pelagos-battery" })
@@ -250,6 +251,7 @@ data.raw["technology"]["wood-spoiling-technology"].research_trigger = {
 	entity = "biochamber",
 }
 data.raw["technology"]["wood-spoiling-technology"].prerequisites = { "coconut-processing-technology" }
+utils.remove_recipes("wood-spoiling-technology", { "nutrients-from-spoilage-methane" })
 
 data.raw["technology"]["tank_ship"].unit = {
 	count = 300,

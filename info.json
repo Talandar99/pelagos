@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.40.1",
+    "version": "0.41.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -14,9 +14,9 @@
         "cargo-ships",
         "pirateship",
         "long_range_delivery_drones_talandar_fork",
-        "! Long_Range_Delivery_Drones",
         "barreling-group2",
         "talandar_cargo_ships_tweaks",
+        "diesel_cargo_ships",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-arig",
         "? maraxsis",
@@ -31,8 +31,10 @@
         "? skewer_planet_vesta",
         "? multi_surface_promethium_plate_recipe",
         "(?) gleba_cultured_soil",
+        "! Long_Range_Delivery_Drones",
         "! auto-barrel",
-        "! fct-barreling-machine"
+        "! fct-barreling-machine",
+        "! space-age-many-planets-server-mod-compat"
     ],
     "description": "Visit Pelagos. Insular planet rich in tropical coconut palms, methane deposits, and minor lifeforms. Harvest coconuts, process them into oil, sealant, and biofuels, experiment with fermentation, and use high-temperature calciners to improve smelting processes in your factory.",
     "factorio_version": "2.0",

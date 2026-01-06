@@ -685,6 +685,7 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "wood-spoiling" },
 			{ type = "unlock-recipe", recipe = "coconut-husk-spoiling" },
+			{ type = "unlock-recipe", recipe = "nutrients-from-spoilage-methane" },
 		},
 		prerequisites = { "pelagos-science-pack" },
 		unit = {

@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.41.0
+Date: 2026-01-05
+  Changes:
+    - added new music to soundtrack: crawfish (Thx JonJon)
+    - added new music to soundtrack: birds    (Thx JonJon)
+    - added new music to soundtrack: twowave  (Thx JonJon)
+    - added setting: Decomposition science pack is needed to unlock and research aquilo (disabled by default)
+    - added setting: Decomposition science pack is needed to unlock and research promethium technology (enabled by default)
+    - added new recipe: Methane-assisted nutrients from spoilage unlocked with Cellulose decomposition research
+    - any planet start: Methane-assisted nutrients from spoilage is unlocked with "Deep sea extraction"
+    - new mandatory dependancy: diesel_cargo_ships. It contains all code related to making cargo ships diesel 
+      powered, so you can now enjoy this way of powering ships without pelagos installed. 
+  Balancing:
+    - demolishers have now reduced resistances against corrosive dmg type (20 -> 10)
+    - methane explosive no longer require carbon in recipe but 2x more methane instead
+  Bugfixes:
+    - removed next_upgrade field from diesel assembler. When using upgrade planner, assembling machine 3 
+      should now properly downgrade to assembling machine 2 instead of diesel assembling machine
+---------------------------------------------------------------------------------------------------
+Version: 0.40.2
+Date: 2026-01-03
+  Changes:
+    - space-age-many-planets-server-mod-compat, removes pelagos core role, 
+      without it planet is no longer needed anyway so mod is marked as incompatible
+---------------------------------------------------------------------------------------------------
 Version: 0.40.1
 Date: 2026-01-03
   Bugfixes:
@@ -68,7 +93,6 @@ Date: 2025-12-27
 ---------------------------------------------------------------------------------------------------
 Version: 0.37.0
 Date: 2025-12-26
-  Balancing:
   Changes:
     - added long handed diesel inserter 
     - added recipe for long handed diesel inserter

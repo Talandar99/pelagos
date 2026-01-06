@@ -17,7 +17,7 @@ for _, proto in pairs(data.raw["segmented-unit"]) do
 		table.insert(proto.resistances, {
 			type = "corrosive",
 			decrease = 0,
-			percent = 20,
+			percent = 10,
 		})
 	end
 end
@@ -28,7 +28,7 @@ for _, proto in pairs(data.raw["segment"]) do
 		table.insert(proto.resistances, {
 			type = "corrosive",
 			decrease = 0,
-			percent = 20,
+			percent = 10,
 		})
 	end
 end

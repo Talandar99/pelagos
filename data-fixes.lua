@@ -37,7 +37,19 @@ if settings.startup["allow-galleon-before-pelagos"].value then
 		table.insert(data.raw.technology["steel-axe"].effects, { type = "unlock-recipe", recipe = "pirateship" })
 	end
 end
------------------------------------
+-------------------------------------------------------------------------------
+-- pelagos science pack addtion settings
+-------------------------------------------------------------------------------
+if settings.startup["pelagos-contribute-to-aquilo-discovery"].value then
+	table.insert(data.raw.technology["planet-discovery-aquilo"].prerequisites, "pelagos-science-pack")
+	table.insert(data.raw.technology["planet-discovery-aquilo"].unit.ingredients, { "pelagos-science-pack", 1 })
+end
+if settings.startup["pelagos-contribute-to-promethium-science"].value then
+	table.insert(data.raw.technology["promethium-science-pack"].prerequisites, "pelagos-science-pack")
+	table.insert(data.raw.technology["promethium-science-pack"].unit.ingredients, { "pelagos-science-pack", 1 })
+	table.insert(data.raw.technology["research-productivity"].unit.ingredients, { "pelagos-science-pack", 1 })
+end
+-------------------------------------------------------------------------------
 if settings.startup["pelagos-methane-on-vesta"].value then
 	if mods["skewer_planet_vesta"] then
 		if data.raw.planet.vesta and data.raw.planet.vesta.map_gen_settings then

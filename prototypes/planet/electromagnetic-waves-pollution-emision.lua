@@ -64,13 +64,13 @@ local function add_em_to_generator(proto)
 	end
 end
 
-local tiles = { "sand-1", "sand-2", "pelagos-sand-3", "pelagos-sand-4" }
+local tiles = { "sand-1", "sand-2", "pelagos-sand-1", "pelagos-sand-2", "pelagos-sand-3", "pelagos-sand-4" }
 
 for _, tile in pairs(tiles) do
 	if data.raw.tile[tile] then
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00001
-		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00001
+		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000125
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00003 -- a bit too high
 	end
 end
@@ -81,7 +81,8 @@ for _, tile in pairs(tiles) do
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000001 -- too low
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000015
-		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000016
+		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000016
+		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00000175
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000003 -- a bit to high
 	end
 end

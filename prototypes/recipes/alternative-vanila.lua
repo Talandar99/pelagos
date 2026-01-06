@@ -201,8 +201,7 @@ data:extend({
 		category = "organic",
 		icon = "__pelagos__/graphics/methane-explosives.png",
 		ingredients = {
-			{ type = "item", name = "carbon", amount = 1 },
-			{ type = "fluid", name = "methane", amount = 25 },
+			{ type = "fluid", name = "methane", amount = 50 },
 			{ type = "fluid", name = "water", amount = 10 },
 		},
 		results = { { type = "item", name = "explosives", amount = 2 } },
@@ -214,6 +213,29 @@ data:extend({
 			secondary = { r = 0.64, g = 0.11, b = 0.3, a = 1.000 },
 			tertiary = { r = 1.0, g = 0.33, b = 0.15, a = 1.000 },
 			quaternary = { r = 0.64, g = 0.11, b = 0.3, a = 1.000 },
+		},
+	},
+	{
+		type = "recipe",
+		name = "nutrients-from-spoilage-methane",
+		icons = {
+			{ icon = "__pelagos__/graphics/methane.png", icon_size = 64 },
+			{ icon = "__space-age__/graphics/icons/nutrients-from-spoilage.png", icon_size = 64 },
+		},
+		category = "organic",
+		subgroup = "agriculture-processes",
+		order = "c[nutrients]-c[nutrients-from-spoilage-methane]",
+		enabled = false,
+		allow_productivity = true,
+		energy_required = 2,
+		ingredients = {
+			{ type = "item", name = "spoilage", amount = 10 },
+			{ type = "fluid", name = "methane", amount = 10 },
+		},
+		results = { { type = "item", name = "nutrients", amount = 2, percent_spoiled = 0.6 } },
+		crafting_machine_tint = {
+			primary = { r = 0.8, g = 0.9, b = 1, a = 1.000 },
+			secondary = { r = 0.5, g = 0.5, b = 0.8, a = 1.000 },
 		},
 	},
 })

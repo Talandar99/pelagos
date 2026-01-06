@@ -1215,14 +1215,13 @@ PlanetsLib:extend({
 				warp_sample_1 = { scale = 0.8 / 16 },
 				warp_sample_2 = { scale = 3.75 * 0.8 / 32, wind_speed_factor = 0 },
 				warped_shape_sample = { scale = 2 * 0.18 / 32 },
-				-- zmniejszone zagęszczenie
 				additional_density_sample = { scale = 0.5 * 0.18 / 32, wind_speed_factor = 1.77 },
 				detail_sample_1 = { scale = 1.709 / 32, wind_speed_factor = 0.2 / 1.709 },
 				detail_sample_2 = { scale = 2.179 / 32, wind_speed_factor = 0.2 / 2.179 },
 
-				scale = 0.6, -- mniejsze chmury
-				movement_speed_multiplier = 0.5, -- wolniejsze przesuwanie
-				opacity = 0.15, -- bardziej przezroczyste
+				scale = 0.6,
+				movement_speed_multiplier = 0.5,
+				opacity = 0.15,
 				shape_warp_strength = 0.06,
 				shape_warp_weight = 0.4,
 				detail_sample_morph_duration = 256,
