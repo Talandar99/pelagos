@@ -921,7 +921,7 @@ data:extend({
 		},
 		energy_required = 2,
 		results = {
-			{ type = "item", name = "iron-ore", amount = 30 },
+			{ type = "item", name = "iron-ore", amount = 40 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 79, g = 121, b = 148, a = 1.000 },
@@ -947,7 +947,7 @@ data:extend({
 		},
 		energy_required = 2,
 		results = {
-			{ type = "fluid", name = "methane", amount = 100 },
+			{ type = "fluid", name = "methane", amount = 200 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 163, g = 209, b = 62, a = 1.000 },
@@ -976,7 +976,7 @@ data:extend({
 		},
 		energy_required = 2,
 		results = {
-			{ type = "fluid", name = "water", amount = 100 },
+			{ type = "fluid", name = "water", amount = 200 },
 		},
 		crafting_machine_tint = {
 			primary = { r = 42, g = 143, b = 189, a = 1.000 },

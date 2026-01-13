@@ -81,8 +81,8 @@ for _, tile in pairs(tiles) do
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000001 -- too low
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000015
-		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000016
-		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00000175
+		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000016
+		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00000175
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000003 -- a bit to high
 	end
 end
@@ -100,20 +100,16 @@ local entity = data.raw["reactor"]["heating-tower"]
 entity.energy_source = entity.energy_source or {}
 entity.energy_source.emissions_per_minute = entity.energy_source.emissions_per_minute or {}
 entity.energy_source.emissions_per_minute.electromagnetic_waves = 0
+
 local silo = data.raw["rocket-silo"]["rocket-silo"]
 silo.energy_source = silo.energy_source or {}
 silo.energy_source.emissions_per_minute = silo.energy_source.emissions_per_minute or {}
-silo.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
+silo.energy_source.emissions_per_minute.electromagnetic_waves = 2
 
 local beacon = data.raw["beacon"]["beacon"]
 beacon.energy_source = beacon.energy_source or {}
 beacon.energy_source.emissions_per_minute = beacon.energy_source.emissions_per_minute or {}
 beacon.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
-
-local lab = data.raw["lab"]["lab"]
-lab.energy_source = lab.energy_source or {}
-lab.energy_source.emissions_per_minute = lab.energy_source.emissions_per_minute or {}
-lab.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
 
 local lab = data.raw["lab"]["lab"]
 lab.energy_source = lab.energy_source or {}

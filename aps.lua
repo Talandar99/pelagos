@@ -61,6 +61,7 @@ utils.add_recipes("deep_sea_oil_extraction", { "nutrients-from-spoilage-methane"
 utils.add_recipes("lubricant", { "pelagos-biolubricant" })
 utils.add_recipes("processing-unit", { "pelagos-processing-unit" })
 utils.add_recipes("battery", { "pelagos-battery" })
+utils.add_recipes("rocket-silo", { "pelagos-rocket-part" })
 
 data:extend({
 	{

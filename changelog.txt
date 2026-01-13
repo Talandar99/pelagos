@@ -1,6 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.41.2
+Date: 2026-01-13
+  Balancing:
+    - regular rocket silo pollution reduction was partially reverted because now you can build 
+      diesel dragon (silo that does not generate pollution at all on pelagos)
+    - metallic asteroid methane crushing now give more iron ! (30 -> 40)
+    - carbonic asteroid gasification now provide more methane ! (100 -> 200)
+    - oxide asteroid melting now provide more water ! (100 -> 200)
+---------------------------------------------------------------------------------------------------
+Version: 0.41.1
+Date: 2026-01-08
+  Changes:
+    - any planet start: to make it easier for player to understand that you don't need rocket fuel. 
+      Rocket part recipe is repeated on rocket silo researach
+---------------------------------------------------------------------------------------------------
 Version: 0.41.0
-Date: 2026-01-05
+Date: 2026-01-07
   Changes:
     - added new music to soundtrack: crawfish (Thx JonJon)
     - added new music to soundtrack: birds    (Thx JonJon)
