@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.42.0
+Date: 2026-01-18
+  Changes:
+    - splited basic diesel machines into separate mod
+    - diesel machines is now new mandatory dependency
+    - removed few old unused icons to save some space
+    - locale for Electromagnetic waves tips and tricks now mentiones that solar panels and accumulators also generate EM waves
+  Balancing:
+    - all tiers of copper spitter and nests have now 100% immunity to laser damage (previous was 95-100%)
+    - all tiers of copper spitter and nests have now 100% immunity to electric damage (previous was 95-100%)
+---------------------------------------------------------------------------------------------------
 Version: 0.41.2
 Date: 2026-01-13
   Balancing:

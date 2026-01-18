@@ -258,7 +258,7 @@ data:extend({
 	{
 		type = "assembling-machine",
 		name = "diesel-asteroid-collector-engine",
-		icon = "__pelagos__/graphics/diesel-assembling-machine.png",
+		icon = "__pelagos__/graphics/diesel-asteroid-collector/asteroid-collector.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
 		collision_mask = { layers = {} },
 		max_health = 350,

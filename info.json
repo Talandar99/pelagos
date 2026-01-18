@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.41.2",
+    "version": "0.42.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -17,6 +17,7 @@
         "barreling-group2",
         "talandar_cargo_ships_tweaks",
         "diesel_cargo_ships",
+        "diesel_machines",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-arig",
         "? maraxsis",

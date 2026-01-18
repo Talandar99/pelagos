@@ -444,7 +444,7 @@ data:extend({
 	{
 		type = "technology",
 		name = "diesel-automation",
-		icon = "__pelagos__/graphics/diesel-automation.png",
+		icon = "__diesel_machines__/graphics/diesel-assembling-machine/diesel-automation.png",
 		icon_size = 256,
 		effects = {
 			{ type = "unlock-recipe", recipe = "fast-diesel-inserter" },

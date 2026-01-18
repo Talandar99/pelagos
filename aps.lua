@@ -189,7 +189,7 @@ data:extend({
 	{
 		type = "technology",
 		name = "diesel-mining-drill",
-		icon = "__pelagos__/graphics/diesel-mining-drill/diesel-mining-drill-technology.png",
+		icon = "__diesel_machines__/graphics/diesel-mining-drill/diesel-mining-drill-technology.png",
 		icon_size = 512,
 		essential = true,
 		effects = {
