@@ -278,7 +278,7 @@ data:extend({
 	{
 		type = "item",
 		name = "copper-biter-egg",
-		icon = "__pelagos__/graphics/copper-biter-egg.png",
+		icon = "__pelagos__/graphics/spitter/icons/spitter-pelagos-egg.png",
 		fuel_category = "chemical",
 		fuel_value = "6MJ",
 		subgroup = "agriculture-products",
@@ -435,7 +435,7 @@ data:extend({
 	{
 		type = "item",
 		name = "captive-copper-biter-spawner",
-		icon = "__pelagos__/graphics/captive-biter-spawner.png",
+		icon = "__pelagos__/graphics/spitter/icons/spitter-pelagos-nest-captured.png",
 		subgroup = "agriculture",
 		order = "z[biter-nest]",
 		inventory_move_sound = item_sounds.mechanical_inventory_move,

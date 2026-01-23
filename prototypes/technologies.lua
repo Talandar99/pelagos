@@ -314,8 +314,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "captive-copper-biter-spawner",
-		icon = "__space-age__/graphics/technology/captive-biter-spawner.png",
-		icon_size = 256,
+		icon = "__pelagos__/graphics/spitter/spitter-pelagos-nest-captured.png",
+		icon_size = 376,
 		effects = {
 			{
 				type = "unlock-recipe",

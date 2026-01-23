@@ -227,6 +227,11 @@ local function build_allowed_entities()
 	allowed["or_radar"] = true
 	allowed["or_tank"] = true
 
+	if script.active_mods["Krastorio2-spaced-out"] then
+		allowed["kr-steel-pump"] = true
+		allowed["kr-steel-pipe"] = true
+	end
+
 	return allowed
 end
 -------------------------------------------------------------------------------

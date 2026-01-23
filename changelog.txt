@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.43.1
+Date: 2026-01-23
+  Changes:
+    - reduced size on new copper spitter assets
+    - updated fermentation-bacteria-cultivation icon
+    - updated bacteria-cultivation-productivity icon
+    - updated captured nest entity sprite
+    - changed captive-copper-biter-spawner technology icon
+    - K2SO compatibility: steel pipe and pump can now be placed on wooden platforms
+---------------------------------------------------------------------------------------------------
 Version: 0.43.0
 Date: 2026-01-22
   Changes:

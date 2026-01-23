@@ -159,6 +159,7 @@ data.raw["assembling-machine"]["captive-copper-biter-spawner"].graphics_set = {
 				frame_count = 1,
 				--scale = 0.456,
 				scale = 0.6,
+				--scale = 0.6,
 				animation_speed = 0.12,
 				run_mode = "forward-then-backward",
 				surface = "nauvis",
@@ -185,9 +186,6 @@ data.raw["unit"]["leviathan-copper-biter"].icon = "__pelagos__/graphics/spitter/
 data.raw["unit-spawner"]["copper-biter-spawner"].icon = "__pelagos__/graphics/spitter/icons/spitter-pelagos-nest.png"
 data.raw["assembling-machine"]["captive-copper-biter-spawner"].icon =
 	"__pelagos__/graphics/spitter/icons/spitter-pelagos-nest-captured.png"
-data.raw["item"]["captive-copper-biter-spawner"].icon =
-	data.raw["assembling-machine"]["captive-copper-biter-spawner"].icon
-data.raw["item"]["copper-biter-egg"].icon = "__pelagos__/graphics/spitter/icons/spitter-pelagos-egg.png"
 
 ------------- Spawner corpse -------------
 
