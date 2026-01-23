@@ -2,7 +2,7 @@
 Version: 0.43.1
 Date: 2026-01-23
   Changes:
-    - reduced size on new copper spitter assets
+    - slightly reduced size of new copper spitter assets
     - updated fermentation-bacteria-cultivation icon
     - updated bacteria-cultivation-productivity icon
     - updated captured nest entity sprite
