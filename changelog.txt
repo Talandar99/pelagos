@@ -2,9 +2,8 @@
 Version: 0.44.0
 Date: 2026-01-24
   Changes:
-    - Added Sand and Sand Recipe. It's same recipe and item that was used by planet Vesta. 
-      I made sure it's as compatible with other mods as possible, so it should work out with 
-      mods like Vesta, Maraxsis or K2SO
+    - Added Sand and Sand Recipe. For better compatibility, and because it's exactly what 
+      i wanted, It's same recipe that was used by planet Vesta. 
     - Added Sandfill. It's landfill but made of sand. You can use it as soil to grow coconuts on it!
     - Sand and Sandfill recipes are unlocked by researching "Diesel Excavator"
 ---------------------------------------------------------------------------------------------------
