@@ -193,6 +193,8 @@ if mods["canal-excavator"] then
 	t.effects = {
 		{ type = "unlock-recipe", recipe = "canex-excavator" },
 		{ type = "unlock-recipe", recipe = "canex-digable" },
+		{ type = "unlock-recipe", recipe = "sand" },
+		{ type = "unlock-recipe", recipe = "pelagos-sandfill" },
 	}
 
 	t.research_trigger = {

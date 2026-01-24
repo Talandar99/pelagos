@@ -483,3 +483,36 @@ data:extend({
 		},
 	},
 })
+-- sandfill
+data:extend({
+	{
+		type = "item",
+		name = "sand",
+		icon = "__pelagos__/graphics/sand.png",
+		subgroup = "raw-resource",
+		order = "d[sand]",
+		inventory_move_sound = item_sounds.resource_inventory_move,
+		pick_sound = item_sounds.resource_inventory_pickup,
+		drop_sound = item_sounds.resource_inventory_move,
+		stack_size = 50,
+		weight = 1 * kg,
+	},
+	{
+		type = "item",
+		name = "pelagos-sandfill",
+		icon = "__pelagos__/graphics/sandfill.png",
+		subgroup = "terrain",
+		order = "c[sandfill]-a[dirt]",
+		inventory_move_sound = item_sounds.landfill_inventory_move,
+		pick_sound = item_sounds.landfill_inventory_pickup,
+		drop_sound = item_sounds.landfill_inventory_move,
+		stack_size = 100,
+		place_as_tile = {
+			result = "pelagos-sandfill",
+			condition_size = 1,
+			condition = { layers = { ground_tile = true } },
+			tile_condition = {},
+		},
+		random_tint_color = item_tints.organic_green,
+	},
+})

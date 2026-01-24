@@ -988,3 +988,35 @@ data:extend({
 		allow_decomposition = false,
 	},
 })
+data:extend({
+	{
+		type = "recipe",
+		name = "sand",
+		category = "crafting-with-fluid",
+		enabled = false,
+		auto_recycle = false,
+		energy_required = 0.85,
+		ingredients = {
+			{ type = "fluid", name = "water", amount = 5 },
+			{ type = "item", name = "stone", amount = 2 },
+		},
+		main_product = "sand",
+		results = {
+			{ type = "item", name = "sand", amount = 4 },
+			{ type = "fluid", name = "water", amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2 },
+		},
+		allow_productivity = true,
+	},
+	{
+		type = "recipe",
+		name = "pelagos-sandfill",
+		energy_required = 0.5,
+		enabled = false,
+		auto_recycle = false,
+		category = "organic",
+		ingredients = {
+			{ type = "item", name = "sand", amount = 40 },
+		},
+		results = { { type = "item", name = "pelagos-sandfill", amount = 1 } },
+	},
+})

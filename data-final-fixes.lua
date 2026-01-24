@@ -2,18 +2,28 @@
 require("prototypes.plants-autoplace-settings")
 require("prototypes.pirate-ship")
 require("prototypes.liquid-fuel.rocket-silo")
-require("prototypes.planet.electromagnetic-waves-pollution-emision")
-require("prototypes.corrosive-dmg-resistances")
-
 -- allow foundation on pelagos-deepsea
 local landfill = data.raw.item["foundation"]
 if landfill and landfill.place_as_tile and landfill.place_as_tile.tile_condition then
 	table.insert(landfill.place_as_tile.tile_condition, "pelagos-deepsea")
 end
-
 -- make pelagos-deepsea water_tile_type
 table.insert(water_tile_type_names, "pelagos-deepsea")
 
+-- sandfill
+local sandfill = table.deepcopy(data.raw.tile["sand-1"])
+sandfill.name = "pelagos-sandfill"
+sandfill.minable = { mining_time = 0.2, result = "pelagos-sandfill" }
+sandfill.localised_name = { "tile-name.pelagos-sandfill" }
+sandfill.absorptions_per_second = nil
+sandfill.tile_order = "a[artificial]-d[utility]-a[sandfill]"
+data:extend({ sandfill })
+data.raw["item"]["pelagos-sandfill"].place_as_tile.tile_condition =
+	table.deepcopy(data.raw["item"]["landfill"].place_as_tile.tile_condition)
+-- sandfill
+
+require("prototypes.planet.electromagnetic-waves-pollution-emision")
+require("prototypes.corrosive-dmg-resistances")
 -- Disable Arig's high-support electric poles on Pelagos deep sea tiles
 
 -- Register a new collision layer if it doesn't exist yet
