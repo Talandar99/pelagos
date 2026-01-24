@@ -502,6 +502,11 @@ local productivity_effects = {
 	},
 	{
 		type = "change-recipe-productivity",
+		recipe = "pelagos-sandfill",
+		change = 0.1,
+	},
+	{
+		type = "change-recipe-productivity",
 		recipe = "landfill",
 		change = 0.1,
 	},

@@ -1015,7 +1015,7 @@ data:extend({
 		auto_recycle = false,
 		category = "organic",
 		ingredients = {
-			{ type = "item", name = "sand", amount = 40 },
+			{ type = "item", name = "sand", amount = 45 },
 		},
 		results = { { type = "item", name = "pelagos-sandfill", amount = 1 } },
 	},
