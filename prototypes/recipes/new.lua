@@ -991,18 +991,22 @@ data:extend({
 data:extend({
 	{
 		type = "recipe",
-		name = "sand",
-		category = "crafting-with-fluid",
+		name = "stone-erosion",
+		category = "organic",
+		icons = {
+			{ icon = "__base__/graphics/icons/stone.png", icon_size = 64 },
+			{ icon = "__base__/graphics/icons/fluid/water.png", icon_size = 64, scale = 0.3, shift = { 8, 8 } },
+		},
 		enabled = false,
 		auto_recycle = false,
-		energy_required = 0.85,
+		energy_required = 5.0,
 		ingredients = {
-			{ type = "fluid", name = "water", amount = 5 },
-			{ type = "item", name = "stone", amount = 2 },
+			{ type = "fluid", name = "water", amount = 10 },
+			{ type = "item", name = "stone", amount = 5 },
 		},
 		main_product = "sand",
 		results = {
-			{ type = "item", name = "sand", amount = 4 },
+			{ type = "item", name = "sand", amount = 10 },
 			{ type = "fluid", name = "water", amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2 },
 		},
 		allow_productivity = true,
