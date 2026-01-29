@@ -258,6 +258,14 @@ data:extend({
 		order = "ea[pelagos]",
 	},
 })
+-- add mineral glass if glass exist
+local tech = data.raw.technology["calciner"]
+if tech and data.raw.recipe["calciner-mineral-glass"] then
+	table.insert(tech.effects, {
+		type = "unlock-recipe",
+		recipe = "calciner-mineral-glass",
+	})
+end
 
 data:extend({
 	{
@@ -1061,5 +1069,12 @@ if mods["planetaris-arig"] then
 
 		{ type = "unlock-recipe", recipe = "pelagos-biodiesel-arig-cactus" }
 	)
+end
+if mods["castra"] then
+	table.insert(data.raw["technology"]["engine-productivity"].effects, {
+		type = "change-recipe-productivity",
+		recipe = "pelagos-casting-engine-unit",
+		change = 0.1,
+	})
 end
 PlanetsLib.add_item_name_to_global_cargo_drops_whitelist("coconut")

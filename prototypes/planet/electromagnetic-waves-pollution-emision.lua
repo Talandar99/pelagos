@@ -1,9 +1,37 @@
+local function has_nuclear_fuel(es)
+	if not es then
+		return false
+	end
+	if es.fuel_category == "nuclear" then
+		return true
+	end
+	if es.fuel_categories then
+		for _, cat in pairs(es.fuel_categories) do
+			if cat == "nuclear" then
+				return true
+			end
+		end
+	end
+	return false
+end
+
 local function add_em_to_electric(proto)
-	if proto.energy_source and proto.energy_source.type == "electric" and proto.energy_usage then
-		local value = util.parse_energy(proto.energy_usage) / 1000 -- w kW
-		if value > 0 then
-			proto.energy_source.emissions_per_minute = proto.energy_source.emissions_per_minute or {}
-			proto.energy_source.emissions_per_minute["electromagnetic_waves"] = value
+	if proto.energy_source and proto.energy_usage then
+		local es = proto.energy_source
+		local generates_pollution = false
+
+		if es.type == "electric" then
+			generates_pollution = true
+		elseif es.type == "burner" and has_nuclear_fuel(es) then
+			generates_pollution = true
+		end
+
+		if generates_pollution then
+			local value = util.parse_energy(proto.energy_usage) / 1000 -- kW
+			if value > 0 then
+				es.emissions_per_minute = es.emissions_per_minute or {}
+				es.emissions_per_minute.electromagnetic_waves = value
+			end
 		end
 	end
 end
@@ -20,6 +48,17 @@ local function add_em_to_generator(proto)
 				proto.energy_source.emissions_per_minute = proto.energy_source.emissions_per_minute or {}
 				proto.energy_source.emissions_per_minute["electromagnetic_waves"] = value
 			end
+		end
+	elseif
+		(proto.type == "generator" or proto.type == "burner-generator")
+		and proto.burner
+		and has_nuclear_fuel(proto.burner)
+		and proto.max_power_output
+	then
+		local mw = (util.parse_energy(proto.max_power_output) / 1000)
+		if mw > 0 then
+			proto.burner.emissions_per_minute = proto.burner.emissions_per_minute or {}
+			proto.burner.emissions_per_minute.electromagnetic_waves = mw
 		end
 	elseif proto.type == "fusion-generator" then
 		local waves = 50
@@ -102,11 +141,6 @@ entity.energy_source = entity.energy_source or {}
 entity.energy_source.emissions_per_minute = entity.energy_source.emissions_per_minute or {}
 entity.energy_source.emissions_per_minute.electromagnetic_waves = 0
 
-local silo = data.raw["rocket-silo"]["rocket-silo"]
-silo.energy_source = silo.energy_source or {}
-silo.energy_source.emissions_per_minute = silo.energy_source.emissions_per_minute or {}
-silo.energy_source.emissions_per_minute.electromagnetic_waves = 2
-
 local beacon = data.raw["beacon"]["beacon"]
 beacon.energy_source = beacon.energy_source or {}
 beacon.energy_source.emissions_per_minute = beacon.energy_source.emissions_per_minute or {}
@@ -116,14 +150,3 @@ local lab = data.raw["lab"]["lab"]
 lab.energy_source = lab.energy_source or {}
 lab.energy_source.emissions_per_minute = lab.energy_source.emissions_per_minute or {}
 lab.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
-
-------------------------------------------------------------------------------------------------------------------------
---- compat mulana
-------------------------------------------------------------------------------------------------------------------------
---if mods["planet-muluna"] then
---	local muluna_vacuum_assembler = data.raw["reactor"]["heat-assembling-machine-muluna-vacuum-heating-tower-reactor"]
---	muluna_vacuum_assembler.energy_source = muluna_vacuum_assembler.energy_source or {}
---	muluna_vacuum_assembler.energy_source.emissions_per_minute = muluna_vacuum_assembler.energy_source.emissions_per_minute
---		or {}
---	muluna_vacuum_assembler.energy_source.emissions_per_minute.electromagnetic_waves = 0
---end

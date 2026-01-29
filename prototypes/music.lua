@@ -31,7 +31,8 @@ data:extend({
 		planet = "pelagos",
 		sound = {
 			filename = "__pelagos__/sound/birds.ogg",
-			volume = 0.8,
+			--volume = 0.8,
+			volume = 0.7,
 		},
 	},
 	{

@@ -152,6 +152,11 @@ if mods["maraxsis"] then
 	if tech and tech.effects then
 		table.insert(tech.effects, { type = "unlock-recipe", recipe = "pelagos-maraxsis-super-sealant-substance" })
 	end
+	local recipe = data.raw.recipe["maraxsis-glass-panes"]
+	if recipe then
+		recipe.additional_categories = recipe.additional_categories or {}
+		table.insert(recipe.additional_categories, "calcining")
+	end
 end
 
 -- optional compat with ironclad and it's fork

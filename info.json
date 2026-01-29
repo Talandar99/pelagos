@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.44.2",
+    "version": "0.45.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -21,6 +21,7 @@
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-arig",
         "? maraxsis",
+        "? skewer_planet_vesta",
         "? boompuff-agriculture",
         "? aai-vehicles-ironclad",
         "? ironclad-gunboat-and-mortar-turret-fork",
@@ -29,7 +30,6 @@
         "? spoiled_trenches_of_fulgora",
         "? sand_seas_of_arig",
         "? depths_of_nauvis",
-        "? skewer_planet_vesta",
         "? multi_surface_promethium_plate_recipe",
         "(?) gleba_cultured_soil",
         "! Long_Range_Delivery_Drones",

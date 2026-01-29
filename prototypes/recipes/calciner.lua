@@ -108,6 +108,7 @@ data:extend({
 		allow_productivity = true,
 		auto_recycle = false,
 	},
+
 	--	{
 	--		type = "recipe",
 	--		name = "scrap-burning",
@@ -129,3 +130,29 @@ data:extend({
 	--		allow_productivity = true,
 	--	},
 })
+
+-- special glass recipes for compatibility with mods that add glass
+
+if data.raw.item and data.raw.item["glass"] then
+	local glass = data.raw.item["glass"]
+	data:extend({
+		{
+			type = "recipe",
+			name = "calciner-mineral-glass",
+			category = "calcining",
+			ingredients = {
+				{ type = "item", name = "calcite", amount = 4 },
+			},
+			results = {
+				{ type = "item", name = "glass", amount = 1 },
+			},
+			icons = {
+				{ icon = glass.icon, icon_size = 64 },
+				{ icon = "__space-age__/graphics/icons/calcite.png", icon_size = 64, scale = 0.3, shift = { 8, 8 } },
+			},
+			icon_size = glass.icon_size,
+			allow_productivity = true,
+			auto_recycle = false,
+		},
+	})
+end
