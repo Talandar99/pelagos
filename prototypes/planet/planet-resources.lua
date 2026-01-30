@@ -74,7 +74,7 @@ data:extend({
 			},
 		},
 		map_color = { 0.0, 1.0, 0.0 },
-		map_grid = true,
+		map_grid = false,
 	},
 })
 data:extend({
@@ -156,7 +156,7 @@ data:extend({
 			},
 		},
 		map_color = { r = 1.0, g = 0.7, b = 0.0 },
-		map_grid = true,
+		map_grid = false,
 	},
 })
 --methane

@@ -1,14 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.45.1
+Date: 2026-01-30
+  Bugfixes:
+    - titanium sludge and methane should now properly display on minimap on new saves
+---------------------------------------------------------------------------------------------------
 Version: 0.45.0
 Date: 2026-01-29
   Changes:
-    - reguced "brids" soundtrack volume by 10%
+    - reduced "brids" soundtrack volume by 10%
     - planet castra compatibility: engine unit productivity now works for "engine casting" recipe 
     - compatibility with mods that require glass in recipes: if item named "glass" is present in game 
       calciner will have new recipe "Mineral glass" which allows for making glass from calcite (4 calcite -> 1 glass)
-    - machines powered directly by burining nuclear fuel cells now generate EM pollution
-    - generators powered directly by burining nuclear fuel cells now generate EM pollution
-    - regular rocket silo no longer have pollution discount because you can use diesel dragon silo instead
+    - machines powered directly by burning nuclear fuel cells now generate EM pollution
+    - generators powered directly by burning nuclear fuel cells now generate EM pollution
+    - regular rocket silo no longer have lowered em pollution because you can use diesel dragon silo instead
 ---------------------------------------------------------------------------------------------------
 Version: 0.44.2
 Date: 2026-01-25
