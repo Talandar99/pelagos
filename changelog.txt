@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.46.0
+Date: 2026-01-31
+  Changes:
+    - rewritten wooden platform code and moved it into separate mod that is now pelagos dependency 
+      that can be used without planet mod and even without Space Age installed
+    - removed old control script responsible for wooden platform mechanic
+  Balancing:
+    - slightly reduced pollution generation for oil rig
+---------------------------------------------------------------------------------------------------
 Version: 0.45.1
 Date: 2026-01-30
   Bugfixes:

@@ -1,6 +1,5 @@
 require("prototypes.fluids")
 require("prototypes.items")
-require("prototypes.tiles")
 require("prototypes.corrosive")
 require("prototypes.plants")
 require("prototypes.planet.electromagnetic-waves")

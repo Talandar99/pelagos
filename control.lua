@@ -148,92 +148,6 @@ script.on_nth_tick(60, function()
 end)
 -------------------------------------------------------------------------------
 -- Define the initial machine groups and allowed tiles for each group.
-local function build_allowed_entities()
-	local allowed = {}
-	local filters = {
-		{ filter = "subgroup", subgroup = "circuit-network" },
-	}
-	local entity_filters = {
-		{ filter = "type", type = "inserter" },
-		{ filter = "type", type = "transport-belt" },
-	}
-
-	local entities = prototypes.get_entity_filtered(entity_filters)
-	for _, ent in pairs(entities) do
-		allowed[ent.name] = true
-	end
-
-	-- get items from filters
-	local items = {}
-	if filters[1] then
-		items = prototypes.get_item_filtered(filters)
-	end
-
-	for _, item in pairs(items) do
-		if item.place_result then
-			allowed[item.place_result.name] = true
-		end
-	end
-
-	-- chest with size 1x1
-	local chest_filters = { { filter = "type", type = "container" } }
-	local chests = prototypes.get_entity_filtered(chest_filters)
-	for _, chest in pairs(chests) do
-		local box = chest.selection_box
-		if box and box.left_top and box.right_bottom then
-			local width = math.abs(box.right_bottom.x - box.left_top.x)
-			local height = math.abs(box.right_bottom.y - box.left_top.y)
-			if width < 1.1 and height < 1.1 then
-				allowed[chest.name] = true
-			end
-		end
-	end
-
-	-- logistic chest with size 1x1
-	local logistic_chest_filters = { { filter = "type", type = "logistic-container" } }
-	local logistic_chests = prototypes.get_entity_filtered(logistic_chest_filters)
-	for _, chest in pairs(logistic_chests) do
-		local box = chest.selection_box
-		if box and box.left_top and box.right_bottom then
-			local width = math.abs(box.right_bottom.x - box.left_top.x)
-			local height = math.abs(box.right_bottom.y - box.left_top.y)
-			if width < 1.1 and height < 1.1 then
-				allowed[chest.name] = true
-			end
-		end
-	end
-
-	-- additional stuff
-	allowed["gun-turret"] = true
-	allowed["heavy-gun-turret"] = true
-	allowed["flamethrower-turret"] = true
-	allowed["rocket-turret"] = true
-	allowed["pipe"] = true
-	allowed["steel-chest"] = true
-	allowed["barreling-machine"] = true
-	allowed["radar"] = true
-	allowed["canex-excavator"] = true
-	allowed["entity-ghost"] = true
-	allowed["pump"] = true
-	allowed["long-range-delivery-drone-request-depot"] = true
-	allowed["cargo_ship"] = true
-	allowed["cargo_ship_engine"] = true
-	allowed["oil_tanker"] = true
-	allowed["indep-boat"] = true
-	allowed["boat_engine"] = true
-	allowed["oil_rig"] = true
-	allowed["or_power_electric"] = true
-	allowed["or_pole"] = true
-	allowed["or_radar"] = true
-	allowed["or_tank"] = true
-
-	if script.active_mods["Krastorio2-spaced-out"] then
-		allowed["kr-steel-pump"] = true
-		allowed["kr-steel-pipe"] = true
-	end
-
-	return allowed
-end
 -------------------------------------------------------------------------------
 --- init
 -------------------------------------------------------------------------------
@@ -259,10 +173,6 @@ local function ensure_storage_integrity()
 		return
 	end
 
-	if not storage.allowed_entities then
-		storage.allowed_entities = build_allowed_entities()
-	end
-
 	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
 end
@@ -271,82 +181,6 @@ end
 -------------------------------------------------------------------------------
 local function on_entity_built(event)
 	ensure_storage_integrity()
-	local entity = event.entity
-	if not (entity and entity.valid) then
-		return
-	end
-
-	local surface = entity.surface
-	local bounds = entity.bounding_box
-	local left = math.floor(bounds.left_top.x + 0.001)
-	local top = math.floor(bounds.left_top.y + 0.001)
-	local right = math.floor(bounds.right_bottom.x - 0.001)
-	local bottom = math.floor(bounds.right_bottom.y - 0.001)
-
-	-- Check every tile beneath the entity for allowed terrain.
-	for tx = left, right do
-		for ty = top, bottom do
-			local tile = surface.get_tile(tx, ty)
-			local tile_name = tile.name
-			-- check if ground is wooden-platform
-			if tile_name == "wooden-platform" then
-				-- check if it's allowed to place
-				if not storage.allowed_entities[entity.name] then
-					if event.player_index then
-						local player = game.get_player(event.player_index)
-						if player then
-							local consumed_inv = event.consumed_items
-							if consumed_inv and consumed_inv.valid then
-								for _, stack in ipairs(consumed_inv.get_contents()) do
-									local item_name = stack.name or stack[1]
-									local item_count = stack.count or stack[2]
-									local item_quality = stack.quality or stack[3]
-									local insert_stack = { name = item_name, count = item_count }
-									if item_quality then
-										insert_stack.quality = (type(item_quality) == "table" and item_quality.name)
-											or item_quality
-									end
-									local inserted = player.insert(insert_stack)
-									if inserted < item_count then
-										surface.spill_item_stack({
-											position = entity.position,
-											stack = {
-												name = item_name,
-												count = item_count - inserted,
-												quality = insert_stack.quality,
-											},
-											enable_looted = true,
-										})
-									end
-								end
-							end
-						end
-					else
-						if event.stack and event.stack.valid_for_read then
-							local item_name = event.stack.name
-							local item_count = event.stack.count
-							local quality_proto = event.stack.quality
-							local spill_stack = { name = item_name, count = item_count }
-							if quality_proto then
-								spill_stack.quality = quality_proto.name or quality_proto
-							end
-							surface.spill_item_stack({
-								position = entity.position,
-								stack = spill_stack,
-								enable_looted = true,
-							})
-						end
-					end
-
-					if entity.valid then
-						entity.destroy({ raise_destroy = false })
-					end
-					return
-				end
-				return
-			end
-		end
-	end
 end
 
 local function on_built_rocket_silo(event)
@@ -373,7 +207,6 @@ local function on_built_rocket_silo(event)
 end
 -------------------------------------------------------------------------------
 local function on_init(event)
-	storage.allowed_entities = build_allowed_entities()
 	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
 	register_with_cargo_ships()
@@ -381,7 +214,6 @@ end
 script.on_init(on_init)
 
 local function on_configuration_changed(event)
-	storage.allowed_entities = build_allowed_entities()
 	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
 	register_with_cargo_ships()

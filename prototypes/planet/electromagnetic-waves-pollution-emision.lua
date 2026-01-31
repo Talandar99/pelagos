@@ -150,3 +150,8 @@ local lab = data.raw["lab"]["lab"]
 lab.energy_source = lab.energy_source or {}
 lab.energy_source.emissions_per_minute = lab.energy_source.emissions_per_minute or {}
 lab.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
+
+local lab = data.raw["mining-drill"]["oil_rig"]
+lab.energy_source = lab.energy_source or {}
+lab.energy_source.emissions_per_minute = lab.energy_source.emissions_per_minute or {}
+lab.energy_source.emissions_per_minute.electromagnetic_waves = 1.5

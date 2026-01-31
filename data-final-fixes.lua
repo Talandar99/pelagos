@@ -102,16 +102,6 @@ if mods["elevated-rails"] then
 	data.raw["utility-constants"].default.default_collision_masks["rail-support"].layers["deepsea_mechanic"] = true
 end
 
--- add placeholder layer for wooden-platform rework
-if not data.raw["collision-layer"]["wooden-platform"] then
-	data:extend({
-		{
-			type = "collision-layer",
-			name = "wooden-platform",
-		},
-	})
-end
-
 if data.raw["mining-drill"]["canex-excavator"] then
 	local excavator = data.raw["mining-drill"]["canex-excavator"]
 end
