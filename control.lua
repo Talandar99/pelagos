@@ -1,3 +1,49 @@
+local function recipe_has_sealant(recipe_name)
+	local rp = prototypes.recipe[recipe_name]
+	if not rp then
+		return false
+	end
+
+	for _, ing in pairs(rp.ingredients) do
+		if ing and ing.name == "coconut-sealant" then
+			return true
+		end
+	end
+
+	return false
+end
+
+local function sanity_checks()
+	assert(
+		recipe_has_sealant("cargo_ship"),
+		"\n\n[img=utility/warning_icon] Coconut Sealant missing from cargo_ship recipe!"
+			.. "\n\nA mod has removed coconut-sealant from the cargo ship recipe."
+			.. "\nThis breaks pelagos design by making planet pointless"
+			.. "\n\nPlease EITHER:"
+			.. "\n   Option 1) Disable the mod that alters the cargo_ship recipe"
+			.. "\n   Option 2) Restore coconut-sealant as a required ingredient\n\n"
+	)
+
+	assert(
+		recipe_has_sealant("oil_tanker"),
+		"\n\n[img=utility/warning_icon] Coconut Sealant missing from oil_tanker recipe!"
+			.. "\n\nA mod has removed coconut-sealant from the tanker recipe."
+			.. "\nThis breaks pelagos design by making planet pointless"
+			.. "\n\nPlease EITHER:"
+			.. "\n   Option 1) Disable the mod that alters the oil_tanker recipe"
+			.. "\n   Option 2) Restore coconut-sealant as a required ingredient\n\n"
+	)
+
+	assert(
+		recipe_has_sealant("boat"),
+		"\n\n[img=utility/warning_icon] Coconut Sealant missing from boat recipe!"
+			.. "\n\nA mod has removed coconut-sealant from the boat recipe."
+			.. "\nThis breaks pelagos design by making planet pointless"
+			.. "\n\nPlease EITHER:"
+			.. "\n   Option 1) Disable the mod that alters the boat recipe"
+			.. "\n   Option 2) Restore coconut-sealant as a required ingredient\n\n"
+	)
+end
 -------------------------------------------------------------------------------
 -- lighthouse: spawn/remove lamp based on fuel state
 -------------------------------------------------------------------------------
@@ -210,6 +256,7 @@ local function on_init(event)
 	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
 	register_with_cargo_ships()
+	sanity_checks()
 end
 script.on_init(on_init)
 
@@ -217,6 +264,7 @@ local function on_configuration_changed(event)
 	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
 	register_with_cargo_ships()
+	sanity_checks()
 end
 script.on_configuration_changed(on_configuration_changed)
 -------------------------------------------------------------------------------
@@ -341,3 +389,6 @@ script.on_event(defines.events.on_surface_created, function(event)
 	end
 end)
 -------------------------------------------------------------------------------
+---
+-------------------------------------------------------------------------------
+---
