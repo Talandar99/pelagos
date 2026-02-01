@@ -15,6 +15,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "pelagos-biochamber" },
 			{ type = "unlock-recipe", recipe = "pelagos-rocket-part" },
 			{ type = "unlock-recipe", recipe = "pirateship" },
+			{ type = "unlock-recipe", recipe = "port" },
 		},
 		prerequisites = { "agricultural-science-pack", "fish-breeding", "captivity" },
 		unit = {
@@ -131,7 +132,6 @@ if mods["cargo-ships"] then
 	}
 	t.effects = {
 		{ type = "unlock-recipe", recipe = "boat" },
-		{ type = "unlock-recipe", recipe = "port" },
 		{ type = "unlock-recipe", recipe = "buoy" },
 		{ type = "unlock-recipe", recipe = "chain_buoy" },
 		{ type = "unlock-recipe", recipe = "cargo_ship" },
@@ -910,7 +910,7 @@ end
 if mods["pirateship"] then
 	local t = data.raw["technology"]["Pirate_Ship"]
 
-	t.icon = "__pelagos__/graphics/pirateship/pirateship_tech_icon.png"
+	t.icon = "__talandar_cargo_ships_tweaks__/graphics/pirateship/pirateship_tech_icon.png"
 	t.icon_size = 256
 	t.prerequisites = { "pelagos-science-pack", "chemical-science-pack", "military-science-pack" }
 	t.effects = {

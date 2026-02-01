@@ -35,6 +35,7 @@ end
 if settings.startup["allow-galleon-before-pelagos"].value then
 	if mods["pirateship"] and data.raw.technology["steel-axe"] and data.raw.recipe["pirateship"] then
 		table.insert(data.raw.technology["steel-axe"].effects, { type = "unlock-recipe", recipe = "pirateship" })
+		table.insert(data.raw.technology["steel-axe"].effects, { type = "unlock-recipe", recipe = "port" })
 	end
 end
 -------------------------------------------------------------------------------

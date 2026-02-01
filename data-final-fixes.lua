@@ -1,6 +1,5 @@
 -- make sure plants can grow on sand-1
 require("prototypes.plants-autoplace-settings")
-require("prototypes.pirate-ship")
 require("prototypes.liquid-fuel.rocket-silo")
 -- allow foundation on pelagos-deepsea
 local landfill = data.raw.item["foundation"]
@@ -86,16 +85,6 @@ local diesel_categories = table.deepcopy(base_categories)
 table.insert(diesel_categories, "barreling")
 table.insert(diesel_categories, "cargo-crates")
 data.raw["assembling-machine"]["diesel-assembling-machine"].crafting_categories = diesel_categories
-
--- remove buggy input from pirate ship mod
-data:extend({
-	{
-		type = "custom-input",
-		name = "enter-pirate-ship",
-		key_sequence = "",
-		consuming = "none",
-	},
-})
 
 -- disable elevated rails on pleagos deep sea
 if mods["elevated-rails"] then

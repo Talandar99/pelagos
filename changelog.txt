@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.48.0
+Date: 2026-02-01
+  Changes:
+    - galleon can now be placed on waterway
+    - port is unlocked with galleon so right after researching pelagos
+    - setting "Allow galleon before pelagos" has been renamed to "Allow galleon and port before pelagos"
+    - setting "Allow galleon and port before pelagos" now unlocks galleon and port with steel axe research, 
+      not just galleon
+---------------------------------------------------------------------------------------------------
 Version: 0.47.0
 Date: 2026-02-01
   Changes:
