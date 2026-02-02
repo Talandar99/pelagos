@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.48.1
+Date: 2026-02-01
+  Changes:
+    - recipes to make steam machines from iron are now part of lignumis so my code that 
+      add alternative recipes (that use iron) is not needed anymore, so it is removed
+---------------------------------------------------------------------------------------------------
 Version: 0.48.0
 Date: 2026-02-01
   Changes:

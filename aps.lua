@@ -389,43 +389,6 @@ if mods["lignumis"] then
 		type = "mine-entity",
 		entity = "pelagos-copper-stromatolite",
 	}
-	data:extend({
-		{
-			type = "recipe",
-			name = "steam-inserter-iron-pipe",
-			icons = {
-				{ icon = "__lignumis-assets__/graphics/icons/burner-inserter.png", icon_size = 64 },
-				{ icon = "__base__/graphics/icons/fluid/steam.png", icon_size = 64, scale = 0.25, shift = { 8, -8 } },
-				{ icon = "__base__/graphics/icons/pipe.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
-			},
-			enabled = false,
-			ingredients = {
-				{ type = "item", name = "burner-inserter", amount = 1 },
-				{ type = "item", name = "pipe", amount = 2 },
-			},
-			results = { { type = "item", name = "steam-inserter", amount = 1 } },
-			allow_productivity = false,
-		},
-		{
-			type = "recipe",
-			name = "steam-long-handed-inserter-iron-pipe",
-			icons = {
-				{ icon = "__lignumis-assets__/graphics/icons/burner-long-handed-inserter.png", icon_size = 64 },
-				{ icon = "__base__/graphics/icons/fluid/steam.png", icon_size = 64, scale = 0.25, shift = { 8, -8 } },
-				{ icon = "__base__/graphics/icons/pipe.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
-			},
-			enabled = false,
-			ingredients = {
-				{ type = "item", name = "burner-long-handed-inserter", amount = 1 },
-				{ type = "item", name = "pipe", amount = 2 },
-			},
-			results = { { type = "item", name = "steam-long-handed-inserter", amount = 1 } },
-			allow_productivity = false,
-		},
-	})
-
-	utils.add_recipes("steam-power", { "steam-inserter-iron-pipe" })
-	utils.add_recipes("steam-power", { "steam-long-handed-inserter-iron-pipe" })
 end
 
 if mods["cargo_crates"] then
