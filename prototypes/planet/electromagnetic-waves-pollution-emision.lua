@@ -49,16 +49,16 @@ local function add_em_to_generator(proto)
 				proto.energy_source.emissions_per_minute["electromagnetic_waves"] = value
 			end
 		end
-	elseif
-		(proto.type == "generator" or proto.type == "burner-generator")
-		and proto.burner
-		and has_nuclear_fuel(proto.burner)
-		and proto.max_power_output
-	then
-		local mw = (util.parse_energy(proto.max_power_output) / 1000)
-		if mw > 0 then
+	elseif proto.type == "burner-generator" and proto.burner and proto.max_power_output then
+		local power_mw = util.parse_energy(proto.max_power_output) / 100000
+		local multiplier = 5
+		if has_nuclear_fuel(proto.burner) then
+			multiplier = 100
+		end
+		local value = power_mw * multiplier
+		if value > 0 then
 			proto.burner.emissions_per_minute = proto.burner.emissions_per_minute or {}
-			proto.burner.emissions_per_minute.electromagnetic_waves = mw
+			proto.burner.emissions_per_minute.electromagnetic_waves = value
 		end
 	elseif proto.type == "fusion-generator" then
 		local waves = 50
@@ -109,7 +109,8 @@ for _, tile in pairs(tiles) do
 	if data.raw.tile[tile] then
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00001
-		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000125
+		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000124
+		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000125
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00003 -- a bit too high
 	end
 end
@@ -120,7 +121,7 @@ for _, tile in pairs(tiles) do
 		data.raw.tile[tile].absorptions_per_second = data.raw.tile[tile].absorptions_per_second or {}
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000001 -- too low
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000015
-		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00000155
+		data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000015
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.0000016
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.00000175
 		--data.raw.tile[tile].absorptions_per_second.electromagnetic_waves = 0.000003 -- a bit to high
@@ -141,11 +142,6 @@ entity.energy_source = entity.energy_source or {}
 entity.energy_source.emissions_per_minute = entity.energy_source.emissions_per_minute or {}
 entity.energy_source.emissions_per_minute.electromagnetic_waves = 0
 
-local beacon = data.raw["beacon"]["beacon"]
-beacon.energy_source = beacon.energy_source or {}
-beacon.energy_source.emissions_per_minute = beacon.energy_source.emissions_per_minute or {}
-beacon.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
-
 local lab = data.raw["lab"]["lab"]
 lab.energy_source = lab.energy_source or {}
 lab.energy_source.emissions_per_minute = lab.energy_source.emissions_per_minute or {}
@@ -154,4 +150,4 @@ lab.energy_source.emissions_per_minute.electromagnetic_waves = 0.5
 local lab = data.raw["mining-drill"]["oil_rig"]
 lab.energy_source = lab.energy_source or {}
 lab.energy_source.emissions_per_minute = lab.energy_source.emissions_per_minute or {}
-lab.energy_source.emissions_per_minute.electromagnetic_waves = 1.5
+lab.energy_source.emissions_per_minute.electromagnetic_waves = 1.0

@@ -1024,3 +1024,29 @@ data:extend({
 		results = { { type = "item", name = "pelagos-sandfill", amount = 1 } },
 	},
 })
+
+if mods["lubrication_tower"] then
+	data:extend({
+		{
+			type = "recipe",
+			name = "lubrication-tower",
+			enabled = false,
+			ingredients = {
+				{ type = "item", name = "steel-plate", amount = 50 },
+				{ type = "item", name = "titanium-plate", amount = 10 },
+				{ type = "item", name = "pipe", amount = 20 },
+				{ type = "item", name = "coconut-sealant", amount = 20 },
+				{ type = "item", name = "storage-tank", amount = 1 },
+			},
+			results = { { type = "item", name = "lubrication-tower", amount = 1 } },
+			surface_conditions = {
+				{
+					property = "pressure",
+					min = 1809,
+					max = 1809,
+				},
+			},
+		},
+	})
+	data.raw.item["lubrication-tower"].default_import_location = "pelagos"
+end

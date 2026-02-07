@@ -156,3 +156,14 @@ if data.raw.item and data.raw.item["glass"] then
 		},
 	})
 end
+
+if mods["Krastorio2-spaced-out"] then
+	data.raw["recipe"]["calciner-advanced-steel-smelting"].ingredients = {
+		{ type = "item", name = "iron-plate", amount = 5 },
+		{ type = "item", name = "activated-carbon", amount = 2 },
+	}
+
+	data.raw["recipe"]["calciner-advanced-steel-smelting"].results = {
+		{ type = "item", name = "steel-plate", amount = 3 },
+	}
+end

@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.48.1",
+    "version": "0.49.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -17,6 +17,8 @@
         "diesel_cargo_ships",
         "diesel_machines",
         "wooden_platform",
+        "lubrication_tower",
+        "? apia",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-arig",
         "? maraxsis",

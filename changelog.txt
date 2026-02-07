@@ -1,9 +1,33 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.49.0
+Date: 2026-02-07
+  Changes:
+    - new required dependency: Lubrication Tower. Non electric beacon
+    - Lubrication Tower is now part of pelagos tech tree until Ferros will be released 
+    - new recipe: nutrients spoiling. allows you to turn nutrients into spoilage
+    - K2SO compatibility: advanced steel smelting now have different ratio if mod is isntalled 
+      (5 iron + 2 activated carbon => 3 steel) to balance it better next to k2 coke recipe
+    - apia compatibility: Pelagos Coconut biolubricant is now affected by Apia lubricant productivity
+    - apia compatibility: Pelagos Copper spitter eggs production is now affected by Apia biter eggs productivity
+    - apia compatibility: Pelagos Coconut processing is now affected by Apia agriculture productivity
+    - apia compatibility: Apia larvae cultivation is now affected by Pelagos cultivation productivity
+    - apia compatibility: Apia wax platform is now affected by Pelagos landfill productivity
+  Balancing:
+    - regular beacon em waves value is no longer reduced, because you can now use lubrication tower
+    - em absorbtion by ground and water is now slightly reduced because with addtion of diesel dragon 
+      and lubrication tower you can now make fully non electric base
+    - big, behemoth and leviathan copper spitter will now have 30,50 and 90 proc poison resistance
+  Bugfixes:
+    - only planet discovery and science pack is now marked ass "essential technology"
+    - antimaterial reactor from k2so now generate em pollution
+    - bio reactor from apia now generate em pollution
+    - all burner generators should now generate em pollution
+---------------------------------------------------------------------------------------------------
 Version: 0.48.1
 Date: 2026-02-01
   Changes:
     - recipes to make steam machines from iron are now part of lignumis so my code that 
-      add alternative recipes (that use iron) is not needed anymore, so it is removed
+      add alternative recipes is not needed anymore, so it is removed
 ---------------------------------------------------------------------------------------------------
 Version: 0.48.0
 Date: 2026-02-01

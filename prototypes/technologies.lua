@@ -38,7 +38,6 @@ data:extend({
 		name = "project-diesel-dragon",
 		icon_size = 752,
 		icon = "__pelagos__/graphics/diesel-dragon/diesel-dragon-technology.png",
-		essential = true,
 		effects = {
 			{ type = "unlock-recipe", recipe = "advanced-titanium-plate-from-dust" },
 			{ type = "unlock-recipe", recipe = "diesel-dragon" },
@@ -67,7 +66,6 @@ data:extend({
 		name = "coconut-processing-technology",
 		icon = "__pelagos__/graphics/coconut-processing-technology.png",
 		icon_size = 512,
-		essential = true,
 		effects = {
 			{ type = "unlock-recipe", recipe = "nutrients-from-coconut-meat" },
 			{ type = "unlock-recipe", recipe = "coconut-processing" },
@@ -164,7 +162,6 @@ data:extend({
 		name = "fermentation-bacteria-cultivation-technology",
 		icon = "__pelagos__/graphics/fermentation-bacteria.png",
 		icon_size = 64,
-		essential = true,
 		effects = {
 			{ type = "unlock-recipe", recipe = "fermentation-bacteria" },
 			{ type = "unlock-recipe", recipe = "fermentation-bacteria-cultivation" },
@@ -211,7 +208,6 @@ end
 --		name = "diesel-mining-drill",
 --		icon = "__pelagos__/graphics/diesel-mining-drill/diesel-mining-drill-technology.png",
 --		icon_size = 512,
---		essential = true,
 --		effects = {
 --			{ type = "unlock-recipe", recipe = "diesel-mining-drill" },
 --		},
@@ -233,7 +229,6 @@ data:extend({
 		name = "calciner",
 		icon = "__pelagos__/graphics/calciner/calciner-technology.png",
 		icon_size = 320,
-		essential = true,
 		effects = {
 			{ type = "unlock-recipe", recipe = "calciner" },
 			{ type = "unlock-recipe", recipe = "calciner-calcite-brick" },
@@ -574,11 +569,18 @@ if mods["gleba_cultured_soil"] then
 		change = 0.1,
 	})
 end
--- add back in future
 if mods["skewer_planet_vesta"] then
 	table.insert(productivity_effects, {
 		type = "change-recipe-productivity",
 		recipe = "vesta-foundation",
+		change = 0.1,
+	})
+end
+
+if mods["apia"] then
+	table.insert(productivity_effects, {
+		type = "change-recipe-productivity",
+		recipe = "wax-platform",
 		change = 0.1,
 	})
 end
@@ -638,7 +640,13 @@ local cultivation_productivity_effects = {
 		change = 0.1,
 	},
 }
-
+if mods["apia"] then
+	table.insert(cultivation_productivity_effects, {
+		type = "change-recipe-productivity",
+		recipe = "larvae-cultivation",
+		change = 0.1,
+	})
+end
 data:extend({
 	{
 		type = "technology",
@@ -700,6 +708,7 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "wood-spoiling" },
 			{ type = "unlock-recipe", recipe = "coconut-husk-spoiling" },
+			{ type = "unlock-recipe", recipe = "nutrients-spoiling" },
 			{ type = "unlock-recipe", recipe = "nutrients-from-spoilage-methane" },
 		},
 		prerequisites = { "pelagos-science-pack" },
@@ -1048,6 +1057,22 @@ if mods["cargo_crates"] then
 	}
 end
 
+if mods["lubrication_tower"] then
+	table.insert(data.raw["technology"]["lubrication-tower"].prerequisites, "pelagos-science-pack")
+	data.raw["technology"]["lubrication-tower"].unit = {
+		count = 1000,
+		ingredients = {
+			{ "automation-science-pack", 1 },
+			{ "logistic-science-pack", 1 },
+			{ "chemical-science-pack", 1 },
+			{ "space-science-pack", 1 },
+			{ "pelagos-science-pack", 1 },
+			{ "production-science-pack", 1 },
+		},
+		time = 60,
+	}
+end
+
 if mods["Cerys-Moon-of-Fulgora"] or mods["planetaris-arig"] then
 	data:extend({
 		{
@@ -1066,7 +1091,6 @@ end
 if mods["planetaris-arig"] then
 	table.insert(
 		data.raw["technology"]["pelagos-biodiesel"].effects,
-
 		{ type = "unlock-recipe", recipe = "pelagos-biodiesel-arig-cactus" }
 	)
 end
@@ -1077,4 +1101,22 @@ if mods["castra"] then
 		change = 0.1,
 	})
 end
+if mods["apia"] then
+	table.insert(data.raw["technology"]["agriculture-productivity"].effects, {
+		type = "change-recipe-productivity",
+		recipe = "coconut-processing",
+		change = 0.1,
+	})
+	table.insert(data.raw["technology"]["biter-egg-productivity"].effects, {
+		type = "change-recipe-productivity",
+		recipe = "copper-biter-egg",
+		change = 0.05,
+	})
+	table.insert(data.raw["technology"]["lubricant-productivity"].effects, {
+		type = "change-recipe-productivity",
+		recipe = "pelagos-biolubricant",
+		change = 0.1,
+	})
+end
+
 PlanetsLib.add_item_name_to_global_cargo_drops_whitelist("coconut")
