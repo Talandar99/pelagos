@@ -1242,15 +1242,27 @@ PlanetsLib:extend({
 			-- sun fully set at 0.45
 			-- sun starts to rise at 0.55
 			-- sun fully risen at 0.75
+			--day_night_cycle_color_lookup = {
+			--	{ 0.00, "__space-age__/graphics/lut/gleba-1-noon.png" },
+			--	{ 0.15, "__space-age__/graphics/lut/gleba-2-afternoon.png" },
+			--	{ 0.25, "__space-age__/graphics/lut/gleba-3-late-afternoon.png" },
+			--	{ 0.35, "__space-age__/graphics/lut/gleba-4-sunset.png" },
+			--	{ 0.45, "__space-age__/graphics/lut/gleba-5-after-sunset.png" },
+			--	{ 0.55, "__space-age__/graphics/lut/gleba-6-before-dawn.png" },
+			--	{ 0.65, "__space-age__/graphics/lut/gleba-7-dawn.png" },
+			--	{ 0.75, "__space-age__/graphics/lut/gleba-8-morning.png" },
+			--},
+
 			day_night_cycle_color_lookup = {
-				{ 0.00, "__space-age__/graphics/lut/gleba-1-noon.png" },
-				{ 0.15, "__space-age__/graphics/lut/gleba-2-afternoon.png" },
-				{ 0.25, "__space-age__/graphics/lut/gleba-3-late-afternoon.png" },
-				{ 0.35, "__space-age__/graphics/lut/gleba-4-sunset.png" },
-				{ 0.45, "__space-age__/graphics/lut/gleba-5-after-sunset.png" },
-				{ 0.55, "__space-age__/graphics/lut/gleba-6-before-dawn.png" },
-				{ 0.65, "__space-age__/graphics/lut/gleba-7-dawn.png" },
-				{ 0.75, "__space-age__/graphics/lut/gleba-8-morning.png" },
+				{ 0.00000000, "__pelagos__/graphics/luts/tropical_pelagos_day.png" },
+				{ 0.00000001, "__pelagos__/graphics/luts/tropical_pelagos_day.png" },
+				{ 0.25000000, "__pelagos__/graphics/luts/tropical_pelagos_day.png" },
+				{ 0.30000000, "__pelagos__/graphics/luts/tropical_pelagos_dusk.png" },
+				{ 0.35000000, "__pelagos__/graphics/luts/tropical_pelagos_night.png" },
+				{ 0.65000000, "__pelagos__/graphics/luts/tropical_pelagos_night.png" },
+				{ 0.70000000, "__pelagos__/graphics/luts/tropical_pelagos_dusk.png" },
+				{ 0.75000000, "__pelagos__/graphics/luts/tropical_pelagos_day.png" },
+				{ 0.99999999, "__pelagos__/graphics/luts/tropical_pelagos_day.png" },
 			},
 		},
 		solar_power_in_space = 200,

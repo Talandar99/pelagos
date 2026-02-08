@@ -54,7 +54,7 @@ data:extend({
 		icon = "__pelagos__/graphics/barreling-machine-icon.png",
 		subgroup = "production-machine",
 		group = "production",
-		order = "b[barreling-machine]",
+		order = "z-a[barreling-machine]",
 		inventory_move_sound = item_sounds.metal_chest_inventory_move,
 		pick_sound = item_sounds.metal_chest_inventory_pickup,
 		drop_sound = item_sounds.metal_chest_inventory_move,
