@@ -220,7 +220,7 @@ data:extend({
 		darkness_for_all_lamps_on = 0.5,
 		darkness_for_all_lamps_off = 0.3,
 		--light = { intensity = 0.9, size = 40, color = { 1, 1, 0.75 } },
-		light = { intensity = 0.9, size = 120, color = { 1, 1, 0.75 } },
+		light = { intensity = 2.1, size = 120, color = { 1, 1, 0.75 } },
 		light_when_colored = { intensity = 0, size = 6, color = { 1, 1, 0.75 } },
 		--glow_size = 6,
 		glow_size = 6,
