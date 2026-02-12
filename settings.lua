@@ -10,7 +10,7 @@ data:extend({
 		type = "bool-setting",
 		name = "pelagos-contribute-to-aquilo-discovery",
 		setting_type = "startup",
-		default_value = false,
+		default_value = true,
 		order = "pelagos-b",
 	},
 	{

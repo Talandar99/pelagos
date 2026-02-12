@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.50.2
+Date: 2026-02-09
+  Changes:
+    - pelagos science pack is now by default requirement to go to aquilo (this can be disabled in settings, so no worries)
+---------------------------------------------------------------------------------------------------
 Version: 0.50.1
 Date: 2026-02-09
   Changes:
