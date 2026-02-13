@@ -1174,7 +1174,7 @@ PlanetsLib:extend({
 	{
 		type = "planet",
 		name = "pelagos",
-		label_orientation = 0.15,
+		label_orientation = 0.25,
 		orbit = {
 			parent = { type = "space-location", name = "star" },
 			distance = 20,

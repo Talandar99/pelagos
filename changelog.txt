@@ -1,8 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.50.3
+Date: 2026-02-10
+  Balancing:
+    - nutrients spoiling recipe no longer accept productivity modules
+---------------------------------------------------------------------------------------------------
 Version: 0.50.2
 Date: 2026-02-09
   Changes:
     - pelagos science pack is now by default requirement to go to aquilo (this can be disabled in settings, so no worries)
+    - moved "pelagos" planet name label a bit to make it more visible when playing any planet start with lignumis
+    - updated required Canal Excavator Version
+  Bugfixes:
+    - fusion cell powered machines should now also generate EM pollution on Pelagos
 ---------------------------------------------------------------------------------------------------
 Version: 0.50.1
 Date: 2026-02-09

@@ -15,6 +15,23 @@ local function has_nuclear_fuel(es)
 	return false
 end
 
+local function has_fusion_fuel(es)
+	if not es then
+		return false
+	end
+	if es.fuel_category == "fusion" then
+		return true
+	end
+	if es.fuel_categories then
+		for _, cat in pairs(es.fuel_categories) do
+			if cat == "fusion" then
+				return true
+			end
+		end
+	end
+	return false
+end
+
 local function add_em_to_electric(proto)
 	if proto.energy_source and proto.energy_usage then
 		local es = proto.energy_source
@@ -23,6 +40,8 @@ local function add_em_to_electric(proto)
 		if es.type == "electric" then
 			generates_pollution = true
 		elseif es.type == "burner" and has_nuclear_fuel(es) then
+			generates_pollution = true
+		elseif es.type == "burner" and has_fusion_fuel(es) then
 			generates_pollution = true
 		end
 

@@ -248,7 +248,7 @@ data:extend({
 		subgroup = "agriculture-processes",
 		order = "c[nutrients]-a[zspoilage]",
 		enabled = false,
-		allow_productivity = true,
+		allow_productivity = false,
 		energy_required = 0.1,
 		ingredients = {
 			{ type = "item", name = "nutrients", amount = 10 },

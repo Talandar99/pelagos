@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.50.1",
+    "version": "0.50.3",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -9,7 +9,7 @@
         "quality",
         "PlanetsLib",
         "cargo_crates",
-        "canal-excavator >= 1.9.0",
+        "canal-excavator >= 1.13.3",
         "cargo-ships",
         "pirateship",
         "long_range_delivery_drones_talandar_fork",
