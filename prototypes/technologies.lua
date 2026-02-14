@@ -105,7 +105,7 @@ data:extend({
 	{
 		type = "technology",
 		name = "lighthouse",
-		icon = "__pelagos__/graphics/lighthouse/lighthouse-technology.png",
+		icon = "__lighthouse_radar__/graphics/lighthouse-technology.png",
 		icon_size = 256,
 		effects = {
 			{
@@ -814,7 +814,7 @@ data:extend({
 	{
 		type = "technology",
 		name = "heavy-gun-turret",
-		icon = "__pelagos__/graphics/heavy-gun-turret-technology.png",
+		icon = "__heavy_gun_turret__/graphics/heavy-gun-turret-technology.png",
 		icon_size = 305,
 		effects = {
 			{ type = "unlock-recipe", recipe = "heavy-gun-turret" },
@@ -1022,25 +1022,6 @@ end
 if mods["cargo-ships"] then
 	data.raw["technology"]["automated_bridges"] = nil
 end
--- add heavy-gun-turret to dmg researches
-local function add_heavy_turret_bonus(tech_name, modifier)
-	local tech = data.raw.technology[tech_name]
-	if tech and tech.effects then
-		table.insert(tech.effects, {
-			type = "turret-attack",
-			turret_id = "heavy-gun-turret",
-			modifier = modifier,
-		})
-	end
-end
-
-add_heavy_turret_bonus("physical-projectile-damage-1", 0.1)
-add_heavy_turret_bonus("physical-projectile-damage-2", 0.1)
-add_heavy_turret_bonus("physical-projectile-damage-3", 0.2)
-add_heavy_turret_bonus("physical-projectile-damage-4", 0.2)
-add_heavy_turret_bonus("physical-projectile-damage-5", 0.2)
-add_heavy_turret_bonus("physical-projectile-damage-6", 0.2)
-add_heavy_turret_bonus("physical-projectile-damage-7", 0.2)
 
 if mods["cargo_crates"] then
 	data.raw["technology"]["cargo-crates"].prerequisites = { "pelagos-science-pack" }

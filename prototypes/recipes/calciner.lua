@@ -152,6 +152,7 @@ if data.raw.item and data.raw.item["glass"] then
 			},
 			icon_size = glass.icon_size,
 			allow_productivity = true,
+			enabled = false,
 			auto_recycle = false,
 		},
 	})

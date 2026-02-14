@@ -52,3 +52,7 @@ end
 
 require("prototypes.recipes.barreling")
 require("aps-lignumis-updates")
+
+-- import location for submods
+data.raw["item"]["lighthouse"].default_import_location = "pelagos"
+data.raw["item"]["heavy-gun-turret"].default_import_location = "pelagos"

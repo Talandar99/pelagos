@@ -44,72 +44,7 @@ local function sanity_checks()
 			.. "\n   Option 2) Restore coconut-sealant as a required ingredient\n\n"
 	)
 end
--------------------------------------------------------------------------------
--- lighthouse: spawn/remove lamp based on fuel state
--------------------------------------------------------------------------------
-local function on_built_lighthouse(event)
-	local lighthouse = event.entity or event.created_entity
-	if not (lighthouse and lighthouse.valid and lighthouse.name == "lighthouse") then
-		return
-	end
 
-	storage.pelagos_lighthouse_lamps[lighthouse.unit_number] = { radar = lighthouse, lamp = nil }
-end
-local function on_removed_lighthouse(event)
-	local e = event.entity
-	if not (e and e.valid and e.name == "lighthouse") then
-		return
-	end
-
-	local data = storage.pelagos_lighthouse_lamps[e.unit_number]
-	if data and data.lamp and data.lamp.valid then
-		data.lamp.destroy()
-	end
-	storage.pelagos_lighthouse_lamps[e.unit_number] = nil
-end
-
--------------------------------------------------------------------------------
--- check every 2 seconds
--------------------------------------------------------------------------------
-script.on_nth_tick(120, function()
-	if not storage.pelagos_lighthouse_lamps then
-		return
-	end
-
-	for id, data in pairs(storage.pelagos_lighthouse_lamps) do
-		local lighthouse = data.radar
-		if not (lighthouse and lighthouse.valid) then
-			if data.lamp and data.lamp.valid then
-				data.lamp.destroy()
-			end
-			storage.pelagos_lighthouse_lamps[id] = nil
-		else
-			local fluid = lighthouse.fluidbox and lighthouse.fluidbox[1]
-			local has_fuel = (fluid and fluid.amount or 0) > 0
-
-			if has_fuel then
-				if not (data.lamp and data.lamp.valid) then
-					local lamp = lighthouse.surface.create_entity({
-						name = "lighthouse-light",
-						position = { lighthouse.position.x - 0.1, lighthouse.position.y },
-						force = lighthouse.force,
-						create_build_effect_smoke = false,
-					})
-					if lamp then
-						lamp.destructible = false
-						lamp.operable = false
-						data.lamp = lamp
-					end
-				end
-			else
-				if data.lamp and data.lamp.valid then
-					data.lamp.destroy()
-					data.lamp = nil
-				end
-			end
-		end
-	end
-end)
 -------------------------------------------------------------------------------
 -- diesel asteroid collector: manage paired engine
 -------------------------------------------------------------------------------
@@ -203,7 +138,6 @@ local function ensure_storage_integrity()
 		return
 	end
 
-	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
 end
 -------------------------------------------------------------------------------
@@ -237,14 +171,12 @@ local function on_built_rocket_silo(event)
 end
 -------------------------------------------------------------------------------
 local function on_init(event)
-	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
 	sanity_checks()
 end
 script.on_init(on_init)
 
 local function on_configuration_changed(event)
-	storage.pelagos_lighthouse_lamps = storage.pelagos_lighthouse_lamps or {}
 	storage.pelagos_diesel_collectors = storage.pelagos_diesel_collectors or {}
 	sanity_checks()
 end
@@ -258,7 +190,6 @@ script.on_event(defines.events.on_built_entity, function(event)
 
 	on_entity_built(event)
 	on_built_rocket_silo(event)
-	on_built_lighthouse(event)
 	on_built_collector(event)
 end)
 
@@ -269,7 +200,6 @@ script.on_event(defines.events.on_robot_built_entity, function(event)
 	end
 	on_entity_built(event)
 	on_built_rocket_silo(event)
-	on_built_lighthouse(event)
 	on_built_collector(event)
 end)
 script.on_event(defines.events.on_space_platform_built_entity, function(event)
@@ -279,7 +209,6 @@ script.on_event(defines.events.on_space_platform_built_entity, function(event)
 	end
 
 	on_built_rocket_silo(event)
-	on_built_lighthouse(event)
 	on_built_collector(event)
 end)
 
@@ -291,7 +220,6 @@ script.on_event(
 			return
 		end
 
-		on_removed_lighthouse(event)
 		on_removed_collector(event)
 	end
 )
