@@ -1012,17 +1012,6 @@ data:extend({
 	},
 })
 
--- remove unused researches
-if mods["cargo-ships"] then
-	data.raw["technology"]["cargo_ships"] = nil
-end
-if mods["cargo-ships"] then
-	data.raw["technology"]["water_transport"] = nil
-end
-if mods["cargo-ships"] then
-	data.raw["technology"]["automated_bridges"] = nil
-end
-
 if mods["cargo_crates"] then
 	data.raw["technology"]["cargo-crates"].prerequisites = { "pelagos-science-pack" }
 	data.raw["technology"]["cargo-crates"].unit = {

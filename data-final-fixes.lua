@@ -1,4 +1,4 @@
--- make sure plants can grow on sand-1
+require("prototypes.data-final-fixes-cargo-ships")
 require("prototypes.plants-autoplace-settings")
 require("prototypes.liquid-fuel.rocket-silo")
 -- allow foundation on pelagos-deepsea

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.51.3
+Date: 2026-02-15
+  Bugfixes:
+    - code that makes unused cargo ships technologies hidden should now rewire technology 
+      connections first, to make sure other mods that rely on them work properly. 
+      Peterwolf's cargo ship mods, should now work fine with pelagos.
+---------------------------------------------------------------------------------------------------
 Version: 0.51.2
 Date: 2026-02-15
   Bugfixes:
