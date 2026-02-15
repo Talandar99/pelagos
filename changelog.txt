@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.51.2
+Date: 2026-02-15
+  Bugfixes:
+    - fixed changelog
+---------------------------------------------------------------------------------------------------
 Version: 0.51.1
 Date: 2026-02-15
   Changes:
@@ -11,7 +16,7 @@ Date: 2026-02-14
     - added lighthouse as dependancy
     - separated heavy gun turret code into separate mod
     - added heavy gun turret as dependancy
-  Bugfixes
+  Bugfixes:
     - calciner mineral glass recipe is now disabled by default
 ---------------------------------------------------------------------------------------------------
 Version: 0.50.3
