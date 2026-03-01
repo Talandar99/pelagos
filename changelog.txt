@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.51.4
+Date: 2026-02-28
+  Balancing:
+    - lubrication tower: added crafting time (20 seconds) 
+    - lubrication tower: added 100 refined concrete to recipe 
+---------------------------------------------------------------------------------------------------
 Version: 0.51.3
 Date: 2026-02-15
   Bugfixes:
