@@ -1037,7 +1037,7 @@ if mods["lubrication_tower"] then
 				{ type = "item", name = "titanium-plate", amount = 10 },
 				{ type = "item", name = "pipe", amount = 20 },
 				{ type = "item", name = "coconut-sealant", amount = 20 },
-				{ type = "item", name = "storage-tank", amount = 1 },
+				{ type = "item", name = "engine-unit", amount = 10 },
 				{ type = "item", name = "refined-concrete", amount = 100 },
 			},
 			results = { { type = "item", name = "lubrication-tower", amount = 1 } },
