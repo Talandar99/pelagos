@@ -120,6 +120,7 @@ script.on_nth_tick(60, function()
 				local fluid = engine.fluidbox and engine.fluidbox[1]
 				local has_fuel = (fluid and fluid.amount or 0) > 0
 				local working = (engine.is_crafting() or engine.energy > 0) and has_fuel
+
 				if collector.active ~= working then
 					collector.active = working
 				end

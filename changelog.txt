@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.51.7
+Date: 2026-03-05
+  Bugfixes:
+    - fixed bug where sometimes you could not pull asteroid chunks from diesel asteroid collector.
+      If it still happens to existing inserters, just mine and place them and it should be fine.
+  Balancing:
+    - increased arm_inventory_size for diesel asteroid collector (5 -> 6)
+    - diesel asteroid collector arm_inventory_size now scale with quality (+1 per quality lv)
+---------------------------------------------------------------------------------------------------
 Version: 0.51.6
 Date: 2026-03-04
   Changes:

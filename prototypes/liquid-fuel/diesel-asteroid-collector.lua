@@ -207,8 +207,8 @@ data:extend({
 		},
 		inventory_size = 39,
 		inventory_size_quality_increase = 5,
-		arm_inventory_size = 5,
-		arm_inventory_size_quality_increase = 0,
+		arm_inventory_size = 6,
+		arm_inventory_size_quality_increase = 1,
 		max_health = 300,
 		minable = { mining_time = 0.2, result = "diesel-asteroid-collector" },
 		resistances = {
@@ -259,7 +259,13 @@ data:extend({
 		type = "assembling-machine",
 		name = "diesel-asteroid-collector-engine",
 		icon = "__pelagos__/graphics/diesel-asteroid-collector/asteroid-collector.png",
-		flags = { "placeable-neutral", "placeable-player", "player-creation" },
+		flags = {
+			"placeable-neutral",
+			"placeable-player",
+			"player-creation",
+			"no-automated-item-insertion",
+			"no-automated-item-removal",
+		},
 		collision_mask = { layers = {} },
 		max_health = 350,
 		corpse = "assembling-machine-3-remnants",
@@ -276,28 +282,6 @@ data:extend({
 			{
 				type = "fire",
 				percent = 70,
-			},
-		},
-		fluid_boxes = {
-			{
-				production_type = "input",
-				pipe_picture = cutpipecover(),
-				pipe_covers = pipecoverspictures(),
-				volume = 1000,
-				pipe_connections = {
-					{ flow_direction = "input", direction = defines.direction.north, position = { 0, -1 } },
-				},
-				secondary_draw_orders = { north = -1 },
-			},
-			{
-				production_type = "output",
-				pipe_picture = cutpipecover(),
-				pipe_covers = pipecoverspictures(),
-				volume = 1000,
-				pipe_connections = {
-					{ flow_direction = "output", direction = defines.direction.south, position = { 0, 1 } },
-				},
-				secondary_draw_orders = { north = -1 },
 			},
 		},
 		fluid_boxes_off_when_no_fluid_recipe = true,
