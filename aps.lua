@@ -28,7 +28,6 @@ data.raw.technology["landfill"].research_trigger = {
 utils.add_prerequisites("automation-science-pack", { "coconut-processing-technology" })
 utils.add_prerequisites("automated_water_transport", { "engine", "fluid-handling" })
 utils.add_prerequisites("canex-excavator", { "engine", "fluid-handling" })
-utils.add_recipes("fluid-handling", { "barreling-machine" })
 -- green science
 utils.set_prerequisites("logistic-science-pack", { "automation-science-pack", "engine" })
 utils.add_recipes("coconut-processing-technology", { "nutrients-from-spoilage" })
@@ -56,7 +55,6 @@ utils.remove_recipes(
 	"pelagos-science-pack",
 	{ "pelagos-biolubricant", "pelagos-processing-unit", "pelagos-battery", "pelagos-explosives" }
 )
-utils.remove_recipes("deep_sea_oil_extraction", { "barreling-machine" })
 utils.add_recipes("deep_sea_oil_extraction", { "nutrients-from-spoilage-methane" })
 utils.add_recipes("lubricant", { "pelagos-biolubricant" })
 utils.add_recipes("processing-unit", { "pelagos-processing-unit" })

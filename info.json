@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.51.7",
+    "version": "0.52.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -16,10 +16,11 @@
         "barreling-group2",
         "diesel_cargo_ships",
         "diesel_machines",
-        "wooden_platform",
+        "wooden_platform >= 0.2.0",
         "lubrication_tower",
         "lighthouse_radar",
         "heavy_gun_turret",
+        "barreling_machines",
         "? apia",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-arig",
@@ -37,7 +38,6 @@
         "(?) gleba_cultured_soil",
         "! Long_Range_Delivery_Drones",
         "! auto-barrel",
-        "! fct-barreling-machine",
         "! space-age-many-planets-server-mod-compat"
     ],
     "description": "Visit Pelagos. Insular planet rich in tropical coconut palms, methane deposits, and minor lifeforms. Harvest coconuts, process them into oil, sealant, and biofuels, experiment with fermentation, and use high-temperature calciners to improve smelting processes in your factory.",

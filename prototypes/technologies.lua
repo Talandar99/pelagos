@@ -148,7 +148,6 @@ if mods["cargo-ships"] then
 	}
 	t.effects = {
 		{ type = "unlock-recipe", recipe = "oil_rig" },
-		{ type = "unlock-recipe", recipe = "barreling-machine" },
 	}
 	t.unit = nil
 	t.research_trigger = {

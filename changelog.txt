@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.52.0
+Date: 2026-03-12
+  Changes:
+    - added new required dependency: barreling_machines
+    - added burner and diesel barreling machines 
+    - burner and electric barreling machines are now unlocked before going to pelagos
+    - diesel barreling machine is unlocked with diesel automation
+    - fct-barreling-machine is no longer incompatible with Pelagos. I still don't recomend using 
+      2 barreling machine mods at once, as it might cause wierd behaviour, and don't make a lot of sense.
+      But now it should at least technicly work
+---------------------------------------------------------------------------------------------------
 Version: 0.51.7
 Date: 2026-03-05
   Bugfixes:

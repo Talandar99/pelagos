@@ -345,20 +345,3 @@ local function process_fluids(fluids, technology, empty_barrel_item)
 end
 
 process_fluids(data.raw["fluid"], get_technology(technology_name), get_item(empty_barrel_name))
------------------------------------------------------------------------------------------------------------------------
--- barreling category
------------------------------------------------------------------------------------------------------------------------
-local original_recipes = {}
-for name, _ in pairs(data.raw.recipe) do
-	table.insert(original_recipes, name)
-end
-
-for name, recipe in pairs(data.raw.recipe) do
-	if recipe and string.sub(name, -6) == "barrel" and string.len(name) > 6 then
-		if not recipe.additional_categories then
-			recipe.additional_categories = {}
-		end
-		table.insert(recipe.additional_categories, "barreling")
-	end
-end
-data.raw.recipe["titanium-barrel"].additional_categories = {}

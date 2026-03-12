@@ -592,17 +592,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "barreling-machine",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "iron-plate", amount = 10 },
-			{ type = "item", name = "iron-gear-wheel", amount = 5 },
-			{ type = "item", name = "electronic-circuit", amount = 1 },
-		},
-		results = { { type = "item", name = "barreling-machine", amount = 1 } },
-	},
-	{
-		type = "recipe",
 		name = "pelagos-casting-engine-unit",
 		category = "metallurgy",
 		subgroup = "vulcanus-processes",
