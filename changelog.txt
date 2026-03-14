@@ -8,8 +8,8 @@ Date: 2026-03-14
     - port is now unlocked with steel axe research
     - galleon is now unlocked with steel axe research
     - wooden platfrom is now unlocked with steel axe research
-    - unlocking galleon, barreling machine, wooden platform, port and oil rigs before going to pelagos,
-      means that simple water automation is now possible before going to pelagos. This should make it
+    - unlocking galleon, barreling machine, wooden platform, port and oil rigs before going to Pelagos,
+      means that simple water automation is now possible before going to Pelagos. This should make it
       nicer to start on nauvis with Depths Of Nauvis. Using galleons instead of cargo ships is much 
       worse for transporting goods, so going to Pelagos to get cargo ships is still a good idea, but 
       it's now not mandatory. 
