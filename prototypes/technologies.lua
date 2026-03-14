@@ -17,7 +17,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "pirateship" },
 			{ type = "unlock-recipe", recipe = "port" },
 		},
-		prerequisites = { "agricultural-science-pack", "fish-breeding", "captivity" },
+		prerequisites = { "agricultural-science-pack", "fish-breeding", "captivity", "deep_sea_oil_extraction" },
 		unit = {
 			count = 1000,
 			ingredients = {
@@ -71,7 +71,6 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "coconut-processing" },
 			{ type = "unlock-recipe", recipe = "coconut-oil" },
 			{ type = "unlock-recipe", recipe = "coconut-sealant" },
-			{ type = "unlock-recipe", recipe = "wooden-platform" },
 		},
 		prerequisites = { "planet-discovery-pelagos" },
 		research_trigger = {
@@ -140,21 +139,6 @@ if mods["cargo-ships"] then
 		item = "coconut-sealant",
 	}
 end
-if mods["cargo-ships"] then
-	local t = data.raw["technology"]["deep_sea_oil_extraction"]
-	t.prerequisites = {
-		"automated_water_transport",
-		--"fluid-handling", -- important for any planet start
-	}
-	t.effects = {
-		{ type = "unlock-recipe", recipe = "oil_rig" },
-	}
-	t.unit = nil
-	t.research_trigger = {
-		type = "build-entity",
-		entity = "cargo_ship",
-	}
-end
 data:extend({
 	{
 		type = "technology",
@@ -170,10 +154,10 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "pelagos-biolubricant" },
 			{ type = "unlock-recipe", recipe = "ethanol" },
 		},
-		prerequisites = { "deep_sea_oil_extraction" },
+		prerequisites = { "automated_water_transport" },
 		research_trigger = {
-			type = "build-entity",
-			entity = "oil_rig",
+			type = "mine-entity",
+			entity = "methane",
 		},
 		order = "ea[pelagos]",
 	},

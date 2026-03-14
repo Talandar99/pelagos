@@ -83,26 +83,12 @@ if mods["cargo-ships"] then
 			{ type = "item", name = "electronic-circuit", amount = 2 },
 		}
 	end
-
-	if data.raw["recipe"]["oil_rig"] then
-		data.raw["recipe"]["oil_rig"].ingredients = {
-			{ type = "item", name = "steel-plate", amount = 200 },
-			{ type = "item", name = "iron-gear-wheel", amount = 50 },
-			{ type = "item", name = "pipe", amount = 100 },
-			{ type = "item", name = "steam-engine", amount = 3 },
-			{ type = "item", name = "storage-tank", amount = 6 },
-			{ type = "item", name = "coconut-sealant", amount = 300 },
-		}
-	end
 end
 --pirateship
 if mods["pirateship"] then
 	data.raw["recipe"]["pirateship-cannonball"].ingredients = {
 		{ type = "item", name = "iron-plate", amount = 25 },
 		{ type = "item", name = "activated-carbon", amount = 5 },
-	}
-	data.raw["recipe"]["pirateship"].ingredients = {
-		{ type = "item", name = "wood", amount = 50 },
 	}
 end
 --delivery drones

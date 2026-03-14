@@ -1,13 +1,6 @@
 data:extend({
 	{
 		type = "bool-setting",
-		name = "allow-galleon-before-pelagos",
-		setting_type = "startup",
-		default_value = false,
-		order = "pelagos-a",
-	},
-	{
-		type = "bool-setting",
 		name = "pelagos-contribute-to-aquilo-discovery",
 		setting_type = "startup",
 		default_value = true,
