@@ -41,7 +41,5 @@ end
 -- remove unused researches
 data.raw["technology"]["cargo_ships"].effects = {}
 data.raw["technology"]["water_transport"].effects = {}
-data.raw["technology"]["automated_bridges"].effects = {}
-hide_technology_and_rewire("automated_bridges", "automated_water_transport")
 hide_technology_and_rewire("water_transport", "automated_water_transport")
 hide_technology_and_rewire("cargo_ships", "automated_water_transport")

@@ -13,7 +13,7 @@ data:extend({
 		name = "pelagos-diesel-rocket-part",
 		icons = {
 			{ icon = "__pelagos__/graphics/diesel-dragon/rocket-part.png", icon_size = 64 },
-			{ icon = "__pelagos__/graphics/pelagos.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+			{ icon = "__pelagos__/graphics/planet/pelagos64.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
 		},
 		energy_required = 3,
 		enabled = true,

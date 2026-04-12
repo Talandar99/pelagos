@@ -24,8 +24,8 @@ require("prototypes.liquid-fuel.diesel-dragon")
 require("prototypes.recipes.rocket-parts-diesel-dragon")
 require("prototypes.rockets")
 require("prototypes.canal-excavator")
-require("prototypes.cargo-ships")
 require("prototypes.tips-and-tricks")
+require("prototypes.achivements")
 require("prototypes.music")
 if mods["multi_surface_promethium_plate_recipe"] then
 	require("prototypes.msppr")
@@ -39,12 +39,7 @@ if mods["any-planet-start"] then
 		technology = "planet-discovery-pelagos",
 	})
 end
--- dummy prototype
-if data.raw["rocket-silo"]["rocket-silo"] then
-	local pelagos_silo = table.deepcopy(data.raw["rocket-silo"]["rocket-silo"])
-	pelagos_silo.name = "pelagos-rocket-silo"
-	pelagos_silo.hidden = true
-	pelagos_silo.selectable_in_game = false
 
-	data:extend({ pelagos_silo })
-end
+data.raw["tips-and-tricks-item"]["cargo-ships"].category = "space-age"
+data.raw["tips-and-tricks-item"]["cargo-ships"].order = "pelagos-g"
+data.raw["tips-and-tricks-item"]["cargo-ships"].indent = 1

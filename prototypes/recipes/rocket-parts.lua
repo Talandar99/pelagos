@@ -5,7 +5,7 @@ data:extend({
 		name = "pelagos-rocket-part",
 		icons = {
 			{ icon = "__base__/graphics/icons/rocket-part.png", icon_size = 64 },
-			{ icon = "__pelagos__/graphics/pelagos.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+			{ icon = "__pelagos__/graphics/planet/pelagos64.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
 		},
 		energy_required = 3,
 		enabled = false,

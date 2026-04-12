@@ -489,6 +489,7 @@ data:extend({
 		pick_sound = item_sounds.landfill_inventory_pickup,
 		drop_sound = item_sounds.landfill_inventory_move,
 		stack_size = 100,
+		weight = 20 * kg,
 		place_as_tile = {
 			result = "pelagos-sandfill",
 			condition_size = 1,

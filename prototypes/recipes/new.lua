@@ -1014,7 +1014,7 @@ if mods["Krastorio2-spaced-out"] then
 	electronic_components.name = "pelagos-electronic-components"
 	electronic_components.icons = {
 		{ icon = "__Krastorio2Assets__/icons/items/electronic-components.png", icon_size = 64 },
-		{ icon = "__pelagos__/graphics/pelagos.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		{ icon = "__pelagos__/graphics/planet/pelagos64.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
 	}
 	electronic_components.ingredients = {
 		{ type = "item", name = "kr-glass", amount = 2 },
