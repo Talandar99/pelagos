@@ -1,0 +1,1200 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.56.0
+Date: 2026-04-04
+  Changes:
+    - Titanium plate, dust and all realated technologies have now now pretty graphics made by myself. 
+      Enjoy! :D
+---------------------------------------------------------------------------------------------------
+Version: 0.55.1
+Date: 2026-04-04
+  Balancing:
+    - Updated fuel efficiency curve for ethanol thruster. It should now perform much better when 
+      throttled (20x better)
+---------------------------------------------------------------------------------------------------
+Version: 0.55.0
+Date: 2026-04-03
+  Changes:
+    - moved calciner into separate mod
+    - added calciner as required dependency
+---------------------------------------------------------------------------------------------------
+Version: 0.54.1
+Date: 2026-04-02
+  Balancing:
+    - adjusted ground and water pollution absorbtion for em waves
+  Bugfixes:
+    - beacon now generate em pollution
+---------------------------------------------------------------------------------------------------
+Version: 0.54.0
+Date: 2026-03-27
+  Changes:
+    - K2SO: Added electromagnetic components recipe for pelagos (locked to it's surface). 
+      You can now craft electromagnetic components on planet surface without need to import silicon.
+    - K2SO: Mineral glass now works with K2SO. This recipe adds ability to turn Calcite into glass 
+      in calciner (worked before with mods that adds glass internally named as "glass", but k2 use 
+      "kr-glass", so this was not working out of the box before)
+    - capture bot rockets can now automaticly target pelagos nests 
+      (not just caputre bot bullets as before)
+  Balancing:
+    - Diesel agricultural tower is now faster (2x for every parameter except for rotation which 
+      is 1.5x faster)
+---------------------------------------------------------------------------------------------------
+Version: 0.53.0
+Date: 2026-03-14
+  Changes:
+    - sealant is no longer needed for oil rigs
+    - oil rigs are now unlocked before going to pelagos
+    - oil rigs are now prerequisite for pelagos
+    - port is now unlocked with steel axe research
+    - galleon is now unlocked with steel axe research
+    - wooden platfrom is now unlocked with steel axe research
+    - unlocking galleon, barreling machine, wooden platform, port and oil rigs before going to Pelagos,
+      means that simple water automation is now possible before going to Pelagos. This should make it
+      nicer to start on nauvis with Depths Of Nauvis. Using galleons instead of cargo ships is much 
+      worse for transporting goods, so going to Pelagos to get cargo ships is still a good idea, but 
+      it's now not mandatory. 
+---------------------------------------------------------------------------------------------------
+Version: 0.52.0
+Date: 2026-03-12
+  Changes:
+    - added new required dependency: barreling_machines
+    - added burner and diesel barreling machines 
+    - burner and electric barreling machines are now unlocked before going to pelagos
+    - diesel barreling machine is unlocked with diesel automation
+    - fct-barreling-machine is no longer incompatible with Pelagos. I still don't recomend using 
+      2 barreling machine mods at once, as it might cause wierd behaviour, and don't make a lot of sense.
+      But now it should at least technicly work
+---------------------------------------------------------------------------------------------------
+Version: 0.51.7
+Date: 2026-03-05
+  Bugfixes:
+    - fixed bug where sometimes you could not pull asteroid chunks from diesel asteroid collector.
+      If it still happens to existing inserters, just mine and place them and it should be fine.
+  Balancing:
+    - increased arm_inventory_size for diesel asteroid collector (5 -> 6)
+    - diesel asteroid collector arm_inventory_size now scale with quality (+1 per quality lv)
+---------------------------------------------------------------------------------------------------
+Version: 0.51.6
+Date: 2026-03-04
+  Changes:
+    - updated russian translation with one made by VoiderMAX
+---------------------------------------------------------------------------------------------------
+Version: 0.51.5
+Date: 2026-03-01
+  Balancing:
+    - lubrication tower: replaced storage tank with 10 engine units in recipe
+---------------------------------------------------------------------------------------------------
+Version: 0.51.4
+Date: 2026-02-28
+  Balancing:
+    - lubrication tower: added crafting time (20 seconds) 
+    - lubrication tower: added 100 refined concrete to recipe 
+---------------------------------------------------------------------------------------------------
+Version: 0.51.3
+Date: 2026-02-15
+  Bugfixes:
+    - code that makes unused cargo ships technologies hidden should now rewire technology 
+      connections first, to make sure other mods that rely on them work properly. 
+      Peterwolf's cargo ship mods, should now work fine with pelagos.
+---------------------------------------------------------------------------------------------------
+Version: 0.51.2
+Date: 2026-02-15
+  Bugfixes:
+    - fixed changelog
+---------------------------------------------------------------------------------------------------
+Version: 0.51.1
+Date: 2026-02-15
+  Changes:
+    - added german locale made by Schlumpf
+---------------------------------------------------------------------------------------------------
+Version: 0.51.0
+Date: 2026-02-14
+  Changelog:
+    - separated lighthouse code into separate mod
+    - added lighthouse as dependancy
+    - separated heavy gun turret code into separate mod
+    - added heavy gun turret as dependancy
+  Bugfixes:
+    - calciner mineral glass recipe is now disabled by default
+---------------------------------------------------------------------------------------------------
+Version: 0.50.3
+Date: 2026-02-10
+  Balancing:
+    - nutrients spoiling recipe no longer accept productivity modules
+---------------------------------------------------------------------------------------------------
+Version: 0.50.2
+Date: 2026-02-09
+  Changes:
+    - pelagos science pack is now by default requirement to go to aquilo (this can be disabled in settings, so no worries)
+    - moved "pelagos" planet name label a bit to make it more visible when playing any planet start with lignumis
+    - updated required Canal Excavator Version
+  Bugfixes:
+    - fusion cell powered machines should now also generate EM pollution on Pelagos
+---------------------------------------------------------------------------------------------------
+Version: 0.50.1
+Date: 2026-02-09
+  Changes:
+    - changed lighthouse light intensity to make pelagos sea less green at night 
+---------------------------------------------------------------------------------------------------
+Version: 0.50.0
+Date: 2026-02-08
+  Changes:
+    - replaced LUT by the ones made by shibadisaster. 
+    - changed barreling machine order in factoriopedia
+---------------------------------------------------------------------------------------------------
+Version: 0.49.0
+Date: 2026-02-07
+  Changes:
+    - new required dependency: Lubrication Tower. Non electric beacon
+    - Lubrication Tower is now part of pelagos tech tree until Ferros will be released 
+    - new recipe: nutrients spoiling. allows you to turn nutrients into spoilage
+    - K2SO compatibility: advanced steel smelting now have different ratio if mod is isntalled 
+      (5 iron + 2 activated carbon => 3 steel) to balance it better next to k2 coke recipe
+    - apia compatibility: Pelagos Coconut biolubricant is now affected by Apia lubricant productivity
+    - apia compatibility: Pelagos Copper spitter eggs production is now affected by Apia biter eggs productivity
+    - apia compatibility: Pelagos Coconut processing is now affected by Apia agriculture productivity
+    - apia compatibility: Apia larvae cultivation is now affected by Pelagos cultivation productivity
+    - apia compatibility: Apia wax platform is now affected by Pelagos landfill productivity
+  Balancing:
+    - regular beacon em waves value is no longer reduced, because you can now use lubrication tower
+    - em absorbtion by ground and water is now slightly reduced because with addtion of diesel dragon 
+      and lubrication tower you can now make fully non electric base
+    - big, behemoth and leviathan copper spitter will now have 30,50 and 90 proc poison resistance
+  Bugfixes:
+    - only planet discovery and science pack is now marked ass "essential technology"
+    - antimaterial reactor from k2so now generate em pollution
+    - bio reactor from apia now generate em pollution
+    - all burner generators should now generate em pollution
+---------------------------------------------------------------------------------------------------
+Version: 0.48.1
+Date: 2026-02-01
+  Changes:
+    - recipes to make steam machines from iron are now part of lignumis so my code that 
+      add alternative recipes is not needed anymore, so it is removed
+---------------------------------------------------------------------------------------------------
+Version: 0.48.0
+Date: 2026-02-01
+  Changes:
+    - galleon can now be placed on waterway
+    - port is unlocked with galleon so right after researching pelagos
+    - setting "Allow galleon before pelagos" has been renamed to "Allow galleon and port before pelagos"
+    - setting "Allow galleon and port before pelagos" now unlocks galleon and port with steel axe research, 
+      not just galleon
+---------------------------------------------------------------------------------------------------
+Version: 0.47.0
+Date: 2026-02-01
+  Changes:
+    - attempt of removing sealant from ships recipes will now cause runtime crash
+---------------------------------------------------------------------------------------------------
+Version: 0.46.0
+Date: 2026-01-31
+  Changes:
+    - rewritten wooden platform code and moved it into separate mod that is now pelagos dependency 
+      that can be used without planet mod and even without Space Age installed
+    - removed old control script responsible for wooden platform mechanic
+  Balancing:
+    - slightly reduced pollution generation for oil rig
+---------------------------------------------------------------------------------------------------
+Version: 0.45.1
+Date: 2026-01-30
+  Bugfixes:
+    - titanium sludge and methane should now properly display on minimap on new saves
+---------------------------------------------------------------------------------------------------
+Version: 0.45.0
+Date: 2026-01-29
+  Changes:
+    - reduced "brids" soundtrack volume by 10%
+    - planet castra compatibility: engine unit productivity now works for "engine casting" recipe 
+    - compatibility with mods that require glass in recipes: if item named "glass" is present in game 
+      calciner will have new recipe "Mineral glass" which allows for making glass from calcite (4 calcite -> 1 glass)
+    - machines powered directly by burning nuclear fuel cells now generate EM pollution
+    - generators powered directly by burning nuclear fuel cells now generate EM pollution
+    - regular rocket silo no longer have lowered em pollution because you can use diesel dragon silo instead
+---------------------------------------------------------------------------------------------------
+Version: 0.44.2
+Date: 2026-01-25
+  Changes:
+    - changed way you can make sand. Recipe is now named "Stone erosion" and can be selected in biochamber
+---------------------------------------------------------------------------------------------------
+Version: 0.44.1
+Date: 2026-01-24
+  Changes:
+    - fixed typo in locale
+---------------------------------------------------------------------------------------------------
+Version: 0.44.0
+Date: 2026-01-24
+  Changes:
+    - Added Sand and Sand Recipe. For better compatibility, and because it's exactly what 
+      i wanted, It's same recipe that was used by planet Vesta. 
+    - Added Sandfill. It's landfill but made of sand. You can use it as soil to grow coconuts on it!
+    - Sand and Sandfill recipes are unlocked by researching "Diesel Excavator"
+---------------------------------------------------------------------------------------------------
+Version: 0.43.1
+Date: 2026-01-23
+  Changes:
+    - slightly reduced size of new copper spitter assets
+    - updated fermentation-bacteria-cultivation icon
+    - updated bacteria-cultivation-productivity icon
+    - updated captured nest entity sprite
+    - changed captive-copper-biter-spawner technology icon
+    - K2SO compatibility: steel pipe and pump can now be placed on wooden platforms
+---------------------------------------------------------------------------------------------------
+Version: 0.43.0
+Date: 2026-01-22
+  Changes:
+    - added new copper spitter graphics made by InanimateLog. Thank you, looks amazing :D
+---------------------------------------------------------------------------------------------------
+Version: 0.42.0
+Date: 2026-01-18
+  Changes:
+    - splited basic diesel machines into separate mod
+    - diesel machines is now new mandatory dependency
+    - removed few old unused icons to save some space
+    - locale for Electromagnetic waves tips and tricks now mentiones that solar panels and accumulators also generate EM waves
+  Balancing:
+    - all tiers of copper spitter and nests have now 100% immunity to laser damage (previous was 95-100%)
+    - all tiers of copper spitter and nests have now 100% immunity to electric damage (previous was 95-100%)
+---------------------------------------------------------------------------------------------------
+Version: 0.41.2
+Date: 2026-01-13
+  Balancing:
+    - regular rocket silo pollution reduction was partially reverted because now you can build 
+      diesel dragon (silo that does not generate pollution at all on pelagos)
+    - metallic asteroid methane crushing now give more iron ! (30 -> 40)
+    - carbonic asteroid gasification now provide more methane ! (100 -> 200)
+    - oxide asteroid melting now provide more water ! (100 -> 200)
+---------------------------------------------------------------------------------------------------
+Version: 0.41.1
+Date: 2026-01-08
+  Changes:
+    - any planet start: to make it easier for player to understand that you don't need rocket fuel. 
+      Rocket part recipe is repeated on rocket silo researach
+---------------------------------------------------------------------------------------------------
+Version: 0.41.0
+Date: 2026-01-07
+  Changes:
+    - added new music to soundtrack: crawfish (Thx JonJon)
+    - added new music to soundtrack: birds    (Thx JonJon)
+    - added new music to soundtrack: twowave  (Thx JonJon)
+    - added setting: Decomposition science pack is needed to unlock and research aquilo (disabled by default)
+    - added setting: Decomposition science pack is needed to unlock and research promethium technology (enabled by default)
+    - added new recipe: Methane-assisted nutrients from spoilage unlocked with Cellulose decomposition research
+    - any planet start: Methane-assisted nutrients from spoilage is unlocked with "Deep sea extraction"
+    - new mandatory dependancy: diesel_cargo_ships. It contains all code related to making cargo ships diesel 
+      powered, so you can now enjoy this way of powering ships without pelagos installed. 
+  Balancing:
+    - demolishers have now reduced resistances against corrosive dmg type (20 -> 10)
+    - methane explosive no longer require carbon in recipe but 2x more methane instead
+  Bugfixes:
+    - removed next_upgrade field from diesel assembler. When using upgrade planner, assembling machine 3 
+      should now properly downgrade to assembling machine 2 instead of diesel assembling machine
+---------------------------------------------------------------------------------------------------
+Version: 0.40.2
+Date: 2026-01-03
+  Changes:
+    - space-age-many-planets-server-mod-compat, removes pelagos core role, 
+      without it planet is no longer needed anyway so mod is marked as incompatible
+---------------------------------------------------------------------------------------------------
+Version: 0.40.1
+Date: 2026-01-03
+  Bugfixes:
+    - delivery drones now should now have proper research price and recipes.
+---------------------------------------------------------------------------------------------------
+Version: 0.40.0
+Date: 2026-01-03
+  Changes:
+    - Pelagos hit 10 000 unique downloads. If you are reading this then thank you in all time 
+      you spend with my mod so far C: 
+    - Introduced new technology for 10 000 downloads: Project diesel dragon. 
+      Special rocket silo powered by liquid fuel. It does not require rocked fuel, 
+      need half of rocket parts of regular silo, crafting is quicker, 
+      but it also require titanium plates instead of LDS. 
+    - renamed locale from "Titanium plate from dust" to "Titanium plate smelting"
+    - Added "Advanced titanium plate smelting" recipe. Two times more efficient method of making 
+      titanium plates from titanium dust. Unlocked with diesel dragon research
+    - changed dependancy: Long_Range_Delivery_Drones to long_range_delivery_drones_talandar_fork 
+      It's fork maintained by myself and created in order to fix few control.lua bugs. Feel free to 
+      report any issues
+    - updated terrain generation, pelagos should now generate a bit more land, titanium sludge and methane patches
+  Bugfixes:
+    - methane and titanium patches now generate in a way you can always place oil rigs on all sources in single patch
+---------------------------------------------------------------------------------------------------
+Version: 0.39.4
+Date: 2026-01-01
+  Changes:
+    - if lignumis is installed steam assembling machine has advanced-crafting category in order to be able to craft engine units
+---------------------------------------------------------------------------------------------------
+Version: 0.39.3
+Date: 2025-12-30
+  Changes:
+    - moved setting to enable or disable flamethrower changes from pelagos mod to diesel engine mod
+---------------------------------------------------------------------------------------------------
+Version: 0.39.2
+Date: 2025-12-30
+  Bugfixes:
+    - temporarly fixed aps crash with muluna that was caused by attempt of adding agriculture science pack  
+  Changes:
+    - cargo crates now can be only crafted in diesel assembling machine
+    - removed fast replaceable group from diesel inserter because it was more confusing than helpfull
+---------------------------------------------------------------------------------------------------
+Version: 0.39.1
+Date: 2025-12-27
+  Balancing:
+    - titanium dust recipe now require less titanium sludge (100->50)
+---------------------------------------------------------------------------------------------------
+Version: 0.39.0
+Date: 2025-12-27
+  Changes:
+    - any planet start + lignumis: added long handed recipe for inserter that uses iron pipe
+    - any planet start + lignumis: utility science can now be research after ethanol thruster
+    - any planet start + lignumis: production science can now be research after ethanol thruster
+    - any planet start + lignumis: steam assembler recipe with iron pipes is no longer needed because it's provided by lignumis
+    - any planet start: pelagos biodiesel now require only lubricant instead of all science
+    - any planet start: ethanol thruster is now trigger tech and require crafting 500 of white science
+---------------------------------------------------------------------------------------------------
+Version: 0.38.1
+Date: 2025-12-27
+  Bugfixes:
+    - fixed ships not being diesel powered after previous update
+---------------------------------------------------------------------------------------------------
+Version: 0.38.0
+Date: 2025-12-27
+  Changes:
+    - separatated core diesel/liquid fuel stuff into separate internal mod
+---------------------------------------------------------------------------------------------------
+Version: 0.37.0
+Date: 2025-12-26
+  Changes:
+    - added long handed diesel inserter 
+    - added recipe for long handed diesel inserter
+    - long handed diesel inserter is now unlocked with diesel automation research
+    - increased rotation speed of fast diesel inserter by 50%
+    - any planet start: added ethanol thruster back to tech tree and moved 
+      regular thruster research post gleba to simplify progression
+    - added missing locale for pelagos sands
+    - pelagos big rock is now in environment tab
+---------------------------------------------------------------------------------------------------
+Version: 0.36.0
+Date: 2025-12-25
+  Balancing:
+  Changes:
+    - added required compatibility: Cargo Crates
+    - adjusted cargo crates technology to be part of pelagos tech tree
+    - any planet start: cargo crates have easier tech requirement and science cost compared to normal game
+    - any planet start: I am happy to say that Lignumis have added steam inserter. 
+      That means that my implementation of it is redundant so code responsible for is removed
+    - any planet start: iron pipe recipe for steam inserter is adjusted (4 pipe -> 2 pipe) to match lignumis golden pipe recipe
+  Bugfixes:
+    - delivery drones rocket capacity now has normal value (200->20)
+---------------------------------------------------------------------------------------------------
+Version: 0.35.0
+Date: 2025-12-22
+  Balancing:
+  Changes:
+    - added compatibility: Multi-Surface Promethium Plate Recipe mod
+    - any planet start: tree seeding is now prerequisite to going to nauvis
+    - new recipe: fermentation bacteria breeding (fermented fish)
+  Balancing:
+    - item changed: fermented fish spoil time changed (2h -> 4h)
+    - recipe changed: fermented fish recipe result increased (5->10)
+---------------------------------------------------------------------------------------------------
+Version: 0.34.0
+Date: 2025-12-17
+  Changes:
+    - Recipe Removed: biodiesel from bioflux 
+    - Recipe Added: biodiesel from spoilage
+    - Recipe Removed: calcite concrete
+    - Recipe Added: calcite brick
+    - Recipe Changed: coconut oil lubricant require activated carbon to make instead of bacteria 
+  Balancing:
+    - Copper ore from copper biter egg now require less ethanol (50->25)
+    - Corrosive firearm magazine now inputs and outputs more magazines (4->6) which means you can use less bacteria
+    - Ethanol recipe now require more activated carbon (1->3)
+---------------------------------------------------------------------------------------------------
+Version: 0.33.1
+Date: 2025-12-15
+  Balancing:
+    - any planet start: fermentation bacteria cultivation is now unlocked with fish breeding
+    - fish calcining now gives more calcite (1 -> 3)
+    - coconut husk spoiling recipe crafting time lowered (6 -> 5)
+    - increased amount of stone you get from pelagos big rock to make sure you always can craft 
+      landfill if you mined at least 2 of them (amount_min 18->25) (amount_max 22->28)
+  Changes:
+    - any planet start: calciner now require concrete to research, which makes sense because you need concrete to make it
+    - any planet start: heating tower now require concrete to research, which makes sense because you need concrete to make it
+---------------------------------------------------------------------------------------------------
+Version: 0.33.0
+Date: 2025-12-13
+  Changes:
+    - added dependency on internal tweaks mod
+---------------------------------------------------------------------------------------------------
+Version: 0.32.3
+Date: 2025-12-10
+  Changes:
+    - calciner working flame effect should now be aligned properly with new sprite
+---------------------------------------------------------------------------------------------------
+Version: 0.32.2
+Date: 2025-12-10
+  Changes:
+    - improved calciner sprite
+---------------------------------------------------------------------------------------------------
+Version: 0.32.1
+Date: 2025-12-10
+  Changes:
+    - fixed calciner pipe connection graphics
+---------------------------------------------------------------------------------------------------
+Version: 0.32.0
+Date: 2025-12-10
+  Changes:
+    - Calciner has now new graphic
+    - any planet start: sending first space station now unlock carbon crushing to prevent softlock while playing with cerys
+---------------------------------------------------------------------------------------------------
+Version: 0.31.0
+Date: 2025-12-07
+  Changes:
+    - any planet start: Nauvis no longer has save orbit
+    - Updated excavator code based on new changes made to it's API
+---------------------------------------------------------------------------------------------------
+Version: 0.30.0
+Date: 2025-12-05
+  Changes:
+    - arig: added biodiesel from cactus recipe if arig is installed
+    - arig: coconut drop technology now has mention of arig in description to suggest that it works there as well
+    - added sand seas of arig as optional dependency
+    - added depths of nauvis as optional dependency
+  Balancing:
+    - spoilage concrete now can be make only in biochamber
+---------------------------------------------------------------------------------------------------
+Version: 0.29.0
+Date: 2025-12-05
+  Changes:
+    - added new required dependency: barreling group
+    - changed pelagos science pack technology graphic
+    - added cococoncrete recipe
+    - added spoilage concrete recipe
+    - added improvised concrete technology
+    - any planet start: improvised concrete technology is unlockable earlier than in regular game
+  Balancing:
+    - reduced beacon EM pollution (1->0.5)
+    - reduced lab EM pollution (1->0.5)
+    - any planet start: changed Pelagos space science recipe (water 20 -> 10)
+---------------------------------------------------------------------------------------------------
+Version: 0.28.1
+Date: 2025-11-30
+  Changes:
+    - added warning communicate if pelagos and depths of nauvis are installed together, player start on nauvis, and oil patches are disabled on land. 
+---------------------------------------------------------------------------------------------------
+Version: 0.28.0
+Date: 2025-11-29
+  Bugfixes:
+    - compatibilities with Arig now reference planetaris-arig not planetaris-unbounded 
+    - any planet start: ice melting is unlocked on planet discovery fulgora and advanced 
+      asteroid processing instead just on advanced asteroid processing to prevent lack of 
+      ability to melt ice if player goes to fulgora before researching advanced asteroid processing
+  Changes:
+    - added technology: biodiesel 
+    - added fluid: biodiesel with fuel value 0.8MJ
+    - added recipe: biodiesel from tree seed
+    - added recipe: biodiesel from bioflux
+    - added recipe: solid fuel from biodiesel 
+    - any planet start: planet discovery gleba now require biodiesel to be researched first
+  Balancing:
+    - reduced puff gas fuel value (0.8MJ -> 0.7MJ)
+---------------------------------------------------------------------------------------------------
+Version: 0.27.4
+Date: 2025-11-28
+  Bugfixes:
+    - if fluid has fuel value equal 0 it will be treated like not having fuel value at all. 
+      So game won't crash at startup if some mod decide to set fuel value to 0 instead of not setting or removing it
+    - added prefix to casting-engine-unit recipe. So it won't collide with other mods that have recipe with the same name
+---------------------------------------------------------------------------------------------------
+Version: 0.27.2
+Date: 2025-11-26
+  Changes:
+    - powerpoles are now ALWAYS allowed on amonia and oil ocean. This was done to save 2 collision layers in code
+    - unified deepsea_mechanic collision layer name to save some layers if pelagos is installed with other mods that use this mechanic
+  Bugfixes:
+    - setting processing unit recipe via circuits no longer prioritize ethanol processing unit 
+---------------------------------------------------------------------------------------------------
+Version: 0.27.1
+Date: 2025-11-23
+  Changes:
+    - increased soundtrack volume (0.4 -> 0.8)
+  Balancing:
+    - reduced EM pollution for beacons (2->1)
+---------------------------------------------------------------------------------------------------
+Version: 0.27.0
+Date: 2025-11-22
+  Changes:
+    - added soundtrack: "decomposing by the beach" by JonJon licensed under CC BY-NC-ND 4.0
+    - added soundtrack: "horizonwide fractured mirror" by JonJon licensed under CC BY-NC-ND 4.0
+    - added soundtrack: "stranded far apart" by JonJon licensed under CC BY-NC-ND 4.0
+  Bugfixes:
+    - elevated rails can no longer be placed on deepsea of pelagos 
+---------------------------------------------------------------------------------------------------
+Version: 0.26.4
+Date: 2025-11-19
+  Balancing:
+    - calcite concrete recipe now gives more concrete (10 -> 20)
+    - calcite concrete recipe now require less calcite (10 -> 8)
+    - excavator is no longer affected by mining productivity
+---------------------------------------------------------------------------------------------------
+Version: 0.26.3
+Date: 2025-11-19
+  Changes:
+    - updated resource map colors for improved visibility
+    - map icons for methane and titanium sludge are now bigger  
+    - added new optional dependency: Spoiled Trenches of Fulgora
+---------------------------------------------------------------------------------------------------
+Version: 0.26.2
+Date: 2025-11-18
+  Bugfixes:
+    - fixed chinese locale. 
+---------------------------------------------------------------------------------------------------
+Version: 0.26.1
+Date: 2025-11-18
+  Changes:
+    - improved Coconut drop technology icon
+    - cultured soil is now hidden dependency
+  Balancing:
+    - reduced fuel slots for portable diesel generator (4->3)
+---------------------------------------------------------------------------------------------------
+Version: 0.26.0
+Date: 2025-11-16
+  Changes:
+    - improved speed control for yellow boat (now breaks faster)
+    - portable diesel generator default import location is now set to pelagos
+    - you can drop coconuts on cerys (ignoring drop restriction) if pelagos and cerys are installed
+  Bugfixes:
+    - fixed bug realted to chinese locale
+---------------------------------------------------------------------------------------------------
+Version: 0.25.0
+Date: 2025-11-16
+  Changes:
+    - introduced portable diesel generator with it's technology and recipe
+    - any planet start: portable diesel generator require 200 science packs to research
+    - added simplified chinese locale support
+    - capture bot bullet can now target regular biter and and spitter nests
+  Balancing:
+    - Boompuff agriculture: increased fuel value (600kJ -> 800kJ)
+    - reduced "pollution to join attack" property for all copper spitter to make sure more of them will join attacks so they will be harder to deal with
+    - changed probability related to planet pollution for medium, big, behemoth, leviathan to make sure they spawn on earlier levels of pollution so they will be harder to deal with
+    - changed probability to spawn for medium, big, behemoth, leviathan to make sure more of them will spawn on every level of pollution so they will be harder to deal with
+    - added explosion resistances increasing with type for medium, big, behemoth copper spitter. Leviathan already  had it
+    - Leviathan size copper spitter has now 100% imunity to lasers and electric dmg
+  Bugfixes:
+    - Excavator entity and item descriptions should now be the same as base mod 
+    - Fixed Crash that prevented Dreadgeworks frozen reaches to launch with vesta methane patches option turned on
+---------------------------------------------------------------------------------------------------
+Version: 0.24.1
+Date: 2025-11-12
+  Changes:
+    - Updated logic responsible for wooden platforms to make sure modded inserters, chests and belts will work correctly in future
+---------------------------------------------------------------------------------------------------
+Version: 0.24.0
+Date: 2025-11-11
+  Changes:
+    - Vesta: added vesta as optional dependency
+    - Vesta: added option to change methane generation to spawn methane stain instead of tile on planet. 
+    - Vesta: Gas giant platform now benefits from landfill productivity research
+    - Vesta: canal excavator can now be used on vesta
+    - Vesta: added option to override Vesta methane icon (turned on by default)
+---------------------------------------------------------------------------------------------------
+Version: 0.23.2
+Date: 2025-11-10
+  Balancing:
+    - reduced rocket capacity for lighthouse (50 -> 1)
+    - increased lighthouse recipe price (100 concrete -> 200 concrete)
+    - increased probability to generate copper stromatolite
+  Changes:
+    - kry-inserters mod should now work properly with wooden platform
+    - lighthouse is not allowed on gleba
+    - tips and tricks for pelagos now uses cool simulations for excavator mod made by mod's author Jurgy
+    - tips and tricks for cargo ships is moved to pelagos planet category to make it easier to find
+---------------------------------------------------------------------------------------------------
+Version: 0.23.1
+Date: 2025-11-10
+  Changes:
+    - palm tree texture should blend a little bit better with ground
+    - lighthouse can not be placed on gleba
+    - removed unused graphics to reduce mod size
+  Balancing:
+    - reduced stack size of fermentation bacteria (50->20) to make it harder to stockpile as output in biochamber and spoil by accident
+    - reduced ammount of bacteria produced by breeding recipe (16->12)
+    - reduced ammount of spoilage from coconut husk spoiling recipe (30->20)
+    - reduced ammount of spoilage from wood spoiling recipe (50->40)
+---------------------------------------------------------------------------------------------------
+Version: 0.23.0
+Date: 2025-11-09
+  Changes:
+    - new palm tree graphics
+    - palm tree no longer snaps to grid which should result in more natural look
+  Balancing:
+    - wooden platforms now require less wood (20 -> 15)
+---------------------------------------------------------------------------------------------------
+Version: 0.22.1
+Date: 2025-11-06
+  Balancing:
+    - increased range of diesel agricultural tower by 1 
+    - doubled diesel agricultural tower energy demand (200kW->400kW)
+    - reduced EM pollution emited by beacons (8->2)
+---------------------------------------------------------------------------------------------------
+Version: 0.22.0
+Date: 2025-11-05
+  Changes:
+    - any planet start: added steam inserter. Only present if lignumis is installed 
+    - any planet start: added lignumis steam assmebling machine recipe that uses regular pipes to make it possible to craft on pelagos later
+---------------------------------------------------------------------------------------------------
+Version: 0.21.3
+Date: 2025-11-04
+  Changes:
+    - any planet start: cellulose decomposition now is available after placing biochamber on ground to allow for easy coconut husk voiding by turning them in spoilage and later in nutrients.
+  Balancing:
+    - decomposition science pack recipe now gives 2 science packs instead of one but recipe is 2 times slower
+---------------------------------------------------------------------------------------------------
+Version: 0.21.2
+Date: 2025-11-02
+  Changes:
+    - any planet start fix: with lignumis installed copper processing technology require to mine pelagos copper stromatolite instead of copper ore patch
+  Balancing:
+    - any planet start: landfill technology is now unlocked with trigger instead of science pack
+    - any planet start: fish breeding technology now is quicker to research and cost less (time 30 -> 10, science 30 -> 10)
+---------------------------------------------------------------------------------------------------
+Version: 0.21.1
+Date: 2025-11-01
+  Changes:
+    - reduced 4k planet star map icon to 2k to allow players with lower atlas size to play mod
+    - removed some unused graphical assets to reduce mod size
+---------------------------------------------------------------------------------------------------
+Version: 0.21.0
+Date: 2025-10-31
+  Changes:
+    - added 4k planet star map graphic and changed icon
+---------------------------------------------------------------------------------------------------
+Version: 0.20.0
+Date: 2025-10-30
+  Changes:
+    - added Crane stack diesel inserter with it's research and own recipe
+    - graphics-fix: Crane bulk diesel inserter no longer clip on belt
+    - marked barreling machine mods as incompatible. Pelagos adds it's own barreling machine and don't lock away ability to use regular barrels with assemblers.
+    - fix: regular assembling machine 3 no longer can use titanium barrels, it was added by accident. Ability to use titanium barrels should be locked only to diesel assembler and barreling machine
+  Balancing:
+    - changed heavy-gun-turret health (800 -> 1200)
+    - reduced weight of wooden platform to make it easier to export (10kg -> 5kg)
+---------------------------------------------------------------------------------------------------
+Version: 0.19.4
+Date: 2025-10-26
+  Changes:
+    - alt mode icons above diesel inserters are now visible
+    - added support for gleba_cultured_soil
+    - fix: error when trying to place wooden platform if storage was corrupted. Code should now check if wooden platform blacklist exist before placing attempt to prevent crash (create list it if does not exist)
+    - you should be now able to place heavy-gun-turret on wooden platform 
+---------------------------------------------------------------------------------------------------
+Version: 0.19.3
+Date: 2025-10-26
+  Changes:
+    - pelagos terrain generation settings that can't be tweaked are now hidden
+    - fix: dmg research now works with heavy gun turret as well (just like it works with regular one)
+---------------------------------------------------------------------------------------------------
+Version: 0.19.2
+Date: 2025-10-25
+  Changes:
+    - fix: pirate ship enter boat code is now overridden to not cause issues with player location. You can now enter pirateship the same way you enter cargo ship ships
+---------------------------------------------------------------------------------------------------
+Version: 0.19.1
+Date: 2025-10-25
+  Changes:
+    - fix: composite entities should built properly on space stations
+---------------------------------------------------------------------------------------------------
+Version: 0.19.0
+Date: 2025-10-25
+  Changes:
+    - added space age feature flags to make sure pelagos show up as space age mod on mod portal
+    - added diesel asteroid collector
+    - any planet start: diesel asteroid collector replaces regular one in progression
+    - any planet start: asteroid collector (regular one) is unlocked with advanced asteroid processing
+  Balancing:
+    - increased speed and added rocket acceleration to poison capsule rocket making it faster
+    - increased speed and added rocket acceleration to slowdown capsule rocket making it faster
+    - increased fuel efficiency of ethanol thruster
+---------------------------------------------------------------------------------------------------
+Version: 0.18.2
+Date: 2025-10-23
+  Balancing:
+    - increased max distance of nearby sector revealed by lighthouse (1 -> 2)
+---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 2025-10-23
+  Changes:
+    - improved lighthouse performance
+    - added bztitanium compatibility
+---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 2025-10-23
+  Changes:
+    - added lighthouse - pelagos liquid fuel radar for discovering new lands
+    - graphics: calciner now has proper unique remnants
+    - graphics: changed remnants of diesel assembling machine to ones that match closer it's look
+    - graphics: changed remnants of barreling machine to ones that match closer it's look
+    - graphics: changed remnants of crane bulk diesel inserter to ones that match closer it's look
+    - graphics: changed remnants of fast diesel inserter for to ones that match closer it's look
+    - graphics: changed remnants of extra long handed diesel inserter to ones that match closer it's look
+    - fix: changed titanium plate default import location to pelagos
+  Balancing:
+    - engine casting recipe now require less molten iron (55 -> 50)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 2025-10-22
+  Changes:
+    - fix: added categories back to diesel assembler so they will be overridden but wanted to make sure they does not cause crash with tenebris 
+---------------------------------------------------------------------------------------------------
+Version: 0.17.4
+Date: 2025-10-21
+  Changes:
+    - changed recipe icon location on calciner for improved readability
+    - added biochamber colors for metallic asteroid methane crushing recipe
+    - added biochamber colors for carbonic asteroid gasification
+    - added biochamber colors for oxide asteroid melting
+    - added fuel value to fermentation-bacteria, so now you can keep cultivation it running even if you have more bacteria than you need
+    - fix: changed recipe category for methane explosives to "organic" to make sure it does not show, even with bugged fluid boxes from other mods
+    - fix: added code that copy assembler 3 recipes to diesel assembler to make sure every assembling machine recipe is present in diesel assembler 
+  Balancing:
+    - terrain generator: changed iron ore patches size (1.1 -> 1.2)
+    - terrain generator: changed iron ore richness (2 -> 2.5)
+    - terrain generator: changed starting iron ore patch radius (10 -> 12)
+    - terrain generator: changed starting iron ore patch richness 
+    - metallic asteroid methane crushing gives 5 iron more (25 -> 30)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 2025-10-16
+  Balancing:
+    - long range delivery drones weight changed. Now you can pack only 1 on rocket (reverts change made in 0.17.2)
+---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 2025-10-16
+  Changes:
+    - fixed bug that caused crash on startup related to wrong procession catalogue
+    - long range delivery drone recipe now use 50 ethanol instead of 1 ethanol barrel
+  Balancing:
+    - long range delivery drones weight changed. Now you can pack 10 into single rocket instead of 1
+---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 2025-10-16
+  Changes:
+    - fixed bug that made it impossible to see changelog in game
+    - fixed bug that gives you regular thruster after decontructing ethanol one
+---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 2025-10-14
+  Changes:
+    - boat now have built in radar
+    - boat can now be remotely controlled
+    - boat now have equipment grid
+    - boat is now faster
+    - added starter iron path that will ALWAYS generate next to 0,0 to make sure player have fair start on pelagos
+---------------------------------------------------------------------------------------------------
+Version: 0.16.4
+Date: 2025-10-12
+  Balancing:
+    - rocket silo now generate much less electromagnetic waves
+---------------------------------------------------------------------------------------------------
+Version: 0.16.3
+Date: 2025-10-12
+  Changes:
+    - fix: tile migration run only on pelagos surface
+---------------------------------------------------------------------------------------------------
+Version: 0.16.2
+Date: 2025-10-12
+  Changes:
+    - titanium barrels technology now require tanker
+    - delivery drones technology now require ethanol thruster 
+    - disabled pelagos-sand-3 and pelagos-sand-4 in world generation because they don't look tropical
+  Balancing:
+    - reduced long range delivery drones research cost (2500 -> 2000)
+    - any planet start: degradation module technology research cost reduced (2000 -> 500)
+    - any planet start: titanium barrels technology research cost reduced (1000 -> 200)
+    - any planet start: long range delivery drones technology research cost reduced (500 -> 250)
+---------------------------------------------------------------------------------------------------
+Version: 0.16.1
+Date: 2025-10-12
+  Balancing:
+    - any planet start: added safe asteroids on pelagos orbit (medium asteroids and bigger one don't spawn on pelagos orbit)
+---------------------------------------------------------------------------------------------------
+Version: 0.16.0
+Date: 2025-10-11
+  Changes:
+    - changed surface restriction on fermentation-bacteria to allow this recipe in space
+    - changed surface restriction on fermentation-bacteria-cultivation to allow this recipe in space
+    - changed surface restriction on fish breeding to allow this recipe in space
+    - added metallic asteroid methane crushing recipe
+    - added carbonic asteroid gasification recipe
+    - added oxide asteroid melting recipe
+    - added asteroid bioprocessing technology to unlock new asteroid processing recipes
+    - any planet start: moved asteroids processing and crusher into advanced asteroid processing, 
+    - any planet start: added pelagos space science pack recipe
+      and changed progression to unlock asteroid bioprocessing after launching first space station
+    - added ethanol thruster and related technology to unlock it
+    - any planet start: moved regular thruster and related recipes into advanced asteroid processing. Thruster research now enable ethanol thruster
+    - fix: changed planet pressure and gravity to not collide with other mods
+  Balancing:
+    - changed corrosive ammo dmg to match red ammo (7->8)
+    - you can now craft more corrosive magazines with 1 bacteria (1 firearm-magazine -> 4 firearm-magazine)
+    - reduced pumping speed of diesel pump (1800->1200) now it's the same as electric pump
+    - reduced energy usage of diesel pump (50kW->20kW)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.2
+Date: 2025-10-11
+  Changes:
+    - reverted fix: mulana heat assembling machine muluna vacuum heating tower reactor no longer emmit electromagnetic waves
+  Balancing:
+    - any planet start: tanker ship research cost reduced (500->300)
+---------------------------------------------------------------------------------------------------
+Version: 0.15.1
+Date: 2025-10-10
+  Changes:
+    - fix: corrosive firearm magazine recipe is no longer unlocked from start of the game
+    - fix: copper plate from copper biter egg recipe is no longer unlocked from start of the game
+    - fix: mulana heat assembling machine muluna vacuum heating tower reactor no longer emmit electromagnetic waves
+---------------------------------------------------------------------------------------------------
+Version: 0.15.0
+Date: 2025-10-10
+  Changes:
+    - added crane bulk diesel inserter
+    - any planet start: automation, logistic, military and chemical science pack pelagos recipes now have different icon
+    - added setting to enable galleon before pelagos
+    - added titanium coral new mineable decorative found in deep sea of pelagos
+  Balancing:
+    - arig high support electric pole can't be build on pelagos deepsea
+    - changed cost for titanium dust (fermentation bacteria 4 -> 1)
+    - changed ammount of fermentation bacteria gained with fermentation bacteria breeding recipe (8 -> 16)
+    - changed cost of corrosive firearm magazine (2 firearm magazine + 1 bacteria -> 1 firearm magazine + 1 bacteria)
+---------------------------------------------------------------------------------------------------
+Version: 0.14.6
+Date: 2025-10-08
+  Changes:
+    - fix: added missing crafting category to degradation modules. Now they can be crafted with electromagnetic plant
+---------------------------------------------------------------------------------------------------
+Version: 0.14.5
+Date: 2025-10-07
+  Changes:
+    - fix: Yuoki Industries no longer crash on startup
+    - fix: 5dim new energy no longer crash on startup
+    - fixed locale for em tips and tricks
+---------------------------------------------------------------------------------------------------
+Version: 0.14.4
+Date: 2025-10-05
+  Changes:
+    - change: inserter fishing now follow cargo ship setting so it's disabled by default
+    - fix: titanium barrels now unlock properly with titanium barrel technology
+  Balancing:
+    - any planet start: pelagos chemical science pack recipe now gives 3 packs instead of 2
+    - copper bitter spawner now make more eggs (5 -> 10)
+---------------------------------------------------------------------------------------------------
+Version: 0.14.3
+Date: 2025-10-05
+  Changes:
+    - fixed locale for Activated carbon item
+  Balancing:
+    - fermented fish spoiling time is now longer (1h -> 2h)
+    - copper spitter egg spoiling time is now longer (0.5h -> 1.0h)
+    - coconutrients now give more nutrients (8 -> 10)
+---------------------------------------------------------------------------------------------------
+Version: 0.14.2
+Date: 2025-10-05
+  Changes:
+    - reduced wooden platform mining time (0.5 -> 0.2)
+    - fix: forcebuild on pelagos deepsea now works and will default to wooden platform
+---------------------------------------------------------------------------------------------------
+Version: 0.14.1
+Date: 2025-10-04
+  Changes:
+    - improvised landfill recipe now get productivity bonus from landfill productivity
+---------------------------------------------------------------------------------------------------
+Version: 0.14.0
+Date: 2025-10-04
+  Changes:
+    - cargo ship boat placed on waterway now has diesel engine not burner.
+    - added diesel agricultural tower with research and it's recipe
+    - any planet start: moved agricultural tower research back to gleba
+---------------------------------------------------------------------------------------------------
+Version: 0.13.2
+Date: 2025-10-04
+  Changes:
+    - fixed titanium sludge color
+    - capsule rocket now require agricultural science pack tech requiremend because you can't research it without it anyway
+  Balancing:
+    - increased energy value of fermented fish (2MJ -> 3MJ), so you can get more copper with the same ammount of fermented fish
+    - changed cost of improvised landfill (10 stone -> 20 stone) (30 spoilage -> 60 spoilage)
+    - increased EM pollution absorbtion by water by 50%
+    - any planet start: improvised landfill research cost reduced (1000 -> 100)
+    - any planet start: wood spoiling technology cost reduced (500 -> 100)
+    - any planet start: tanker ship technology cost reduced (1500 -> 500)
+    - any planet start: long range delivery drones technology cost reduced (2000 -> 500)
+---------------------------------------------------------------------------------------------------
+Version: 0.13.1
+Date: 2025-10-03
+  Changes:
+    - forgot to add +2 range that I talk about in 0.13.0 changelog
+    - added 200 hp for heavy gun turret
+---------------------------------------------------------------------------------------------------
+Version: 0.13.0
+Date: 2025-10-03
+  Changes:
+    - added heavy gun turret and it's recipe. It has the same range as regular one (+2 because of offset correction needed because it's bigger, and range is counted from turret center), and 3x shooting speed
+    - any planet start: heavy gun turret has cheaper technology research
+    - introduced corrosive dmg type. It is intended as alternative to use rockets to shoot big asteroids. Expect space recipe related to it in future c;
+    - added corrosive dmg resistances for demolishers
+    - added corrosive dmg resistances for hudge asteroids
+    - renamed poisonous ammo into corrosive ammo
+    - changed pelagos explosive recipe (1 coal -> 1 carbon)
+    - updated galleon graphic with one improved by snouz 
+    - moved little engine icon on diesel machines into upper right corner to improve it's readability
+  Balancing:
+    - accumulators should now generate 5x less pollution
+    - increased leviathan copper spitter size by 25%
+    - increased leviathan copper spitter dmg by 50%
+    - increased corrosive magazine dmg (5 -> 7)
+    - changed pelagos explosive recipe cost (50 methane -> 25 methane)
+    - changed cost of fermentation bacteria recipe (150 methane -> 100 methane)
+    - increased coconut stack size (50 -> 100)
+    - fermented fish now require less raw-fish (15 -> 10)
+    - pelagos capture bot bullet now require less fermented fish (20 -> 10)
+    - fermentation-bacteria cultivation now give more bacteria (4 -> 8) to reduce ammount of needed fish 
+---------------------------------------------------------------------------------------------------
+Version: 0.12.1
+Date: 2025-10-01
+  Changes:
+    - reduced cost of improvised landfill (20 rock + 80 spoilage) -> (10 rock + 40 spoilage)
+    - pelagos capture bot rocket is now bullet not rocket.
+    - improved collisions for copper spitter
+    - oil rig can now be placed next to wooden platform
+    - methane explosive recipe can now be used with productivity bonus
+    - calcite concrete recipe can now be used with productivity bonus
+---------------------------------------------------------------------------------------------------
+Version: 0.12.0
+Date: 2025-09-29
+  Changes:
+    - terrain generation: added 4 new palm leaves variants
+    - terrain generation: added 2 new sand variants
+    - terrain generation: added 2 new decorative rocks variants
+    - terrain generation: changed clouds to more "tropical" ones
+    - terrain generation: incresed palm generation by 66%
+    - any planet start: added Pelagos military science pack
+    - engine casting recipe is now 50% quicker
+    - pelagos pollution type now works with accumulators, fusion generator, and solar power
+    - long range delivery drone request depot can now be placed on wooden platform
+    - fixed bug that not allowed placement of cargo ships next to wooden platform
+---------------------------------------------------------------------------------------------------
+Version: 0.11.2
+Date: 2025-09-29
+  Changes:
+    - long range delivery drone request depot can now be placed on wooden platform
+    - fixed bug that not allowed placement of cargo ships next to wooden platform
+---------------------------------------------------------------------------------------------------
+Version: 0.11.1
+Date: 2025-09-29
+  Changes:
+    - reduced pollution absorbtion by ground and water 3x
+    - added engine unit to decomposition science recipe
+    - added tips and tricks for EM waves
+    - coconut oil can now be crafted with cryogenic plant
+    - pelagos battery can now be crafted with cryogenic plant
+    - fixed typo in locale 
+---------------------------------------------------------------------------------------------------
+Version: 0.11.0
+Date: 2025-09-28
+  Changes:
+    - coconut husk now stack up to 50
+    - alternative biochamber recipe now require 25 iron plates instead of 30
+    - renamed diesel inserter to extra long handed diesel inserter
+    - Extra long handed diesel inserter now require 1 more engine unit to craft
+    - added fast diesel inserter
+    - diesel machines that are similar to vanilla ones are now marked with engine for better readability
+    - every fluid that has insane fuel value will now give reasonable acceleration while used as barreled fuel
+    - removed fish productivity bonus from cultivation productivity to make people stop saying me that it breaks the game with 19 levels of productivity.
+    - renamed copper bitters in locale to copper spitters for consistency
+    - added copper tint to copper spitter spawner
+    - added Captive copper spitter spawner recipe and technology
+    - palm tree should now spawn more often on new maps
+    - Any Planet Start: fish breeding research time is shorter (30->15)
+    - Any Planet Start: landfill research time is shorter (30->10)
+    - Any Planet Start: engine research time is shorter (30->10)
+    - Any Planet Start: engine research amount of required packs reduced (50->30)
+    - Any Planet Start: added diesel drill research to move drill earlier in tech tree
+---------------------------------------------------------------------------------------------------
+Version: 0.10.0
+Date: 2025-09-28
+  Changes:
+    - creating nuke explosion now creates deep water on pelagos
+    - electric pumps are now  allowed on wooden platforms 
+    - copper biter now deal 10X more dmg
+    - added recipe for making copper ore from copper biter eggs
+    - added new capture bot rocket for pelagos
+    - moved titanium processing into separate tech
+    - moved ethanol related recipes into separate tech
+    - moved copper egg recipes into "Coper biter captivity" tech
+    - updated any planet start tech tree based on changed above 
+---------------------------------------------------------------------------------------------------
+Version: 0.9.3
+Date: 2025-09-27
+  Changes:
+    - added 1 module slot to diesel assembling machine
+    - changed crafting speed of diesel assembling machine from 1 to 1.25
+---------------------------------------------------------------------------------------------------
+Version: 0.9.2
+Date: 2025-09-26
+  Changes:
+    - changed locale for technology "Deep sea oil extraction" is now "Deep sea extraction"
+    - changed locale for technology description of "Deep sea extraction"
+    - reduced generation and consumption of electricity by oil rig by 100kW
+    - fuel_top_speed_multiplier now applies correctly to every fuel 
+---------------------------------------------------------------------------------------------------
+Version: 0.9.1
+Date: 2025-09-26
+  Changes:
+    - poisonus firearm magazine can't be recycled into bacteria to prevent stacking it 
+    - degradation module can't be recycled into bacteria to prevent stacking it 
+    - diesel excavator now require coconut processing technology because it has sealant in recipe
+    - pelagos big rock now have small ammount of spoilage
+    - heating tower don't generate EM waves anymore
+---------------------------------------------------------------------------------------------------
+Version: 0.9.0
+Date: 2025-09-26
+  Changes:
+    - coconut oil now require 10 coconut meat instead of 15
+    - sand on pelagos now absorbs small ammount of pollution
+    - water on pelagos now absorbs tiny ammount of pollution
+    - updated locale for copper biter
+    - updated copper biter color
+    - added physical resistances to copper biter
+    - added poisonus firearm magazine
+---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+Date: 2025-09-25
+  Changes:
+    - any planet start pelagos logistic science pack recipe now require coconut sealant instead of engine unit
+    - fixed bug where you get regular pump when mining diesel pump
+    - oil rig now cost 50 gear wheel instead of 50 electric circuits
+    - oil rig cost changed (1 steam engine and 5 pumpjacks) -> (6 storage tank and 3 steam engines)
+    - increased ammount of mined methane and titanium sludge by 2
+    - methane and titanium sludge patches depletion time has been increased
+    - methane and titanium sludge patches depletion can't be lower than 40%
+    - added inserter fuel leech as optional dependency
+    - added popup after launching new any planet start run without burner leech mod, that informs that it is intended to have it
+    - increased mining time of copper stromatolite (0.4 -> 1)
+    - reduced energy usage of diesel assembling machine (400->300kW)
+    - reduced energy usage of diesel drill (360->270kW)
+    - improved cargo ship and tanker fuel efficiency
+---------------------------------------------------------------------------------------------------
+Version: 0.8.0
+Date: 2025-09-25
+  Changes:
+    - moved wooden platform tips and tricks unlock from deep sea oil extraction tech to coconut processing to make it easier get early on
+    - changed recipe type for diggable ground from advanced crafting to "organic-or-assembling". It can now be crafted by hand, assembler or with biochamber
+    - increased ethanol crafting time (6 -> 10)
+    - reduced coconut oil crafting time (10 -> 6)
+    - reduced wooden platform crafting cost (10 sealant-> 5 sealant)
+    - all pelagos recipes now have 4 tint colors. They are compatible with mods like collored_biochamber
+    - colorful_biochamber added to optional dependencies
+---------------------------------------------------------------------------------------------------
+Version: 0.7.9
+Date: 2025-09-23
+  Changes:
+    - added missing locale to Any Planet Start dropdown menu
+    - changed how recipe for pelagos rocket silo is set in order to make sure it does not ovveride other ones by accident
+    - added russian translation made by Пружинка
+---------------------------------------------------------------------------------------------------
+Version: 0.7.8
+Date: 2025-09-22
+  Changes:
+    - fixed recycling recipe for concrete
+    - fixed recycling recipe for steel plate
+    - fixed recycling recipe for capture bot rocket
+    - fixed recycling recipe for processing unit
+---------------------------------------------------------------------------------------------------
+Version: 0.7.7
+Date: 2025-09-22
+  Changes:
+    - to make sure damage is balanced flamethrower now adds only new fluids with fuel value listed and balanced by pelagos 
+---------------------------------------------------------------------------------------------------
+Version: 0.7.6
+Date: 2025-09-21
+  Changes:
+    - Updated cost of diggable ground (5 Spoilage + 25 water) -> 20 spoilage, and changed recipe type so it can now be crafted in assembling-machine-1
+    - fixed loading error when fulgoran enemies + explosive bitters are installed with pelagos
+    - added palm tree seed into ignored list for quality seed if quality seeds mod is installed as temporary fix
+---------------------------------------------------------------------------------------------------
+Version: 0.7.5
+Date: 2025-09-21
+  Changes:
+    - Any Planet Start: moved fluid handling a bit earlier in tech tree and locked diesel machines that consume barreled fuel after it
+    - Any Planet Start: moved fish breeding into automation category
+    - Any Planet Start: moved barreling machine into fluid handling
+---------------------------------------------------------------------------------------------------
+Version: 0.7.2
+Date: 2025-09-21
+  Changes:
+    - improved generation rate and copper drop from copper stromatolite
+---------------------------------------------------------------------------------------------------
+Version: 0.7.1
+Date: 2025-09-21
+  Changes:
+    - added missing locale for cultivation productivity tech
+    - updated spanish translation made by AnthonyDPS 
+---------------------------------------------------------------------------------------------------
+Version: 0.7.0
+Date: 2025-09-21
+  Changes:
+    - added Any planet start mod support
+    - added methane explosives recipe
+    - pelagos biochamber recipe now doesn't require electronic circuits but 10 extra iron plates instead
+    - adjusted titanium sludge and methane patches so they won't overlap in generation
+    - introduced copper biter into pelagos terrain generation
+    - removed copper ore from pelagos terrain generation. It won't be present on new saves
+    - introduced electromagnetic waves - pelagos pollution type created by electrical devices
+    - added new biter spawner food - fermented fish
+    - changed amount of stone mined from Pelagos big rock (30 -> 20)
+    - added Pelagos copper stromatolite to terrain generation
+    - it is now possible to place flamethrower turret, gun turret and rocket turret on wooden 
+    - flamethrower turret now uses fuel value to apply dmg modifier,
+      and every fluid with fuel value is included in flamethrower ammo list.
+    - added setting that allows to disable flamethrower fuel value based dmg and fluid inclusion
+    - new arig compatibility: you can now place wooden platform on arig sand
+---------------------------------------------------------------------------------------------------
+Version: 0.6.2
+Date: 2025-09-15
+  Changes:
+    - recipe for regular titanium barrel is no longer present in barreling machine
+    - added missing locale for titanium sludge autoplace
+    - diesel assembling machine can now fill and empty titanium barrels
+---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 2025-09-14
+  Changes:
+    - fixed error with pipe connection or rocket silo
+    - accleration calculation for barrels of liquid fuel will now work work with every notation (not only MJ) 
+---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: 2025-09-14
+  Changes:
+    - reworked terrain generator, and added pelagos deep sea 
+    - biochamber will now be recycled into vanilla recipe (it was overridden by pelagos recipe before)
+    - player can now plant coconut seeds (without agricultural tower)
+    - moved pelagos rocket part recipe into regular silo (fixes lack of ability to blueprint rocket silo)
+    - reduced galleon cost 120 wood -> 50 wood
+    - galleon should now be about 3x faster
+    - pelagos battery recipe is now unlocked with science pack
+    - added new resource titanium sludge. It can be processed into dust and then into plates
+    - rocket part on pelagos now requires titanium plate instead of low density structure
+    - decomposition science pack uses titanium dust instead of calcite
+    - tanker recipe uses 20 titanium plates instead of 20 electronic circuits
+    - cargo ship recipe uses 20 iron gear wheel instead of 20 electronic circuits
+    - boat recipe uses 6 iron gear wheel instead of 6 electronic circuits
+    - diesel inserter recipe uses burner inserter instead of long handed inserter
+    - diesel inserter recipe is now a bit cheaper (5 -> 4 pipe, 6 -> 4 coconut sealant)
+    - diesel assembling machine no longer requires assembling-machine-1 in crafting
+    - calciner recipe now requires 15 iron plates instead of 5 electronic circuits
+    - diesel mining drill now has new recipe that doesn't require electric mining drill
+    - reduced hydrogen fuel value from 0.675MJ to 0.4MJ
+    - added hard dependency on Long_Range_Delivery_Drones
+    - changed technology and recipes related with Long_Range_Delivery_Drones to include them in pelagos tech tree
+    - fixed planet icon scale so it works properly with telescopic planet discovery
