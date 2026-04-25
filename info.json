@@ -1,6 +1,6 @@
 {
     "name": "pelagos",
-    "version": "0.56.2",
+    "version": "0.57.0",
     "title": "Planet Pelagos",
     "author": "Talandar",
     "dependencies": [
@@ -23,6 +23,7 @@
         "heavy_gun_turret",
         "barreling_machines >= 0.1.4",
         "calciner",
+        "deepsea_mechanic",
         "? apia",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-arig",

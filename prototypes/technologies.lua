@@ -417,7 +417,7 @@ data:extend({
 	{
 		type = "technology",
 		name = "portable-diesel-generator",
-		icons = util.technology_icon_constant_equipment("__pelagos__/graphics/portable-diesel-generator.png"),
+		icons = util.technology_icon_constant_equipment("__diesel_machines__/graphics/portable-diesel-generator.png"),
 		icon_size = 256,
 		effects = {
 			{ type = "unlock-recipe", recipe = "portable-diesel-generator" },

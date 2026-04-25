@@ -1,8 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.57.0
+Date: 2026-04-15
+  Changes:
+    - removed deepsea mechanic code from pelagos
+    - added new required mod "Deepsea Mechanic"
+    - moved portable diesel generator from pelagos to diesel machines it can now be used without 
+      pelagos or space age installed
+---------------------------------------------------------------------------------------------------
 Version: 0.56.2
 Date: 2026-04-15
   Changes:
-    - removed all old. They become so old they started causing troubles
+    - removed all old migrations. They become so old they started causing troubles
 ---------------------------------------------------------------------------------------------------
 Version: 0.56.1
 Date: 2026-04-12
