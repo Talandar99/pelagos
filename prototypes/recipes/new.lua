@@ -439,73 +439,6 @@ data:extend({
 		results = { { type = "item", name = "lighthouse", amount = 1 } },
 	},
 	{
-		type = "recipe",
-		name = "diesel-mining-drill",
-		energy_required = 2,
-		ingredients = {
-			{ type = "item", name = "iron-plate", amount = 10 },
-			{ type = "item", name = "iron-gear-wheel", amount = 5 },
-			{ type = "item", name = "engine-unit", amount = 2 },
-			{ type = "item", name = "coconut-sealant", amount = 6 },
-		},
-		results = { { type = "item", name = "diesel-mining-drill", amount = 1 } },
-		enabled = false,
-	},
-	{
-
-		type = "recipe",
-		name = "diesel-inserter",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "pipe", amount = 4 },
-			{ type = "item", name = "engine-unit", amount = 2 },
-			{ type = "item", name = "coconut-sealant", amount = 4 },
-			{ type = "item", name = "burner-inserter", amount = 1 },
-		},
-		results = { { type = "item", name = "diesel-inserter", amount = 1 } },
-	},
-	{
-
-		type = "recipe",
-		name = "fast-diesel-inserter",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "pipe", amount = 4 },
-			{ type = "item", name = "engine-unit", amount = 1 },
-			{ type = "item", name = "coconut-sealant", amount = 4 },
-			{ type = "item", name = "burner-inserter", amount = 1 },
-		},
-		results = { { type = "item", name = "fast-diesel-inserter", amount = 1 } },
-	},
-	{
-
-		type = "recipe",
-		name = "long-handed-diesel-inserter",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "pipe", amount = 4 },
-			{ type = "item", name = "engine-unit", amount = 1 },
-			{ type = "item", name = "coconut-sealant", amount = 4 },
-			{ type = "item", name = "burner-inserter", amount = 1 },
-		},
-		results = { { type = "item", name = "long-handed-diesel-inserter", amount = 1 } },
-	},
-	{
-
-		type = "recipe",
-		name = "crane-bulk-diesel-inserter",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "pipe", amount = 4 },
-			{ type = "item", name = "engine-unit", amount = 5 },
-			{ type = "item", name = "coconut-sealant", amount = 6 },
-			{ type = "item", name = "burner-inserter", amount = 1 },
-			{ type = "item", name = "iron-plate", amount = 10 },
-			{ type = "item", name = "titanium-plate", amount = 5 },
-		},
-		results = { { type = "item", name = "crane-bulk-diesel-inserter", amount = 1 } },
-	},
-	{
 
 		type = "recipe",
 		name = "crane-stack-diesel-inserter",
@@ -518,30 +451,6 @@ data:extend({
 			{ type = "item", name = "titanium-plate", amount = 10 },
 		},
 		results = { { type = "item", name = "crane-stack-diesel-inserter", amount = 1 } },
-	},
-	{
-		type = "recipe",
-		name = "diesel-assembling-machine",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "steel-plate", amount = 5 },
-			{ type = "item", name = "coconut-sealant", amount = 10 },
-			{ type = "item", name = "iron-plate", amount = 15 },
-			{ type = "item", name = "iron-gear-wheel", amount = 7 },
-			{ type = "item", name = "engine-unit", amount = 1 },
-		},
-		results = { { type = "item", name = "diesel-assembling-machine", amount = 1 } },
-	},
-	{
-		type = "recipe",
-		name = "diesel-pump",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "engine-unit", amount = 2 },
-			{ type = "item", name = "pipe", amount = 4 },
-			{ type = "item", name = "coconut-sealant", amount = 2 },
-		},
-		results = { { type = "item", name = "diesel-pump", amount = 1 } },
 	},
 	{
 		type = "recipe",
@@ -843,22 +752,6 @@ data:extend({
 		enabled = false,
 		--auto_recycle = false,
 	},
-	{
-		type = "recipe",
-		name = "portable-diesel-generator",
-		energy_required = 10,
-		ingredients = {
-			{ type = "item", name = "titanium-plate", amount = 100 },
-			{ type = "item", name = "iron-gear-wheel", amount = 60 },
-			{ type = "item", name = "pipe", amount = 50 },
-			{ type = "item", name = "engine-unit", amount = 150 },
-			{ type = "item", name = "plastic-bar", amount = 30 },
-			{ type = "item", name = "coconut-sealant", amount = 50 },
-		},
-		results = { { type = "item", name = "portable-diesel-generator", amount = 1 } },
-		enabled = false,
-		--auto_recycle = false,
-	},
 })
 
 data:extend({
@@ -980,34 +873,6 @@ data:extend({
 		results = { { type = "item", name = "pelagos-sandfill", amount = 1 } },
 	},
 })
-
-if mods["lubrication_tower"] then
-	data:extend({
-		{
-			type = "recipe",
-			name = "lubrication-tower",
-			enabled = false,
-			energy_required = 20,
-			ingredients = {
-				{ type = "item", name = "steel-plate", amount = 50 },
-				{ type = "item", name = "titanium-plate", amount = 10 },
-				{ type = "item", name = "pipe", amount = 20 },
-				{ type = "item", name = "coconut-sealant", amount = 20 },
-				{ type = "item", name = "engine-unit", amount = 10 },
-				{ type = "item", name = "refined-concrete", amount = 100 },
-			},
-			results = { { type = "item", name = "lubrication-tower", amount = 1 } },
-			surface_conditions = {
-				{
-					property = "pressure",
-					min = 1809,
-					max = 1809,
-				},
-			},
-		},
-	})
-	data.raw.item["lubrication-tower"].default_import_location = "pelagos"
-end
 
 if mods["Krastorio2-spaced-out"] then
 	local electronic_components = table.deepcopy(data.raw["recipe"]["kr-electronic-components"])

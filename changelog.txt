@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.58.0
+Date: 2026-05-10
+  Changes:
+    - internal code changes/cleanup: pelagos dependancies by default now have the same base recipes as 
+      standalone version. Planet no longer override whole recipes, just add sealant and import location.
+      You might expect some recipe changes. Impacted submods: diesel machines, lubrication tower
+    - Tellus compatibility: magnesium bacteria cultivation recipe is now affected by bacteria 
+      cultivation productivity
+    - Tellus compatibility: Tellus soils are now affected by Pelagos landfill productivity
+    - Arig compatibility: Arig landfill compression recipe is now affected by Pelagos 
+      landfill productivity
+    - Foliax compatibility: Foliax soils are now affected by Pelagos landfill productivity
+    - Obsidiax compatibility: Obsidiax foundation is now affected by Pelagos landfill productivity
+    - Titanium barrels, related tech and recipe now have new graphics.
+    - PlanetLib support is now optional
+---------------------------------------------------------------------------------------------------
 Version: 0.57.0
 Date: 2026-04-15
   Changes:

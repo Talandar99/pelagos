@@ -4,7 +4,7 @@ data:extend({
 		type = "technology",
 		name = "planet-discovery-pelagos",
 		icon_size = 512,
-		icons = PlanetsLib.technology_icon_constant_planet("__pelagos__/graphics/planet/pelagos512.png", 512),
+		icons = util.technology_icon_constant_planet("__pelagos__/graphics/planet/pelagos256.png"),
 		essential = true,
 		effects = {
 			{
@@ -494,41 +494,6 @@ local productivity_effects = {
 		change = 0.1,
 	},
 }
-
-if mods["planetaris-arig"] then
-	table.insert(productivity_effects, {
-		type = "change-recipe-productivity",
-		recipe = "planetaris-sandstone-foundation",
-		change = 0.1,
-	})
-end
-if mods["gleba_cultured_soil"] then
-	table.insert(productivity_effects, {
-		type = "change-recipe-productivity",
-		recipe = "cultured-yumako-soil",
-		change = 0.1,
-	})
-	table.insert(productivity_effects, {
-		type = "change-recipe-productivity",
-		recipe = "cultured-jellynut-soil",
-		change = 0.1,
-	})
-end
-if mods["skewer_planet_vesta"] then
-	table.insert(productivity_effects, {
-		type = "change-recipe-productivity",
-		recipe = "vesta-foundation",
-		change = 0.1,
-	})
-end
-
-if mods["apia"] then
-	table.insert(productivity_effects, {
-		type = "change-recipe-productivity",
-		recipe = "wax-platform",
-		change = 0.1,
-	})
-end
 data:extend({
 	{
 		type = "technology",
@@ -585,13 +550,6 @@ local cultivation_productivity_effects = {
 		change = 0.1,
 	},
 }
-if mods["apia"] then
-	table.insert(cultivation_productivity_effects, {
-		type = "change-recipe-productivity",
-		recipe = "larvae-cultivation",
-		change = 0.1,
-	})
-end
 data:extend({
 	{
 		type = "technology",
@@ -784,7 +742,7 @@ data:extend({
 		type = "technology",
 		name = "titanium-barrels",
 		icon = "__pelagos__/graphics/titanium-barreling/titanium-barrels.png",
-		icon_size = 128,
+		icon_size = 512,
 		effects = {
 			{ type = "unlock-recipe", recipe = "titanium-barrel" },
 		},
@@ -1033,5 +991,6 @@ if mods["apia"] then
 		change = 0.1,
 	})
 end
-
-PlanetsLib.add_item_name_to_global_cargo_drops_whitelist("coconut")
+if mods["PlanetsLib"] then
+	PlanetsLib.add_item_name_to_global_cargo_drops_whitelist("coconut")
+end

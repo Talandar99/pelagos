@@ -12,8 +12,8 @@ local barrel_empty_icon = "__pelagos__/graphics/titanium-barreling/barrel-empty.
 local barrel_empty_side_mask = "__pelagos__/graphics/titanium-barreling/barrel-empty-side-mask.png"
 local barrel_empty_top_mask = "__pelagos__/graphics/titanium-barreling/barrel-empty-top-mask.png"
 
-local barrel_fill_icon = "__pelagos__/graphics/titanium-barreling/barrel-fill.png"
-local barrel_fill_side_mask = "__pelagos__/graphics/titanium-barreling/barrel-fill-side-mask.png"
+local barrel_fill_icon = "__pelagos__/graphics/titanium-barreling/empty-barrel.png"
+local barrel_fill_side_mask = "__pelagos__/graphics/titanium-barreling/barrel-side-mask.png"
 local barrel_fill_top_mask = "__pelagos__/graphics/titanium-barreling/barrel-fill-top-mask.png"
 -----------------------------------------------------------------------------------------------------------------------
 -- Alpha used for barrel masks

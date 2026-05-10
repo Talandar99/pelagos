@@ -1,3 +1,5 @@
+require("compatibility/internal_recipes")
+require("compatibility/productivity")
 -- ironclad compatibility
 if mods["aai-vehicles-ironclad"] and not mods["ironclad-gunboat-and-mortar-turret-fork"] then
 	local clad = data.raw["technology"]["ironclad"]

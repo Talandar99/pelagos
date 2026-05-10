@@ -1170,16 +1170,13 @@ local function MapGen_Pelagos()
 end
 
 --local max = graphics.get_max_texture_size and graphics.get_max_texture_size() or 8192
-PlanetsLib:extend({
+data:extend({
 	{
 		type = "planet",
 		name = "pelagos",
 		label_orientation = 0.25,
-		orbit = {
-			parent = { type = "space-location", name = "star" },
-			distance = 20,
-			orientation = 0.11,
-		},
+		distance = 20,
+		orientation = 0.11,
 		subgroup = "planets",
 		icon = "__pelagos__/graphics/planet/pelagos64.png",
 		icon_size = 64,
@@ -1278,7 +1275,6 @@ PlanetsLib:extend({
 		asteroid_spawn_influence = 1,
 		asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_gleba, 0.9),
 	},
-	is_planet = true,
 })
 data:extend({
 	{
