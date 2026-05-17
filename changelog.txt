@@ -2,6 +2,13 @@
 Version: 0.58.0
 Date: 2026-05-10
   Changes:
+  Balancing
+    - reduced cost of long range delivery drones (5 titanium => 3 titanium, 50 ethanol => 25 ethanol)
+
+---------------------------------------------------------------------------------------------------
+Version: 0.58.0
+Date: 2026-05-10
+  Changes:
     - internal code changes/cleanup: pelagos dependancies by default now have the same base recipes as 
       standalone version. Planet no longer override whole recipes, just add sealant and import location.
       You might expect some recipe changes. Impacted submods: diesel machines, lubrication tower

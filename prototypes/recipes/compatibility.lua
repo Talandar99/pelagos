@@ -97,10 +97,10 @@ data.raw["item"]["long-range-delivery-drone"].weight = 50 * kg
 
 data.raw["recipe"]["long-range-delivery-drone"].category = "crafting-with-fluid"
 data.raw["recipe"]["long-range-delivery-drone"].ingredients = {
-	{ type = "item", name = "titanium-plate", amount = 5 },
+	{ type = "item", name = "titanium-plate", amount = 3 },
 	{ type = "item", name = "advanced-circuit", amount = 1 },
 	{ type = "item", name = "engine-unit", amount = 1 },
-	{ type = "fluid", name = "ethanol", amount = 50 },
+	{ type = "fluid", name = "ethanol", amount = 25 },
 }
 data.raw["recipe"]["long-range-delivery-drone-depot"].ingredients = {
 	{ type = "item", name = "advanced-circuit", amount = 10 },

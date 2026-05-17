@@ -21,15 +21,54 @@ function add_sealant_and_pelagos_import_location(name, sealant_count)
 	end
 end
 
+local function replace_recipe_ingredient(recipe_name, old_ingredient, new_ingredient, new_amount)
+	if data.raw["recipe"][recipe_name] == nil then
+		return
+	end
+
+	local recipe = data.raw["recipe"][recipe_name]
+
+	if recipe.ingredients == nil then
+		return
+	end
+
+	for _, ingredient in ipairs(recipe.ingredients) do
+		if ingredient.name == old_ingredient then
+			ingredient.name = new_ingredient
+			ingredient.amount = new_amount
+			return
+		end
+	end
+end
+
+local function add_recipe_ingredient(recipe_name, ingredient_name, ingredient_amount)
+	local recipe = data.raw.recipe[recipe_name]
+
+	if not recipe or not recipe.ingredients then
+		return
+	end
+
+	table.insert(recipe.ingredients, {
+		type = "item",
+		name = ingredient_name,
+		amount = ingredient_amount,
+	})
+end
+
 if mods["diesel_machines"] then
+	-- inserters
 	add_sealant_and_pelagos_import_location("crane-bulk-diesel-inserter", 6)
+	replace_recipe_ingredient("crane-bulk-diesel-inserter", "steel-plate", "titanium-plate", 5)
 	add_sealant_and_pelagos_import_location("long-handed-diesel-inserter", 4)
 	add_sealant_and_pelagos_import_location("fast-diesel-inserter", 4)
 	add_sealant_and_pelagos_import_location("diesel-inserter", 4)
-	add_sealant_and_pelagos_import_location("diesel-mining-drill", 6)
-	add_sealant_and_pelagos_import_location("portable-diesel-generator", 50)
+	-- buildings
 	add_sealant_and_pelagos_import_location("diesel-assembling-machine", 10)
 	add_sealant_and_pelagos_import_location("diesel-pump", 10)
+	add_sealant_and_pelagos_import_location("diesel-mining-drill", 6)
+	-- equipment
+	add_sealant_and_pelagos_import_location("portable-diesel-generator", 50)
+	add_recipe_ingredient("portable-diesel-generator", "titanium-plate", 20)
 	if mods["barreling_machines"] then
 		add_sealant_and_pelagos_import_location("diesel-barreling-machine", 1)
 	end
@@ -37,6 +76,7 @@ end
 
 if mods["lubrication_tower"] then
 	add_sealant_and_pelagos_import_location("lubrication-tower", 20)
+	replace_recipe_ingredient("lubrication-tower", "iron-plate", "titanium-plate", 15)
 	data.raw.item["lubrication-tower"].surface_conditions = {
 		{
 			property = "pressure",
