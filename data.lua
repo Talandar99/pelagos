@@ -26,6 +26,8 @@ require("prototypes.canal-excavator")
 require("prototypes.tips-and-tricks")
 require("prototypes.achivements")
 require("prototypes.music")
+require("compatibility/internal_recipes")
+
 if mods["multi_surface_promethium_plate_recipe"] then
 	require("prototypes.msppr")
 end
