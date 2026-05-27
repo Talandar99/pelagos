@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.60.0
+Date: 2026-05-17
+  Changes:
+    - reworked diesel dragon and related recipes
+  Balancing:
+    - reworked diesel dragon and related recipes
+    - updated ethanol thruster efficiency/thrust curve. It should be now be even more rewarding for 
+      players that throttle it instead of going full speed
+---------------------------------------------------------------------------------------------------
 Version: 0.59.0
 Date: 2026-05-17
   Changes:

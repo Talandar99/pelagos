@@ -40,6 +40,7 @@ local base_categories = data.raw["assembling-machine"]["assembling-machine-3"].c
 local diesel_categories = table.deepcopy(base_categories)
 table.insert(diesel_categories, "barreling")
 table.insert(diesel_categories, "cargo-crates")
+table.insert(diesel_categories, "diesel-rocket-parts")
 data.raw["assembling-machine"]["diesel-assembling-machine"].crafting_categories = diesel_categories
 
 if data.raw["mining-drill"]["canex-excavator"] then

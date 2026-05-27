@@ -79,8 +79,10 @@ data:extend({
 		--min_performance = { fluid_volume = 0.1, fluid_usage = 0.025, effectivity = 0.02 },
 		--max_performance = { fluid_volume = 0.8, fluid_usage = 0.25, effectivity = 0.1 },
 		--
-		min_performance = { fluid_volume = 0.1, fluid_usage = 0.025, effectivity = 0.2 },
-		max_performance = { fluid_volume = 0.8, fluid_usage = 0.25, effectivity = 0.1 },
+		--min_performance = { fluid_volume = 0.1, fluid_usage = 0.025, effectivity = 0.2 },
+		--max_performance = { fluid_volume = 0.8, fluid_usage = 0.25, effectivity = 0.1 },
+		min_performance = { fluid_volume = 0.1, fluid_usage = 0.025, effectivity = 0.3 },
+		max_performance = { fluid_volume = 0.9, fluid_usage = 0.25, effectivity = 0.1 },
 		fuel_fluid_box = {
 			filter = "ethanol",
 			production_type = "input",

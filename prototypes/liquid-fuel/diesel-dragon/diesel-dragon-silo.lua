@@ -79,7 +79,7 @@ data:extend({
 		icons_positioning = {
 			{ inventory_index = defines.inventory.assembling_machine_modules, shift = { 0, 3.3 } },
 		},
-		--fixed_recipe = "rocket-part",
+		fixed_recipe = "diesel-dragon-loading",
 		show_recipe_icon = false,
 		allowed_effects = { "consumption", "speed", "productivity", "pollution" },
 		minable = { mining_time = 1, result = "diesel-dragon" },
