@@ -595,12 +595,6 @@ data:extend({
 data.raw.item["diesel-dragon"].subgroup = "space-interactors"
 data.raw["rocket-silo"]["diesel-dragon"].circuit_connector = circuit_connector_definitions["rocket-silo"]
 data.raw["rocket-silo"]["diesel-dragon"].circuit_wire_max_distance = default_circuit_wire_max_distance
-data.raw["rocket-silo"]["diesel-dragon"].surface_conditions = {
-	{
-		property = "pressure",
-		min = 1,
-	},
-}
 data.raw["rocket-silo"]["diesel-dragon"].heating_energy = "300kW"
 data.raw.item["diesel-dragon"].flags = data.raw.item["rocket-silo"].flags or {}
 table.insert(data.raw.item["diesel-dragon"].flags, "draw-logistic-overlay")
