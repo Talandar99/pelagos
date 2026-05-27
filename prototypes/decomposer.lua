@@ -3,39 +3,31 @@ local hit_effects = require("__base__.prototypes.entity.hit-effects")
 data:extend({
 	{
 		type = "recipe-category",
-		name = "composter",
-	},
-})
-
--- 1. Nowa kategoria craftingu
-data:extend({
-	{
-		type = "recipe-category",
-		name = "composter",
+		name = "decomposition",
 	},
 })
 
 data:extend({
 	{
 		type = "item",
-		name = "composter",
-		icon = "__pelagos__/graphics/composter/composter64.png",
+		name = "decomposer",
+		icon = "__pelagos__/graphics/decomposer/decomposer64.png",
 		subgroup = "agriculture",
-		order = "b[composter]",
+		order = "b[decomposer]",
 		inventory_move_sound = item_sounds.fluid_inventory_move,
 		pick_sound = item_sounds.fluid_inventory_pickup,
 		drop_sound = item_sounds.fluid_inventory_move,
-		place_result = "composter",
+		place_result = "decomposer",
 		stack_size = 20,
 		default_import_location = "pelagos",
 	},
 	{
 		type = "assembling-machine",
-		name = "composter",
-		icon = "__pelagos__/graphics/composter/composter64.png",
+		name = "decomposer",
+		icon = "__pelagos__/graphics/decomposer/decomposer64.png",
 		flags = { "placeable-neutral", "placeable-player", "player-creation" },
-		minable = { mining_time = 0.1, result = "composter" },
-		fast_replaceable_group = "composter",
+		minable = { mining_time = 0.1, result = "decomposer" },
+		fast_replaceable_group = "decomposer",
 		max_health = 300,
 		corpse = "biochamber-remnants",
 		dying_explosion = "biochamber-explosion",
@@ -52,7 +44,7 @@ data:extend({
 				layers = {
 					-- Warstwa 1: Główny budynek
 					{
-						filename = "__pelagos__/graphics/composter/composter256.png",
+						filename = "__pelagos__/graphics/decomposer/decomposer256.png",
 						priority = "high",
 						width = 256,
 						height = 256,
@@ -64,7 +56,7 @@ data:extend({
 					},
 					-- Warstwa 2: Cień (TERAZ JEST WEWNĄTRZ LAYERS)
 					{
-						filename = "__pelagos__/graphics/composter/composter-shadow.png",
+						filename = "__pelagos__/graphics/decomposer/decomposer-shadow.png",
 						priority = "high",
 						width = 384,
 						height = 256,
@@ -80,7 +72,7 @@ data:extend({
 		},
 
 		crafting_speed = 2,
-		crafting_categories = { "composter" },
+		crafting_categories = { "decomposition" },
 		energy_source = {
 			type = "burner",
 			fuel_categories = { "nutrients" },
