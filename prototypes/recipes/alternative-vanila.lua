@@ -215,48 +215,4 @@ data:extend({
 			quaternary = { r = 0.64, g = 0.11, b = 0.3, a = 1.000 },
 		},
 	},
-	{
-		type = "recipe",
-		name = "nutrients-from-spoilage-methane",
-		icons = {
-			{ icon = "__pelagos__/graphics/methane.png", icon_size = 64 },
-			{ icon = "__space-age__/graphics/icons/nutrients-from-spoilage.png", icon_size = 64 },
-		},
-		category = "organic",
-		subgroup = "agriculture-processes",
-		order = "c[nutrients]-c[nutrients-from-spoilage-methane]",
-		enabled = false,
-		allow_productivity = true,
-		energy_required = 2,
-		ingredients = {
-			{ type = "item", name = "spoilage", amount = 10 },
-			{ type = "fluid", name = "methane", amount = 10 },
-		},
-		results = { { type = "item", name = "nutrients", amount = 2, percent_spoiled = 0.6 } },
-		crafting_machine_tint = {
-			primary = { r = 0.8, g = 0.9, b = 1, a = 1.000 },
-			secondary = { r = 0.5, g = 0.5, b = 0.8, a = 1.000 },
-		},
-	},
-	{
-		type = "recipe",
-		name = "nutrients-spoiling",
-		icons = {
-			{ icon = "__pelagos__/graphics/nutrients-spoiling.png", icon_size = 64 },
-		},
-		category = "organic",
-		subgroup = "agriculture-processes",
-		order = "c[nutrients]-a[zspoilage]",
-		enabled = false,
-		allow_productivity = false,
-		energy_required = 0.1,
-		ingredients = {
-			{ type = "item", name = "nutrients", amount = 10 },
-		},
-		results = { { type = "item", name = "spoilage", amount = 20 } },
-		crafting_machine_tint = {
-			primary = { r = 0.0, g = 0.1, b = 0, a = 1.000 },
-			secondary = { r = 0.0, g = 0.1, b = 0.0, a = 1.000 },
-		},
-	},
 })

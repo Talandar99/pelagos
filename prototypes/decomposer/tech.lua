@@ -1,15 +1,31 @@
 data:extend({
 	{
 		type = "technology",
-		name = "wood-spoiling-technology",
-		icon = "__pelagos__/graphics/celulose-decomposition.png",
-		icon_size = 90,
+		name = "decomposer",
+		icon = "__pelagos__/graphics/decomposer/decomposer256.png",
+		icon_size = 256,
 		effects = {
-			{ type = "unlock-recipe", recipe = "wood-spoiling" },
-			{ type = "unlock-recipe", recipe = "coconut-husk-spoiling" },
 			{ type = "unlock-recipe", recipe = "nutrients-spoiling" },
 			{ type = "unlock-recipe", recipe = "nutrients-from-spoilage-methane" },
 		},
+		prerequisites = { "coconut-processing-technology" },
+
+		unit = nil,
+		research_trigger = {
+			type = "mine-entity",
+			entity = "pelagos-big-rock",
+		},
+
+		order = "cc[pelagos]",
+	},
+})
+data:extend({
+	{
+		type = "technology",
+		name = "wood-spoiling-technology",
+		icon = "__pelagos__/graphics/celulose-decomposition.png",
+		icon_size = 90,
+		effects = {},
 		prerequisites = { "pelagos-science-pack" },
 		unit = {
 			count_formula = "500",

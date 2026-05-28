@@ -141,6 +141,8 @@ if mods["canal-excavator"] then
 	t.prerequisites = {
 		"planet-discovery-pelagos",
 		"coconut-processing-technology",
+		"decomposer",
+		"diesel-automation",
 		--"engine", -- important for any planet start
 	}
 	t.effects = {
@@ -151,8 +153,8 @@ if mods["canal-excavator"] then
 	}
 
 	t.research_trigger = {
-		type = "mine-entity",
-		entity = "pelagos-big-rock",
+		type = "build-entity",
+		entity = "decomposer",
 	}
 	t.order = "ea[pelagos]"
 	t.unit = nil
@@ -209,7 +211,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "pelagos-processing-unit" },
 			{ type = "unlock-recipe", recipe = "pelagos-battery" },
 		},
-		prerequisites = { "fermentation-bacteria-cultivation-technology", "calciner" },
+		prerequisites = { "fermentation-bacteria-cultivation-technology", "calciner", "decomposer" },
 		research_trigger = {
 			type = "craft-fluid",
 			fluid = "ethanol",
@@ -275,7 +277,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "pelagos-science-pack" },
 			{ type = "unlock-recipe", recipe = "pelagos-explosives" },
 		},
-		prerequisites = { "fermentation-bacteria-cultivation-technology", "titanium", "calciner" },
+		prerequisites = { "fermentation-bacteria-cultivation-technology", "titanium", "calciner", "decomposer" },
 		research_trigger = {
 			type = "craft-item",
 			item = "fermentation-bacteria",
@@ -363,29 +365,34 @@ data:extend({
 		},
 	},
 })
-data:extend({
-	{
-		type = "technology",
-		name = "diesel-automation",
-		icon = "__diesel_machines__/graphics/diesel-assembling-machine/diesel-automation.png",
-		icon_size = 256,
-		effects = {
-			{ type = "unlock-recipe", recipe = "fast-diesel-inserter" },
-			{ type = "unlock-recipe", recipe = "long-handed-diesel-inserter" },
-			{ type = "unlock-recipe", recipe = "diesel-inserter" },
-			{ type = "unlock-recipe", recipe = "diesel-assembling-machine" },
-			{ type = "unlock-recipe", recipe = "diesel-pump" },
-		},
-		prerequisites = {
-			"calciner",
-			--	"automation-2", -- important for any planet start
-		},
-		research_trigger = {
-			type = "build-entity",
-			entity = "diesel-mining-drill",
-		},
-	},
+
+--	table.insert(tech.effects, {
+--		type = "unlock-recipe",
+--		recipe = "diesel-mining-drill",
+--	})
+--	tech.prerequisites = {
+--		--"diesel-mining-drill",
+--		--"advanced-material-processing", -- important for any planet start
+--		"concrete",
+--		"canex-excavator",
+--	}
+data.raw["technology"]["calciner"].unit = nil
+data.raw["technology"]["calciner"].research_trigger = {
+	type = "build-entity",
+	entity = "canex-excavator",
+}
+table.insert(data.raw["technology"]["calciner"].effects, {
+	type = "unlock-recipe",
+	recipe = "calciner-coconut-husk-carbonization",
 })
+data.raw["technology"]["calciner"].prerequisites = { "canex-excavator", "diesel-automation" }
+
+data.raw["technology"]["diesel-automation"].prerequisites = { "coconut-processing-technology" }
+data.raw["technology"]["diesel-automation"].unit = nil
+data.raw["technology"]["diesel-automation"].research_trigger = {
+	type = "craft-item",
+	item = "coconut-sealant",
+}
 data:extend({
 	{
 		type = "technology",

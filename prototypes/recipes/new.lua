@@ -88,36 +88,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "pelagos-science-pack",
-		category = "organic",
-		subgroup = "science-pack",
-		surface_conditions = {
-			{
-				property = "pressure",
-				min = 1809,
-				max = 1809,
-			},
-		},
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "coconut-sealant", amount = 2 },
-			{ type = "item", name = "engine-unit", amount = 1 },
-			{ type = "item", name = "fermentation-bacteria", amount = 3 },
-			{ type = "item", name = "activated-carbon", amount = 1 },
-			{ type = "item", name = "titanium-dust", amount = 1 },
-		},
-		energy_required = 8,
-		results = { { type = "item", name = "pelagos-science-pack", amount = 2 } },
-		allow_productivity = true,
-		crafting_machine_tint = {
-			primary = { r = 0.39, g = 0.48, b = 0.26, a = 1.000 },
-			secondary = { r = 0.49, g = 0.58, b = 0.36, a = 1.000 },
-			tertiary = { r = 0.39, g = 0.48, b = 0.26, a = 1.000 },
-			quaternary = { r = 0.49, g = 0.58, b = 0.36, a = 1.000 },
-		},
-	},
-	{
-		type = "recipe",
 		name = "fermentation-bacteria",
 		category = "organic",
 		surface_conditions = {
@@ -762,28 +732,6 @@ data:extend({
 	},
 })
 data:extend({
-	{
-		type = "recipe",
-		name = "stone-erosion",
-		category = "organic",
-		icons = {
-			{ icon = "__base__/graphics/icons/stone.png", icon_size = 64 },
-			{ icon = "__base__/graphics/icons/fluid/water.png", icon_size = 64, scale = 0.3, shift = { 8, 8 } },
-		},
-		enabled = false,
-		auto_recycle = false,
-		energy_required = 5.0,
-		ingredients = {
-			{ type = "fluid", name = "water", amount = 10 },
-			{ type = "item", name = "stone", amount = 5 },
-		},
-		main_product = "sand",
-		results = {
-			{ type = "item", name = "sand", amount = 10 },
-			{ type = "fluid", name = "water", amount = 2, ignored_by_stats = 2, ignored_by_productivity = 2 },
-		},
-		allow_productivity = true,
-	},
 	{
 		type = "recipe",
 		name = "pelagos-sandfill",
