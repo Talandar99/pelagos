@@ -1,12 +1,24 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.60.0
+Version: 1.0.0
 Date: 2026-05-17
+  Info:
+    - This update contain significant changes and as result it WILL BREAK EXISTING FACTORIES.
+    - Pelagos reached 20 000 downloads. As a result I wanted to add something cool, 
+      and cleanup stuff I was not 100% happy about 
+    - This update contain some breaking changes concentrated around stuff that I think I could 
+      have made better. Mainly diesel dragon and recipes related to spoilage.
+    - It also contin new recipes, tech, and new building
   Changes:
-    - reworked diesel dragon and related recipes
+    - reworked diesel dragon and related recipes. Rocket parts are now made outside of rocket silo
+    - added new building: Decomposer
+    - Moved some existing recipes to be exclusive to Decomposer
+    - Updated progression tree, added new techs and moved around existing ones
   Balancing:
     - reworked diesel dragon and related recipes
     - updated ethanol thruster efficiency/thrust curve. It should be now be even more rewarding for 
       players that throttle it instead of going full speed
+  Bugfixes:
+    - increased shooting delay on capture bot bullet to prevent "rapid fire" effect
 ---------------------------------------------------------------------------------------------------
 Version: 0.59.0
 Date: 2026-05-17

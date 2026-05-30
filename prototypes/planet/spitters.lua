@@ -371,7 +371,11 @@ data:extend({
 		healing_per_tick = 0.02,
 
 		collision_mask = {
-			layers = { ["ground_tile"] = true, ["is_object"] = true, ["trigger_target"] = true },
+			layers = {
+				["ground_tile"] = true,
+				["is_object"] = true,
+				["trigger_target"] = true,
+			},
 		},
 		--collision_mask = { layers = { water_tile = true } },
 		collision_box = { { -2.2, -2.2 }, { 2.2, 2.2 } },

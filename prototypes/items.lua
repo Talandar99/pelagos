@@ -391,6 +391,7 @@ data:extend({
 		icon = "__pelagos__/graphics/capture-bot.png",
 		ammo_category = "bullet",
 		ammo_type = {
+			cooldown_modifier = 100,
 			action = {
 				type = "direct",
 				action_delivery = {
