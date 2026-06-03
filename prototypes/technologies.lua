@@ -313,36 +313,6 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
-		name = "improvised-concrete",
-		icon = "__pelagos__/graphics/concrete-technology.png",
-		icon_size = 128,
-		effects = {
-			{ type = "unlock-recipe", recipe = "cococoncrete" },
-			{ type = "unlock-recipe", recipe = "pelagos-spoilage-concrete" },
-		},
-		prerequisites = {
-			"pelagos-science-pack",
-			"improvised-landfill",
-			"wood-spoiling-technology",
-			"chemical-science-pack",
-			"concrete",
-		},
-		unit = {
-			count_formula = "1000",
-			ingredients = {
-				{ "automation-science-pack", 1 },
-				{ "logistic-science-pack", 1 },
-				{ "chemical-science-pack", 1 },
-				{ "space-science-pack", 1 },
-				{ "pelagos-science-pack", 1 },
-			},
-			time = 60,
-		},
-	},
-})
-data:extend({
-	{
-		type = "technology",
 		name = "crane-stack-diesel-inserter",
 		icon = "__pelagos__/graphics/diesel-titanium-crane-stack-inserter/stack-inserter.png",
 		icon_size = 64,
@@ -585,31 +555,6 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
-		name = "pelagos-biodiesel",
-		icon = "__pelagos__/graphics/biodiesel.png",
-		icon_size = 64,
-		effects = {
-			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-tree" },
-			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-spoilage" },
-			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-solid-fuel" },
-		},
-		prerequisites = { "pelagos-science-pack", "wood-spoiling-technology", "space-science-pack" },
-		unit = {
-			count_formula = "500",
-			ingredients = {
-				{ "automation-science-pack", 1 },
-				{ "logistic-science-pack", 1 },
-				{ "chemical-science-pack", 1 },
-				{ "space-science-pack", 1 },
-				{ "pelagos-science-pack", 1 },
-			},
-			time = 60,
-		},
-	},
-})
-data:extend({
-	{
-		type = "technology",
 		name = "pelagos-casting-engine-unit",
 		icon = "__pelagos__/graphics/casting-engine-unit.png",
 		icon_size = 64,
@@ -805,7 +750,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "metallic-asteroid-methane-crushing" },
 			{ type = "unlock-recipe", recipe = "carbonic-asteroid-gasification" },
 		},
-		prerequisites = { "pelagos-science-pack" },
+		prerequisites = { "pelagos-science-pack", "organic-decomposition" },
 		unit = {
 			count_formula = "500",
 			ingredients = {
@@ -853,9 +798,64 @@ data:extend({
 		effects = {
 			{ type = "unlock-recipe", recipe = "ethanol-thruster" },
 		},
-		prerequisites = { "pelagos-science-pack", "ethanol" },
+		prerequisites = { "pelagos-science-pack", "ethanol", "pelagos-asteroid-bioprocessing" },
 		unit = {
 			count = 1000,
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+data:extend({
+	{
+		type = "technology",
+		name = "improvised-concrete",
+		icon = "__pelagos__/graphics/concrete-technology.png",
+		icon_size = 128,
+		effects = {
+			{ type = "unlock-recipe", recipe = "cococoncrete" },
+			{ type = "unlock-recipe", recipe = "pelagos-spoilage-concrete" },
+		},
+		prerequisites = {
+			"pelagos-science-pack",
+			"improvised-landfill",
+			"organic-decomposition",
+			"chemical-science-pack",
+			"concrete",
+		},
+		unit = {
+			count_formula = "1000",
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
+				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+data:extend({
+	{
+		type = "technology",
+		name = "pelagos-biodiesel",
+		icon = "__pelagos__/graphics/biodiesel.png",
+		icon_size = 64,
+		effects = {
+			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-tree" },
+			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-spoilage" },
+			{ type = "unlock-recipe", recipe = "pelagos-biodiesel-solid-fuel" },
+		},
+		prerequisites = { "pelagos-science-pack", "organic-decomposition", "space-science-pack" },
+		unit = {
+			count_formula = "500",
 			ingredients = {
 				{ "automation-science-pack", 1 },
 				{ "logistic-science-pack", 1 },

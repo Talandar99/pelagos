@@ -44,7 +44,6 @@ local function sanity_checks()
 			.. "\n   Option 2) Restore coconut-sealant as a required ingredient\n\n"
 	)
 end
-
 -------------------------------------------------------------------------------
 -- diesel asteroid collector: manage paired engine
 -------------------------------------------------------------------------------
@@ -220,7 +219,6 @@ script.on_event(
 		if not e then
 			return
 		end
-
 		on_removed_collector(event)
 	end
 )

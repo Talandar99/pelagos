@@ -22,7 +22,7 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
-		name = "wood-spoiling-technology",
+		name = "organic-decomposition",
 		icon = "__pelagos__/graphics/celulose-decomposition.png",
 		icon_size = 90,
 		effects = {},
