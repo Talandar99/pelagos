@@ -94,7 +94,7 @@ data:extend({
 					flow_direction = "input-output",
 					direction = defines.direction.east,
 					position = { 1.5, -2 },
-					enable_working_visualisations = { "pipe-1" },
+					enable_working_visualisations = { "pipe-4" },
 				},
 				{
 					flow_direction = "input-output",
@@ -105,7 +105,7 @@ data:extend({
 			},
 		},
 		oxidizer_fluid_box = {
-			filter = "ethanol",
+			filter = "oxygen",
 			production_type = "input",
 			-- pipe_covers = pipecoverspictures(),
 			draw_only_when_connected = true,
@@ -115,13 +115,13 @@ data:extend({
 					flow_direction = "input-output",
 					direction = defines.direction.west,
 					position = { -1.5, 0 },
-					enable_working_visualisations = { "pipe-3" },
+					enable_working_visualisations = { "pipe-1" },
 				},
 				{
 					flow_direction = "input-output",
 					direction = defines.direction.west,
 					position = { -1.5, -2 },
-					enable_working_visualisations = { "pipe-4" },
+					enable_working_visualisations = { "pipe-3" },
 				},
 			},
 		},

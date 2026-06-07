@@ -744,6 +744,59 @@ data:extend({
 		},
 		results = { { type = "item", name = "pelagos-sandfill", amount = 1 } },
 	},
+	{
+		type = "recipe",
+		name = "nutrients-from-spoilage-methane",
+		icons = {
+			{ icon = "__pelagos__/graphics/methane.png", icon_size = 64 },
+			{ icon = "__space-age__/graphics/icons/nutrients-from-spoilage.png", icon_size = 64 },
+		},
+		category = "decomposition",
+		subgroup = "decomposition-products",
+		order = "c[nutrients]-c[nutrients-from-spoilage-methane]",
+		enabled = false,
+		allow_productivity = true,
+		energy_required = 2,
+		ingredients = {
+			{ type = "item", name = "spoilage", amount = 10 },
+			{ type = "fluid", name = "methane", amount = 5 },
+		},
+		results = { { type = "item", name = "nutrients", amount = 2, percent_spoiled = 0.6 } },
+		crafting_machine_tint = {
+			primary = { r = 0.8, g = 0.9, b = 1, a = 1.000 },
+			secondary = { r = 0.5, g = 0.5, b = 0.8, a = 1.000 },
+		},
+	},
+	{
+		type = "recipe",
+		name = "pelagos-science-pack",
+		category = "decomposition",
+		subgroup = "science-pack",
+		surface_conditions = {
+			{
+				property = "pressure",
+				min = 1809,
+				max = 1809,
+			},
+		},
+		enabled = false,
+		ingredients = {
+			{ type = "item", name = "coconut-sealant", amount = 2 },
+			{ type = "item", name = "engine-unit", amount = 1 },
+			{ type = "item", name = "fermentation-bacteria", amount = 3 },
+			{ type = "item", name = "activated-carbon", amount = 1 },
+			{ type = "item", name = "titanium-dust", amount = 1 },
+		},
+		energy_required = 8,
+		results = { { type = "item", name = "pelagos-science-pack", amount = 2 } },
+		allow_productivity = true,
+		crafting_machine_tint = {
+			primary = { r = 0.39, g = 0.48, b = 0.26, a = 1.000 },
+			secondary = { r = 0.49, g = 0.58, b = 0.36, a = 1.000 },
+			tertiary = { r = 0.39, g = 0.48, b = 0.26, a = 1.000 },
+			quaternary = { r = 0.49, g = 0.58, b = 0.36, a = 1.000 },
+		},
+	},
 })
 
 if mods["Krastorio2-spaced-out"] then

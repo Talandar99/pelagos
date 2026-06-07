@@ -19,25 +19,25 @@ data:extend({
 		order = "cc[pelagos]",
 	},
 })
-data:extend({
-	{
-		type = "technology",
-		name = "organic-decomposition",
-		icon = "__pelagos__/graphics/celulose-decomposition.png",
-		icon_size = 90,
-		effects = {},
-		prerequisites = { "pelagos-science-pack" },
-		unit = {
-			count_formula = "500",
-			ingredients = {
-				{ "automation-science-pack", 1 },
-				{ "logistic-science-pack", 1 },
-				{ "chemical-science-pack", 1 },
-				{ "space-science-pack", 1 },
-				{ "pelagos-science-pack", 1 },
-			},
-			time = 60,
-		},
-		order = "cc[pelagos]",
-	},
-})
+--data:extend({
+--	{
+--		type = "technology",
+--		name = "organic-decomposition",
+--		icon = "__pelagos__/graphics/celulose-decomposition.png",
+--		icon_size = 90,
+--		effects = {},
+--		prerequisites = { "pelagos-science-pack" },
+--		unit = {
+--			count_formula = "500",
+--			ingredients = {
+--				{ "automation-science-pack", 1 },
+--				{ "logistic-science-pack", 1 },
+--				{ "chemical-science-pack", 1 },
+--				{ "space-science-pack", 1 },
+--				{ "pelagos-science-pack", 1 },
+--			},
+--			time = 60,
+--		},
+--		order = "cc[pelagos]",
+--	},
+--})

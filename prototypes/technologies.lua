@@ -280,7 +280,7 @@ data:extend({
 		prerequisites = { "fermentation-bacteria-cultivation-technology", "titanium", "calciner", "decomposer" },
 		research_trigger = {
 			type = "craft-item",
-			item = "fermentation-bacteria",
+			item = "titanium-dust",
 		},
 		order = "ea[pelagos]",
 	},
