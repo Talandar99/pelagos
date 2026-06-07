@@ -92,8 +92,8 @@ data:extend({
 			pipe_connections = {
 				{
 					flow_direction = "input-output",
-					direction = defines.direction.east,
-					position = { 1.5, -2 },
+					direction = defines.direction.west,
+					position = { -1.5, -2 },
 					enable_working_visualisations = { "pipe-4" },
 				},
 				{
@@ -113,14 +113,14 @@ data:extend({
 			pipe_connections = {
 				{
 					flow_direction = "input-output",
-					direction = defines.direction.west,
-					position = { -1.5, 0 },
+					direction = defines.direction.east,
+					position = { 1.5, -2 },
 					enable_working_visualisations = { "pipe-1" },
 				},
 				{
 					flow_direction = "input-output",
 					direction = defines.direction.west,
-					position = { -1.5, -2 },
+					position = { -1.5, 0 },
 					enable_working_visualisations = { "pipe-3" },
 				},
 			},
