@@ -7,10 +7,10 @@ if palm then
 		peaks = {
 			{
 				influence = 0.2,
-				tile_restriction = { "sand-1", "sand-2", "pelagos-sand-1", "pelagos-sand-2", "pelagos-sandfill" },
+				tile_restriction = { "sand-1", "sand-2", "pelagos-sand-1", "pelagos-sand-2", "decomposer-sandfill" },
 			},
 		},
-		tile_restriction = { "sand-1", "sand-2", "pelagos-sand-1", "pelagos-sand-2", "pelagos-sandfill" },
+		tile_restriction = { "sand-1", "sand-2", "pelagos-sand-1", "pelagos-sand-2", "decomposer-sandfill" },
 		surface_conditions = {
 			{ property = "pressure", min = 1809, max = 1809 },
 		},

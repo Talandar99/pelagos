@@ -13,7 +13,7 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "diesel-dragon-rocket-part-hot" },
 			{ type = "unlock-recipe", recipe = "diesel-dragon-rocket-part-cold" },
 		},
-		prerequisites = { "pelagos-science-pack", "long-range-delivery-drone", "titanium-barrels", "pelagos-biodiesel" },
+		prerequisites = {},
 		unit = {
 			count = 10000,
 			ingredients = {

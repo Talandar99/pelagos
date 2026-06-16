@@ -54,6 +54,26 @@ local function add_recipe_ingredient(recipe_name, ingredient_name, ingredient_am
 		amount = ingredient_amount,
 	})
 end
+local function remove_recipe_ingredient(recipe_name, ingredient_name)
+	if data.raw["recipe"][recipe_name] == nil then
+		return
+	end
+
+	local recipe = data.raw["recipe"][recipe_name]
+
+	if recipe.ingredients == nil then
+		return
+	end
+
+	for i, ingredient in ipairs(recipe.ingredients) do
+		local current_name = ingredient.name or ingredient[1]
+
+		if current_name == ingredient_name then
+			table.remove(recipe.ingredients, i)
+			return
+		end
+	end
+end
 
 if mods["diesel_machines"] then
 	-- inserters
@@ -83,5 +103,37 @@ if mods["lubrication_tower"] then
 			min = 1809,
 			max = 1809,
 		},
+	}
+end
+
+if mods["cargo-ships"] then
+	add_sealant_and_pelagos_import_location("floating-electric-pole", 4)
+	-- boat
+	add_recipe_ingredient("boat", "coconut-sealant", 30)
+	remove_recipe_ingredient("boat", "electronic-circuit")
+	-- cargo ship
+	add_recipe_ingredient("cargo_ship", "coconut-sealant", 80)
+	remove_recipe_ingredient("cargo_ship", "electronic-circuit")
+	-- tanker
+	add_recipe_ingredient("oil_tanker", "coconut-sealant", 80)
+	add_recipe_ingredient("oil_tanker", "titanium-plate", 20)
+	remove_recipe_ingredient("oil_tanker", "electronic-circuit")
+	-- buoys
+	add_recipe_ingredient("buoy", "coconut-sealant", 2)
+	add_recipe_ingredient("chain_buoy", "coconut-sealant", 2)
+end
+
+-- optional compat with ironclad and it's fork
+if mods["ironclad-gunboat-and-mortar-turret-fork"] then
+	add_recipe_ingredient("ironclad-gunboat", "coconut-sealant", 40)
+end
+if mods["aai-vehicles-ironclad"] then
+	add_recipe_ingredient("ironclad", "coconut-sealant", 40)
+end
+if mods["decomposer"] then
+	data.raw["recipe"]["decomposition-bacteria"].ingredients = {
+		{ type = "item", name = "raw-fish", amount = 2 },
+		{ type = "fluid", name = "coconut-oil", amount = 30 },
+		{ type = "fluid", name = "methane", amount = 100 },
 	}
 end

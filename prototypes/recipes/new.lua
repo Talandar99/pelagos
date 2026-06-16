@@ -1,6 +1,35 @@
 data:extend({
 	{
 		type = "recipe",
+		name = "pelagos-rocket-part",
+		icons = {
+			{ icon = "__base__/graphics/icons/rocket-part.png", icon_size = 64 },
+			{ icon = "__pelagos__/graphics/planet/pelagos64.png", icon_size = 64, scale = 0.25, shift = { 8, 8 } },
+		},
+		energy_required = 3,
+		enabled = false,
+		hide_from_player_crafting = true,
+		auto_recycle = false,
+		category = "rocket-building",
+		ingredients = {
+			{ type = "item", name = "processing-unit", amount = 1 },
+			{ type = "item", name = "titanium-plate", amount = 1 },
+			{ type = "fluid", name = "ethanol", amount = 100 },
+		},
+		surface_conditions = {
+			{
+				property = "pressure",
+				min = 1809,
+				max = 1809,
+			},
+		},
+		results = { { type = "item", name = "rocket-part", amount = 1 } },
+		allow_productivity = true,
+	},
+})
+data:extend({
+	{
+		type = "recipe",
 		name = "nutrients-from-coconut-meat",
 		icon = "__pelagos__/graphics/nutrients-from-coconut-meat.png",
 		category = "organic",
@@ -85,105 +114,6 @@ data:extend({
 			tertiary = { r = 0.850, g = 0.650, b = 0.450, a = 1.000 },
 			quaternary = { r = 0.600, g = 0.450, b = 0.300, a = 1.000 },
 		},
-	},
-	{
-		type = "recipe",
-		name = "fermentation-bacteria",
-		category = "organic",
-		surface_conditions = {
-			{
-				property = "pressure",
-				min = 0,
-				max = 1809,
-			},
-		},
-		subgroup = "agriculture-processes",
-		order = "b[agriculture]-d[bacteria]-a[fermentation-bacteria]",
-		enabled = false,
-		allow_productivity = true,
-		energy_required = 1,
-		ingredients = {
-			{ type = "item", name = "raw-fish", amount = 2 },
-			{ type = "fluid", name = "coconut-oil", amount = 30 },
-			{ type = "fluid", name = "methane", amount = 100 },
-		},
-		results = {
-			{ type = "item", name = "fermentation-bacteria", amount = 1, probability = 0.1 },
-			{ type = "item", name = "spoilage", amount = 5 },
-		},
-		main_product = "fermentation-bacteria",
-		crafting_machine_tint = {
-			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
-			secondary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
-			tertiary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
-			quaternary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
-		},
-	},
-	{
-		type = "recipe",
-		name = "fermentation-bacteria-cultivation",
-		icons = {
-			{ icon = "__pelagos__/graphics/fermentation-bacteria-cultivation.png", icon_size = 64 },
-			{ icon = "__base__/graphics/icons/fish.png", icon_size = 64, scale = 0.3, shift = { 8, 8 } },
-		},
-		category = "organic",
-		surface_conditions = {
-			{
-				property = "pressure",
-				min = 0,
-				max = 1809,
-			},
-		},
-		subgroup = "agriculture-processes",
-		order = "b[agriculture]-d[bacteria]-b[fermentation-bacteria-cultivation]",
-		enabled = false,
-		allow_productivity = true,
-		reset_freshness_on_craft = true,
-		energy_required = 4,
-		ingredients = {
-			{ type = "item", name = "fermentation-bacteria", amount = 1 },
-			{ type = "item", name = "raw-fish", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "fermentation-bacteria", amount = 12 },
-		},
-		crafting_machine_tint = {
-			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
-			secondary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
-			tertiary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
-			quaternary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
-		},
-		show_amount_in_title = false,
-	},
-	{
-		type = "recipe",
-		name = "fermentation-bacteria-cultivation-fermented-fish",
-		icons = {
-			{ icon = "__pelagos__/graphics/fermentation-bacteria-cultivation.png", icon_size = 64 },
-			{ icon = "__pelagos__/graphics/fermented-fish.png", icon_size = 64, scale = 0.3, shift = { 8, 8 } },
-		},
-		category = "organic",
-		surface_conditions = {},
-		subgroup = "agriculture-processes",
-		order = "b[agriculture]-d[bacteria]-b[fermentation-bacteria-cultivation]",
-		enabled = false,
-		allow_productivity = true,
-		reset_freshness_on_craft = true,
-		energy_required = 4,
-		ingredients = {
-			{ type = "item", name = "fermentation-bacteria", amount = 1 },
-			{ type = "item", name = "fermented-fish", amount = 1 },
-		},
-		results = {
-			{ type = "item", name = "fermentation-bacteria", amount = 12 },
-		},
-		crafting_machine_tint = {
-			primary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
-			secondary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
-			tertiary = { r = 0.57, g = 0.72, b = 0.41, a = 1.000 },
-			quaternary = { r = 0.67, g = 0.82, b = 0.51, a = 1.000 },
-		},
-		show_amount_in_title = false,
 	},
 	{
 		type = "recipe",
@@ -283,7 +213,7 @@ data:extend({
 		allow_productivity = true,
 		energy_required = 10,
 		ingredients = {
-			{ type = "item", name = "fermentation-bacteria", amount = 5 },
+			{ type = "item", name = "decomposition-bacteria", amount = 5 },
 			{ type = "item", name = "nutrients", amount = 20 },
 			{ type = "fluid", name = "water", amount = 100 },
 			{ type = "item", name = "activated-carbon", amount = 3 },
@@ -334,7 +264,7 @@ data:extend({
 			{ type = "item", name = "degradation-module-2", amount = 4 },
 			{ type = "item", name = "advanced-circuit", amount = 5 },
 			{ type = "item", name = "processing-unit", amount = 5 },
-			{ type = "item", name = "fermentation-bacteria", amount = 5 },
+			{ type = "item", name = "decomposition-bacteria", amount = 5 },
 		},
 		energy_required = 60,
 		results = { { type = "item", name = "degradation-module-3", amount = 1 } },
@@ -390,24 +320,6 @@ data:extend({
 	},
 	{
 		type = "recipe",
-		name = "pelagos-casting-engine-unit",
-		category = "metallurgy",
-		subgroup = "vulcanus-processes",
-		order = "b[casting]-h[casting-engine-unit]",
-		icon = "__pelagos__/graphics/casting-engine-unit.png",
-		enabled = false,
-		ingredients = {
-			{ type = "fluid", name = "molten-iron", amount = 50, fluidbox_multiplier = 50 },
-			{ type = "item", name = "activated-carbon", amount = 3 },
-		},
-		energy_required = 10,
-		-- energy_required = 10, for assembling machine
-		allow_decomposition = false,
-		results = { { type = "item", name = "engine-unit", amount = 1 } },
-		allow_productivity = true,
-	},
-	{
-		type = "recipe",
 		name = "titanium-dust",
 		category = "organic",
 		subgroup = "agriculture-products",
@@ -418,7 +330,7 @@ data:extend({
 		energy_required = 5,
 		ingredients = {
 			{ type = "fluid", name = "titanium-sludge", amount = 50 },
-			{ type = "item", name = "fermentation-bacteria", amount = 1 },
+			{ type = "item", name = "decomposition-bacteria", amount = 1 },
 		},
 		results = {
 			{ type = "item", name = "titanium-dust", amount = 1, probability = 0.25 },
@@ -581,32 +493,6 @@ data:extend({
 data:extend({
 	{
 		type = "recipe",
-		name = "poison-rocket",
-		enabled = false,
-		energy_required = 4,
-		ingredients = {
-			{ type = "item", name = "iron-plate", amount = 1 },
-			{ type = "item", name = "poison-capsule", amount = 1 },
-			{ type = "item", name = "coconut-sealant", amount = 1 },
-			{ type = "item", name = "explosives", amount = 1 },
-		},
-		results = { { type = "item", name = "poison-rocket", amount = 1 } },
-	},
-	{
-		type = "recipe",
-		name = "slowdown-rocket",
-		enabled = false,
-		energy_required = 4,
-		ingredients = {
-			{ type = "item", name = "iron-plate", amount = 1 },
-			{ type = "item", name = "slowdown-capsule", amount = 1 },
-			{ type = "item", name = "coconut-sealant", amount = 1 },
-			{ type = "item", name = "explosives", amount = 1 },
-		},
-		results = { { type = "item", name = "slowdown-rocket", amount = 1 } },
-	},
-	{
-		type = "recipe",
 		name = "pelagos-capture-robot-rocket",
 		energy_required = 10,
 		ingredients = {
@@ -625,7 +511,7 @@ data:extend({
 		energy_required = 1,
 		ingredients = {
 			{ type = "item", name = "firearm-magazine", amount = 6 },
-			{ type = "item", name = "fermentation-bacteria", amount = 1 },
+			{ type = "item", name = "decomposition-bacteria", amount = 1 },
 		},
 		results = { { type = "item", name = "corrosive-firearm-magazine", amount = 6 } },
 		enabled = false,
@@ -734,18 +620,6 @@ data:extend({
 data:extend({
 	{
 		type = "recipe",
-		name = "pelagos-sandfill",
-		energy_required = 0.5,
-		enabled = false,
-		auto_recycle = false,
-		category = "organic",
-		ingredients = {
-			{ type = "item", name = "sand", amount = 45 },
-		},
-		results = { { type = "item", name = "pelagos-sandfill", amount = 1 } },
-	},
-	{
-		type = "recipe",
 		name = "nutrients-from-spoilage-methane",
 		icons = {
 			{ icon = "__pelagos__/graphics/methane.png", icon_size = 64 },
@@ -783,9 +657,10 @@ data:extend({
 		ingredients = {
 			{ type = "item", name = "coconut-sealant", amount = 2 },
 			{ type = "item", name = "engine-unit", amount = 1 },
-			{ type = "item", name = "fermentation-bacteria", amount = 3 },
+			{ type = "item", name = "decomposition-bacteria", amount = 3 },
 			{ type = "item", name = "activated-carbon", amount = 1 },
 			{ type = "item", name = "titanium-dust", amount = 1 },
+			{ type = "fluid", name = "ethanol", amount = 25 },
 		},
 		energy_required = 8,
 		results = { { type = "item", name = "pelagos-science-pack", amount = 2 } },

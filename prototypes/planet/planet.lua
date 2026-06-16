@@ -46,7 +46,7 @@ data:extend({
 			results = {
 				--{ type = "item", name = "stone", amount_min = 18, amount_max = 22 },
 				{ type = "item", name = "stone", amount_min = 25, amount_max = 28 },
-				{ type = "item", name = "fermentation-bacteria", amount_min = 4, amount_max = 6 },
+				{ type = "item", name = "decomposition-bacteria", amount_min = 4, amount_max = 6 },
 				{ type = "item", name = "spoilage", amount_min = 2, amount_max = 3 },
 			},
 		},

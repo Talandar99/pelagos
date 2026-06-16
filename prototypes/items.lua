@@ -135,27 +135,6 @@ table.insert(data.raw["lab"]["lab"].inputs, "pelagos-science-pack")
 
 data:extend({
 	{
-		type = "item",
-		name = "fermentation-bacteria",
-		icon = "__pelagos__/graphics/fermentation-bacteria.png",
-		subgroup = "agriculture-processes",
-		order = "b[agriculture]-d[bacteria]-a[fermentation-bacteria]",
-		inventory_move_sound = space_age_item_sounds.agriculture_inventory_move,
-		pick_sound = space_age_item_sounds.agriculture_inventory_pickup,
-		drop_sound = space_age_item_sounds.agriculture_inventory_move,
-		fuel_category = "chemical",
-		fuel_value = "25kJ",
-		stack_size = 20,
-		default_import_location = "pelagos",
-		weight = 1 * kg,
-		spoil_ticks = 5 * minute,
-		--spoil_ticks = 3 * minute,
-		spoil_result = "spoilage",
-	},
-})
-
-data:extend({
-	{
 		type = "module",
 		name = "degradation-module",
 		localised_description = { "item-description.degradation-module" },
@@ -314,27 +293,6 @@ data:extend({
 
 data:extend({
 	{
-		type = "item",
-		name = "fermented-fish",
-		icon = "__pelagos__/graphics/fermented-fish.png",
-		subgroup = "agriculture-products",
-		order = "a[organic-processing]-b[bioflux]",
-		inventory_move_sound = space_age_item_sounds.agriculture_inventory_move,
-		pick_sound = space_age_item_sounds.agriculture_inventory_pickup,
-		drop_sound = space_age_item_sounds.agriculture_inventory_move,
-		fuel_category = "food",
-		fuel_value = "3MJ",
-		stack_size = 20,
-		default_import_location = "pelagos",
-		spoil_ticks = 4 * hour,
-		spoil_result = "spoilage",
-		weight = 5 * kg,
-		--capsule_action = item_effects.bioflux_speed_and_regen,
-	},
-})
-
-data:extend({
-	{
 		type = "ammo",
 		name = "corrosive-firearm-magazine",
 		icon = "__pelagos__/graphics/poisonus-firearm-magazine.png",
@@ -464,39 +422,5 @@ data:extend({
 				},
 			},
 		},
-	},
-})
--- sandfill
-data:extend({
-	{
-		type = "item",
-		name = "sand",
-		icon = "__pelagos__/graphics/sand.png",
-		subgroup = "raw-resource",
-		order = "d[sand]",
-		inventory_move_sound = item_sounds.resource_inventory_move,
-		pick_sound = item_sounds.resource_inventory_pickup,
-		drop_sound = item_sounds.resource_inventory_move,
-		stack_size = 50,
-		weight = 1 * kg,
-	},
-	{
-		type = "item",
-		name = "pelagos-sandfill",
-		icon = "__pelagos__/graphics/sandfill.png",
-		subgroup = "terrain",
-		order = "c[sandfill]-a[dirt]",
-		inventory_move_sound = item_sounds.landfill_inventory_move,
-		pick_sound = item_sounds.landfill_inventory_pickup,
-		drop_sound = item_sounds.landfill_inventory_move,
-		stack_size = 100,
-		weight = 20 * kg,
-		place_as_tile = {
-			result = "pelagos-sandfill",
-			condition_size = 1,
-			condition = { layers = { ground_tile = true } },
-			tile_condition = {},
-		},
-		random_tint_color = item_tints.organic_green,
 	},
 })

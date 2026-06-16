@@ -1,4 +1,3 @@
-require("prototypes.data-final-fixes-cargo-ships")
 require("prototypes.plants-autoplace-settings")
 require("prototypes.liquid-fuel.rocket-silo")
 -- allow foundation on pelagos-deepsea
@@ -8,18 +7,6 @@ if landfill and landfill.place_as_tile and landfill.place_as_tile.tile_condition
 end
 -- make pelagos-deepsea water_tile_type
 table.insert(water_tile_type_names, "pelagos-deepsea")
-
--- sandfill
-local sandfill = table.deepcopy(data.raw.tile["sand-1"])
-sandfill.name = "pelagos-sandfill"
-sandfill.minable = { mining_time = 0.2, result = "pelagos-sandfill" }
-sandfill.localised_name = { "tile-name.pelagos-sandfill" }
-sandfill.absorptions_per_second = nil
-sandfill.tile_order = "a[artificial]-d[utility]-a[sandfill]"
-data:extend({ sandfill })
-data.raw["item"]["pelagos-sandfill"].place_as_tile.tile_condition =
-	table.deepcopy(data.raw["item"]["landfill"].place_as_tile.tile_condition)
--- sandfill
 
 require("prototypes.planet.electromagnetic-waves-pollution-emision")
 require("prototypes.corrosive-dmg-resistances")
@@ -57,3 +44,49 @@ if mods["lignumis"] then
 		end
 	end
 end
+
+local function hide_technology_and_rewire(old_tech, new_tech)
+	local old = data.raw.technology[old_tech]
+	local new = data.raw.technology[new_tech]
+
+	if not old or not new then
+		return
+	end
+
+	for _, tech in pairs(data.raw.technology) do
+		if tech.prerequisites then
+			for i = #tech.prerequisites, 1, -1 do
+				if tech.prerequisites[i] == old_tech then
+					table.remove(tech.prerequisites, i)
+
+					local exists = false
+					for _, p in pairs(tech.prerequisites) do
+						if p == new_tech then
+							exists = true
+							break
+						end
+					end
+
+					if not exists then
+						table.insert(tech.prerequisites, new_tech)
+					end
+				end
+			end
+		end
+	end
+
+	if old.effects then
+		new.effects = new.effects or {}
+		for _, effect in pairs(old.effects) do
+			table.insert(new.effects, effect)
+		end
+	end
+
+	old.hidden = true
+	old.enabled = false
+end
+-- remove unused researches
+data.raw["technology"]["cargo_ships"].effects = {}
+data.raw["technology"]["water_transport"].effects = {}
+hide_technology_and_rewire("water_transport", "automated_water_transport")
+hide_technology_and_rewire("cargo_ships", "automated_water_transport")

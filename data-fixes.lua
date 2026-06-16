@@ -26,12 +26,6 @@ fish_breeding.surface_conditions = {
 }
 fish_breeding.enabled = false
 -------------------------------------------------------------------------------
--- temporary fix until miguel moves his ass
--------------------------------------------------------------------------------
-if mods["quality-seeds"] then
-	table.insert(quality_seeds.ignore_plants, "coconut-palm")
-end
--------------------------------------------------------------------------------
 -- regular capture bot rockets can now be used on pelagos nests
 -------------------------------------------------------------------------------
 table.insert(data.raw["ammo"]["capture-robot-rocket"].ammo_type.target_filter, "copper-biter-spawner")
