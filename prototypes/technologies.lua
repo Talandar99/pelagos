@@ -434,8 +434,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "degradation-module",
-		icon = "__pelagos__/graphics/degradation-module-technology.png",
-		icon_size = 120,
+		icon = "__pelagos__/graphics/degradation-module/degradation-module-1-tech.png",
+		icon_size = 256,
 		effects = {
 			{ type = "unlock-recipe", recipe = "degradation-module" },
 		},
@@ -454,8 +454,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "degradation-module-2",
-		icon = "__pelagos__/graphics/degradation-module-technology.png",
-		icon_size = 120,
+		icon = "__pelagos__/graphics/degradation-module/degradation-module-2-tech.png",
+		icon_size = 256,
 		effects = {
 			{ type = "unlock-recipe", recipe = "degradation-module-2" },
 		},
@@ -474,8 +474,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "degradation-module-3",
-		icon = "__pelagos__/graphics/degradation-module-technology.png",
-		icon_size = 120,
+		icon = "__pelagos__/graphics/degradation-module/degradation-module-3-tech.png",
+		icon_size = 256,
 		effects = {
 			{ type = "unlock-recipe", recipe = "degradation-module-3" },
 		},

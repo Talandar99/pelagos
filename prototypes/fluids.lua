@@ -35,7 +35,7 @@ data:extend({
 		default_temperature = 25,
 		base_color = { r = 0.28, g = 0.29, b = 0.16 },
 		flow_color = { r = 0.38, g = 0.39, b = 0.26 },
-		icon = "__pelagos__/graphics/titanium/titanium-sludge-new.png",
+		icon = "__pelagos__/graphics/titanium/titanium-sludge.png",
 		icon_size = 64,
 		order = "a[fluid]-b[titanium-sludge]",
 		pressure_to_speed_ratio = 0.4,
