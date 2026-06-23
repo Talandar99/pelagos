@@ -118,6 +118,7 @@ if mods["cargo-ships"] then
 	add_recipe_ingredient("oil_tanker", "coconut-sealant", 80)
 	add_recipe_ingredient("oil_tanker", "titanium-plate", 20)
 	remove_recipe_ingredient("oil_tanker", "electronic-circuit")
+	replace_recipe_ingredient("oil_tanker", "", "titanium-plate", 15)
 	-- buoys
 	add_recipe_ingredient("buoy", "coconut-sealant", 2)
 	add_recipe_ingredient("chain_buoy", "coconut-sealant", 2)

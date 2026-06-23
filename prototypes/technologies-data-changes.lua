@@ -139,10 +139,18 @@ add_technology_prerequisite("lubrication-tower", "planet-discovery-pelagos")
 add_technology_prerequisite("lubrication-tower", "pelagos-science-pack")
 add_technology_prerequisite("portable-diesel-generator", "planet-discovery-pelagos")
 add_technology_prerequisite("portable-diesel-generator", "pelagos-science-pack")
+
 add_technology_prerequisite("diesel-asteroid-collector", "planet-discovery-pelagos")
 add_technology_prerequisite("diesel-asteroid-collector", "pelagos-science-pack")
-add_technology_prerequisite("tank_ship", "pelagos-science-pack")
+
 add_technology_prerequisite("lithic-decomposition", "pelagos-science-pack")
+
+add_technology_prerequisite("titanium-storage-tank", "pelagos-science-pack")
+add_technology_prerequisite("titanium-storage-tank", "fluid-handling")
+add_technology_prerequisite("titanium-storage-tank", "titanium")
+
+add_technology_prerequisite("tank_ship", "titanium-storage-tank")
+add_technology_prerequisite("tank_ship", "pelagos-science-pack")
 
 add_technology_prerequisite("organic-decomposition", "pelagos-science-pack")
 
@@ -188,7 +196,6 @@ add_technology_prerequisite("degradation-module", "pelagos-science-pack")
 add_technology_prerequisite("degradation-module", "quality-module")
 
 add_technology_prerequisite("degradation-module-2", "degradation-module")
-add_technology_prerequisite("degradation-module-2", "epic-quality")
 add_technology_prerequisite("degradation-module-2", "quality-module-2")
 
 add_technology_prerequisite("Pirate_Ship", "pelagos-science-pack")
@@ -219,4 +226,4 @@ add_technology_prerequisite("captive-copper-biter-spawner", "pelagos-science-pac
 add_technology_prerequisite("captive-copper-biter-spawner", "cryogenic-science-pack")
 add_technology_prerequisite("captive-copper-biter-spawner", "copper-biter-captivity")
 add_technology_prerequisite("degradation-module-3", "quality-module-3")
-add_technology_prerequisite("degradation-module-3", "legendary-quality")
+add_technology_prerequisite("degradation-module-3", "degradation-module-2")

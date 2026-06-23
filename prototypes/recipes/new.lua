@@ -233,10 +233,12 @@ data:extend({
 		type = "recipe",
 		name = "degradation-module",
 		enabled = false,
-		category = "electronics",
+		auto_recycle = false,
+		category = "decomposition",
+		additional_categories = { "electromagnetics" },
 		ingredients = {
-			{ type = "item", name = "electronic-circuit", amount = 5 },
-			{ type = "item", name = "advanced-circuit", amount = 5 },
+			{ type = "item", name = "quality-module", amount = 1 },
+			{ type = "item", name = "decomposition-bacteria", amount = 1 },
 		},
 		energy_required = 15,
 		results = { { type = "item", name = "degradation-module", amount = 1 } },
@@ -245,11 +247,13 @@ data:extend({
 		type = "recipe",
 		name = "degradation-module-2",
 		enabled = false,
-		category = "electronics",
+		auto_recycle = false,
+		category = "decomposition",
+		additional_categories = { "electromagnetics" },
 		ingredients = {
+			{ type = "item", name = "quality-module-2", amount = 1 },
 			{ type = "item", name = "degradation-module", amount = 4 },
-			{ type = "item", name = "advanced-circuit", amount = 5 },
-			{ type = "item", name = "processing-unit", amount = 5 },
+			{ type = "item", name = "decomposition-bacteria", amount = 3 },
 		},
 		energy_required = 30,
 		results = { { type = "item", name = "degradation-module-2", amount = 1 } },
@@ -259,11 +263,11 @@ data:extend({
 		name = "degradation-module-3",
 		enabled = false,
 		auto_recycle = false,
-		category = "electronics",
+		category = "decomposition",
+		additional_categories = { "electromagnetics" },
 		ingredients = {
+			{ type = "item", name = "quality-module-3", amount = 1 },
 			{ type = "item", name = "degradation-module-2", amount = 4 },
-			{ type = "item", name = "advanced-circuit", amount = 5 },
-			{ type = "item", name = "processing-unit", amount = 5 },
 			{ type = "item", name = "decomposition-bacteria", amount = 5 },
 		},
 		energy_required = 60,
@@ -417,6 +421,17 @@ data:extend({
 		results = { { type = "item", name = "diesel-dragon", amount = 1 } },
 		requester_paste_multiplier = 1,
 	},
+	{
+		type = "recipe",
+		name = "titanium-storage-tank",
+		enabled = false,
+		energy_required = 3,
+		ingredients = {
+			{ type = "item", name = "titanium-plate", amount = 10 },
+			{ type = "item", name = "storage-tank", amount = 3 },
+		},
+		results = { { type = "item", name = "titanium-storage-tank", amount = 1 } },
+	},
 })
 
 data:extend({
@@ -534,89 +549,6 @@ data:extend({
 	},
 })
 
-data:extend({
-	{
-		type = "recipe",
-		name = "metallic-asteroid-methane-crushing",
-		icon = "__pelagos__/graphics/metallic-asteroid-methane-crushing.png",
-		category = "organic-or-chemistry",
-		subgroup = "space-crushing",
-		order = "g-a-a",
-		auto_recycle = false,
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "metallic-asteroid-chunk", amount = 1 },
-			{ type = "fluid", name = "methane", amount = 20 },
-		},
-		energy_required = 2,
-		results = {
-			{ type = "item", name = "iron-ore", amount = 40 },
-		},
-		crafting_machine_tint = {
-			primary = { r = 79, g = 121, b = 148, a = 1.000 },
-			secondary = { r = 85, g = 132, b = 161, a = 1.000 },
-			tertiary = { r = 79, g = 121, b = 148, a = 1.000 },
-			quaternary = { r = 85, g = 132, b = 161, a = 1.000 },
-		},
-		allow_productivity = true,
-		allow_decomposition = false,
-	},
-	{
-		type = "recipe",
-		name = "carbonic-asteroid-gasification",
-		icon = "__pelagos__/graphics/carbonic-asteroid-gasification.png",
-		category = "organic",
-		subgroup = "space-crushing",
-		order = "g-a-b",
-		auto_recycle = false,
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "carbonic-asteroid-chunk", amount = 1 },
-			{ type = "fluid", name = "water", amount = 20 },
-		},
-		energy_required = 2,
-		results = {
-			{ type = "fluid", name = "methane", amount = 200 },
-		},
-		crafting_machine_tint = {
-			primary = { r = 163, g = 209, b = 62, a = 1.000 },
-			secondary = { r = 193, g = 239, b = 92, a = 1.000 },
-			tertiary = { r = 163, g = 209, b = 62, a = 1.000 },
-			quaternary = { r = 193, g = 239, b = 92, a = 1.000 },
-		},
-		allow_productivity = true,
-		allow_decomposition = false,
-	},
-	{
-		type = "recipe",
-		name = "oxide-asteroid-melting",
-		icons = {
-			{ icon = "__space-age__/graphics/icons/oxide-asteroid-chunk.png", icon_size = 64 },
-			{ icon = "__base__/graphics/icons/fluid/water.png", icon_size = 64, scale = 0.4, shift = { 8, -8 } },
-		},
-		category = "organic",
-		subgroup = "space-crushing",
-		order = "g-a-c",
-		auto_recycle = false,
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "oxide-asteroid-chunk", amount = 1 },
-			{ type = "item", name = "spoilage", amount = 1 },
-		},
-		energy_required = 2,
-		results = {
-			{ type = "fluid", name = "water", amount = 200 },
-		},
-		crafting_machine_tint = {
-			primary = { r = 42, g = 143, b = 189, a = 1.000 },
-			secondary = { r = 7, g = 80, b = 98, a = 1.000 },
-			tertiary = { r = 42, g = 143, b = 189, a = 1.000 },
-			quaternary = { r = 7, g = 80, b = 98, a = 1.000 },
-		},
-		allow_productivity = true,
-		allow_decomposition = false,
-	},
-})
 data:extend({
 	{
 		type = "recipe",

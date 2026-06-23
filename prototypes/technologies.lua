@@ -440,12 +440,11 @@ data:extend({
 			{ type = "unlock-recipe", recipe = "degradation-module" },
 		},
 		unit = {
-			count = 2000,
+			count = 500,
 			ingredients = {
 				{ "automation-science-pack", 1 },
 				{ "logistic-science-pack", 1 },
 				{ "chemical-science-pack", 1 },
-				{ "space-science-pack", 1 },
 				{ "pelagos-science-pack", 1 },
 			},
 			time = 60,
@@ -486,6 +485,28 @@ data:extend({
 				{ "logistic-science-pack", 1 },
 				{ "chemical-science-pack", 1 },
 				{ "space-science-pack", 1 },
+				{ "pelagos-science-pack", 1 },
+			},
+			time = 60,
+		},
+	},
+})
+
+data:extend({
+	{
+		type = "technology",
+		name = "titanium-storage-tank",
+		icon = "__pelagos__/graphics/titanium-storage-tank/tank_512_tech.png",
+		icon_size = 512,
+		effects = {
+			{ type = "unlock-recipe", recipe = "titanium-storage-tank" },
+		},
+		unit = {
+			count = 500,
+			ingredients = {
+				{ "automation-science-pack", 1 },
+				{ "logistic-science-pack", 1 },
+				{ "chemical-science-pack", 1 },
 				{ "pelagos-science-pack", 1 },
 			},
 			time = 60,
