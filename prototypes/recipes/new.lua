@@ -394,19 +394,6 @@ data:extend({
 
 	{
 		type = "recipe",
-		name = "titanium-barrel",
-		category = "crafting",
-		energy_required = 1,
-		subgroup = "intermediate-product",
-		enabled = false,
-		ingredients = {
-			{ type = "item", name = "titanium-plate", amount = 1 },
-		},
-		results = { { type = "item", name = "titanium-barrel", amount = 1 } },
-		allow_productivity = true,
-	},
-	{
-		type = "recipe",
 		name = "diesel-dragon",
 		enabled = false,
 		ingredients = {

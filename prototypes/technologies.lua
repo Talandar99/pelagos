@@ -121,29 +121,6 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
-		name = "titanium-barrels",
-		icon = "__pelagos__/graphics/titanium-barreling/titanium-barrels.png",
-		icon_size = 512,
-		effects = {
-			{ type = "unlock-recipe", recipe = "titanium-barrel" },
-		},
-		unit = {
-			count = 1000,
-			ingredients = {
-				{ "automation-science-pack", 1 },
-				{ "logistic-science-pack", 1 },
-				{ "chemical-science-pack", 1 },
-				{ "space-science-pack", 1 },
-				{ "utility-science-pack", 1 },
-				{ "pelagos-science-pack", 1 },
-			},
-			time = 60,
-		},
-	},
-})
-data:extend({
-	{
-		type = "technology",
 		name = "ethanol-thruster",
 		icon = "__pelagos__/graphics/thruster/ethanol_thruster_tech.png",
 		icon_size = 256,

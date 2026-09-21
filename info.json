@@ -15,21 +15,21 @@
         "diesel_engine >= 0.7.0",
         "canal-excavator >= 1.13.3",
         "cargo-ships",
-        -- in progress currently
         "diesel_machines",
+        "barreling-group2",
+        "deepsea_mechanic",
+        -- in progress currently
         -- waiting for update
         "pirateship",
-        "barreling-group2",
         -- todo
         "diesel_cargo_ships",
         "wooden_platform >= 0.2.0",
-        "lubrication_tower",
         "heavy_gun_turret",
         "barreling_machines >= 0.1.4",
-        "deepsea_mechanic",
         "decomposer",
         "talandar_cargo_ships_tweaks",
         --
+        "lubrication_tower",
         "? apia",
         "? Cerys-Moon-of-Fulgora",
         "? planetaris-arig",
