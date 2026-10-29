@@ -106,7 +106,7 @@ script.on_nth_tick(60, function()
 					if new_engine.set_recipe and new_engine.force.recipes[recipe] then
 						new_engine.set_recipe(recipe)
 						new_engine.recipe_locked = true
-						new_engine.active = true
+						new_engine.disabled_by_script = false
 					end
 
 					data.engine = new_engine
@@ -116,12 +116,12 @@ script.on_nth_tick(60, function()
 			if data.engine and data.engine.valid then
 				local engine = data.engine
 				local collector = data.collector
-				local fluid = engine.fluidbox and engine.fluidbox[1]
+				local fluid = engine.fluids_count > 0 and engine.get_fluid(1)
 				local has_fuel = (fluid and fluid.amount or 0) > 0
 				local working = (engine.is_crafting() or engine.energy > 0) and has_fuel
 
-				if collector.active ~= working then
-					collector.active = working
+				if collector.disabled_by_script == working then
+					collector.disabled_by_script = not working
 				end
 			end
 		end

@@ -1,4 +1,5 @@
-require("__base__.prototypes.entity.biter-ai-settings")
+-- Factorio 2.1 removed __base__/prototypes/entity/biter-ai-settings.lua, which defined this global
+local biter_ai_settings = { destroy_when_commands_fail = true, allow_try_return_to_spawner = true }
 require("__base__.prototypes.entity.spitter-animations")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")

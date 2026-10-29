@@ -77,7 +77,7 @@ data:extend({
 		icon_draw_specification = { shift = { 0, 2 } },
 		module_slots = 6,
 		icons_positioning = {
-			{ inventory_index = defines.inventory.assembling_machine_modules, shift = { 0, 3.3 } },
+			{ inventory_index = defines.inventory.crafter_modules, shift = { 0, 3.3 } },
 		},
 		fixed_recipe = "diesel-dragon-loading",
 		show_recipe_icon = false,
